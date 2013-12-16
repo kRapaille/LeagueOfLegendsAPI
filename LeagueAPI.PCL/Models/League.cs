@@ -2,7 +2,7 @@
 
 namespace LeagueAPI.PCL.Models
 {
-    public class LeagueInfo
+    public class League
     {
         [JsonProperty("timestamp")]
         public long Timestamp { get; set; }
@@ -17,10 +17,10 @@ namespace LeagueAPI.PCL.Models
         public string Queue { get; set; }
 
         [JsonProperty("entries")]
-        public Entry[] Entries { get; set; }
+        public LeagueItem[] LeagueItems { get; set; }
     }
 
-    public class Entry
+    public class LeagueItem
     {
         [JsonProperty("playerOrTeamId")]
         public string PlayerOrTeamId { get; set; }
@@ -62,9 +62,30 @@ namespace LeagueAPI.PCL.Models
         public bool IsInactive { get; set; }
 
         [JsonProperty("lastPlayed")]
-        public int LastPlayed { get; set; }
+        public long LastPlayed { get; set; }
 
         [JsonProperty("timeUntilDecay")]
-        public int TimeUntilDecay { get; set; }
+        public long TimeUntilDecay { get; set; }
+
+        [JsonProperty("miniSeries")]
+        public MiniSeries MiniSeries { get; set; }
+    }
+
+    public class MiniSeries
+    {
+        [JsonProperty("losses")]
+        public int Losses { get; set; }
+
+        [JsonProperty("progress")]
+        public string Progress { get; set; }
+
+        [JsonProperty("target")]
+        public int Target { get; set; }
+
+        [JsonProperty("timeLeftToPlayMillis")]
+        public long TimeLeftToPlayMillis { get; set; }
+
+        [JsonProperty("wins")]
+        public int Wins { get; set; }
     }
 }

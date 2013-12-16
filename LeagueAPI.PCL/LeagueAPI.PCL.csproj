@@ -34,11 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="LeagueAPIService.cs" />
+    <Compile Include="Models\Enum\MapEnum.cs" />
+    <Compile Include="Models\Enum\QueueEnum.cs" />
     <Compile Include="Models\Enum\SeasonEnum.cs" />
     <Compile Include="Models\Exceptions\APIRequestError.cs" />
     <Compile Include="Models\Exceptions\APIRequestException.cs" />
     <Compile Include="Models\Enum\RegionEnum.cs" />
-    <Compile Include="Models\LeagueInfo.cs" />
+    <Compile Include="Models\League.cs" />
     <Compile Include="Models\MasteryPage.cs" />
     <Compile Include="Models\PlayerStatSummary.cs" />
     <Compile Include="Models\RankedStats.cs" />

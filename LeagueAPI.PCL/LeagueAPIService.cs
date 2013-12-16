@@ -79,13 +79,13 @@ namespace LeagueAPI.PCL
             return recentGamesRoot.Games.AsEnumerable();
         }
 
-        public async Task<Dictionary<string, LeagueInfo>> GetLeagueInfosBySummonerId(
+        public async Task<Dictionary<string, League>> GetLeagueInfosBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("{0}/v2.1/league/by-summoner/{1}", GetRegion(region), summonerId);
 
-            return await SendRequest<Dictionary<string, LeagueInfo>>(url);
+            return await SendRequest<Dictionary<string, League>>(url);
         }
 
         public async Task<IEnumerable<PlayerStatSummary>> GetPlayerStatsSummariesBySummonerId(
