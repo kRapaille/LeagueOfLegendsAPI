@@ -1,7 +1,6 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace LeagueAPI.PCL.Models
+namespace LeagueAPI.PCL.Models.v1.rev1
 {
     public class PlayerStatSummaryRoot
     {

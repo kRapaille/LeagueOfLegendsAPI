@@ -4,9 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using LeagueAPI.PCL.Models;
 using LeagueAPI.PCL.Models.Enum;
 using LeagueAPI.PCL.Models.Exceptions;
+using LeagueAPI.PCL.Models.v1.rev1;
+using LeagueAPI.PCL.Models.v1.rev2;
+using LeagueAPI.PCL.Models.v2.rev1;
 using Newtonsoft.Json;
 
 namespace LeagueAPI.PCL

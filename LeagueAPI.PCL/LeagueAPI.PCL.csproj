@@ -40,16 +40,16 @@
     <Compile Include="Models\Exceptions\APIRequestError.cs" />
     <Compile Include="Models\Exceptions\APIRequestException.cs" />
     <Compile Include="Models\Enum\RegionEnum.cs" />
-    <Compile Include="Models\League.cs" />
-    <Compile Include="Models\MasteryPage.cs" />
-    <Compile Include="Models\PlayerStatSummary.cs" />
-    <Compile Include="Models\RankedStats.cs" />
-    <Compile Include="Models\RecentGames.cs" />
-    <Compile Include="Models\ChampionsRoot.cs" />
-    <Compile Include="Models\RunePage.cs" />
-    <Compile Include="Models\Summoner.cs" />
-    <Compile Include="Models\SummonerInfos.cs" />
-    <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\v2\rev1\League.cs" />
+    <Compile Include="Models\v1\rev1\MasteryPage.cs" />
+    <Compile Include="Models\v1\rev1\PlayerStatSummary.cs" />
+    <Compile Include="Models\v1\rev1\RankedStats.cs" />
+    <Compile Include="Models\v1\rev2\RecentGames.cs" />
+    <Compile Include="Models\v1\rev1\Champions.cs" />
+    <Compile Include="Models\v1\rev1\RunePage.cs" />
+    <Compile Include="Models\v1\rev1\Summoner.cs" />
+    <Compile Include="Models\v1\rev1\SummonerInfos.cs" />
+    <Compile Include="Models\v2\rev1\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\v2\rev2\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
