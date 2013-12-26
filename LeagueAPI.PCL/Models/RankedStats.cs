@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace LeagueAPI.PCL.Models
 {
@@ -11,7 +12,7 @@ namespace LeagueAPI.PCL.Models
         public RankedStatsChampion[] Champions { get; set; }
 
         [JsonProperty("modifyDateStr")]
-        public long ModifyDateStr { get; set; }
+        public string ModifyDateStr { get; set; }
 
         [JsonProperty("summonerId")]
         public int SummonerId { get; set; }
