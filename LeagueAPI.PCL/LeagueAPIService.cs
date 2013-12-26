@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
@@ -14,7 +15,7 @@ namespace LeagueAPI.PCL
     {
         private readonly string _key;
 
-        private const string BaseURL = "https://prod.api.pvp.net/api/";
+        private static readonly Uri BaseUri = new Uri("https://prod.api.pvp.net/api/");
         private readonly RegionEnum _region;
 
         public LeagueAPIService(string key, RegionEnum region)
@@ -23,14 +24,25 @@ namespace LeagueAPI.PCL
             _region = region;
         }
 
-        private async Task<T> SendRequest<T>(string operationURL, bool hasOtherQueryParamaters = false) where T : class
+        private async Task<T> SendRequest<T>(string relativeUrl) where T : class
         {
-            var apiKeyPrefix = hasOtherQueryParamaters ? "&" : "?";
+            return await SendRequest<T>(new Uri(relativeUrl, UriKind.Relative));
+        }
 
-            var url = string.Concat(BaseURL, operationURL, apiKeyPrefix, string.Format("api_key={0}", _key));
+        private async Task<T> SendRequest<T>(Uri relativeUri) where T : class
+        {
+            var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
+
+            var keyParameter = string.Format("api_key={0}", _key);
+            if (uriBuilder.Query != null && uriBuilder.Query.Length > 1)
+                uriBuilder.Query = uriBuilder.Query.Substring(1) + "&" + keyParameter;
+            else
+                uriBuilder.Query = keyParameter;
+
+            var uri = uriBuilder.Uri;
 
             var httpClient = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, url);
+            var request = new HttpRequestMessage(HttpMethod.Get, uri);
             var response = await httpClient.SendAsync(request);
 
             T result;
@@ -43,10 +55,10 @@ namespace LeagueAPI.PCL
             }
             else
             {
-                Debug.WriteLine(url);
+                Debug.WriteLine(uri.ToString());
 
                 var apiRequestError = JsonConvert.DeserializeObject<APIRequestError>(content);
-                throw new APIRequestException(apiRequestError, url);
+                throw new APIRequestException(apiRequestError, uri.ToString());
             }
 
             return result;
@@ -63,7 +75,7 @@ namespace LeagueAPI.PCL
         {
             var url = string.Format("lol/{0}/v1.1/champion?freeToPlay={1}", GetRegion(region), freeToPlay);
 
-            var championsRoot = await SendRequest<ChampionsRoot>(url, true);
+            var championsRoot = await SendRequest<ChampionsRoot>(url);
 
             return championsRoot.Champions.AsEnumerable();
         }
@@ -95,14 +107,10 @@ namespace LeagueAPI.PCL
         {
             var url = string.Format("lol/{0}/v1.1/stats/by-summoner/{1}/summary", GetRegion(region), summonerId);
 
-            var hasOtherQueryParamaters = false;
             if (season.HasValue)
-            {
                 url += string.Concat("?season=", season.ToString().ToUpper());
-                hasOtherQueryParamaters = true;
-            }
 
-            var playerStatSummaryRoot = await SendRequest<PlayerStatSummaryRoot>(url, hasOtherQueryParamaters);
+            var playerStatSummaryRoot = await SendRequest<PlayerStatSummaryRoot>(url);
 
             return playerStatSummaryRoot.PlayerStatSummaries.AsEnumerable();
         }
@@ -114,14 +122,10 @@ namespace LeagueAPI.PCL
         {
             var url = string.Format("lol/{0}/v1.1/stats/by-summoner/{1}/ranked", GetRegion(region), summonerId);
 
-            var hasOtherQueryParamaters = false;
             if (season.HasValue)
-            {
                 url += string.Concat("?season=", season.ToString().ToUpper());
-                hasOtherQueryParamaters = true;
-            }
 
-            var rankedStatsRoot = await SendRequest<RankedStats>(url, hasOtherQueryParamaters);
+            var rankedStatsRoot = await SendRequest<RankedStats>(url);
 
             return rankedStatsRoot;
         }
