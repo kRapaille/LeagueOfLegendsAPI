@@ -8,6 +8,8 @@ namespace LeagueAPI.PCL.Services
 {
     public class ChampionService : BaseService
     {
+        private ChampionService() { }
+
         private static ChampionService _instance;
 
         internal static ChampionService Instance

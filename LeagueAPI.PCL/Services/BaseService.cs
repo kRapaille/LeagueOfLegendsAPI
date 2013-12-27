@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using LeagueAPI.PCL.Helpers;
 using LeagueAPI.PCL.Interfaces;
 using LeagueAPI.PCL.Models.Constants;
 using LeagueAPI.PCL.Models.Enums;
@@ -27,14 +28,11 @@ namespace LeagueAPI.PCL.Services
             var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
 
             var keyParameter = string.Format("api_key={0}", Key);
-            if (uriBuilder.Query != null && uriBuilder.Query.Length > 1)
-                uriBuilder.Query = uriBuilder.Query.Substring(1) + "&" + keyParameter;
-            else
-                uriBuilder.Query = keyParameter;
+            uriBuilder.AddQueryParameter(keyParameter);
 
             return await HttpRequestService.SendRequest<T>(uriBuilder.Uri);
         }
-
+        
         protected string GetRegion(RegionEnum? region)
         {
             region = region.HasValue ? region : DefaultRegion;
@@ -58,13 +56,9 @@ namespace LeagueAPI.PCL.Services
 
         protected string GetVersionAsString(VersionEnum? version)
         {
-            if (!version.HasValue)
-                version = CompatibleVersions.Last();
+            var versionValue = GetVersion(version);
 
-            if (!CompatibleVersions.Contains(version.Value))
-                throw new ArgumentException("Version not supported");
-
-            return VersionConsts.Versions[version.Value];
+            return VersionConsts.Versions[versionValue];
         }
     }
 }

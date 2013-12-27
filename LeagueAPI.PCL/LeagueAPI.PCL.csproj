@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Helpers\UriExtensions.cs" />
     <Compile Include="Interfaces\IHttpRequestService.cs" />
     <Compile Include="Interfaces\IResolver.cs" />
     <Compile Include="LeagueAPI.cs" />
