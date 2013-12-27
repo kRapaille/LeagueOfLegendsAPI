@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace LeagueAPI.PCL.Models.v1.rev2
+namespace LeagueAPI.PCL.Models
 {
     public class RecentGamesRoot
     {

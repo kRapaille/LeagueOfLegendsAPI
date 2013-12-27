@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using LeagueAPI.PCL.Models.Enum;
-using LeagueAPI.PCL.Models.Exceptions;
+using LeagueAPI.PCL.Models.Enums;
 using NUnit.Framework;
 
 namespace LeagueAPI.PCL.Test
@@ -10,34 +8,17 @@ namespace LeagueAPI.PCL.Test
     [TestFixture]
     public class LeagueAPIServiceTests
     {
-        private readonly LeagueAPIService _leagueAPIService;
         public LeagueAPIServiceTests()
         {
             // TODO : Don't forget to pass your api key
-            _leagueAPIService = new LeagueAPIService(string.Empty, RegionEnum.Euw);
-        }
-
-        [Test]
-        public async void APIKeyErrorTest()
-        {
-            // Let API Key empty here
-            var api = new LeagueAPIService(string.Empty, RegionEnum.Euw);
-            try
-            {
-                await api.GetChampions(true);
-
-                Assert.Fail("Exception didn't throw");
-            }
-            catch (APIRequestException are)
-            {
-                Debug.WriteLine(are.Message);
-            }
+            LeagueAPI.Init("YOU KEY HERE");
+            LeagueAPI.SetDefaultRegion(RegionEnum.Euw);
         }
 
         [Test]
         public async void GetFreeChampionsTest()
         {
-            var freeChampions = await _leagueAPIService.GetChampions(true);
+            var freeChampions = await LeagueAPI.Champion.GetChampions(true);
             
             Assert.NotNull(freeChampions);
             Assert.AreEqual(10, freeChampions.Count());
@@ -46,7 +27,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetChampionsTest()
         {
-            var freeChampions = await _leagueAPIService.GetChampions(false);
+            var freeChampions = await LeagueAPI.Champion.GetChampions(false);
 
             Assert.NotNull(freeChampions);
         }
@@ -54,7 +35,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetRecentGamesBySummonerIdTest()
         {
-            var result = await _leagueAPIService.GetRecentGamesBySummonerId(19231046);
+            var result = await LeagueAPI.Game.GetRecentGamesBySummonerId(19231046);
 
             Assert.NotNull(result);
         }
@@ -62,7 +43,15 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetLeagueInfosBySummonerIdTest()
         {
-            var result = await _leagueAPIService.GetLeagueInfosBySummonerId(19231046);
+            var result = await LeagueAPI.League.GetLeagueInfosBySummonerId(19231046);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetLeagueInfosBySummonerIdV2Rev1Test()
+        {
+            var result = await LeagueAPI.League.GetLeagueInfosBySummonerId(19231046, version:VersionEnum.V2Rev1);
 
             Assert.NotNull(result);
         }
@@ -70,7 +59,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetPlayerStatsSummariesBySummonerIdTest()
         {
-            var result = await _leagueAPIService.GetPlayerStatsSummariesBySummonerId(19231046);
+            var result = await LeagueAPI.Stats.GetPlayerStatsSummariesBySummonerId(19231046);
 
             Assert.NotNull(result);
         }
@@ -78,7 +67,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetRankedStatsSummariesBySummonerIdTest()
         {
-            var result = await _leagueAPIService.GetRankedStatsSummariesBySummonerId(19231046);
+            var result = await LeagueAPI.Stats.GetRankedStatsSummariesBySummonerId(19231046);
 
             Assert.NotNull(result);
         }
@@ -86,7 +75,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetMasteryPagesBySummonerIdTest()
         {
-            var result = await _leagueAPIService.GetMasteryPagesBySummonerId(19231046);
+            var result = await LeagueAPI.Summoner.GetMasteryPagesBySummonerId(19231046);
 
             Assert.NotNull(result);
         }
@@ -94,7 +83,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetRunePagesBySummonerIdTest()
         {
-            var result = await _leagueAPIService.GetRunePagesBySummonerId(19231046);
+            var result = await LeagueAPI.Summoner.GetRunePagesBySummonerId(19231046);
 
             Assert.NotNull(result);
         }
@@ -102,7 +91,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetSummonerByNameTest()
         {
-            var result = await _leagueAPIService.GetSummonerByName("TuC Kiwii");
+            var result = await LeagueAPI.Summoner.GetSummonerByName("TuC Kiwii");
 
             Assert.NotNull(result);
         }
@@ -110,7 +99,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetSummonerByIdTest()
         {
-            var result = await _leagueAPIService.GetSummonerById(19231046);
+            var result = await LeagueAPI.Summoner.GetSummonerById(19231046);
 
             Assert.NotNull(result);
         }
@@ -118,7 +107,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetSummonerNamesByIdsTest()
         {
-            var result = await _leagueAPIService.GetSummonerNamesByIds(new List<long> { 19231046, 19231045 });
+            var result = await LeagueAPI.Summoner.GetSummonerNamesByIds(new List<long> { 19231046, 19231045 });
 
             Assert.NotNull(result);
         }
@@ -126,7 +115,7 @@ namespace LeagueAPI.PCL.Test
         [Test]
         public async void GetTeamsBySummonerIdTest()
         {
-            var result = await _leagueAPIService.GetTeamsBySummonerId(19231046);
+            var result = await LeagueAPI.Team.GetTeamsBySummonerId(19231046);
 
             Assert.NotNull(result);
         }

@@ -1,4 +1,4 @@
-﻿namespace LeagueAPI.PCL.Models.Enum
+﻿namespace LeagueAPI.PCL.Models.Enums
 {
     public enum SeasonEnum
     {

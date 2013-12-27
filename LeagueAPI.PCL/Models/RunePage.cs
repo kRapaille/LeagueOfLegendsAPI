@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace LeagueAPI.PCL.Models.v1.rev1
+namespace LeagueAPI.PCL.Models
 {
     public class RunePageRoot
     {
