@@ -11,15 +11,10 @@ namespace LeagueAPI.PCL.Models.IoC
         public AutoFacResolver()
         {
             var containerBuilder = new ContainerBuilder();
-
-            Load(containerBuilder);
+            
+            containerBuilder.RegisterType<HttpRequestService>().As<IHttpRequestService>();
 
             _container = containerBuilder.Build();
-        }
-
-        private void Load(ContainerBuilder containerBuilder)
-        {
-            containerBuilder.RegisterType<HttpRequestService>().As<IHttpRequestService>();
         }
 
         public T Resolve<T>()
