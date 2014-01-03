@@ -34,7 +34,7 @@ namespace LeagueAPI.PCL.Services
                 GetVersionAsString(version), 
                 summonerId);
 
-            var recentGamesRoot = await SendRequest<RecentGamesRoot>(url);
+            var recentGamesRoot = await GetResponse<RecentGamesRoot>(url);
 
             return recentGamesRoot.Games.AsEnumerable();
         }

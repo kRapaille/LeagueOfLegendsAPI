@@ -39,7 +39,7 @@ namespace LeagueAPI.PCL.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var playerStatSummaryRoot = await SendRequest<PlayerStatSummaryRoot>(url);
+            var playerStatSummaryRoot = await GetResponse<PlayerStatSummaryRoot>(url);
 
             return playerStatSummaryRoot.PlayerStatSummaries.AsEnumerable();
         }
@@ -58,7 +58,7 @@ namespace LeagueAPI.PCL.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var rankedStatsRoot = await SendRequest<RankedStats>(url);
+            var rankedStatsRoot = await GetResponse<RankedStats>(url);
 
             return rankedStatsRoot;
         }

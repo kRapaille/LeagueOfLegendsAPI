@@ -23,7 +23,7 @@ namespace LeagueAPI.PCL.Services
         {
             var url = string.Format("lol/{0}/v1.1/champion?freeToPlay={1}", GetRegion(region), freeToPlay);
 
-            var championsRoot = await SendRequest<ChampionsRoot>(url);
+            var championsRoot = await GetResponse<ChampionsRoot>(url);
 
             return championsRoot.Champions.AsEnumerable();
         }

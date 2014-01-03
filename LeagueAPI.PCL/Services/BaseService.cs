@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using LeagueAPI.PCL.Helpers;
 using LeagueAPI.PCL.Interfaces;
 using LeagueAPI.PCL.Models.Constants;
 using LeagueAPI.PCL.Models.Enums;
+using LeagueAPI.PCL.Models.Exceptions;
+using Newtonsoft.Json;
 
 namespace LeagueAPI.PCL.Services
 {
@@ -18,19 +21,37 @@ namespace LeagueAPI.PCL.Services
 
         protected VersionEnum[] CompatibleVersions;
 
-        protected async Task<T> SendRequest<T>(string relativeUrl) where T : class
+        protected async Task<T> GetResponse<T>(string relativeUrl) where T : class
         {
-            return await SendRequest<T>(new Uri(relativeUrl, UriKind.Relative));
+            return await GetResponse<T>(new Uri(relativeUrl, UriKind.Relative));
         }
 
-        protected async Task<T> SendRequest<T>(Uri relativeUri) where T : class
+        protected async Task<T> GetResponse<T>(Uri relativeUri) where T : class
         {
             var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
 
             var keyParameter = string.Format("api_key={0}", Key);
             uriBuilder.AddQueryParameter(keyParameter);
 
-            return await HttpRequestService.SendRequest<T>(uriBuilder.Uri);
+            var response = await HttpRequestService.SendRequest<T>(uriBuilder.Uri);
+
+            T result;
+
+            var content = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+            {
+                result = JsonConvert.DeserializeObject<T>(content);
+            }
+            else
+            {
+                Debug.WriteLine(uriBuilder.Uri.ToString());
+
+                var apiRequestError = JsonConvert.DeserializeObject<APIRequestError>(content);
+                throw new APIRequestException(apiRequestError, uriBuilder.Uri.ToString());
+            }
+
+            return result;
         }
         
         protected string GetRegion(RegionEnum? region)

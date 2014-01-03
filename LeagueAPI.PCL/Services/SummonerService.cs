@@ -34,7 +34,7 @@ namespace LeagueAPI.PCL.Services
                 GetVersionAsString(verion), 
                 summonerId);
 
-            var masteryPagesRoot = await SendRequest<MasteryPagesRoot>(url);
+            var masteryPagesRoot = await GetResponse<MasteryPagesRoot>(url);
 
             return masteryPagesRoot.Pages.AsEnumerable();
         }
@@ -49,7 +49,7 @@ namespace LeagueAPI.PCL.Services
                 GetVersionAsString(verion), 
                 summonerId);
 
-            var runePageRoot = await SendRequest<RunePageRoot>(url);
+            var runePageRoot = await GetResponse<RunePageRoot>(url);
 
             return runePageRoot.Pages.AsEnumerable();
         }
@@ -64,7 +64,7 @@ namespace LeagueAPI.PCL.Services
                 GetVersionAsString(verion),
                 name);
 
-            return await SendRequest<Summoner>(url);
+            return await GetResponse<Summoner>(url);
         }
 
         public async Task<Summoner> GetSummonerById(
@@ -77,7 +77,7 @@ namespace LeagueAPI.PCL.Services
                 GetVersionAsString(verion),
                 summonerId);
 
-            return await SendRequest<Summoner>(url);
+            return await GetResponse<Summoner>(url);
         }
 
         public async Task<IEnumerable<SummonerInfos>> GetSummonerNamesByIds(
@@ -90,7 +90,7 @@ namespace LeagueAPI.PCL.Services
                 GetVersionAsString(verion),
                 string.Join(",", summonerIds));
 
-            var summonerInfosRoot = await SendRequest<SummonerInfosRoot>(url);
+            var summonerInfosRoot = await GetResponse<SummonerInfosRoot>(url);
 
             return summonerInfosRoot.Summoners.AsEnumerable();
         }

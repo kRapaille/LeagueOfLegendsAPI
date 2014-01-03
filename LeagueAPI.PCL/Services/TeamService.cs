@@ -37,7 +37,7 @@ namespace LeagueAPI.PCL.Services
                 VersionConsts.Versions[versionValue],
                 summonerId);
 
-            return await SendRequest<List<Team>>(url);
+            return await GetResponse<List<Team>>(url);
         }
     }
 }
