@@ -15,9 +15,9 @@ namespace LeagueAPI.PCL.Services
     {
         private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/");
         
-        internal static IHttpRequestService HttpRequestService;
-        internal static string Key;
-        internal static RegionEnum? DefaultRegion;
+        internal static IHttpRequestService HttpRequestService { private get; set; }
+        internal static string Key { private get; set; }
+        internal static RegionEnum? DefaultRegion { private get; set; }
 
         protected VersionEnum[] CompatibleVersions;
 
