@@ -7,6 +7,12 @@ Portable C# Library for League of legends API
 
 Do not hesitate to reach me on twitter [@kRapaille](http://www.twitter.com/kRapaille)
 
+Install
+-------
+
+The library is on NuGet. You can find it [here](https://www.nuget.org/packages/Remake.PortableLeagueAPI/).
+
+    PM> Install-Package Remake.PortableLeagueAPI
 
 Init
 ----
