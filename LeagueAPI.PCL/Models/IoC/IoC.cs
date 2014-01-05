@@ -1,6 +1,6 @@
-﻿using LeagueAPI.PCL.Interfaces;
+﻿using PortableLeagueAPI.Interfaces;
 
-namespace LeagueAPI.PCL.Models.IoC
+namespace PortableLeagueAPI.Models.IoC
 {
     public class IoC
     {

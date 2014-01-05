@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using LeagueAPI.PCL.Models.Enums;
+using PortableLeagueAPI.Models.Enums;
 
-namespace LeagueAPI.PCL.Models.Constants
+namespace PortableLeagueAPI.Models.Constants
 {
     public class VersionConsts
     {

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace LeagueAPI.PCL.Models
+namespace PortableLeagueAPI.Models
 {
     public class Summoner
     {

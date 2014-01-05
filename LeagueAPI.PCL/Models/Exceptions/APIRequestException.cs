@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeagueAPI.PCL.Models.Exceptions
+namespace PortableLeagueAPI.Models.Exceptions
 {
     public class APIRequestException : Exception
     {

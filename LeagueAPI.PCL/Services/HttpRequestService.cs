@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using LeagueAPI.PCL.Interfaces;
+using PortableLeagueAPI.Interfaces;
 
-namespace LeagueAPI.PCL.Services
+namespace PortableLeagueAPI.Services
 {
     public class HttpRequestService : IHttpRequestService
     {

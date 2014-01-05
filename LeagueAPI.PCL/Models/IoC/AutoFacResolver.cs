@@ -1,8 +1,8 @@
 ﻿using Autofac;
-using LeagueAPI.PCL.Interfaces;
-using LeagueAPI.PCL.Services;
+using PortableLeagueAPI.Interfaces;
+using PortableLeagueAPI.Services;
 
-namespace LeagueAPI.PCL.Models.IoC
+namespace PortableLeagueAPI.Models.IoC
 {
     public class AutoFacResolver : IResolver
     {

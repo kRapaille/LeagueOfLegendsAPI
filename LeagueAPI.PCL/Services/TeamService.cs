@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using LeagueAPI.PCL.Models;
-using LeagueAPI.PCL.Models.Constants;
-using LeagueAPI.PCL.Models.Enums;
+using PortableLeagueAPI.Models;
+using PortableLeagueAPI.Models.Constants;
+using PortableLeagueAPI.Models.Enums;
 
-namespace LeagueAPI.PCL.Services
+namespace PortableLeagueAPI.Services
 {
     public class TeamService : BaseService
     {

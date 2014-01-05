@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace LeagueAPI.PCL.Models.Exceptions
+namespace PortableLeagueAPI.Models.Exceptions
 {
     public class APIRequestError
     {

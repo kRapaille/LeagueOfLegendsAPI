@@ -1,9 +1,9 @@
-﻿using LeagueAPI.PCL.Interfaces;
-using LeagueAPI.PCL.Models.Enums;
-using LeagueAPI.PCL.Models.IoC;
-using LeagueAPI.PCL.Services;
+﻿using PortableLeagueAPI.Interfaces;
+using PortableLeagueAPI.Models.Enums;
+using PortableLeagueAPI.Models.IoC;
+using PortableLeagueAPI.Services;
 
-namespace LeagueAPI.PCL
+namespace PortableLeagueAPI
 {
     public static class LeagueAPI
     {

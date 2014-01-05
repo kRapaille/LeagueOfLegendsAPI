@@ -1,4 +1,4 @@
-﻿namespace LeagueAPI.PCL.Interfaces
+﻿namespace PortableLeagueAPI.Interfaces
 {
     public interface IResolver
     {

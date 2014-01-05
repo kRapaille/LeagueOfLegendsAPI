@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace LeagueAPI.PCL.Interfaces
+namespace PortableLeagueAPI.Interfaces
 {
     public interface IHttpRequestService
     {

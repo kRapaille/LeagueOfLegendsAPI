@@ -1,4 +1,4 @@
-﻿namespace LeagueAPI.PCL.Models.Enums
+﻿namespace PortableLeagueAPI.Models.Enums
 {
     public enum VersionEnum
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeagueAPI.PCL.Helpers
+namespace PortableLeagueAPI.Helpers
 {
     internal static class UriExtensions
     {

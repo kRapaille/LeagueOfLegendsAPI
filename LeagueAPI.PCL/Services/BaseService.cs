@@ -2,14 +2,14 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using LeagueAPI.PCL.Helpers;
-using LeagueAPI.PCL.Interfaces;
-using LeagueAPI.PCL.Models.Constants;
-using LeagueAPI.PCL.Models.Enums;
-using LeagueAPI.PCL.Models.Exceptions;
 using Newtonsoft.Json;
+using PortableLeagueAPI.Helpers;
+using PortableLeagueAPI.Interfaces;
+using PortableLeagueAPI.Models.Constants;
+using PortableLeagueAPI.Models.Enums;
+using PortableLeagueAPI.Models.Exceptions;
 
-namespace LeagueAPI.PCL.Services
+namespace PortableLeagueAPI.Services
 {
     public abstract class BaseService
     {

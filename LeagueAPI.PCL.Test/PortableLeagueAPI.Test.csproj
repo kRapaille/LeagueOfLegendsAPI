@@ -6,8 +6,8 @@
     <ProjectGuid>{019388B8-944D-4FC9-A7CD-8D80F4C48A38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LeagueAPI.PCL.Test</RootNamespace>
-    <AssemblyName>LeagueAPI.PCL.Test</AssemblyName>
+    <RootNamespace>PortableLeagueAPI.Test</RootNamespace>
+    <AssemblyName>PortableLeagueAPI.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LeagueAPI.PCL\LeagueAPI.PCL.csproj">
+    <ProjectReference Include="..\LeagueAPI.PCL\PortableLeagueAPI.csproj">
       <Project>{B6006AB6-FFC5-46A6-9680-19A6E8863FD3}</Project>
-      <Name>LeagueAPI.PCL</Name>
+      <Name>PortableLeagueAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

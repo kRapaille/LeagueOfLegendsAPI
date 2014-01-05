@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using LeagueAPI.PCL.Models.Enums;
 using NUnit.Framework;
+using PortableLeagueAPI.Models.Enums;
 
-namespace LeagueAPI.PCL.Test
+namespace PortableLeagueAPI.Test
 {
     [TestFixture]
     public class LeagueAPIServiceTests
@@ -11,7 +11,7 @@ namespace LeagueAPI.PCL.Test
         public LeagueAPIServiceTests()
         {
             // TODO : Don't forget to pass your api key
-            LeagueAPI.Init("YOU KEY HERE");
+            LeagueAPI.Init("YOUR KEY HERE");
             LeagueAPI.SetDefaultRegion(RegionEnum.Euw);
         }
 

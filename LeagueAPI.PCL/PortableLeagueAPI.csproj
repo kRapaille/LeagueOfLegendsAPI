@@ -8,8 +8,8 @@
     <ProjectGuid>{B6006AB6-FFC5-46A6-9680-19A6E8863FD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LeagueAPI.PCL</RootNamespace>
-    <AssemblyName>LeagueAPI.PCL</AssemblyName>
+    <RootNamespace>PortableLeagueAPI</RootNamespace>
+    <AssemblyName>PortableLeagueAPI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

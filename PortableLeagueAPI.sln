@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueAPI.PCL", "LeagueAPI.PCL\LeagueAPI.PCL.csproj", "{B6006AB6-FFC5-46A6-9680-19A6E8863FD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueAPI", "LeagueAPI.PCL\PortableLeagueAPI.csproj", "{B6006AB6-FFC5-46A6-9680-19A6E8863FD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueAPI.PCL.Test", "LeagueAPI.PCL.Test\LeagueAPI.PCL.Test.csproj", "{019388B8-944D-4FC9-A7CD-8D80F4C48A38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueAPI.Test", "LeagueAPI.PCL.Test\PortableLeagueAPI.Test.csproj", "{019388B8-944D-4FC9-A7CD-8D80F4C48A38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
