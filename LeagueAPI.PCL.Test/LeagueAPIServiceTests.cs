@@ -11,7 +11,7 @@ namespace PortableLeagueAPI.Test
         public LeagueAPIServiceTests()
         {
             // TODO : Don't forget to pass your api key
-            LeagueAPI.Init("610efb89-3c8a-4140-8670-0c74221460ad");
+            LeagueAPI.Init("YOUR KEY HERE");
             LeagueAPI.SetDefaultRegion(RegionEnum.Euw);
         }
 

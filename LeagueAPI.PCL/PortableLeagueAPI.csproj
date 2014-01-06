@@ -46,9 +46,9 @@
     <Compile Include="Models\Exceptions\APIRequestException.cs" />
     <Compile Include="Models\Enums\RegionEnum.cs" />
     <Compile Include="Models\IoC\IoC.cs" />
+    <Compile Include="Models\IoC\LeagueResolver.cs" />
     <Compile Include="Models\League\League.cs" />
     <Compile Include="Models\Summoner\MasteryPage.cs" />
-    <Compile Include="Models\IoC\AutoFacResolver.cs" />
     <Compile Include="Models\Stats\PlayerStatSummary.cs" />
     <Compile Include="Models\Stats\RankedStats.cs" />
     <Compile Include="Models\Game\RecentGames.cs" />
@@ -68,9 +68,6 @@
     <Compile Include="Services\TeamService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.2.0\lib\portable-win+net40+sl50+wp8\Autofac.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>

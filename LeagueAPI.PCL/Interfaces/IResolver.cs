@@ -2,6 +2,6 @@
 {
     public interface IResolver
     {
-        T Resolve<T>();
+        T Resolve<T>() where T : class;
     }
 }

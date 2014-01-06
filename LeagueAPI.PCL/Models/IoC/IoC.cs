@@ -6,7 +6,7 @@ namespace PortableLeagueAPI.Models.IoC
     {
         private static IResolver _resolver;
 
-        public static T Resolve<T>()
+        public static T Resolve<T>() where T : class
         {
             return _resolver.Resolve<T>();
         }
