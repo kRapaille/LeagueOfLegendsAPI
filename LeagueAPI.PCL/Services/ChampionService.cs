@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueAPI.Models;
+using PortableLeagueAPI.Models.Champion;
 using PortableLeagueAPI.Models.Enums;
 
 namespace PortableLeagueAPI.Services

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PortableLeagueAPI.Models
+namespace PortableLeagueAPI.Models.Champion
 {
     public class ChampionsRoot
     {
