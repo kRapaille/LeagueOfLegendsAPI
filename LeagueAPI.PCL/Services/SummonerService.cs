@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueAPI.Models;
 using PortableLeagueAPI.Models.Enums;
+using PortableLeagueAPI.Models.Summoner;
 
 namespace PortableLeagueAPI.Services
 {

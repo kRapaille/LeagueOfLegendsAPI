@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using PortableLeagueAPI.Models;
 using PortableLeagueAPI.Models.Constants;
 using PortableLeagueAPI.Models.Enums;
+using PortableLeagueAPI.Models.League;
 
 namespace PortableLeagueAPI.Services
 {

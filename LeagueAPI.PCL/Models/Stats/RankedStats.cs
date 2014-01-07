@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PortableLeagueAPI.Models
+namespace PortableLeagueAPI.Models.Stats
 {
     public class RankedStats
     {
@@ -8,7 +8,7 @@ namespace PortableLeagueAPI.Models
         public long ModifyDate { get; set; }
 
         [JsonProperty("champions")]
-        public Champion[] Champions { get; set; }
+        public Champion.Champion[] Champions { get; set; }
 
         [JsonProperty("summonerId")]
         public int SummonerId { get; set; }

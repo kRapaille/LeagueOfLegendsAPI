@@ -18,7 +18,7 @@ namespace PortableLeagueAPI
             string key,
             IResolver resolver = null)
         {
-            IoC.Initialize(resolver ?? new AutoFacResolver());
+            IoC.Initialize(resolver ?? new LeagueResolver());
 
             BaseService.HttpRequestService = IoC.Resolve<IHttpRequestService>();
             BaseService.Key = key;
