@@ -31,7 +31,7 @@ namespace PortableLeagueAPI.Services
             VersionEnum? verion = null)
         {
             var url = string.Format("lol/{0}/{1}/summoner/{2}/masteries",
-                GetRegion(region),
+                GetRegionAsString(region),
                 GetVersionAsString(verion), 
                 summonerId);
 
@@ -46,7 +46,7 @@ namespace PortableLeagueAPI.Services
             VersionEnum? verion = null)
         {
             var url = string.Format("lol/{0}/{1}/summoner/{2}/runes",
-                GetRegion(region),
+                GetRegionAsString(region),
                 GetVersionAsString(verion), 
                 summonerId);
 
@@ -61,7 +61,7 @@ namespace PortableLeagueAPI.Services
             VersionEnum? verion = null)
         {
             var url = string.Format("lol/{0}/{1}/summoner/by-name/{2}",
-                GetRegion(region),
+                GetRegionAsString(region),
                 GetVersionAsString(verion),
                 name);
 
@@ -74,7 +74,7 @@ namespace PortableLeagueAPI.Services
             VersionEnum? verion = null)
         {
             var url = string.Format("lol/{0}/{1}/summoner/{2}",
-                GetRegion(region),
+                GetRegionAsString(region),
                 GetVersionAsString(verion),
                 summonerId);
 
@@ -87,7 +87,7 @@ namespace PortableLeagueAPI.Services
             VersionEnum? verion = null)
         {
             var url = string.Format("lol/{0}/{1}/summoner/{2}/name", 
-                GetRegion(region), 
+                GetRegionAsString(region), 
                 GetVersionAsString(verion),
                 string.Join(",", summonerIds));
 

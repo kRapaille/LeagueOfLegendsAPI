@@ -33,7 +33,7 @@ namespace PortableLeagueAPI.Services
             VersionEnum? verion = null)
         {
             var url = string.Format("lol/{0}/{1}/stats/by-summoner/{2}/summary",
-                GetRegion(region),
+                GetRegionAsString(region),
                 GetVersionAsString(verion),
                 summonerId);
 
@@ -52,7 +52,7 @@ namespace PortableLeagueAPI.Services
             VersionEnum? verion = null)
         {
             var url = string.Format("lol/{0}/{1}/stats/by-summoner/{2}/ranked", 
-                GetRegion(region), 
+                GetRegionAsString(region), 
                 GetVersionAsString(verion),
                 summonerId);
 

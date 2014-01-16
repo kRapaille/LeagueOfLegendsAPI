@@ -13,6 +13,7 @@ namespace PortableLeagueAPI
         public static StatsService Stats { get; private set; }
         public static SummonerService Summoner { get; private set; }
         public static TeamService Team { get; private set; }
+        public static StaticService Static { get; private set; }
         
         public static void Init(
             string key,
@@ -29,6 +30,7 @@ namespace PortableLeagueAPI
             Stats = StatsService.Instance;
             Summoner = SummonerService.Instance;
             Team = TeamService.Instance;
+            Static = StaticService.Instance;
         }
 
         public static void SetDefaultRegion(RegionEnum regionEnum)
