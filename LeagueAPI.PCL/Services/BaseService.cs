@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PortableLeagueAPI.Helpers;
@@ -45,10 +46,29 @@ namespace PortableLeagueAPI.Services
             }
             else
             {
-                Debug.WriteLine(uriBuilder.Uri.ToString());
+                var url = uriBuilder.Uri.ToString();
 
-                var apiRequestError = JsonConvert.DeserializeObject<APIRequestError>(content);
-                throw new APIRequestException(apiRequestError, uriBuilder.Uri.ToString());
+                Debug.WriteLine(url);
+
+                APIRequestError apiRequestError;
+
+                if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    apiRequestError = new APIRequestError
+                    {
+                        Status = new Status
+                        {
+                            Message = "Not found",
+                            StatusCode = 404
+                        }
+                    };
+                }
+                else
+                {
+                    apiRequestError = JsonConvert.DeserializeObject<APIRequestError>(content);
+                }
+
+                throw new APIRequestException(apiRequestError, url);
             }
 
             return result;
