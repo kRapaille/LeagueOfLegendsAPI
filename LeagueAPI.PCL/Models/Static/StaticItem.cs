@@ -68,7 +68,7 @@ namespace PortableLeagueAPI.Models.Static
 
     public class Rune
     {
-        [JsonProperty("I-isrune")]
+        [JsonProperty("isrune")]
         public bool IsRune { get; set; }
 
         [JsonProperty("tier")]

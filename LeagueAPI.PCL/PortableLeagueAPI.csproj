@@ -39,7 +39,9 @@
     <Compile Include="Interfaces\IHttpRequestService.cs" />
     <Compile Include="Interfaces\IResolver.cs" />
     <Compile Include="LeagueAPI.cs" />
+    <Compile Include="Models\Constants\LanguageCodeConsts.cs" />
     <Compile Include="Models\Constants\VersionConsts.cs" />
+    <Compile Include="Models\Enums\LanguageEnum.cs" />
     <Compile Include="Models\Enums\MapEnum.cs" />
     <Compile Include="Models\Enums\QueueEnum.cs" />
     <Compile Include="Models\Enums\SeasonEnum.cs" />
