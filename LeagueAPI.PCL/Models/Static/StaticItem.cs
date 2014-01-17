@@ -5,115 +5,295 @@ namespace PortableLeagueAPI.Models.Static
 {
     public class Basic
     {
-        public string name { get; set; }
-        public Rune rune { get; set; }
-        public Gold gold { get; set; }
-        public string group { get; set; }
-        public string description { get; set; }
-        public string colloq { get; set; }
-        public string plaintext { get; set; }
-        public bool consumed { get; set; }
-        public int stacks { get; set; }
-        public int depth { get; set; }
-        public bool consumeOnFull { get; set; }
-        public object[] from { get; set; }
-        public object[] into { get; set; }
-        public int specialRecipe { get; set; }
-        public bool inStore { get; set; }
-        public bool hideFromAll { get; set; }
-        public string requiredChampion { get; set; }
-        public Stats stats { get; set; }
-        public object[] tags { get; set; }
-        public Dictionary<string, bool> maps { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("rune")]
+        public Rune Rune { get; set; }
+
+        [JsonProperty("gold")]
+        public Gold Gold { get; set; }
+
+        [JsonProperty("group")]
+        public string Group { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("colloq")]
+        public string Colloq { get; set; }
+
+        [JsonProperty("plaintext")]
+        public string Plaintext { get; set; }
+
+        [JsonProperty("consumed")]
+        public bool Consumed { get; set; }
+
+        [JsonProperty("stacks")]
+        public int Stacks { get; set; }
+
+        [JsonProperty("depth")]
+        public int Depth { get; set; }
+
+        [JsonProperty("consumeOnFull")]
+        public bool ConsumeOnFull { get; set; }
+
+        [JsonProperty("from")]
+        public object[] From { get; set; }
+
+        [JsonProperty("into")]
+        public object[] Into { get; set; }
+
+        [JsonProperty("specialRecipe")]
+        public int SpecialRecipe { get; set; }
+
+        [JsonProperty("inStore")]
+        public bool InStore { get; set; }
+
+        [JsonProperty("hideFromAll")]
+        public bool HideFromAll { get; set; }
+
+        [JsonProperty("requiredChampion")]
+        public string RequiredChampion { get; set; }
+
+        [JsonProperty("stats")]
+        public Stats Stats { get; set; }
+
+        [JsonProperty("tags")]
+        public object[] Tags { get; set; }
+
+        [JsonProperty("maps")]
+        public Dictionary<string, bool> Maps { get; set; }
     }
 
     public class Rune
     {
-        public bool isrune { get; set; }
-        public int tier { get; set; }
-        public string type { get; set; }
+        [JsonProperty("I-isrune")]
+        public bool IsRune { get; set; }
+
+        [JsonProperty("tier")]
+        public int Tier { get; set; }
+
+        [JsonProperty("type")]
+        public string Type { get; set; }
     }
 
     public class Gold
     {
         [JsonProperty("base")]
-        public int _base { get; set; }
-        public int total { get; set; }
-        public int sell { get; set; }
-        public bool purchasable { get; set; }
+        public int Base { get; set; }
+
+        [JsonProperty("total")]
+        public int Total { get; set; }
+
+        [JsonProperty("sell")]
+        public int Sell { get; set; }
+
+        [JsonProperty("purchasable")]
+        public bool Purchasable { get; set; }
     }
 
     public class Stats
     {
+        [JsonProperty("FlatHPPoolMod")]
         public float FlatHPPoolMod { get; set; }
-        public float rFlatHPModPerLevel { get; set; }
+
+        [JsonProperty("rFlatHPModPerLevel")]
+        public float RFlatHPModPerLevel { get; set; }
+
+        [JsonProperty("FlatMPPoolMod")]
         public float FlatMPPoolMod { get; set; }
-        public float rFlatMPModPerLevel { get; set; }
+
+        [JsonProperty("rFlatMPModPerLevel")]
+        public float RFlatMPModPerLevel { get; set; }
+
+        [JsonProperty("PercentHPPoolMod")]
         public float PercentHPPoolMod { get; set; }
+
+        [JsonProperty("PercentMPPoolMod")]
         public float PercentMPPoolMod { get; set; }
+
+        [JsonProperty("FlatHPRegenMod")]
         public float FlatHPRegenMod { get; set; }
-        public float rFlatHPRegenModPerLevel { get; set; }
+
+        [JsonProperty("rFlatHPRegenModPerLevel")]
+        public float RFlatHPRegenModPerLevel { get; set; }
+
+        [JsonProperty("PercentHPRegenMod")]
         public float PercentHPRegenMod { get; set; }
+
+        [JsonProperty("FlatMPRegenMod")]
         public float FlatMPRegenMod { get; set; }
-        public float rFlatMPRegenModPerLevel { get; set; }
+
+        [JsonProperty("rFlatMPRegenModPerLevel")]
+        public float RFlatMPRegenModPerLevel { get; set; }
+
+        [JsonProperty("PercentMPRegenMod")]
         public float PercentMPRegenMod { get; set; }
+
+        [JsonProperty("FlatArmorMod")]
         public float FlatArmorMod { get; set; }
-        public float rFlatArmorModPerLevel { get; set; }
+
+        [JsonProperty("rFlatArmorModPerLevel")]
+        public float RFlatArmorModPerLevel { get; set; }
+
+        [JsonProperty("PercentArmorMod")]
         public float PercentArmorMod { get; set; }
-        public float rFlatArmorPenetrationMod { get; set; }
-        public float rFlatArmorPenetrationModPerLevel { get; set; }
-        public float rPercentArmorPenetrationMod { get; set; }
-        public float rPercentArmorPenetrationModPerLevel { get; set; }
+
+        [JsonProperty("rFlatArmorPenetrationMod")]
+        public float RFlatArmorPenetrationMod { get; set; }
+
+        [JsonProperty("rFlatArmorPenetrationModPerLevel")]
+        public float RFlatArmorPenetrationModPerLevel { get; set; }
+
+        [JsonProperty("rPercentArmorPenetrationMod")]
+        public float RPercentArmorPenetrationMod { get; set; }
+
+        [JsonProperty("rPercentArmorPenetrationModPerLevel")]
+        public float RPercentArmorPenetrationModPerLevel { get; set; }
+
+        [JsonProperty("FlatPhysicalDamageMod")]
         public float FlatPhysicalDamageMod { get; set; }
-        public float rFlatPhysicalDamageModPerLevel { get; set; }
+
+        [JsonProperty("rFlatPhysicalDamageModPerLevel")]
+        public float RFlatPhysicalDamageModPerLevel { get; set; }
+
+        [JsonProperty("PercentPhysicalDamageMod")]
         public float PercentPhysicalDamageMod { get; set; }
+
+        [JsonProperty("FlatMagicDamageMod")]
         public float FlatMagicDamageMod { get; set; }
-        public float rFlatMagicDamageModPerLevel { get; set; }
+
+        [JsonProperty("rFlatMagicDamageModPerLevel")]
+        public float RFlatMagicDamageModPerLevel { get; set; }
+
+        [JsonProperty("PercentMagicDamageMod")]
         public float PercentMagicDamageMod { get; set; }
+
+        [JsonProperty("FlatMovementSpeedMod")]
         public float FlatMovementSpeedMod { get; set; }
-        public float rFlatMovementSpeedModPerLevel { get; set; }
+
+        [JsonProperty("rFlatMovementSpeedModPerLevel")]
+        public float RFlatMovementSpeedModPerLevel { get; set; }
+
+        [JsonProperty("PercentMovementSpeedMod")]
         public float PercentMovementSpeedMod { get; set; }
-        public float rPercentMovementSpeedModPerLevel { get; set; }
+
+        [JsonProperty("rPercentMovementSpeedModPerLevel")]
+        public float RPercentMovementSpeedModPerLevel { get; set; }
+
+        [JsonProperty("FlatAttackSpeedMod")]
         public float FlatAttackSpeedMod { get; set; }
+
+        [JsonProperty("PercentAttackSpeedMod")]
         public float PercentAttackSpeedMod { get; set; }
-        public float rPercentAttackSpeedModPerLevel { get; set; }
-        public float rFlatDodgeMod { get; set; }
-        public float rFlatDodgeModPerLevel { get; set; }
+
+        [JsonProperty("rPercentAttackSpeedModPerLevel")]
+        public float RPercentAttackSpeedModPerLevel { get; set; }
+
+        [JsonProperty("rFlatDodgeMod")]
+        public float RFlatDodgeMod { get; set; }
+
+        [JsonProperty("rFlatDodgeModPerLevel")]
+        public float RFlatDodgeModPerLevel { get; set; }
+
+        [JsonProperty("PercentDodgeMod")]
         public float PercentDodgeMod { get; set; }
+
+        [JsonProperty("FlatCritChanceMod")]
         public float FlatCritChanceMod { get; set; }
-        public float rFlatCritChanceModPerLevel { get; set; }
+
+        [JsonProperty("rFlatCritChanceModPerLevel")]
+        public float RFlatCritChanceModPerLevel { get; set; }
+
+        [JsonProperty("PercentCritChanceMod")]
         public float PercentCritChanceMod { get; set; }
+
+        [JsonProperty("FlatCritDamageMod")]
         public float FlatCritDamageMod { get; set; }
-        public float rFlatCritDamageModPerLevel { get; set; }
+
+        [JsonProperty("rFlatCritDamageModPerLevel")]
+        public float RFlatCritDamageModPerLevel { get; set; }
+
+        [JsonProperty("PercentCritDamageMod")]
         public float PercentCritDamageMod { get; set; }
+
+        [JsonProperty("FlatBlockMod")]
         public float FlatBlockMod { get; set; }
+
+        [JsonProperty("PercentBlockMod")]
         public float PercentBlockMod { get; set; }
+
+        [JsonProperty("FlatSpellBlockMod")]
         public float FlatSpellBlockMod { get; set; }
-        public float rFlatSpellBlockModPerLevel { get; set; }
+
+        [JsonProperty("rFlatSpellBlockModPerLevel")]
+        public float RFlatSpellBlockModPerLevel { get; set; }
+
+        [JsonProperty("PercentSpellBlockMod")]
         public float PercentSpellBlockMod { get; set; }
+
+        [JsonProperty("FlatEXPBonus")]
         public float FlatEXPBonus { get; set; }
+
+        [JsonProperty("PercentEXPBonus")]
         public float PercentEXPBonus { get; set; }
-        public float rPercentCooldownMod { get; set; }
-        public float rPercentCooldownModPerLevel { get; set; }
-        public float rFlatTimeDeadMod { get; set; }
-        public float rFlatTimeDeadModPerLevel { get; set; }
-        public float rPercentTimeDeadMod { get; set; }
-        public float rPercentTimeDeadModPerLevel { get; set; }
-        public float rFlatGoldPer10Mod { get; set; }
-        public float rFlatMagicPenetrationMod { get; set; }
-        public float rFlatMagicPenetrationModPerLevel { get; set; }
-        public float rPercentMagicPenetrationMod { get; set; }
-        public float rPercentMagicPenetrationModPerLevel { get; set; }
+
+        [JsonProperty("rPercentCooldownMod")]
+        public float RPercentCooldownMod { get; set; }
+
+        [JsonProperty("rPercentCooldownModPerLevel")]
+        public float RPercentCooldownModPerLevel { get; set; }
+
+        [JsonProperty("rFlatTimeDeadMod")]
+        public float RFlatTimeDeadMod { get; set; }
+
+        [JsonProperty("rFlatTimeDeadModPerLevel")]
+        public float RFlatTimeDeadModPerLevel { get; set; }
+
+        [JsonProperty("rPercentTimeDeadMod")]
+        public float RPercentTimeDeadMod { get; set; }
+
+        [JsonProperty("rPercentTimeDeadModPerLevel")]
+        public float RPercentTimeDeadModPerLevel { get; set; }
+
+        [JsonProperty("rFlatGoldPer10Mod")]
+        public float RFlatGoldPer10Mod { get; set; }
+
+        [JsonProperty("rFlatMagicPenetrationMod")]
+        public float RFlatMagicPenetrationMod { get; set; }
+
+        [JsonProperty("rFlatMagicPenetrationModPerLevel")]
+        public float RFlatMagicPenetrationModPerLevel { get; set; }
+
+        [JsonProperty("rPercentMagicPenetrationMod")]
+        public float RPercentMagicPenetrationMod { get; set; }
+
+        [JsonProperty("rPercentMagicPenetrationModPerLevel")]
+        public float RPercentMagicPenetrationModPerLevel { get; set; }
     }
 
     public class Image
     {
-        public string full { get; set; }
-        public string sprite { get; set; }
-        public string group { get; set; }
-        public int x { get; set; }
-        public int y { get; set; }
-        public int w { get; set; }
-        public int h { get; set; }
+        [JsonProperty("full")]
+        public string Full { get; set; }
+
+        [JsonProperty("sprite")]
+        public string Sprite { get; set; }
+
+        [JsonProperty("group")]
+        public string Group { get; set; }
+
+        [JsonProperty("x")]
+        public int X { get; set; }
+
+        [JsonProperty("y")]
+        public int Y { get; set; }
+
+        [JsonProperty("w")]
+        public int Width { get; set; }
+
+        [JsonProperty("h")]
+        public int Height { get; set; }
     }
 }

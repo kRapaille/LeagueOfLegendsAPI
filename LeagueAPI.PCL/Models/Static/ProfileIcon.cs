@@ -1,17 +1,26 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace PortableLeagueAPI.Models.Static
 {
     public class ProfileIconRoot
     {
-        public string type { get; set; }
-        public string version { get; set; }
-        public Dictionary<int, ProfileIcon> data { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
+
+        [JsonProperty("version")]
+        public string Version { get; set; }
+
+        [JsonProperty("data")]
+        public Dictionary<int, ProfileIcon> Data { get; set; }
     }
 
     public class ProfileIcon
     {
-        public int id { get; set; }
-        public Image image { get; set; }
+        [JsonProperty("id")]
+        public int ID { get; set; }
+
+        [JsonProperty("image")]
+        public Image Image { get; set; }
     }
 }

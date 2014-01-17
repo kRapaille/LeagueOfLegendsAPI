@@ -1,20 +1,30 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace PortableLeagueAPI.Models.Static
 {
     public class LanguageRoot
     {
-        public string type { get; set; }
-        public string version { get; set; }
-        public Dictionary<string, string> data { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
-        public Tree tree { get; set; }
+        [JsonProperty("version")]
+        public string Version { get; set; }
+
+        [JsonProperty("data")]
+        public Dictionary<string, string> Data { get; set; }
+
+        [JsonProperty("tree")]
+        public Tree Tree { get; set; }
     }
 
     
     public class Tree
     {
-        public string searchKeyIgnore { get; set; }
-        public object[] searchKeyRemap { get; set; }
+        [JsonProperty("searchKeyIgnore")]
+        public string SearchKeyIgnore { get; set; }
+
+        [JsonProperty("searchKeyRemap")]
+        public object[] SearchKeyRemap { get; set; }
     }
 }

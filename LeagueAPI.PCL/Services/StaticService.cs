@@ -43,7 +43,7 @@ namespace PortableLeagueAPI.Services
 
             var result = await GetResponse<ItemRootObject>(new Uri(url));
 
-            return result.data;
+            return result.Data;
         }
 
         public async Task<Dictionary<string, RuneItem>> GetRunes(
@@ -55,7 +55,7 @@ namespace PortableLeagueAPI.Services
 
             var result = await GetResponse<RuneRootObject>(new Uri(url));
 
-            return result.data;
+            return result.Data;
         }
 
         public async Task<Dictionary<string, Mastery>> GetMasteries(
@@ -67,7 +67,7 @@ namespace PortableLeagueAPI.Services
 
             var result = await GetResponse<MasteryRootobject>(new Uri(url));
 
-            return result.data;
+            return result.Data;
         }
 
         public async Task<Dictionary<string, Summoner>> GetSummoners(
@@ -79,7 +79,7 @@ namespace PortableLeagueAPI.Services
 
             var result = await GetResponse<SummonerRootobject>(new Uri(url));
 
-            return result.data;
+            return result.Data;
         }
 
         public async Task<Dictionary<string, StaticChampion>> GetChampions(
@@ -91,7 +91,7 @@ namespace PortableLeagueAPI.Services
 
             var result = await GetResponse<StaticChampionRoot>(new Uri(url));
 
-            return result.data;
+            return result.Data;
         }
 
         public async Task<Dictionary<int, ProfileIcon>> GetProfileIcons(
@@ -103,7 +103,7 @@ namespace PortableLeagueAPI.Services
 
             var result = await GetResponse<ProfileIconRoot>(new Uri(url));
 
-            return result.data;
+            return result.Data;
         }
 
         public async Task<Dictionary<string, string>> GetLanguages(
@@ -115,7 +115,7 @@ namespace PortableLeagueAPI.Services
 
             var result = await GetResponse<LanguageRoot>(new Uri(url));
 
-            return result.data;
+            return result.Data;
         }
     }
 }
