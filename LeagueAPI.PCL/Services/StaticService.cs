@@ -83,5 +83,41 @@ namespace PortableLeagueAPI.Services
 
             return result.data;
         }
+
+        public async Task<Dictionary<string, StaticChampion>> GetChampions(
+            RegionEnum? region = null)
+        {
+            var lastVersions = await GetVersioningByRegion(region);
+            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/en_US/champion.json",
+                    lastVersions.Champion);
+
+            var result = await GetResponse<StaticChampionRoot>(new Uri(url));
+
+            return result.data;
+        }
+
+        public async Task<Dictionary<int, ProfileIcon>> GetProfileIcons(
+            RegionEnum? region = null)
+        {
+            var lastVersions = await GetVersioningByRegion(region);
+            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/en_US/profileicon.json",
+                    lastVersions.Profileicon);
+
+            var result = await GetResponse<ProfileIconRoot>(new Uri(url));
+
+            return result.data;
+        }
+
+        public async Task<Dictionary<string, string>> GetLanguages(
+            RegionEnum? region = null)
+        {
+            var lastVersions = await GetVersioningByRegion(region);
+            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/en_US/language.json",
+                    lastVersions.Language);
+
+            var result = await GetResponse<LanguageRoot>(new Uri(url));
+
+            return result.data;
+        }
     }
 }

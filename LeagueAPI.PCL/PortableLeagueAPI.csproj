@@ -49,8 +49,11 @@
     <Compile Include="Models\IoC\IoC.cs" />
     <Compile Include="Models\IoC\LeagueResolver.cs" />
     <Compile Include="Models\League\League.cs" />
+    <Compile Include="Models\Static\Champion.cs" />
     <Compile Include="Models\Static\Item.cs" />
+    <Compile Include="Models\Static\Language.cs" />
     <Compile Include="Models\Static\Mastery.cs" />
+    <Compile Include="Models\Static\ProfileIcon.cs" />
     <Compile Include="Models\Static\Rune.cs" />
     <Compile Include="Models\Static\StaticItem.cs" />
     <Compile Include="Models\Static\StaticVersioning.cs" />

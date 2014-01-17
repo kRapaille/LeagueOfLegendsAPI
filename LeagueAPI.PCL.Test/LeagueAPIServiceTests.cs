@@ -175,5 +175,28 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(result);
         }
+
+        [Test]
+        public async void GetStaticChampionsTest()
+        {
+            var result = await LeagueAPI.Static.GetChampions();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetProfileIconsTest()
+        {
+            var result = await LeagueAPI.Static.GetProfileIcons();
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetLanguagesTest()
+        {
+            var result = await LeagueAPI.Static.GetLanguages();
+
+            Assert.NotNull(result);
+        }
     }
 }
