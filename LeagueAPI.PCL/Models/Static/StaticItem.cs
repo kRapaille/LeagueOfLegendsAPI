@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
+using PortableLeagueAPI.Models.Enums;
 
 namespace PortableLeagueAPI.Models.Static
 {
@@ -295,5 +297,13 @@ namespace PortableLeagueAPI.Models.Static
 
         [JsonProperty("h")]
         public int Height { get; set; }
+
+        public string GetImageURL(string versionText)
+        {
+            return string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/img/{1}/{2}",
+                versionText,
+                Group,
+                Full);
+        }
     }
 }
