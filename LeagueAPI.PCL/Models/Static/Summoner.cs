@@ -29,7 +29,9 @@ namespace PortableLeagueAPI.Models.Static
         public int summonerLevel { get; set; }
         public string[] modes { get; set; }
         public string costType { get; set; }
-        public string range { get; set; }
+
+        [JsonConverter(typeof(RangeJsonConverter))]
+        public int range { get; set; }
         public string rangeBurn { get; set; }
         public Image image { get; set; }
         public string resource { get; set; }
@@ -38,7 +40,7 @@ namespace PortableLeagueAPI.Models.Static
     {
         public string link { get; set; }
 
-        [JsonConverter(typeof(OptionalArrayJsonConverter))]
+        [JsonConverter(typeof(CoeffArrayJsonConverter))]
         public float[] coeff { get; set; }
         public string key { get; set; }
     }

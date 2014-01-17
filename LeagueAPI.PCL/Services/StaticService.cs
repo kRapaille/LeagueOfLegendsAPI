@@ -73,8 +73,6 @@ namespace PortableLeagueAPI.Services
         public async Task<Dictionary<string, Summoner>> GetSummoners(
             RegionEnum? region = null)
         {
-            throw new NotImplementedException();
-
             var lastVersions = await GetVersioningByRegion(region);
             var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/en_US/summoner.json",
                     lastVersions.Mastery);
