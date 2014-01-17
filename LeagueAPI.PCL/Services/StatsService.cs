@@ -30,11 +30,11 @@ namespace PortableLeagueAPI.Services
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null,
-            VersionEnum? verion = null)
+            VersionEnum? version = null)
         {
             var url = string.Format("lol/{0}/{1}/stats/by-summoner/{2}/summary",
-                GetRegion(region),
-                GetVersionAsString(verion),
+                GetRegionAsString(region),
+                GetVersionAsString(version),
                 summonerId);
 
             if (season.HasValue)
@@ -49,11 +49,11 @@ namespace PortableLeagueAPI.Services
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null,
-            VersionEnum? verion = null)
+            VersionEnum? version = null)
         {
             var url = string.Format("lol/{0}/{1}/stats/by-summoner/{2}/ranked", 
-                GetRegion(region), 
-                GetVersionAsString(verion),
+                GetRegionAsString(region), 
+                GetVersionAsString(version),
                 summonerId);
 
             if (season.HasValue)

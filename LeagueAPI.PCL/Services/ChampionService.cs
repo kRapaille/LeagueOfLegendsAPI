@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PortableLeagueAPI.Models;
 using PortableLeagueAPI.Models.Champion;
 using PortableLeagueAPI.Models.Enums;
 
@@ -22,7 +21,7 @@ namespace PortableLeagueAPI.Services
             bool freeToPlay,
             RegionEnum? region = null)
         {
-            var url = string.Format("lol/{0}/v1.1/champion?freeToPlay={1}", GetRegion(region), freeToPlay);
+            var url = string.Format("lol/{0}/v1.1/champion?freeToPlay={1}", GetRegionAsString(region), freeToPlay);
 
             var championsRoot = await GetResponse<ChampionsRoot>(url);
 

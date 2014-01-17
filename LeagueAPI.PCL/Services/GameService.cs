@@ -14,7 +14,8 @@ namespace PortableLeagueAPI.Services
             CompatibleVersions = new[]
             {
                 VersionEnum.V1Rev1,
-                VersionEnum.V1Rev2
+                VersionEnum.V1Rev2,
+                VersionEnum.V1Rev3
             };
         }
 
@@ -31,7 +32,7 @@ namespace PortableLeagueAPI.Services
             VersionEnum? version = null)
         {
             var url = string.Format("lol/{0}/{1}/game/by-summoner/{2}/recent",
-                GetRegion(region),
+                GetRegionAsString(region),
                 GetVersionAsString(version), 
                 summonerId);
 

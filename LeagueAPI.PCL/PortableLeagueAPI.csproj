@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Helpers\OptionalArrayJsonConverter.cs" />
     <Compile Include="Helpers\UriExtensions.cs" />
     <Compile Include="Interfaces\IHttpRequestService.cs" />
     <Compile Include="Interfaces\IResolver.cs" />
@@ -48,6 +49,12 @@
     <Compile Include="Models\IoC\IoC.cs" />
     <Compile Include="Models\IoC\LeagueResolver.cs" />
     <Compile Include="Models\League\League.cs" />
+    <Compile Include="Models\Static\Item.cs" />
+    <Compile Include="Models\Static\Mastery.cs" />
+    <Compile Include="Models\Static\Rune.cs" />
+    <Compile Include="Models\Static\StaticItem.cs" />
+    <Compile Include="Models\Static\StaticVersioning.cs" />
+    <Compile Include="Models\Static\Summoner.cs" />
     <Compile Include="Models\Summoner\MasteryPage.cs" />
     <Compile Include="Models\Stats\PlayerStatSummary.cs" />
     <Compile Include="Models\Stats\RankedStats.cs" />
@@ -63,6 +70,7 @@
     <Compile Include="Services\GameService.cs" />
     <Compile Include="Services\HttpRequestService.cs" />
     <Compile Include="Services\LeagueService.cs" />
+    <Compile Include="Services\StaticService.cs" />
     <Compile Include="Services\StatsService.cs" />
     <Compile Include="Services\SummonerService.cs" />
     <Compile Include="Services\TeamService.cs" />

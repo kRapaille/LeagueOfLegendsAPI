@@ -11,7 +11,7 @@ namespace PortableLeagueAPI.Test
         public LeagueAPIServiceTests()
         {
             // TODO : Don't forget to pass your api key
-            LeagueAPI.Init("YOUR KEY HERE");
+            LeagueAPI.Init(string.Empty);
             LeagueAPI.SetDefaultRegion(RegionEnum.Euw);
         }
 
@@ -81,9 +81,25 @@ namespace PortableLeagueAPI.Test
         }
 
         [Test]
+        public async void GetMasteryPagesBySummonerIdsTest()
+        {
+            var result = await LeagueAPI.Summoner.GetMasteryPagesBySummonerId(new List<long> { 19231046, 19231045 });
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
         public async void GetRunePagesBySummonerIdTest()
         {
             var result = await LeagueAPI.Summoner.GetRunePagesBySummonerId(19231046);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetRunePagesBySummonerIdsTest()
+        {
+            var result = await LeagueAPI.Summoner.GetRunePagesBySummonerId(new List<long> { 19231046, 19231045 });
 
             Assert.NotNull(result);
         }
@@ -107,7 +123,15 @@ namespace PortableLeagueAPI.Test
         [Test]
         public async void GetSummonerNamesByIdsTest()
         {
-            var result = await LeagueAPI.Summoner.GetSummonerNamesByIds(new List<long> { 19231046, 19231045 });
+            var result = await LeagueAPI.Summoner.GetSummonerNamesById(new List<long> { 19231046, 19231045 });
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetSummonerNamesByIdTest()
+        {
+            var result = await LeagueAPI.Summoner.GetSummonerNamesById(19231046);
 
             Assert.NotNull(result);
         }
@@ -116,6 +140,38 @@ namespace PortableLeagueAPI.Test
         public async void GetTeamsBySummonerIdTest()
         {
             var result = await LeagueAPI.Team.GetTeamsBySummonerId(19231046);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetItemsTest()
+        {
+            var result = await LeagueAPI.Static.GetItems();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetRunesTest()
+        {
+            var result = await LeagueAPI.Static.GetRunes();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetMasteriesTest()
+        {
+            var result = await LeagueAPI.Static.GetMasteries();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async void GetSummonersTest()
+        {
+            var result = await LeagueAPI.Static.GetSummoners();
 
             Assert.NotNull(result);
         }

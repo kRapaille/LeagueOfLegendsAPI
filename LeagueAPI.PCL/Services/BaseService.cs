@@ -53,15 +53,20 @@ namespace PortableLeagueAPI.Services
 
             return result;
         }
-        
-        protected string GetRegion(RegionEnum? region)
+
+        protected RegionEnum GetRegion(RegionEnum? region)
         {
             region = region.HasValue ? region : DefaultRegion;
 
             if (region == null)
                 throw new ArgumentException("There's no default region");
 
-            return region.ToString().ToLower();
+            return region.Value;
+        }
+        
+        protected string GetRegionAsString(RegionEnum? region)
+        {
+            return GetRegion(region).ToString().ToLower();
         }
 
         protected VersionEnum GetVersion(VersionEnum? version)
