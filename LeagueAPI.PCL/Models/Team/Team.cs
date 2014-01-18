@@ -7,6 +7,9 @@ namespace PortableLeagueAPI.Models.Team
         [JsonProperty("teamStatSummary")]
         public TeamStatSummary TeamStatSummary { get; set; }
 
+        [JsonProperty("fullId")]
+        public string FullId { get; set; }
+
         [JsonProperty("status")]
         public string Status { get; set; }
 
@@ -21,9 +24,6 @@ namespace PortableLeagueAPI.Models.Team
 
         [JsonProperty("modifyDate")]
         public long ModifyDate { get; set; }
-
-        [JsonProperty("teamId")]
-        public TeamId TeamId { get; set; }
 
         [JsonProperty("timestamp")]
         public long Timestamp { get; set; }
@@ -55,8 +55,8 @@ namespace PortableLeagueAPI.Models.Team
         [JsonProperty("teamStatDetails")]
         public TeamStatDetail[] TeamStatDetails { get; set; }
 
-        [JsonProperty("teamId")]
-        public TeamId TeamId { get; set; }
+        [JsonProperty("fullId")]
+        public string FullId { get; set; }
     }
 
     public class TeamStatDetail
@@ -67,20 +67,14 @@ namespace PortableLeagueAPI.Models.Team
         [JsonProperty("averageGamesPlayed")]
         public int AverageGamesPlayed { get; set; }
 
-        [JsonProperty("teamId")]
-        public TeamId TeamId { get; set; }
+        [JsonProperty("fullId")]
+        public string FullId { get; set; }
 
         [JsonProperty("wins")]
         public int Wins { get; set; }
 
         [JsonProperty("teamStatType")]
         public string TeamStatType { get; set; }
-    }
-
-    public class TeamId
-    {
-        [JsonProperty("fullId")]
-        public string FullId { get; set; }
     }
 
     public class Roster

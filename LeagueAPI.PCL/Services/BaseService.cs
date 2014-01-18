@@ -27,7 +27,7 @@ namespace PortableLeagueAPI.Services
             return await GetResponse<T>(new Uri(relativeUrl, UriKind.Relative));
         }
 
-        protected async Task<T> GetResponse<T>(Uri relativeUri) where T : class
+        protected async Task<T> GetResponse<T>(Uri relativeUri, bool errorOnMissingMember = true) where T : class
         {
             var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
 
@@ -42,7 +42,12 @@ namespace PortableLeagueAPI.Services
 
             if (response.IsSuccessStatusCode)
             {
-                result = JsonConvert.DeserializeObject<T>(content);
+                result = JsonConvert.DeserializeObject<T>(content, new JsonSerializerSettings
+                {
+                    MissingMemberHandling = errorOnMissingMember
+                        ? MissingMemberHandling.Error
+                        : MissingMemberHandling.Ignore
+                });
             }
             else
             {

@@ -34,7 +34,7 @@ namespace PortableLeagueAPI.Services
                 var url = string.Format("http://ddragon.leagueoflegends.com/realms/{0}.json",
                     GetRegionAsString(region));
 
-                var result = await GetResponse<StaticVersioningRoot>(new Uri(url));
+                var result = await GetResponse<StaticVersioningRoot>(new Uri(url), false);
 
                 return result.StaticAPIVersions;
             }
@@ -51,7 +51,7 @@ namespace PortableLeagueAPI.Services
                     lastVersions.Item,
                     GetLanguageCode(languageCode));
 
-            var result = await GetResponse<ItemRootObject>(new Uri(url));
+            var result = await GetResponse<ItemRootObject>(new Uri(url), false);
 
             return result.Data;
         }
@@ -65,7 +65,7 @@ namespace PortableLeagueAPI.Services
                     lastVersions.Rune,
                     GetLanguageCode(languageCode));
 
-            var result = await GetResponse<RuneRootObject>(new Uri(url));
+            var result = await GetResponse<RuneRootObject>(new Uri(url), false);
 
             return result.Data;
         }
@@ -79,7 +79,7 @@ namespace PortableLeagueAPI.Services
                     lastVersions.Mastery,
                     GetLanguageCode(languageCode));
 
-            var result = await GetResponse<MasteryRootobject>(new Uri(url));
+            var result = await GetResponse<MasteryRootobject>(new Uri(url), false);
 
             return result.Data;
         }
@@ -93,7 +93,7 @@ namespace PortableLeagueAPI.Services
                     lastVersions.Mastery,
                     GetLanguageCode(languageCode));
 
-            var result = await GetResponse<SummonerRootobject>(new Uri(url));
+            var result = await GetResponse<SummonerRootobject>(new Uri(url), false);
 
             return result.Data;
         }
@@ -107,7 +107,7 @@ namespace PortableLeagueAPI.Services
                     lastVersions.Champion,
                     GetLanguageCode(languageCode));
 
-            var result = await GetResponse<StaticChampionRoot>(new Uri(url));
+            var result = await GetResponse<StaticChampionRoot>(new Uri(url), false);
 
             return result.Data;
         }
@@ -121,7 +121,7 @@ namespace PortableLeagueAPI.Services
                     lastVersions.Profileicon,
                     GetLanguageCode(languageCode));
 
-            var result = await GetResponse<ProfileIconRoot>(new Uri(url));
+            var result = await GetResponse<ProfileIconRoot>(new Uri(url), false);
 
             return result.Data;
         }
@@ -135,7 +135,7 @@ namespace PortableLeagueAPI.Services
                     lastVersions.Language,
                     GetLanguageCode(languageCode));
 
-            var result = await GetResponse<LanguageRoot>(new Uri(url));
+            var result = await GetResponse<LanguageRoot>(new Uri(url), false);
 
             return result.Data;
         }

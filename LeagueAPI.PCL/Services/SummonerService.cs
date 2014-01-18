@@ -73,7 +73,7 @@ namespace PortableLeagueAPI.Services
         }
 
         public async Task<Summoner> GetSummonerByName(
-            string name, 
+            string name,
             RegionEnum? region = null,
             VersionEnum? version = null)
         {
@@ -82,7 +82,9 @@ namespace PortableLeagueAPI.Services
                 GetVersionAsString(version),
                 name);
 
-            return await GetResponse<Summoner>(url);
+            var result = await GetResponse<Dictionary<string, Summoner>>(url);
+
+            return result.Select(x => x.Value).FirstOrDefault();
         }
 
         public async Task<Summoner> GetSummonerById(
@@ -90,12 +92,23 @@ namespace PortableLeagueAPI.Services
             RegionEnum? region = null,
             VersionEnum? version = null)
         {
+            var result = await GetSummonerById(new[] { summonerId }, region, version);
+
+            return result.FirstOrDefault();
+        }
+        public async Task<IEnumerable<Summoner>> GetSummonerById(
+           IEnumerable<long> summonersId,
+           RegionEnum? region = null,
+           VersionEnum? version = null)
+        {
             var url = string.Format("lol/{0}/{1}/summoner/{2}",
                 GetRegionAsString(region),
                 GetVersionAsString(version),
-                summonerId);
+                string.Join(",", summonersId));
 
-            return await GetResponse<Summoner>(url);
+            var result = await GetResponse<Dictionary<string, Summoner>>(url);
+
+            return result.Select(x => x.Value);
         }
 
         public async Task<Dictionary<long, string>> GetSummonerNamesById(

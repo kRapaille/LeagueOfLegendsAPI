@@ -4,115 +4,49 @@ namespace PortableLeagueAPI.Models.Stats
 {
     public class PlayerStatSummaryRoot
     {
+        /// <summary>
+        /// List of player stats summaries associated with the summoner.
+        /// </summary>
         [JsonProperty("playerStatSummaries")]
         public PlayerStatSummary[] PlayerStatSummaries { get; set; }
-
+        
+        /// <summary>
+        /// Summoner ID.
+        /// </summary>
         [JsonProperty("summonerId")]
         public int SummonerId { get; set; }
     }
 
     public class PlayerStatSummary
     {
+        /// <summary>
+        /// Player stats summary type. (legal values: AramUnranked5x5, CoopVsAI, CoopVsAI3x3, OdinUnranked, RankedPremade3x3, RankedPremade5x5, RankedSolo5x5, RankedTeam3x3, RankedTeam5x5, Unranked, Unranked3x3, OneForAll5x5, FirstBlood1x1, FirstBlood2x2)
+        /// </summary>
         [JsonProperty("playerStatSummaryType")]
         public string PlayerStatSummaryType { get; set; }
 
+        /// <summary>
+        /// Aggregated stats.
+        /// </summary>
         [JsonProperty("aggregatedStats")]
         public AggregatedStats AggregatedStats { get; set; }
 
+        /// <summary>
+        /// Number of losses for this queue type. Returned for ranked queue types only.
+        /// </summary>
         [JsonProperty("losses")]
         public int Losses { get; set; }
 
+        /// <summary>
+        /// Date stats were last modified specified as epoch milliseconds.
+        /// </summary>
         [JsonProperty("modifyDate")]
         public long ModifyDate { get; set; }
 
+        /// <summary>
+        /// CNumber of wins for this queue type.
+        /// </summary>
         [JsonProperty("wins")]
         public int Wins { get; set; }
-    }
-
-    public class AggregatedStats
-    {
-        [JsonProperty("totalChampionKills")]
-        public int TotalChampionKills { get; set; }
-
-        [JsonProperty("totalAssists")]
-        public int TotalAssists { get; set; }
-
-        [JsonProperty("totalTurretsKilled")]
-        public int TotalTurretsKilled { get; set; }
-
-        [JsonProperty("totalNeutralMinionsKilled")]
-        public int TotalNeutralMinionsKilled { get; set; }
-
-        [JsonProperty("totalMinionKills")]
-        public int TotalMinionKills { get; set; }
-
-        [JsonProperty("averageNodeCaptureAssist")]
-        public int AverageNodeCaptureAssist { get; set; }
-
-        [JsonProperty("maxNodeNeutralizeAssist")]
-        public int MaxNodeNeutralizeAssist { get; set; }
-
-        [JsonProperty("maxChampionsKilled")]
-        public int MaxChampionsKilled { get; set; }
-
-        [JsonProperty("averageChampionsKilled")]
-        public int AverageChampionsKilled { get; set; }
-
-        [JsonProperty("averageNumDeaths")]
-        public int AverageNumDeaths { get; set; }
-
-        [JsonProperty("maxNodeCapture")]
-        public int MaxNodeCapture { get; set; }
-
-        [JsonProperty("maxObjectivePlayerScore")]
-        public int MaxObjectivePlayerScore { get; set; }
-
-        [JsonProperty("maxAssists")]
-        public int MaxAssists { get; set; }
-
-        [JsonProperty("averageCombatPlayerScore")]
-        public int AverageCombatPlayerScore { get; set; }
-
-        [JsonProperty("maxNodeCaptureAssist")]
-        public int MaxNodeCaptureAssist { get; set; }
-
-        [JsonProperty("averageObjectivePlayerScore")]
-        public int AverageObjectivePlayerScore { get; set; }
-
-        [JsonProperty("maxTeamObjective")]
-        public int MaxTeamObjective { get; set; }
-
-        [JsonProperty("averageNodeCapture")]
-        public int AverageNodeCapture { get; set; }
-
-        [JsonProperty("maxNodeNeutralize")]
-        public int MaxNodeNeutralize { get; set; }
-
-        [JsonProperty("averageTotalPlayerScore")]
-        public int AverageTotalPlayerScore { get; set; }
-
-        [JsonProperty("averageTeamObjective")]
-        public int AverageTeamObjective { get; set; }
-
-        [JsonProperty("averageNodeNeutralize")]
-        public int AverageNodeNeutralize { get; set; }
-
-        [JsonProperty("averageNodeNeutralizeAssist")]
-        public int AverageNodeNeutralizeAssist { get; set; }
-
-        [JsonProperty("maxTotalPlayerScore")]
-        public int MaxTotalPlayerScore { get; set; }
-
-        [JsonProperty("averageAssists")]
-        public int AverageAssists { get; set; }
-
-        [JsonProperty("maxCombatPlayerScore")]
-        public int MaxCombatPlayerScore { get; set; }
-
-        [JsonProperty("totalNodeNeutralize")]
-        public int TotalNodeNeutralize { get; set; }
-
-        [JsonProperty("totalNodeCapture")]
-        public int TotalNodeCapture { get; set; }
     }
 }
