@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace PortableLeagueAPI.Helpers
 {
-    class OptionalArrayJsonConverter : JsonConverter
+    internal class RangeJsonConverter : JsonConverter
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -12,23 +12,25 @@ namespace PortableLeagueAPI.Helpers
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            float[] result = null;
+            var result = 0;
 
-            if (reader.ValueType == typeof(float))
+            if (reader.ValueType == typeof(string))
             {
-                result = new[] { (float)reader.Value };   
+                result = 0;
             }
-            else if (reader.ValueType == typeof(double))
+            else if (reader.ValueType == null)
             {
-                result = new[] { (float)((double)reader.Value) };
+                reader.Read();
+                result = (int)((Int64)reader.Value);
+                reader.Read();
             }
 
-            return result ?? reader.Value;
+            return result;
         }
 
         public override bool CanConvert(Type objectType)
         {
-            return true;
+            throw new NotImplementedException();
         }
     }
 }

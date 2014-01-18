@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PortableLeagueAPI.Models;
 using PortableLeagueAPI.Models.Enums;
 using PortableLeagueAPI.Models.Game;
 
@@ -13,8 +12,8 @@ namespace PortableLeagueAPI.Services
         {
             CompatibleVersions = new[]
             {
-                VersionEnum.V1Rev1,
-                VersionEnum.V1Rev2,
+                //VersionEnum.V1Rev1,
+                //VersionEnum.V1Rev2,
                 VersionEnum.V1Rev3
             };
         }

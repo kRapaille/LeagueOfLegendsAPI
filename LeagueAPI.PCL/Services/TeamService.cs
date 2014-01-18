@@ -13,7 +13,7 @@ namespace PortableLeagueAPI.Services
         {
             CompatibleVersions = new[]
             {
-                VersionEnum.V2Rev1,
+                //VersionEnum.V2Rev1,
                 VersionEnum.V2Rev2
             };
         }

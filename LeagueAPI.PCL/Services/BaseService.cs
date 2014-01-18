@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PortableLeagueAPI.Helpers;
@@ -26,7 +27,7 @@ namespace PortableLeagueAPI.Services
             return await GetResponse<T>(new Uri(relativeUrl, UriKind.Relative));
         }
 
-        protected async Task<T> GetResponse<T>(Uri relativeUri) where T : class
+        protected async Task<T> GetResponse<T>(Uri relativeUri, bool errorOnMissingMember = true) where T : class
         {
             var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
 
@@ -41,14 +42,38 @@ namespace PortableLeagueAPI.Services
 
             if (response.IsSuccessStatusCode)
             {
-                result = JsonConvert.DeserializeObject<T>(content);
+                result = JsonConvert.DeserializeObject<T>(content, new JsonSerializerSettings
+                {
+                    MissingMemberHandling = errorOnMissingMember
+                        ? MissingMemberHandling.Error
+                        : MissingMemberHandling.Ignore
+                });
             }
             else
             {
-                Debug.WriteLine(uriBuilder.Uri.ToString());
+                var url = uriBuilder.Uri.ToString();
 
-                var apiRequestError = JsonConvert.DeserializeObject<APIRequestError>(content);
-                throw new APIRequestException(apiRequestError, uriBuilder.Uri.ToString());
+                Debug.WriteLine(url);
+
+                APIRequestError apiRequestError;
+
+                if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    apiRequestError = new APIRequestError
+                    {
+                        Status = new Status
+                        {
+                            Message = "Not found",
+                            StatusCode = 404
+                        }
+                    };
+                }
+                else
+                {
+                    apiRequestError = JsonConvert.DeserializeObject<APIRequestError>(content);
+                }
+
+                throw new APIRequestException(apiRequestError, url);
             }
 
             return result;

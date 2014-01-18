@@ -6,41 +6,90 @@ namespace PortableLeagueAPI.Models.Static
 {
     public class SummonerRootobject
     {
-        public string type { get; set; }
-        public string version { get; set; }
-        public Dictionary<string, Summoner> data { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
+
+        [JsonProperty("version")]
+        public string Version { get; set; }
+
+        [JsonProperty("data")]
+        public Dictionary<string, Summoner> Data { get; set; }
     }
 
     public class Summoner
     {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public string tooltip { get; set; }
-        public int maxrank { get; set; }
-        public int[] cooldown { get; set; }
-        public string cooldownBurn { get; set; }
-        public int[] cost { get; set; }
-        public string costBurn { get; set; }
-        public object[] effect { get; set; }
-        public object[] effectBurn { get; set; }
-        public Var[] vars { get; set; }
-        public string key { get; set; }
-        public int summonerLevel { get; set; }
-        public string[] modes { get; set; }
-        public string costType { get; set; }
-        public string range { get; set; }
-        public string rangeBurn { get; set; }
-        public Image image { get; set; }
-        public string resource { get; set; }
+        [JsonProperty("id")]
+        public string ID { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("tooltip")]
+        public string Tooltip { get; set; }
+
+        [JsonProperty("maxrank")]
+        public int Maxrank { get; set; }
+
+        [JsonProperty("cooldown")]
+        public int[] Cooldown { get; set; }
+
+        [JsonProperty("cooldownBurn")]
+        public string CooldownBurn { get; set; }
+
+        [JsonProperty("cost")]
+        public int[] Cost { get; set; }
+
+        [JsonProperty("costBurn")]
+        public string CostBurn { get; set; }
+
+        [JsonProperty("effect")]
+        public object[] Effect { get; set; }
+
+        [JsonProperty("effectBurn")]
+        public object[] EffectBurn { get; set; }
+
+        [JsonProperty("vars")]
+        public Var[] Vars { get; set; }
+
+        [JsonProperty("key")]
+        public string Key { get; set; }
+
+        [JsonProperty("summonerLevel")]
+        public int SummonerLevel { get; set; }
+
+        [JsonProperty("modes")]
+        public string[] Modes { get; set; }
+
+        [JsonProperty("costType")]
+        public string CostType { get; set; }
+
+        [JsonProperty("range")]
+        [JsonConverter(typeof(RangeJsonConverter))]
+        public int Range { get; set; }
+
+        [JsonProperty("rangeBurn")]
+        public string RangeBurn { get; set; }
+
+        [JsonProperty("image")]
+        public Image Image { get; set; }
+
+        [JsonProperty("resource")]
+        public string Resource { get; set; }
     }
     public class Var
     {
-        public string link { get; set; }
+        [JsonProperty("link")]
+        public string Link { get; set; }
 
-        [JsonConverter(typeof(OptionalArrayJsonConverter))]
-        public float[] coeff { get; set; }
-        public string key { get; set; }
+        [JsonProperty("coeff")]
+        [JsonConverter(typeof(CoeffArrayJsonConverter))]
+        public float[] Coeff { get; set; }
+
+        [JsonProperty("key")]
+        public string Key { get; set; }
     }
 
 }

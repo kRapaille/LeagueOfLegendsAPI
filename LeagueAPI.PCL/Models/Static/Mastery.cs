@@ -1,28 +1,50 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace PortableLeagueAPI.Models.Static
 {
     public class MasteryRootobject
     {
-        public string type { get; set; }
-        public string version { get; set; }
-        public Dictionary<string, List<List<TreeItem>>> tree { get; set; }
-        public Dictionary<string, Mastery> data { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
+
+        [JsonProperty("version")]
+        public string Version { get; set; }
+
+        [JsonProperty("tree")]
+        public Dictionary<string, List<List<TreeItem>>> Tree { get; set; }
+
+        [JsonProperty("data")]
+        public Dictionary<string, Mastery> Data { get; set; }
     }
     
     public class TreeItem
     {
-        public string masteryId { get; set; }
-        public string prereq { get; set; }
+        [JsonProperty("masteryId")]
+        public string MasteryId { get; set; }
+
+        [JsonProperty("prereq")]
+        public string Prereq { get; set; }
     }
 
     public class Mastery
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string[] description { get; set; }
-        public Image image { get; set; }
-        public int ranks { get; set; }
-        public string prereq { get; set; }
+        [JsonProperty("id")]
+        public int ID { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("description")]
+        public string[] Description { get; set; }
+
+        [JsonProperty("image")]
+        public Image Image { get; set; }
+
+        [JsonProperty("ranks")]
+        public int Ranks { get; set; }
+
+        [JsonProperty("prereq")]
+        public string Prereq { get; set; }
     }
 }

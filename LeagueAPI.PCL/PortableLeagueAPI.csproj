@@ -33,12 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Helpers\OptionalArrayJsonConverter.cs" />
+    <Compile Include="Helpers\CoeffArrayJsonConverter.cs" />
+    <Compile Include="Helpers\RangeJsonConverter.cs" />
     <Compile Include="Helpers\UriExtensions.cs" />
     <Compile Include="Interfaces\IHttpRequestService.cs" />
     <Compile Include="Interfaces\IResolver.cs" />
     <Compile Include="LeagueAPI.cs" />
+    <Compile Include="Models\Constants\LanguageCodeConsts.cs" />
     <Compile Include="Models\Constants\VersionConsts.cs" />
+    <Compile Include="Models\Enums\LanguageEnum.cs" />
     <Compile Include="Models\Enums\MapEnum.cs" />
     <Compile Include="Models\Enums\QueueEnum.cs" />
     <Compile Include="Models\Enums\SeasonEnum.cs" />
@@ -49,12 +52,16 @@
     <Compile Include="Models\IoC\IoC.cs" />
     <Compile Include="Models\IoC\LeagueResolver.cs" />
     <Compile Include="Models\League\League.cs" />
+    <Compile Include="Models\Static\Champion.cs" />
     <Compile Include="Models\Static\Item.cs" />
+    <Compile Include="Models\Static\Language.cs" />
     <Compile Include="Models\Static\Mastery.cs" />
+    <Compile Include="Models\Static\ProfileIcon.cs" />
     <Compile Include="Models\Static\Rune.cs" />
     <Compile Include="Models\Static\StaticItem.cs" />
     <Compile Include="Models\Static\StaticVersioning.cs" />
     <Compile Include="Models\Static\Summoner.cs" />
+    <Compile Include="Models\Stats\AggregatedStats.cs" />
     <Compile Include="Models\Summoner\MasteryPage.cs" />
     <Compile Include="Models\Stats\PlayerStatSummary.cs" />
     <Compile Include="Models\Stats\RankedStats.cs" />
@@ -81,12 +88,6 @@
     </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Extensions">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Primitives">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
