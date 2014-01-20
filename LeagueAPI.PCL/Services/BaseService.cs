@@ -92,7 +92,7 @@ namespace PortableLeagueAPI.Services
                 {
                     apiRequestError = new APIRequestError
                     {
-                        Status = new Status
+                        Status = new APIRequestErrorStatus
                         {
                             Message = "Not found",
                             StatusCode = 404
