@@ -60,7 +60,7 @@ namespace PortableLeagueAPI.Test
             }
             catch (APIRequestException are)
             {
-                if (are.APIRequestError.Status.StatusCode != 404)
+                if (are.APIRequestError.StatusCode != 404)
                     throw;
 
                 return;
