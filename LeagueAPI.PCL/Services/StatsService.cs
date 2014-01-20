@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PortableLeagueAPI.Models;
 using PortableLeagueAPI.Models.Enums;
 using PortableLeagueAPI.Models.Stats;
 
@@ -40,9 +39,9 @@ namespace PortableLeagueAPI.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var playerStatSummaryRoot = await GetResponse<PlayerStatSummaryRoot>(url);
+            var playerStatvalueRoot = await GetResponse<PlayerStatvalueRoot>(url);
 
-            return playerStatSummaryRoot.PlayerStatSummaries.AsEnumerable();
+            return playerStatvalueRoot.PlayerStatSummaries.AsEnumerable();
         }
 
         public async Task<RankedStats> GetRankedStatsSummariesBySummonerId(
