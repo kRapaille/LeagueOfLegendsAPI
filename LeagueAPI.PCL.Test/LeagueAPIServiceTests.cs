@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using NUnit.Framework;
 using PortableLeagueAPI.Models.Enums;
@@ -14,7 +16,8 @@ namespace PortableLeagueAPI.Test
         {
             // TODO : Don't forget to pass your api key
             LeagueAPI.Init(string.Empty);
-            LeagueAPI.SetDefaultRegion(RegionEnum.Euw);
+            LeagueAPI.DefaultRegion = RegionEnum.Euw;
+            LeagueAPI.WaitToAvoidRateLimit = true;
         }
 
         [Test]
@@ -60,27 +63,6 @@ namespace PortableLeagueAPI.Test
                 if (are.APIRequestError.Status.StatusCode != 404)
                     throw;
 
-                return;
-            }
-
-            Assert.NotNull(result);
-        }
-
-        [Test]
-        [Category("League")]
-        public async void GetLeagueInfosBySummonerIdV2Rev1Test()
-        {
-            Dictionary<string, League> result;
-
-            try
-            {
-                result = await LeagueAPI.League.GetLeagueInfosBySummonerId(19231046, version: VersionEnum.V2Rev1);
-            }
-            catch (APIRequestException are)
-            {
-                if (are.APIRequestError.Status.StatusCode != 404)
-                    throw;
-                
                 return;
             }
 
@@ -255,6 +237,23 @@ namespace PortableLeagueAPI.Test
             var result = await LeagueAPI.Static.GetLanguages();
 
             Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Others")]
+        public async void TenSecRateLimitTest()
+        {
+            var start = DateTime.Now;
+
+            for (var i = 0; i < 15; i++)
+            {
+                Debug.WriteLine(i);
+                await LeagueAPI.Champion.GetChampions(true);
+            }
+
+            var diff = DateTime.Now.Subtract(start).TotalSeconds;
+
+            Assert.IsTrue(diff > 10, string.Format("It's be impossible to send 15 requests in {0}s", diff));
         }
     }
 }

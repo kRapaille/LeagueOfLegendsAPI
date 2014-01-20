@@ -8,15 +8,7 @@ namespace PortableLeagueAPI.Services
 {
     public class GameService : BaseService
     {
-        private GameService()
-        {
-            CompatibleVersions = new[]
-            {
-                //VersionEnum.V1Rev1,
-                //VersionEnum.V1Rev2,
-                VersionEnum.V1Rev3
-            };
-        }
+        private GameService() : base(VersionEnum.V1Rev3) { }
 
         private static GameService _instance;
 
@@ -27,15 +19,12 @@ namespace PortableLeagueAPI.Services
 
         public async Task<IEnumerable<Game>> GetRecentGamesBySummonerId(
             long summonerId,
-            RegionEnum? region = null,
-            VersionEnum? version = null)
+            RegionEnum? region = null)
         {
-            var url = string.Format("lol/{0}/{1}/game/by-summoner/{2}/recent",
-                GetRegionAsString(region),
-                GetVersionAsString(version), 
+            var url = string.Format("game/by-summoner/{0}/recent",
                 summonerId);
 
-            var recentGamesRoot = await GetResponse<RecentGamesRoot>(url);
+            var recentGamesRoot = await GetResponse<RecentGamesRoot>(region, url);
 
             return recentGamesRoot.Games.AsEnumerable();
         }

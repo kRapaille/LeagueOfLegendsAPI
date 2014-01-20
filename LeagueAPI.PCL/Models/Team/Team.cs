@@ -5,7 +5,7 @@ namespace PortableLeagueAPI.Models.Team
     public class Team
     {
         [JsonProperty("teamStatSummary")]
-        public TeamStatSummary TeamStatSummary { get; set; }
+        public TeamStatvalue TeamStatSummary { get; set; }
 
         [JsonProperty("fullId")]
         public string FullId { get; set; }
@@ -50,7 +50,7 @@ namespace PortableLeagueAPI.Models.Team
         public long CreateDate { get; set; }
     }
 
-    public class TeamStatSummary
+    public class TeamStatvalue
     {
         [JsonProperty("teamStatDetails")]
         public TeamStatDetail[] TeamStatDetails { get; set; }

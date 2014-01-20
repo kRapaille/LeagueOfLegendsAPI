@@ -7,9 +7,9 @@ namespace PortableLeagueAPI.Models.Champion
         /// <summary>
         /// Gets or sets the champions.
         /// </summary>
-        /// <value>
+        /// <summary>
         /// The list of champion information.
-        /// </value>
+        /// </summary>
         [JsonProperty("champions")]
         public Champion[] Champions { get; set; }
     }

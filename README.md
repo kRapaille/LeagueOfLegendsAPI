@@ -3,7 +3,7 @@ LeagueOfLegendsAPI
 
 Portable C# Library for [League of legends API](https://developer.riotgames.com)
 
-Do not hesitate to reach me on twitter [@kRapaille](http://www.twitter.com/kRapaille)
+Do not hesitate to reach me on twitter **[@kRapaille](http://www.twitter.com/kRapaille)**
 
 Install
 -------
@@ -14,15 +14,22 @@ The library is on NuGet. You can find it [here](https://www.nuget.org/packages/R
 
 Init
 ----
+```c#
+LeagueAPI.Init("YOUR KEY HERE");
+    
+// Facultative parameters :
+LeagueAPI.DefaultRegion = RegionEnum.Euw;
+LeagueAPI.WaitToAvoidRateLimit = true;
+```
 
-    LeagueAPI.Init("YOUR KEY HERE");
-    LeagueAPI.SetDefaultRegion(RegionEnum.Euw);
+**Note** : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, you can set the **WaitToAvoidRateLimit** property to true.
 
 Usage
 ------
+```c#
+var runePages = await LeagueAPI.Summoner.GetRunePagesBySummonerId(19231046);
+```
 
-    var runePages = await LeagueAPI.Summoner.GetRunePagesBySummonerId(19231046);
-    
 Disclaimer
 ----------
 

@@ -14,6 +14,16 @@ namespace PortableLeagueAPI
         public static SummonerService Summoner { get; private set; }
         public static TeamService Team { get; private set; }
         public static StaticService Static { get; private set; }
+
+        public static bool WaitToAvoidRateLimit
+        {
+            set { BaseService.WaitToAvoidRateLimit = value; }
+        }
+
+        public static RegionEnum? DefaultRegion
+        {
+            set { BaseService.DefaultRegion = value; }
+        }
         
         public static void Init(
             string key,
@@ -24,6 +34,8 @@ namespace PortableLeagueAPI
             BaseService.HttpRequestService = IoC.Resolve<IHttpRequestService>();
             BaseService.Key = key;
 
+            WaitToAvoidRateLimit = false;
+
             Champion = ChampionService.Instance;
             Game = GameService.Instance;
             League = LeagueService.Instance;
@@ -31,11 +43,6 @@ namespace PortableLeagueAPI
             Summoner = SummonerService.Instance;
             Team = TeamService.Instance;
             Static = StaticService.Instance;
-        }
-
-        public static void SetDefaultRegion(RegionEnum regionEnum)
-        {
-            BaseService.DefaultRegion = regionEnum;
         }
     }
 }

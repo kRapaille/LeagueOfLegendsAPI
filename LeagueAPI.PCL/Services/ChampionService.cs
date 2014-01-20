@@ -8,10 +8,10 @@ namespace PortableLeagueAPI.Services
 {
     public class ChampionService : BaseService
     {
-        private ChampionService() { }
+        private ChampionService():base(VersionEnum.V1Rev1) { }
 
         private static ChampionService _instance;
-
+        
         internal static ChampionService Instance
         {
             get { return _instance ?? (_instance = new ChampionService()); }
@@ -21,9 +21,10 @@ namespace PortableLeagueAPI.Services
             bool freeToPlay,
             RegionEnum? region = null)
         {
-            var url = string.Format("lol/{0}/v1.1/champion?freeToPlay={1}", GetRegionAsString(region), freeToPlay);
+            var url = string.Format("champion?freeToPlay={0}",
+                freeToPlay);
 
-            var championsRoot = await GetResponse<ChampionsRoot>(url);
+            var championsRoot = await GetResponse<ChampionsRoot>(region, url);
 
             return championsRoot.Champions.AsEnumerable();
         }
