@@ -95,6 +95,22 @@ namespace PortableLeagueAPI.Models.Static
 
     public class Stats
     {
+        public float FlatEnergyRegenMod { get; set; }
+
+        [JsonProperty("rFlatEnergyRegenModPerLevel")]
+        public float RFlatEnergyRegenModPerLevel { get; set; }
+
+        public float FlatEnergyPoolMod { get; set; }
+
+        [JsonProperty("rFlatEnergyModPerLevel")]
+        public float RFlatEnergyModPerLevel { get; set; }
+
+        [JsonProperty("PercentLifeStealMod")]
+        public float PercentLifeStealMod { get; set; }
+
+        [JsonProperty("PercentSpellVampMod")]
+        public float PercentSpellVampMod { get; set; }
+
         [JsonProperty("FlatHPPoolMod")]
         public float FlatHPPoolMod { get; set; }
 

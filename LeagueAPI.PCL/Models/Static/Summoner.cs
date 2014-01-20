@@ -15,7 +15,7 @@ namespace PortableLeagueAPI.Models.Static
         [JsonProperty("data")]
         public Dictionary<string, Summoner> Data { get; set; }
     }
-
+    
     public class Summoner
     {
         [JsonProperty("id")]
@@ -78,7 +78,22 @@ namespace PortableLeagueAPI.Models.Static
 
         [JsonProperty("resource")]
         public string Resource { get; set; }
+
+        [JsonProperty("leveltip")]
+        public Leveltip Leveltip { get; set; }
     }
+
+    public class Leveltip
+    {
+
+        [JsonProperty("label")]
+        public string[] Label { get; set; }
+
+
+        [JsonProperty("effect")]
+        public string[] Effect { get; set; }
+    }
+
     public class Var
     {
         [JsonProperty("link")]
