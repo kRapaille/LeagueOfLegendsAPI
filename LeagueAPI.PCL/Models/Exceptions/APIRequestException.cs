@@ -4,7 +4,7 @@ namespace PortableLeagueAPI.Models.Exceptions
 {
     public class APIRequestException : Exception
     {
-        public APIRequestError APIRequestError { get; set; }
+        public APIRequestErrorStatus APIRequestError { get; set; }
         public string Url { get; set; }
 
         public APIRequestException(APIRequestError apiRequestError, string url)
@@ -13,7 +13,7 @@ namespace PortableLeagueAPI.Models.Exceptions
             if (apiRequestError == null || apiRequestError.Status == null)
                 throw new ArgumentException();
 
-            APIRequestError = apiRequestError;
+            APIRequestError = apiRequestError.Status;
             Url = url;
         }
     }

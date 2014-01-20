@@ -5,10 +5,10 @@ namespace PortableLeagueAPI.Models.Exceptions
     public class APIRequestError
     {
         [JsonProperty("status")]
-        public Status Status { get; set; }
+        public APIRequestErrorStatus Status { get; set; }
     }
 
-    public class Status
+    public class APIRequestErrorStatus
     {
         [JsonProperty("message")]
         public string Message { get; set; }
