@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Schema;
-using PortableLeagueAPI.Interfaces;
+﻿using PortableLeagueAPI.Interfaces;
 using PortableLeagueAPI.Models.Enums;
 using PortableLeagueAPI.Models.IoC;
 using PortableLeagueAPI.Services;

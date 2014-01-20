@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using PortableLeagueAPI.Models;
-using PortableLeagueAPI.Models.Constants;
 using PortableLeagueAPI.Models.Enums;
 using PortableLeagueAPI.Models.League;
 
@@ -9,14 +7,7 @@ namespace PortableLeagueAPI.Services
 {
     public class LeagueService : BaseService
     {
-        private LeagueService()
-        {
-            CompatibleVersions = new[]
-            {
-                VersionEnum.V2Rev1,
-                VersionEnum.V2Rev2
-            };
-        }
+        private LeagueService() : base(VersionEnum.V2Rev2) { }
 
         private static LeagueService _instance;
 
@@ -27,18 +18,12 @@ namespace PortableLeagueAPI.Services
 
         public async Task<Dictionary<string, League>> GetLeagueInfosBySummonerId(
             long summonerId,
-            RegionEnum? region = null,
-            VersionEnum? version = null)
+            RegionEnum? region = null)
         {
-            var versionValue = GetVersion(version);
-
-            var url = string.Format("{0}{1}/{2}/league/by-summoner/{3}", 
-                versionValue == VersionEnum.V2Rev1 ? string.Empty : "lol/",
-                GetRegionAsString(region),
-                VersionConsts.Versions[versionValue],
+            var url = string.Format("league/by-summoner/{0}",
                 summonerId);
 
-            return await GetResponse<Dictionary<string, League>>(url);
+            return await GetResponse<Dictionary<string, League>>(region, url);
         }
     }
 }

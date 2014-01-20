@@ -12,10 +12,7 @@ namespace PortableLeagueAPI.Services
         private static readonly Dictionary<RegionEnum, StaticAPIVersions> StaticAPIVersions = new Dictionary<RegionEnum, StaticAPIVersions>();
         private static StaticService _instance;
 
-        private StaticService()
-        {
-            IsLimitedByRateLimit = false;
-        }
+        private StaticService() : base(false) { }
 
         internal static StaticService Instance
         {

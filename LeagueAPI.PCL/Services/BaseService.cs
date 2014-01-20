@@ -15,7 +15,7 @@ namespace PortableLeagueAPI.Services
 {
     public abstract class BaseService
     {
-        private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/");
+        private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/lol/");
         private static readonly List<DateTime> LastRequests = new List<DateTime>();
 
         private const int MaxRequestsPer10Sec = 10;
@@ -26,11 +26,35 @@ namespace PortableLeagueAPI.Services
         internal static RegionEnum? DefaultRegion { private get; set; }
         internal static bool WaitToAvoidRateLimit { get; set; }
 
-        protected VersionEnum[] CompatibleVersions;
-        protected bool IsLimitedByRateLimit = true;
+        protected bool IsLimitedByRateLimit { get; set; }
+        protected VersionEnum? Version { get; set; }
 
-        protected async Task<T> GetResponse<T>(string relativeUrl) where T : class
+        protected string VersionText
         {
+            get
+            {
+                return Version.HasValue ? VersionConsts.Versions[Version.Value] : string.Empty;
+            }
+        }
+
+        protected BaseService(VersionEnum? version)
+        {
+            Version = version;
+            IsLimitedByRateLimit = true;
+        }
+        
+        protected BaseService(bool isLimitedByRateLimit)
+        {
+            IsLimitedByRateLimit = isLimitedByRateLimit;
+        }
+
+        protected async Task<T> GetResponse<T>(RegionEnum? region, string relativeUrl) where T : class
+        {
+            relativeUrl = string.Format("{0}/{1}/{2}", 
+                GetRegionAsString(region),
+                VersionText,
+                relativeUrl);
+
             return await GetResponse<T>(new Uri(relativeUrl, UriKind.Relative));
         }
 
@@ -144,24 +168,6 @@ namespace PortableLeagueAPI.Services
         protected string GetRegionAsString(RegionEnum? region)
         {
             return GetRegion(region).ToString().ToLower();
-        }
-
-        protected VersionEnum GetVersion(VersionEnum? version)
-        {
-            if (!version.HasValue)
-                version = CompatibleVersions.Last();
-
-            if (!CompatibleVersions.Contains(version.Value))
-                throw new ArgumentException("Version not supported");
-
-            return version.Value;
-        }
-
-        protected string GetVersionAsString(VersionEnum? version)
-        {
-            var versionValue = GetVersion(version);
-
-            return VersionConsts.Versions[versionValue];
         }
     }
 }

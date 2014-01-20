@@ -70,27 +70,6 @@ namespace PortableLeagueAPI.Test
         }
 
         [Test]
-        [Category("League")]
-        public async void GetLeagueInfosBySummonerIdV2Rev1Test()
-        {
-            Dictionary<string, League> result;
-
-            try
-            {
-                result = await LeagueAPI.League.GetLeagueInfosBySummonerId(19231046, version: VersionEnum.V2Rev1);
-            }
-            catch (APIRequestException are)
-            {
-                if (are.APIRequestError.Status.StatusCode != 404)
-                    throw;
-                
-                return;
-            }
-
-            Assert.NotNull(result);
-        }
-
-        [Test]
         [Category("Stats")]
         public async void GetPlayerStatsSummariesBySummonerIdTest()
         {
