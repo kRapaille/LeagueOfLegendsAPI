@@ -102,13 +102,9 @@ namespace PortableLeagueAPI.Services
                 delayInMs = CalculateDelay(MaxRequestsPer10Min, 600, delayInMs);
                 delayInMs = CalculateDelay(MaxRequestsPer10Sec, 10, delayInMs);
 
-                //if (delayInMs > 0)
-                //{
-                //    // Add 1 second to the delay to be sure.
-                //    delayInMs += 1000;
-
-                //    Debug.WriteLine(delayInMs);
-                //}
+                // Add 1s to be sure
+                if (delayInMs > 0)
+                    delayInMs += 1000;
             }
 
             return Task.Delay(delayInMs);
@@ -122,7 +118,7 @@ namespace PortableLeagueAPI.Services
 
             var delay = 0;
 
-            if (requestsInGivenTime.Count() >= maxRequestsInGivenTime)
+            if (requestsInGivenTime.Count() > maxRequestsInGivenTime)
             {
                 var first = requestsInGivenTime.FirstOrDefault();
                 var limitReleaseDateTime = first.AddSeconds(givenTimeInSeconds);
