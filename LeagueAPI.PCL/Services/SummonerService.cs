@@ -8,7 +8,7 @@ namespace PortableLeagueAPI.Services
 {
     public class SummonerService : BaseService
     {
-        private SummonerService() : base(VersionEnum.V1Rev3) { }
+        private SummonerService() : base(VersionEnum.V1Rev3, "summoner") { }
 
         private static SummonerService _instance;
 
@@ -28,7 +28,7 @@ namespace PortableLeagueAPI.Services
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
-            var url = string.Format("summoner/{0}/masteries",
+            var url = string.Format("{0}/masteries",
                 string.Join(",", summonerIds));
 
             var masteryPagesRoot = await GetResponse<Dictionary<long, MasteryPagesRoot>>(region, url);
@@ -47,7 +47,7 @@ namespace PortableLeagueAPI.Services
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
-            var url = string.Format("summoner/{0}/runes",
+            var url = string.Format("{0}/runes",
                 string.Join(",", summonerIds));
 
             var runePageRoot = await GetResponse<Dictionary<long, RunePageRoot>>(region, url);
@@ -59,7 +59,7 @@ namespace PortableLeagueAPI.Services
             string name,
             RegionEnum? region = null)
         {
-            var url = string.Format("summoner/by-name/{0}",
+            var url = string.Format("by-name/{0}",
                 name);
 
             var result = await GetResponse<Dictionary<string, Summoner>>(region, url);
@@ -79,7 +79,7 @@ namespace PortableLeagueAPI.Services
            IEnumerable<long> summonersId,
            RegionEnum? region = null)
         {
-            var url = string.Format("summoner/{0}",
+            var url = string.Format("{0}",
                 string.Join(",", summonersId));
 
             var result = await GetResponse<Dictionary<string, Summoner>>(region, url);
@@ -97,7 +97,7 @@ namespace PortableLeagueAPI.Services
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
-            var url = string.Format("summoner/{0}/name",
+            var url = string.Format("{0}/name",
                 string.Join(",", summonerIds));
 
             var summonersInfo = await GetResponse<Dictionary<long, string>>(region, url);

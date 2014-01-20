@@ -7,7 +7,7 @@ namespace PortableLeagueAPI.Services
 {
     public class TeamService : BaseService
     {
-        private TeamService() : base(VersionEnum.V2Rev2) { }
+        private TeamService() : base(VersionEnum.V2Rev2, "team") { }
 
         private static TeamService _instance;
 
@@ -20,7 +20,7 @@ namespace PortableLeagueAPI.Services
             long summonerId,
             RegionEnum? region = null)
         {
-            var url = string.Format("team/by-summoner/{0}",
+            var url = string.Format("by-summoner/{0}",
                 summonerId);
 
             return await GetResponse<List<Team>>(region, url);

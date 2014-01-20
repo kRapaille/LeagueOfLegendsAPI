@@ -28,6 +28,7 @@ namespace PortableLeagueAPI.Services
 
         protected bool IsLimitedByRateLimit { get; set; }
         protected VersionEnum? Version { get; set; }
+        protected string Prefix { get; set; }
 
         protected string VersionText
         {
@@ -37,10 +38,11 @@ namespace PortableLeagueAPI.Services
             }
         }
 
-        protected BaseService(VersionEnum? version)
+        protected BaseService(VersionEnum? version, string prefix)
         {
             Version = version;
             IsLimitedByRateLimit = true;
+            Prefix = prefix;
         }
         
         protected BaseService(bool isLimitedByRateLimit)
@@ -50,9 +52,10 @@ namespace PortableLeagueAPI.Services
 
         protected async Task<T> GetResponse<T>(RegionEnum? region, string relativeUrl) where T : class
         {
-            relativeUrl = string.Format("{0}/{1}/{2}", 
+            relativeUrl = string.Format("{0}/{1}/{2}/{3}", 
                 GetRegionAsString(region),
                 VersionText,
+                Prefix,
                 relativeUrl);
 
             return await GetResponse<T>(new Uri(relativeUrl, UriKind.Relative));
