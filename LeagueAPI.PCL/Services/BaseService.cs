@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
@@ -15,12 +16,18 @@ namespace PortableLeagueAPI.Services
     public abstract class BaseService
     {
         private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/");
+        private static readonly List<DateTime> LastRequests = new List<DateTime>();
+
+        private const int MaxRequestsPer10Sec = 10;
+        private const int MaxRequestsPer10Min = 500;
         
         internal static IHttpRequestService HttpRequestService { private get; set; }
         internal static string Key { private get; set; }
         internal static RegionEnum? DefaultRegion { private get; set; }
+        internal static bool WaitToAvoidRateLimit { get; set; }
 
         protected VersionEnum[] CompatibleVersions;
+        protected bool IsLimitedByRateLimit = true;
 
         protected async Task<T> GetResponse<T>(string relativeUrl) where T : class
         {
@@ -33,6 +40,8 @@ namespace PortableLeagueAPI.Services
 
             var keyParameter = string.Format("api_key={0}", Key);
             uriBuilder.AddQueryParameter(keyParameter);
+
+            await ManageRateLimit();
 
             var response = await HttpRequestService.SendRequest<T>(uriBuilder.Uri);
 
@@ -77,6 +86,53 @@ namespace PortableLeagueAPI.Services
             }
 
             return result;
+        }
+
+        private Task ManageRateLimit()
+        {
+            var delayInMs = 0;
+
+            if (WaitToAvoidRateLimit && IsLimitedByRateLimit)
+            {
+                LastRequests.Add(DateTime.Now);
+
+                var tenMinutesAgo = DateTime.Now.AddMinutes(-10);
+                LastRequests.RemoveAll(x => x < tenMinutesAgo);
+                
+                delayInMs = CalculateDelay(MaxRequestsPer10Min, 600, delayInMs);
+                delayInMs = CalculateDelay(MaxRequestsPer10Sec, 10, delayInMs);
+
+                //if (delayInMs > 0)
+                //{
+                //    // Add 1 second to the delay to be sure.
+                //    delayInMs += 1000;
+
+                //    Debug.WriteLine(delayInMs);
+                //}
+            }
+
+            return Task.Delay(delayInMs);
+        }
+
+        private static int CalculateDelay(int maxRequestsInGivenTime, int givenTimeInSeconds, int currentDelay)
+        {
+            var givenTimeAgo = DateTime.Now.AddSeconds(-givenTimeInSeconds);
+
+            var requestsInGivenTime = LastRequests.Where(x => x >= givenTimeAgo).ToList();
+
+            var delay = 0;
+
+            if (requestsInGivenTime.Count() >= maxRequestsInGivenTime)
+            {
+                var first = requestsInGivenTime.FirstOrDefault();
+                var limitReleaseDateTime = first.AddSeconds(givenTimeInSeconds);
+
+                delay = (int)limitReleaseDateTime.Subtract(DateTime.Now).TotalMilliseconds;
+
+                Debug.WriteLine(delay);
+            }
+
+            return delay > currentDelay ? delay : currentDelay;
         }
 
         protected RegionEnum GetRegion(RegionEnum? region)
