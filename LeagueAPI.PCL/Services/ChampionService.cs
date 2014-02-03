@@ -8,7 +8,7 @@ namespace PortableLeagueAPI.Services
 {
     public class ChampionService : BaseService
     {
-        private ChampionService():base(VersionEnum.V1Rev1, "champion") { }
+        private ChampionService(): base(VersionEnum.V1Rev1, "champion") { }
 
         private static ChampionService _instance;
         

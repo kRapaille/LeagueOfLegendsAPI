@@ -2,6 +2,7 @@
 {
     public enum VersionEnum
     {
+        V1,
         V1Rev1,
         V1Rev2,
         V1Rev3,

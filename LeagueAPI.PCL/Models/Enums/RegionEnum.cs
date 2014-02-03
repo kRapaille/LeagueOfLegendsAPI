@@ -6,6 +6,11 @@
         Euw,
         Eune,
         Br,
-        Tr
+        Tr,
+        Kr,
+        Lan,
+        Las,
+        Oce,
+        Ru
     }
 }
