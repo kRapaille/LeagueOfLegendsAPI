@@ -17,57 +17,57 @@ namespace PortableLeagueAPI.Services
             get { return _instance ?? (_instance = new SummonerService()); }
         }
 
-        public async Task<Dictionary<long, IEnumerable<MasteryPage>>> GetMasteryPagesBySummonerId(
+        public async Task<Dictionary<long, IEnumerable<MasteryPageDto>>> GetMasteryPagesBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
             return await GetMasteryPagesBySummonerId(new[] {summonerId}, region);
         }
 
-        public async Task<Dictionary<long, IEnumerable<MasteryPage>>> GetMasteryPagesBySummonerId(
+        public async Task<Dictionary<long, IEnumerable<MasteryPageDto>>> GetMasteryPagesBySummonerId(
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
             var url = string.Format("{0}/masteries",
                 string.Join(",", summonerIds));
 
-            var masteryPagesRoot = await GetResponse<Dictionary<long, MasteryPagesRoot>>(region, url);
+            var masteryPagesRoot = await GetResponse<Dictionary<long, MasteryPagesDto>>(region, url);
 
             return masteryPagesRoot.ToDictionary(x => x.Key, x => x.Value.Pages.AsEnumerable());
         }
 
-        public async Task<Dictionary<long, IEnumerable<RunePage>>> GetRunePagesBySummonerId(
+        public async Task<Dictionary<long, IEnumerable<RunePageDto>>> GetRunePagesBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
             return await GetRunePagesBySummonerId(new[] {summonerId}, region);
         }
 
-        public async Task<Dictionary<long, IEnumerable<RunePage>>> GetRunePagesBySummonerId(
+        public async Task<Dictionary<long, IEnumerable<RunePageDto>>> GetRunePagesBySummonerId(
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
             var url = string.Format("{0}/runes",
                 string.Join(",", summonerIds));
 
-            var runePageRoot = await GetResponse<Dictionary<long, RunePageRoot>>(region, url);
+            var runePageRoot = await GetResponse<Dictionary<long, RunePagesDto>>(region, url);
 
             return runePageRoot.ToDictionary(x => x.Key, x => x.Value.Pages.AsEnumerable());
         }
 
-        public async Task<Summoner> GetSummonerByName(
+        public async Task<SummonerDto> GetSummonerByName(
             string name,
             RegionEnum? region = null)
         {
             var url = string.Format("by-name/{0}",
                 name);
 
-            var result = await GetResponse<Dictionary<string, Summoner>>(region, url);
+            var result = await GetResponse<Dictionary<string, SummonerDto>>(region, url);
 
             return result.Select(x => x.Value).FirstOrDefault();
         }
 
-        public async Task<Summoner> GetSummonerById(
+        public async Task<SummonerDto> GetSummonerById(
             long summonerId,
             RegionEnum? region = null)
         {
@@ -75,14 +75,14 @@ namespace PortableLeagueAPI.Services
 
             return result.FirstOrDefault();
         }
-        public async Task<IEnumerable<Summoner>> GetSummonerById(
+        public async Task<IEnumerable<SummonerDto>> GetSummonerById(
            IEnumerable<long> summonersId,
            RegionEnum? region = null)
         {
             var url = string.Format("{0}",
                 string.Join(",", summonersId));
 
-            var result = await GetResponse<Dictionary<string, Summoner>>(region, url);
+            var result = await GetResponse<Dictionary<string, SummonerDto>>(region, url);
 
             return result.Select(x => x.Value);
         }

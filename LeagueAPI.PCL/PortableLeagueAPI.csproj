@@ -54,9 +54,12 @@
     <Compile Include="Models\Exceptions\APIRequestError.cs" />
     <Compile Include="Models\Exceptions\APIRequestException.cs" />
     <Compile Include="Models\Enums\RegionEnum.cs" />
+    <Compile Include="Models\Game\PlayerDto.cs" />
+    <Compile Include="Models\Game\RawStatsDto.cs" />
     <Compile Include="Models\IoC\IoC.cs" />
     <Compile Include="Models\IoC\LeagueResolver.cs" />
-    <Compile Include="Models\League\League.cs" />
+    <Compile Include="Models\League\LeagueDto.cs" />
+    <Compile Include="Models\League\MiniSeriesDto.cs" />
     <Compile Include="Models\Static\Item\BasicDataDto.cs" />
     <Compile Include="Models\Static\Champion\BlockDto.cs" />
     <Compile Include="Models\Static\Champion\BlockItemDto.cs" />
@@ -82,15 +85,18 @@
     <Compile Include="Models\Static\RealmDto.cs" />
     <Compile Include="Models\Static\Champion\StatsDto.cs" />
     <Compile Include="Models\Static\SummonerSpell\SummonerSpellDto.cs" />
-    <Compile Include="Models\Stats\AggregatedStats.cs" />
-    <Compile Include="Models\Summoner\MasteryPage.cs" />
-    <Compile Include="Models\Stats\PlayerStatSummary.cs" />
-    <Compile Include="Models\Stats\RankedStats.cs" />
-    <Compile Include="Models\Game\RecentGames.cs" />
-    <Compile Include="Models\Champion\Champions.cs" />
-    <Compile Include="Models\Summoner\RunePage.cs" />
-    <Compile Include="Models\Summoner\Summoner.cs" />
-    <Compile Include="Models\Summoner\SummonerInfos.cs" />
+    <Compile Include="Models\Stats\AggregatedStatsDto.cs" />
+    <Compile Include="Models\Stats\ChampionStatsDto.cs" />
+    <Compile Include="Models\Summoner\MasteryPageDto.cs" />
+    <Compile Include="Models\Stats\PlayerStatsSummaryDto.cs" />
+    <Compile Include="Models\Stats\RankedStatsDto.cs" />
+    <Compile Include="Models\Game\GameDto.cs" />
+    <Compile Include="Models\Champion\ChampionDto.cs" />
+    <Compile Include="Models\Summoner\RuneDto.cs" />
+    <Compile Include="Models\Summoner\RunePageDto.cs" />
+    <Compile Include="Models\Summoner\RuneSlotDto.cs" />
+    <Compile Include="Models\Summoner\SummonerDto.cs" />
+    <Compile Include="Models\Summoner\TalentDto.cs" />
     <Compile Include="Models\Team\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BaseService.cs" />
@@ -105,7 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.dll</HintPath>

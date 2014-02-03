@@ -16,14 +16,14 @@ namespace PortableLeagueAPI.Services
             get { return _instance ?? (_instance = new LeagueService()); }
         }
 
-        public async Task<Dictionary<string, League>> GetLeagueInfosBySummonerId(
+        public async Task<Dictionary<string, LeagueDto>> GetLeagueInfosBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}",
                 summonerId);
 
-            return await GetResponse<Dictionary<string, League>>(region, url);
+            return await GetResponse<Dictionary<string, LeagueDto>>(region, url);
         }
     }
 }

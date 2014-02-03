@@ -17,7 +17,7 @@ namespace PortableLeagueAPI.Services
             get { return _instance ?? (_instance = new StatsService()); }
         }
 
-        public async Task<IEnumerable<PlayerStatSummary>> GetPlayerStatsSummariesBySummonerId(
+        public async Task<IEnumerable<PlayerStatsSummaryDto>> GetPlayerStatsSummariesBySummonerId(
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null)
@@ -28,12 +28,12 @@ namespace PortableLeagueAPI.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var playerStatvalueRoot = await GetResponse<PlayerStatvalueRoot>(region, url);
+            var playerStatvalueRoot = await GetResponse<PlayerStatsSummaryListDto>(region, url);
 
             return playerStatvalueRoot.PlayerStatSummaries.AsEnumerable();
         }
 
-        public async Task<RankedStats> GetRankedStatsSummariesBySummonerId(
+        public async Task<RankedStatsDto> GetRankedStatsSummariesBySummonerId(
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null)
@@ -44,7 +44,7 @@ namespace PortableLeagueAPI.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var rankedStatsRoot = await GetResponse<RankedStats>(region, url);
+            var rankedStatsRoot = await GetResponse<RankedStatsDto>(region, url);
 
             return rankedStatsRoot;
         }
