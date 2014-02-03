@@ -1,18 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using PortableLeagueAPI.Helpers;
 using PortableLeagueAPI.Models.Constants;
 using PortableLeagueAPI.Models.Enums;
 using PortableLeagueAPI.Models.Static;
+using PortableLeagueAPI.Models.Static.Champion;
+using PortableLeagueAPI.Models.Static.Item;
+using PortableLeagueAPI.Models.Static.Mastery;
+using PortableLeagueAPI.Models.Static.Rune;
+using PortableLeagueAPI.Models.Static.SummonerSpell;
 
 namespace PortableLeagueAPI.Services
 {
     public class StaticService : BaseService
     {
-        private static readonly Dictionary<RegionEnum, StaticAPIVersions> StaticAPIVersions = new Dictionary<RegionEnum, StaticAPIVersions>();
         private static StaticService _instance;
 
-        private StaticService() : base(false) { }
+        private StaticService() : base(VersionEnum.V1, "static-data", false) { }
 
         internal static StaticService Instance
         {
@@ -25,121 +29,238 @@ namespace PortableLeagueAPI.Services
 
             return LanguageCodeConsts.SupportedLanguages[value];
         }
-        
-        private async Task<StaticAPIVersions> GetVersioningByRegion(
+        protected override Uri BuildUri(RegionEnum? region, string relativeUrl)
+        {
+            relativeUrl = string.Format("{0}/{1}/{2}/{3}",
+                   Prefix,
+                   GetRegionAsString(region),
+                   VersionText,
+                   relativeUrl);
+            
+            return BuildUri(new Uri(relativeUrl, UriKind.Relative));
+        }
+
+        private Uri BuildStaticUri<T>(
+            string path,
+            string dataParameterName,
+            T? data,
+            RegionEnum? region,
+            LanguageEnum? languageCode,
+            string dataDragonVersion,
+            int? id = null) where T : struct
+        {
+            return BuildStaticUri(
+                path,
+                dataParameterName,
+                data,
+                region,
+                languageCode,
+                dataDragonVersion,
+                id.HasValue ? id.Value.ToString() : null);
+        }
+
+        private Uri BuildStaticUri<T>(
+            string path,
+            string dataParameterName,
+            T? data,
+            RegionEnum? region,
+            LanguageEnum? languageCode,
+            string dataDragonVersion,
+            string id) where T : struct
+        {
+            var uri = BuildUri(region, path);
+
+            var uriBuilder = new UriBuilder(uri);
+
+            if (languageCode.HasValue)
+                uriBuilder.AddQueryParameter(string.Format("locale={0}", GetLanguageCode(languageCode)));
+
+            if (!string.IsNullOrWhiteSpace(dataDragonVersion))
+                uriBuilder.AddQueryParameter(string.Format("version={0}", dataDragonVersion));
+
+            if (data.HasValue)
+                uriBuilder.AddQueryParameter(string.Format("{0}={1}", dataParameterName, data.Value.ToString().ToLower()));
+
+            if (id != null)
+                uriBuilder.Path += string.Format("/{0}", id);
+
+            return uriBuilder.Uri;
+        }
+
+        public async Task<ChampionListDto> GetChampions(
+            ChampDataEnum? champData = null,
+            RegionEnum? region = null,
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
+        {
+            return await GetResponse<ChampionListDto>(
+                BuildStaticUri(
+                    "champion", 
+                    "champData", 
+                    champData, 
+                    region, 
+                    languageCode, 
+                    dataDragonVersion));
+        }
+
+        public async Task<ChampionDto> GetChampions(
+            int championId,
+            ChampDataEnum? champData = null,
+            RegionEnum? region = null,
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
+        {
+            return await GetResponse<ChampionDto>(
+                BuildStaticUri(
+                    "champion", 
+                    "champData", 
+                    champData, 
+                    region, 
+                    languageCode, 
+                    dataDragonVersion, 
+                    championId));
+        }
+        public async Task<ItemListDto> GetItems(
+            ItemDataEnum? itemData = null,
+            RegionEnum? region = null,
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
+        {
+            return await GetResponse<ItemListDto>(
+                BuildStaticUri(
+                    "item",
+                    "itemListData",
+                    itemData,
+                    region,
+                    languageCode,
+                    dataDragonVersion));
+        }
+
+        public async Task<ItemDto> GetItems(
+            int itemId,
+            ItemDataEnum? itemData = null,
+            RegionEnum? region = null,
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
+        {
+            return await GetResponse<ItemDto>(
+                BuildStaticUri(
+                    "item",
+                    "itemListData",
+                    itemData,
+                    region,
+                    languageCode,
+                    dataDragonVersion,
+                    itemId));
+        }
+
+        public async Task<MasteryListDto> GetMasteries(
+            MasteryDataEnum? itemData = null,
+            RegionEnum? region = null,
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
+        {
+            return await GetResponse<MasteryListDto>(
+                BuildStaticUri(
+                    "mastery",
+                    "masteryListData",
+                    itemData,
+                    region,
+                    languageCode,
+                    dataDragonVersion));
+        }
+
+        public async Task<MasteryDto> GetMasteries(
+            int masteryId,
+            MasteryDataEnum? itemData = null,
+            RegionEnum? region = null,
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
+        {
+            return await GetResponse<MasteryDto>(
+                BuildStaticUri(
+                    "mastery",
+                    "masteryListData",
+                    itemData,
+                    region,
+                    languageCode,
+                    dataDragonVersion,
+                    masteryId));
+        }
+
+        public async Task<RealmDto> GetRealm(
             RegionEnum? region = null)
         {
-            var regionValue = GetRegion(region);
-
-            if (!StaticAPIVersions.ContainsKey(regionValue))
-            {
-                var url = string.Format("http://ddragon.leagueoflegends.com/realms/{0}.json",
-                    GetRegionAsString(region));
-
-                var result = await GetResponse<StaticVersioningRoot>(new Uri(url));
-
-                return result.StaticAPIVersions;
-            }
-
-            return StaticAPIVersions[regionValue];
+            return await GetResponse<RealmDto>(
+                BuildUri(region, "realm"));
         }
 
-        public async Task<Dictionary<string, Item>> GetItems(
+        public async Task<RuneListDto> GetRunes(
+            RuneDataEnum? itemData = null,
             RegionEnum? region = null,
-            LanguageEnum? languageCode = null)
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
         {
-            var lastVersions = await GetVersioningByRegion(region);
-            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/{1}/item.json",
-                    lastVersions.Item,
-                    GetLanguageCode(languageCode));
-
-            var result = await GetResponse<ItemRootObject>(new Uri(url));
-
-            return result.Data;
+            return await GetResponse<RuneListDto>(
+                BuildStaticUri(
+                    "rune",
+                    "runeListData",
+                    itemData,
+                    region,
+                    languageCode,
+                    dataDragonVersion));
         }
 
-        public async Task<Dictionary<string, RuneItem>> GetRunes(
+        public async Task<RuneDto> GetRunes(
+            int runeId,
+            RuneDataEnum? itemData = null,
             RegionEnum? region = null,
-            LanguageEnum? languageCode = null)
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
         {
-            var lastVersions = await GetVersioningByRegion(region);
-            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/{1}/rune.json",
-                    lastVersions.Rune,
-                    GetLanguageCode(languageCode));
-
-            var result = await GetResponse<RuneRootObject>(new Uri(url));
-
-            return result.Data;
+            return await GetResponse<RuneDto>(
+                BuildStaticUri(
+                    "rune",
+                    "runeListData",
+                    itemData,
+                    region,
+                    languageCode,
+                    dataDragonVersion,
+                    runeId));
         }
 
-        public async Task<Dictionary<string, Mastery>> GetMasteries(
+        public async Task<SummonerSpellListDto> GetSummonerSpells(
+            SpellDataEnum? itemData = null,
             RegionEnum? region = null,
-            LanguageEnum? languageCode = null)
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
         {
-            var lastVersions = await GetVersioningByRegion(region);
-            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/{1}/mastery.json",
-                    lastVersions.Mastery,
-                    GetLanguageCode(languageCode));
-
-            var result = await GetResponse<MasteryRootobject>(new Uri(url));
-
-            return result.Data;
+            return await GetResponse<SummonerSpellListDto>(
+                BuildStaticUri(
+                    "summoner-spell",
+                    "spellData",
+                    itemData,
+                    region,
+                    languageCode,
+                    dataDragonVersion));
         }
 
-        public async Task<Dictionary<string, Summoner>> GetSummoners(
+        public async Task<SummonerSpellDto> GetSummonerSpells(
+            string spellId,
+            SpellDataEnum? itemData = null,
             RegionEnum? region = null,
-            LanguageEnum? languageCode = null)
+            LanguageEnum? languageCode = null,
+            string dataDragonVersion = null)
         {
-            var lastVersions = await GetVersioningByRegion(region);
-            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/{1}/summoner.json",
-                    lastVersions.Mastery,
-                    GetLanguageCode(languageCode));
-
-            var result = await GetResponse<SummonerRootobject>(new Uri(url));
-
-            return result.Data;
-        }
-
-        public async Task<Dictionary<string, StaticChampion>> GetChampions(
-            RegionEnum? region = null,
-            LanguageEnum? languageCode = null)
-        {
-            var lastVersions = await GetVersioningByRegion(region);
-            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/{1}/champion.json",
-                    lastVersions.Champion,
-                    GetLanguageCode(languageCode));
-
-            var result = await GetResponse<StaticChampionRoot>(new Uri(url));
-
-            return result.Data;
-        }
-
-        public async Task<Dictionary<int, ProfileIcon>> GetProfileIcons(
-            RegionEnum? region = null,
-            LanguageEnum? languageCode = null)
-        {
-            var lastVersions = await GetVersioningByRegion(region);
-            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/{1}/profileicon.json",
-                    lastVersions.Profileicon,
-                    GetLanguageCode(languageCode));
-
-            var result = await GetResponse<ProfileIconRoot>(new Uri(url));
-
-            return result.Data;
-        }
-
-        public async Task<Dictionary<string, string>> GetLanguages(
-            RegionEnum? region = null,
-            LanguageEnum? languageCode = null)
-        {
-            var lastVersions = await GetVersioningByRegion(region);
-            var url = string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/data/{1}/language.json",
-                    lastVersions.Language,
-                    GetLanguageCode(languageCode));
-
-            var result = await GetResponse<LanguageRoot>(new Uri(url));
-
-            return result.Data;
+            return await GetResponse<SummonerSpellDto>(
+                BuildStaticUri(
+                    "summoner-spell",
+                    "spellData",
+                    itemData,
+                    region,
+                    languageCode,
+                    dataDragonVersion,
+                    spellId));
         }
     }
 }

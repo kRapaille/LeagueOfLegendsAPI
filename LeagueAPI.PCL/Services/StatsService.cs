@@ -8,7 +8,7 @@ namespace PortableLeagueAPI.Services
 {
     public class StatsService : BaseService
     {
-        private StatsService() : base(VersionEnum.V1Rev2) { }
+        private StatsService() : base(VersionEnum.V1Rev2, "stats") { }
 
         private static StatsService _instance;
 
@@ -22,7 +22,7 @@ namespace PortableLeagueAPI.Services
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            var url = string.Format("stats/by-summoner/{0}/summary",
+            var url = string.Format("by-summoner/{0}/summary",
                 summonerId);
 
             if (season.HasValue)
@@ -38,7 +38,7 @@ namespace PortableLeagueAPI.Services
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            var url = string.Format("stats/by-summoner/{0}/ranked",
+            var url = string.Format("by-summoner/{0}/ranked",
                 summonerId);
 
             if (season.HasValue)

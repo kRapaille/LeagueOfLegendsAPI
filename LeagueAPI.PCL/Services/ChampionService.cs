@@ -8,7 +8,7 @@ namespace PortableLeagueAPI.Services
 {
     public class ChampionService : BaseService
     {
-        private ChampionService():base(VersionEnum.V1Rev1) { }
+        private ChampionService(): base(VersionEnum.V1Rev1, "champion") { }
 
         private static ChampionService _instance;
         
@@ -21,7 +21,7 @@ namespace PortableLeagueAPI.Services
             bool freeToPlay,
             RegionEnum? region = null)
         {
-            var url = string.Format("champion?freeToPlay={0}",
+            var url = string.Format("?freeToPlay={0}",
                 freeToPlay);
 
             var championsRoot = await GetResponse<ChampionsRoot>(region, url);

@@ -7,7 +7,7 @@ namespace PortableLeagueAPI.Services
 {
     public class LeagueService : BaseService
     {
-        private LeagueService() : base(VersionEnum.V2Rev2) { }
+        private LeagueService() : base(VersionEnum.V2Rev2, "league") { }
 
         private static LeagueService _instance;
 
@@ -20,7 +20,7 @@ namespace PortableLeagueAPI.Services
             long summonerId,
             RegionEnum? region = null)
         {
-            var url = string.Format("league/by-summoner/{0}",
+            var url = string.Format("by-summoner/{0}",
                 summonerId);
 
             return await GetResponse<Dictionary<string, League>>(region, url);

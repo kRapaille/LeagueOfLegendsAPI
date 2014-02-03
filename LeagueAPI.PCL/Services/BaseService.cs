@@ -26,8 +26,9 @@ namespace PortableLeagueAPI.Services
         internal static RegionEnum? DefaultRegion { private get; set; }
         internal static bool WaitToAvoidRateLimit { get; set; }
 
-        protected bool IsLimitedByRateLimit { get; set; }
-        protected VersionEnum? Version { get; set; }
+        protected bool IsLimitedByRateLimit { get; private set; }
+        protected VersionEnum? Version { get; private set; }
+        protected string Prefix { get; private set; }
 
         protected string VersionText
         {
@@ -37,37 +38,45 @@ namespace PortableLeagueAPI.Services
             }
         }
 
-        protected BaseService(VersionEnum? version)
+        protected BaseService(VersionEnum? version, string prefix, bool isLimitedByRateLimit = true)
         {
             Version = version;
             IsLimitedByRateLimit = true;
-        }
-        
-        protected BaseService(bool isLimitedByRateLimit)
-        {
+            Prefix = prefix;
             IsLimitedByRateLimit = isLimitedByRateLimit;
         }
 
-        protected async Task<T> GetResponse<T>(RegionEnum? region, string relativeUrl) where T : class
+        protected virtual Uri BuildUri(RegionEnum? region, string relativeUrl)
         {
-            relativeUrl = string.Format("{0}/{1}/{2}", 
-                GetRegionAsString(region),
-                VersionText,
-                relativeUrl);
+            relativeUrl = string.Format("{0}/{1}/{2}/{3}",
+                   GetRegionAsString(region),
+                   VersionText,
+                   Prefix,
+                   relativeUrl);
 
-            return await GetResponse<T>(new Uri(relativeUrl, UriKind.Relative));
+            return BuildUri(new Uri(relativeUrl, UriKind.Relative));
         }
 
-        protected async Task<T> GetResponse<T>(Uri relativeUri) where T : class
+        protected Uri BuildUri(Uri relativeUri)
         {
             var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
 
             var keyParameter = string.Format("api_key={0}", Key);
             uriBuilder.AddQueryParameter(keyParameter);
 
+            return uriBuilder.Uri;
+        }
+
+        protected async Task<T> GetResponse<T>(RegionEnum? region, string relativeUrl) where T : class
+        {
+            return await GetResponse<T>(BuildUri(region, relativeUrl));
+        }
+
+        protected async Task<T> GetResponse<T>(Uri uri) where T : class
+        {
             await ManageRateLimit();
 
-            var response = await HttpRequestService.SendRequest<T>(uriBuilder.Uri);
+            var response = await HttpRequestService.SendRequest<T>(uri);
 
             T result;
 
@@ -77,12 +86,14 @@ namespace PortableLeagueAPI.Services
             {
                 result = JsonConvert.DeserializeObject<T>(content, new JsonSerializerSettings
                 {
+#if DEBUG
                     MissingMemberHandling = MissingMemberHandling.Error
+#endif
                 });
             }
             else
             {
-                var url = uriBuilder.Uri.ToString();
+                var url = uri.ToString();
 
                 Debug.WriteLine(url);
 
@@ -92,7 +103,7 @@ namespace PortableLeagueAPI.Services
                 {
                     apiRequestError = new APIRequestError
                     {
-                        Status = new Status
+                        Status = new APIRequestErrorStatus
                         {
                             Message = "Not found",
                             StatusCode = 404
@@ -127,16 +138,21 @@ namespace PortableLeagueAPI.Services
                 // Add 1s to be sure
                 if (delayInMs > 0)
                     delayInMs += 1000;
+                
+                Debug.WriteLine(delayInMs);
             }
-
+            
             return Task.Delay(delayInMs);
         }
 
         private static int CalculateDelay(int maxRequestsInGivenTime, int givenTimeInSeconds, int currentDelay)
         {
-            var givenTimeAgo = DateTime.Now.AddSeconds(-givenTimeInSeconds);
+            var givenTimeAgo = DateTime.Now.AddSeconds(-(givenTimeInSeconds + 1));
 
-            var requestsInGivenTime = LastRequests.Where(x => x >= givenTimeAgo).ToList();
+            var requestsInGivenTime = LastRequests
+                .Where(x => x >= givenTimeAgo)
+                .OrderBy(x => x)
+                .ToList();
 
             var delay = 0;
 
@@ -147,7 +163,8 @@ namespace PortableLeagueAPI.Services
 
                 delay = (int)limitReleaseDateTime.Subtract(DateTime.Now).TotalMilliseconds;
 
-                Debug.WriteLine(delay);
+                if (delay < 0)
+                    delay = 0;
             }
 
             return delay > currentDelay ? delay : currentDelay;

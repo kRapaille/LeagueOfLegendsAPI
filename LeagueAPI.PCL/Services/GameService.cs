@@ -8,7 +8,7 @@ namespace PortableLeagueAPI.Services
 {
     public class GameService : BaseService
     {
-        private GameService() : base(VersionEnum.V1Rev3) { }
+        private GameService() : base(VersionEnum.V1Rev3, "game") { }
 
         private static GameService _instance;
 
@@ -21,7 +21,7 @@ namespace PortableLeagueAPI.Services
             long summonerId,
             RegionEnum? region = null)
         {
-            var url = string.Format("game/by-summoner/{0}/recent",
+            var url = string.Format("by-summoner/{0}/recent",
                 summonerId);
 
             var recentGamesRoot = await GetResponse<RecentGamesRoot>(region, url);

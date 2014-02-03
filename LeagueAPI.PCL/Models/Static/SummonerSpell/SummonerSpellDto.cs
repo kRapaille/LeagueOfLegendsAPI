@@ -2,37 +2,22 @@
 using Newtonsoft.Json;
 using PortableLeagueAPI.Helpers;
 
-namespace PortableLeagueAPI.Models.Static
+namespace PortableLeagueAPI.Models.Static.SummonerSpell
 {
-    public class SummonerRootobject
+    public class SummonerSpellListDto
     {
+        [JsonProperty("data")]
+        public Dictionary<string, SummonerSpellDto> Data { get; set; }
+
         [JsonProperty("type")]
         public string Type { get; set; }
 
         [JsonProperty("version")]
         public string Version { get; set; }
-
-        [JsonProperty("data")]
-        public Dictionary<string, Summoner> Data { get; set; }
     }
     
-    public class Summoner
+    public class SummonerSpellDto
     {
-        [JsonProperty("id")]
-        public string ID { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("description")]
-        public string Description { get; set; }
-
-        [JsonProperty("tooltip")]
-        public string Tooltip { get; set; }
-
-        [JsonProperty("maxrank")]
-        public int Maxrank { get; set; }
-
         [JsonProperty("cooldown")]
         public int[] Cooldown { get; set; }
 
@@ -45,26 +30,35 @@ namespace PortableLeagueAPI.Models.Static
         [JsonProperty("costBurn")]
         public string CostBurn { get; set; }
 
+        [JsonProperty("costType")]
+        public string CostType { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
         [JsonProperty("effect")]
         public object[] Effect { get; set; }
 
         [JsonProperty("effectBurn")]
-        public object[] EffectBurn { get; set; }
+        public string[] EffectBurn { get; set; }
 
-        [JsonProperty("vars")]
-        public Var[] Vars { get; set; }
+        [JsonProperty("id")]
+        public string ID { get; set; }
+
+        [JsonProperty("image")]
+        public ImageDto Image { get; set; }
 
         [JsonProperty("key")]
         public string Key { get; set; }
 
-        [JsonProperty("summonerLevel")]
-        public int SummonerLevel { get; set; }
+        [JsonProperty("maxrank")]
+        public int MaxRank { get; set; }
 
         [JsonProperty("modes")]
         public string[] Modes { get; set; }
 
-        [JsonProperty("costType")]
-        public string CostType { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
         [JsonProperty("range")]
         [JsonConverter(typeof(RangeJsonConverter))]
@@ -73,38 +67,29 @@ namespace PortableLeagueAPI.Models.Static
         [JsonProperty("rangeBurn")]
         public string RangeBurn { get; set; }
 
-        [JsonProperty("image")]
-        public Image Image { get; set; }
-
         [JsonProperty("resource")]
         public string Resource { get; set; }
 
-        [JsonProperty("leveltip")]
-        public Leveltip Leveltip { get; set; }
+        [JsonProperty("summonerLevel")]
+        public int SummonerLevel { get; set; }
+
+        [JsonProperty("tooltip")]
+        public string Tooltip { get; set; }
+
+        [JsonProperty("vars")]
+        public SummonerSpellVarsDto[] Vars { get; set; }
     }
 
-    public class Leveltip
+    public class SummonerSpellVarsDto
     {
-
-        [JsonProperty("label")]
-        public string[] Label { get; set; }
-
-
-        [JsonProperty("effect")]
-        public string[] Effect { get; set; }
-    }
-
-    public class Var
-    {
-        [JsonProperty("link")]
-        public string Link { get; set; }
-
         [JsonProperty("coeff")]
         [JsonConverter(typeof(CoeffArrayJsonConverter))]
         public float[] Coeff { get; set; }
 
         [JsonProperty("key")]
         public string Key { get; set; }
-    }
 
+        [JsonProperty("link")]
+        public string Link { get; set; }
+    }
 }

@@ -6,6 +6,7 @@ using NUnit.Framework;
 using PortableLeagueAPI.Models.Enums;
 using PortableLeagueAPI.Models.Exceptions;
 using PortableLeagueAPI.Models.League;
+using PortableLeagueAPI.Models.Stats;
 
 namespace PortableLeagueAPI.Test
 {
@@ -60,7 +61,7 @@ namespace PortableLeagueAPI.Test
             }
             catch (APIRequestException are)
             {
-                if (are.APIRequestError.Status.StatusCode != 404)
+                if (are.APIRequestError.StatusCode != 404)
                     throw;
 
                 return;
@@ -82,7 +83,19 @@ namespace PortableLeagueAPI.Test
         [Category("Stats")]
         public async void GetRankedStatsSummariesBySummonerIdTest()
         {
-            var result = await LeagueAPI.Stats.GetRankedStatsSummariesBySummonerId(19231046);
+            RankedStats result;
+
+            try
+            {
+                result = await LeagueAPI.Stats.GetRankedStatsSummariesBySummonerId(19231046);
+            }
+            catch (APIRequestException are)
+            {
+                if (are.APIRequestError.StatusCode != 404)
+                    throw;
+
+                return;
+            }
 
             Assert.NotNull(result);
         }
@@ -179,42 +192,6 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetItemsTest()
-        {
-            var result = await LeagueAPI.Static.GetItems();
-
-            Assert.NotNull(result);
-        }
-
-        [Test]
-        [Category("Static")]
-        public async void GetRunesTest()
-        {
-            var result = await LeagueAPI.Static.GetRunes();
-
-            Assert.NotNull(result);
-        }
-
-        [Test]
-        [Category("Static")]
-        public async void GetMasteriesTest()
-        {
-            var result = await LeagueAPI.Static.GetMasteries();
-
-            Assert.NotNull(result);
-        }
-
-        [Test]
-        [Category("Static")]
-        public async void GetSummonersTest()
-        {
-            var result = await LeagueAPI.Static.GetSummoners();
-
-            Assert.NotNull(result);
-        }
-
-        [Test]
-        [Category("Static")]
         public async void GetStaticChampionsTest()
         {
             var result = await LeagueAPI.Static.GetChampions();
@@ -224,17 +201,90 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetProfileIconsTest()
+        public async void GetStaticChampionsWithParametersTest()
         {
-            var result = await LeagueAPI.Static.GetProfileIcons();
+            var result = await LeagueAPI.Static.GetChampions(13, ChampDataEnum.All, languageCode:LanguageEnum.French);
+
             Assert.NotNull(result);
         }
 
         [Test]
         [Category("Static")]
-        public async void GetLanguagesTest()
+        public async void GetStaticItemsTest()
         {
-            var result = await LeagueAPI.Static.GetLanguages();
+            var result = await LeagueAPI.Static.GetItems();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticItemsWithParametersTest()
+        {
+            var result = await LeagueAPI.Static.GetItems(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticMasteriesTest()
+        {
+            var result = await LeagueAPI.Static.GetMasteries();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticMasteriesWithParametersTest()
+        {
+            var result = await LeagueAPI.Static.GetMasteries(4353, MasteryDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetRealm()
+        {
+            var result = await LeagueAPI.Static.GetRealm();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticRunesTest()
+        {
+            var result = await LeagueAPI.Static.GetRunes();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticRunesWithParametersTest()
+        {
+            var result = await LeagueAPI.Static.GetRunes(5235, RuneDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticSummonerSpellsTest()
+        {
+            var result = await LeagueAPI.Static.GetSummonerSpells();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticSummonerSpellsWithParametersTest()
+        {
+            var result = await LeagueAPI.Static.GetSummonerSpells("SummonerBattleCry", SpellDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
