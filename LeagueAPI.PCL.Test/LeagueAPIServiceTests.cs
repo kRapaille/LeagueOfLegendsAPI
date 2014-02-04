@@ -53,16 +53,18 @@ namespace PortableLeagueAPI.Test
         [Category("League")]
         public async void GetLeagueInfosBySummonerIdTest()
         {
-            Dictionary<string, League> result;
+            List<LeagueDto> result;
 
             try
             {
-                result = await LeagueAPI.League.GetLeagueInfosBySummonerId(19231046);
+                result = await LeagueAPI.League.GetLeagueInfosBySummonerId(19332836);
             }
             catch (APIRequestException are)
             {
                 if (are.APIRequestError.StatusCode != 404)
                     throw;
+
+                Debug.WriteLine("Unranked player");
 
                 return;
             }
@@ -83,16 +85,18 @@ namespace PortableLeagueAPI.Test
         [Category("Stats")]
         public async void GetRankedStatsSummariesBySummonerIdTest()
         {
-            RankedStats result;
+            RankedStatsDto result;
 
             try
             {
-                result = await LeagueAPI.Stats.GetRankedStatsSummariesBySummonerId(19231046);
+                result = await LeagueAPI.Stats.GetRankedStatsSummariesBySummonerId(19332836);
             }
             catch (APIRequestException are)
             {
                 if (are.APIRequestError.StatusCode != 404)
                     throw;
+
+                Debug.WriteLine("Player unranked");
 
                 return;
             }
@@ -140,7 +144,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetSummonerByNameTest()
         {
-            var result = await LeagueAPI.Summoner.GetSummonerByName("TuC Kiwii");
+            var result = await LeagueAPI.Summoner.GetSummonerByName("TuC Ølen");
 
             Assert.NotNull(result);
         }
