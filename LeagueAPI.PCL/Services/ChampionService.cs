@@ -17,14 +17,14 @@ namespace PortableLeagueAPI.Services
             get { return _instance ?? (_instance = new ChampionService()); }
         }
 
-        public async Task<IEnumerable<Champion>> GetChampions(
+        public async Task<IEnumerable<ChampionDto>> GetChampions(
             bool freeToPlay,
             RegionEnum? region = null)
         {
             var url = string.Format("?freeToPlay={0}",
                 freeToPlay);
 
-            var championsRoot = await GetResponse<ChampionsRoot>(region, url);
+            var championsRoot = await GetResponse<ChampionListDto>(region, url);
 
             return championsRoot.Champions.AsEnumerable();
         }

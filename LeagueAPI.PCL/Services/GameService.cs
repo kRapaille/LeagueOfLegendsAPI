@@ -17,14 +17,14 @@ namespace PortableLeagueAPI.Services
             get { return _instance ?? (_instance = new GameService()); }
         }
 
-        public async Task<IEnumerable<Game>> GetRecentGamesBySummonerId(
+        public async Task<IEnumerable<GameDto>> GetRecentGamesBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}/recent",
                 summonerId);
 
-            var recentGamesRoot = await GetResponse<RecentGamesRoot>(region, url);
+            var recentGamesRoot = await GetResponse<RecentGamesDto>(region, url);
 
             return recentGamesRoot.Games.AsEnumerable();
         }

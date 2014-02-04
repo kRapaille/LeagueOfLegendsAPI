@@ -7,7 +7,7 @@ namespace PortableLeagueAPI.Services
 {
     public class LeagueService : BaseService
     {
-        private LeagueService() : base(VersionEnum.V2Rev2, "league") { }
+        private LeagueService() : base(VersionEnum.V2Rev3, "league") { }
 
         private static LeagueService _instance;
 
@@ -16,14 +16,14 @@ namespace PortableLeagueAPI.Services
             get { return _instance ?? (_instance = new LeagueService()); }
         }
 
-        public async Task<Dictionary<string, League>> GetLeagueInfosBySummonerId(
+        public async Task<List<LeagueDto>> GetLeagueInfosBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}",
                 summonerId);
 
-            return await GetResponse<Dictionary<string, League>>(region, url);
+            return await GetResponse<List<LeagueDto>>(region, url);
         }
     }
 }
