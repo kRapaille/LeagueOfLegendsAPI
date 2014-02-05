@@ -1,9 +1,9 @@
 ﻿using PortableLeagueAPI.Champion.Services;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Interfaces;
+using PortableLeagueApi.Core.Models.IoC;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Game.Services;
-using PortableLeagueAPI.Interfaces;
 using PortableLeagueApi.League.Services;
 using PortableLeagueAPI.Models.IoC;
 using PortableLeagueApi.Static.Services;
