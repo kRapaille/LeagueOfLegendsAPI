@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using NUnit.Framework;
-using PortableLeagueAPI.Models.Enums;
-using PortableLeagueAPI.Models.Exceptions;
-using PortableLeagueAPI.Models.League;
-using PortableLeagueAPI.Models.Stats;
+using PortableLeagueApi.Core.Enums;
+using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.League.Models.League;
+using PortableLeagueApi.Static.Enums;
+using PortableLeagueApi.Stats.Models.Stats;
 
 namespace PortableLeagueAPI.Test
 {
@@ -288,7 +289,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticSummonerSpellsWithParametersTest()
         {
-            var result = await LeagueAPI.Static.GetSummonerSpells("SummonerBattleCry", SpellDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await LeagueAPI.Static.GetSummonerSpells("SummonerTeleport", SpellDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }

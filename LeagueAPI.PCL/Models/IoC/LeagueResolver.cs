@@ -1,4 +1,5 @@
-﻿using PortableLeagueAPI.Interfaces;
+﻿using PortableLeagueApi.Core.Interfaces;
+using PortableLeagueAPI.Interfaces;
 using PortableLeagueAPI.Services;
 
 namespace PortableLeagueAPI.Models.IoC
