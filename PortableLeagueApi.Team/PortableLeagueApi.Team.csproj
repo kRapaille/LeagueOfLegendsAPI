@@ -33,7 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Models\Team\Team.cs" />
+    <Compile Include="Models\Team\MatchHistorySummaryDto.cs" />
+    <Compile Include="Models\Team\MessageOfDayDto.cs" />
+    <Compile Include="Models\Team\RosterDto.cs" />
+    <Compile Include="Models\Team\TeamDto.cs" />
+    <Compile Include="Models\Team\TeamMemberInfoDto.cs" />
+    <Compile Include="Models\Team\TeamStatDetailDto.cs" />
+    <Compile Include="Models\Team\TeamStatSummaryDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\TeamService.cs" />
   </ItemGroup>

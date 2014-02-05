@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Services;
+using PortableLeagueApi.Team.Models.Team;
 
 namespace PortableLeagueApi.Team.Services
 {
@@ -16,14 +17,14 @@ namespace PortableLeagueApi.Team.Services
             get { return _instance ?? (_instance = new TeamService()); }
         }
 
-        public async Task<IEnumerable<Models.Team.Team>> GetTeamsBySummonerId(
+        public async Task<IEnumerable<TeamDto>> GetTeamsBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}",
                 summonerId);
 
-            return await GetResponse<List<Models.Team.Team>>(region, url);
+            return await GetResponse<List<TeamDto>>(region, url);
         }
     }
 }
