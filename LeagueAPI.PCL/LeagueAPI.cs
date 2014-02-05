@@ -1,7 +1,15 @@
-﻿using PortableLeagueAPI.Interfaces;
-using PortableLeagueAPI.Models.Enums;
+﻿using PortableLeagueAPI.Champion.Services;
+using PortableLeagueApi.Core.Enums;
+using PortableLeagueApi.Core.Interfaces;
+using PortableLeagueApi.Core.Services;
+using PortableLeagueApi.Game.Services;
+using PortableLeagueAPI.Interfaces;
+using PortableLeagueApi.League.Services;
 using PortableLeagueAPI.Models.IoC;
-using PortableLeagueAPI.Services;
+using PortableLeagueApi.Static.Services;
+using PortableLeagueApi.Stats.Services;
+using PortableLeagueApi.Summoner.Services;
+using PortableLeagueApi.Team.Services;
 
 namespace PortableLeagueAPI
 {

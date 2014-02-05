@@ -1,11 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueAPI", "LeagueAPI.PCL\PortableLeagueAPI.csproj", "{B6006AB6-FFC5-46A6-9680-19A6E8863FD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueAPI.Test", "LeagueAPI.PCL.Test\PortableLeagueAPI.Test.csproj", "{019388B8-944D-4FC9-A7CD-8D80F4C48A38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueAPI.Champion", "PortableLeagueAPI.Champion\PortableLeagueAPI.Champion.csproj", "{4FA20F11-72D9-40F3-AB77-46F71ED9D1DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueApi.Core", "PortableLeagueApi.Core\PortableLeagueApi.Core.csproj", "{6CC87881-42FB-43D2-8939-F90B4FC7B29B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueApi.League", "PortableLeagueApi.League\PortableLeagueApi.League.csproj", "{71D95DEB-6EAD-4CBD-99E1-A9B8750CFD6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueApi.Stats", "PortableLeagueApi.Stats\PortableLeagueApi.Stats.csproj", "{22288234-73EA-4BEC-9D10-D46789F18510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueApi.Summoner", "PortableLeagueApi.Summoner\PortableLeagueApi.Summoner.csproj", "{3BD21DAB-8BE1-4A2D-89B2-CCEA57305328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueApi.Team", "PortableLeagueApi.Team\PortableLeagueApi.Team.csproj", "{EE1769F8-0EEE-4325-8835-ECF90BBCA720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueApi.Static", "PortableLeagueApi.Static\PortableLeagueApi.Static.csproj", "{72C4A44C-1285-4758-BE56-F1086CF2DAD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortableLeagueApi.Game", "PortableLeagueApi.Game\PortableLeagueApi.Game.csproj", "{7AF96041-02C3-4002-A0D3-529AA24FB8BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +37,38 @@ Global
 		{019388B8-944D-4FC9-A7CD-8D80F4C48A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{019388B8-944D-4FC9-A7CD-8D80F4C48A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{019388B8-944D-4FC9-A7CD-8D80F4C48A38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA20F11-72D9-40F3-AB77-46F71ED9D1DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA20F11-72D9-40F3-AB77-46F71ED9D1DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA20F11-72D9-40F3-AB77-46F71ED9D1DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA20F11-72D9-40F3-AB77-46F71ED9D1DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC87881-42FB-43D2-8939-F90B4FC7B29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC87881-42FB-43D2-8939-F90B4FC7B29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC87881-42FB-43D2-8939-F90B4FC7B29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC87881-42FB-43D2-8939-F90B4FC7B29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D95DEB-6EAD-4CBD-99E1-A9B8750CFD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D95DEB-6EAD-4CBD-99E1-A9B8750CFD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D95DEB-6EAD-4CBD-99E1-A9B8750CFD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D95DEB-6EAD-4CBD-99E1-A9B8750CFD6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22288234-73EA-4BEC-9D10-D46789F18510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22288234-73EA-4BEC-9D10-D46789F18510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22288234-73EA-4BEC-9D10-D46789F18510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22288234-73EA-4BEC-9D10-D46789F18510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BD21DAB-8BE1-4A2D-89B2-CCEA57305328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD21DAB-8BE1-4A2D-89B2-CCEA57305328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD21DAB-8BE1-4A2D-89B2-CCEA57305328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD21DAB-8BE1-4A2D-89B2-CCEA57305328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE1769F8-0EEE-4325-8835-ECF90BBCA720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1769F8-0EEE-4325-8835-ECF90BBCA720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1769F8-0EEE-4325-8835-ECF90BBCA720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1769F8-0EEE-4325-8835-ECF90BBCA720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72C4A44C-1285-4758-BE56-F1086CF2DAD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72C4A44C-1285-4758-BE56-F1086CF2DAD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72C4A44C-1285-4758-BE56-F1086CF2DAD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C4A44C-1285-4758-BE56-F1086CF2DAD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF96041-02C3-4002-A0D3-529AA24FB8BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF96041-02C3-4002-A0D3-529AA24FB8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF96041-02C3-4002-A0D3-529AA24FB8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF96041-02C3-4002-A0D3-529AA24FB8BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

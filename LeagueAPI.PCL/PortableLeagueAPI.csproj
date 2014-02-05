@@ -33,99 +33,58 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Helpers\CoeffArrayJsonConverter.cs" />
-    <Compile Include="Helpers\RangeJsonConverter.cs" />
-    <Compile Include="Helpers\UriExtensions.cs" />
-    <Compile Include="Interfaces\IHttpRequestService.cs" />
     <Compile Include="Interfaces\IResolver.cs" />
     <Compile Include="LeagueAPI.cs" />
-    <Compile Include="Models\Constants\LanguageCodeConsts.cs" />
-    <Compile Include="Models\Constants\VersionConsts.cs" />
-    <Compile Include="Models\Enums\ChampDataEnum.cs" />
-    <Compile Include="Models\Enums\ItemDataEnum.cs" />
-    <Compile Include="Models\Enums\LanguageEnum.cs" />
     <Compile Include="Models\Enums\MapEnum.cs" />
-    <Compile Include="Models\Enums\MasteryDataEnum.cs" />
     <Compile Include="Models\Enums\QueueEnum.cs" />
-    <Compile Include="Models\Enums\RuneDataEnum.cs" />
-    <Compile Include="Models\Enums\SeasonEnum.cs" />
-    <Compile Include="Models\Enums\SpellDataEnum.cs" />
-    <Compile Include="Models\Enums\VersionEnum.cs" />
-    <Compile Include="Models\Exceptions\APIRequestError.cs" />
-    <Compile Include="Models\Exceptions\APIRequestException.cs" />
-    <Compile Include="Models\Enums\RegionEnum.cs" />
-    <Compile Include="Models\Game\PlayerDto.cs" />
-    <Compile Include="Models\Game\RawStatsDto.cs" />
     <Compile Include="Models\IoC\IoC.cs" />
     <Compile Include="Models\IoC\LeagueResolver.cs" />
-    <Compile Include="Models\League\LeagueDto.cs" />
-    <Compile Include="Models\League\MiniSeriesDto.cs" />
-    <Compile Include="Models\Static\Item\BasicDataDto.cs" />
-    <Compile Include="Models\Static\Champion\BlockDto.cs" />
-    <Compile Include="Models\Static\Champion\BlockItemDto.cs" />
-    <Compile Include="Models\Static\Champion\ChampionDto.cs" />
-    <Compile Include="Models\Static\Item\GoldDto.cs" />
-    <Compile Include="Models\Static\Item\GroupDto.cs" />
-    <Compile Include="Models\Static\ImageDto.cs" />
-    <Compile Include="Models\Static\Item\ItemRuneDto.cs" />
-    <Compile Include="Models\Static\Item\ItemStatsDto.cs" />
-    <Compile Include="Models\Static\Item\ItemTreeDto.cs" />
-    <Compile Include="Models\Static\SummonerSpell\LevelTipDto.cs" />
-    <Compile Include="Models\Static\Mastery\MasteryTreeDto.cs" />
-    <Compile Include="Models\Static\Champion\RecommendedDto.cs" />
-    <Compile Include="Models\Static\Champion\PassiveDto.cs" />
-    <Compile Include="Models\Static\Champion\InfoDto.cs" />
-    <Compile Include="Models\Static\Item\ItemDto.cs" />
-    <Compile Include="Models\Static\Mastery\MasteryDto.cs" />
-    <Compile Include="Models\Static\Rune\RuneDto.cs" />
-    <Compile Include="Models\Static\Rune\RuneStatsDto.cs" />
-    <Compile Include="Models\Static\Rune\RuneTypeDto.cs" />
-    <Compile Include="Models\Static\Champion\SpellDto.cs" />
-    <Compile Include="Models\Static\Champion\SkinDto.cs" />
-    <Compile Include="Models\Static\RealmDto.cs" />
-    <Compile Include="Models\Static\Champion\StatsDto.cs" />
-    <Compile Include="Models\Static\SummonerSpell\SummonerSpellDto.cs" />
-    <Compile Include="Models\Stats\AggregatedStatsDto.cs" />
-    <Compile Include="Models\Stats\ChampionStatsDto.cs" />
-    <Compile Include="Models\Summoner\MasteryPageDto.cs" />
-    <Compile Include="Models\Stats\PlayerStatsSummaryDto.cs" />
-    <Compile Include="Models\Stats\RankedStatsDto.cs" />
-    <Compile Include="Models\Game\GameDto.cs" />
-    <Compile Include="Models\Champion\ChampionDto.cs" />
-    <Compile Include="Models\Summoner\RuneDto.cs" />
-    <Compile Include="Models\Summoner\RunePageDto.cs" />
-    <Compile Include="Models\Summoner\RuneSlotDto.cs" />
-    <Compile Include="Models\Summoner\SummonerDto.cs" />
-    <Compile Include="Models\Summoner\TalentDto.cs" />
-    <Compile Include="Models\Team\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\BaseService.cs" />
-    <Compile Include="Services\ChampionService.cs" />
-    <Compile Include="Services\GameService.cs" />
     <Compile Include="Services\HttpRequestService.cs" />
-    <Compile Include="Services\LeagueService.cs" />
-    <Compile Include="Services\StaticService.cs" />
-    <Compile Include="Services\StatsService.cs" />
-    <Compile Include="Services\SummonerService.cs" />
-    <Compile Include="Services\TeamService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="PortableLeagueAPI.Champion">
+      <HintPath>..\packages\Remake.PortableLeagueAPI.Champion.1.1.0\lib\portable-net45+wp8+win8\PortableLeagueAPI.Champion.dll</HintPath>
+    </Reference>
+    <Reference Include="PortableLeagueApi.Core">
+      <HintPath>..\packages\Remake.PortableLeagueAPI.Core.1.3.3\lib\portable-net45+wp8+win8\PortableLeagueApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PortableLeagueApi.Game">
+      <HintPath>..\packages\Remake.PortableLeagueAPI.Game.1.3.0\lib\portable-net45+wp8+win8\PortableLeagueApi.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="PortableLeagueApi.League">
+      <HintPath>..\packages\Remake.PortableLeagueAPI.League.2.3.0\lib\portable-net45+wp8+win8\PortableLeagueApi.League.dll</HintPath>
+    </Reference>
+    <Reference Include="PortableLeagueApi.Static">
+      <HintPath>..\packages\Remake.PortableLeagueAPI.Static.1.0\lib\portable-net45+wp8+win8\PortableLeagueApi.Static.dll</HintPath>
+    </Reference>
+    <Reference Include="PortableLeagueApi.Stats">
+      <HintPath>..\packages\Remake.PortableLeagueAPI.Stats.1.2\lib\portable-net45+wp8+win8\PortableLeagueApi.Stats.dll</HintPath>
+    </Reference>
+    <Reference Include="PortableLeagueApi.Summoner">
+      <HintPath>..\packages\Remake.PortableLeagueAPI.Summoner.1.3\lib\portable-net45+wp8+win8\PortableLeagueApi.Summoner.dll</HintPath>
+    </Reference>
+    <Reference Include="PortableLeagueApi.Team">
+      <HintPath>..\packages\Remake.PortableLeagueAPI.Team.2.2\lib\portable-net45+wp8+win8\PortableLeagueApi.Team.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
-    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
-    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
