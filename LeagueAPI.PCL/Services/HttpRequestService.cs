@@ -2,17 +2,28 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Interfaces;
+using PortableLeagueApi.Core.Models;
 
 namespace PortableLeagueAPI.Services
 {
     public class HttpRequestService : IHttpRequestService
     {
-        public async Task<HttpResponseMessage> SendRequest<T>(Uri uri) where T : class
+        public async Task<IHttpResponseMessage> SendRequest<T>(Uri uri) where T : class
         {
             using (var httpClient = new HttpClient())
             {
                 var request = new HttpRequestMessage(HttpMethod.Get, uri);
-                return await httpClient.SendAsync(request);   
+                var httpResponseMessage = await httpClient.SendAsync(request);
+
+                return new HttpResponseMessageWrapper
+                {
+                    Content = new HttpContentWrapper
+                    {
+                        ReadAsStringAsync = httpResponseMessage.Content.ReadAsStringAsync
+                    },
+                    IsSuccessStatusCode = httpResponseMessage.IsSuccessStatusCode,
+                    StatusCode = httpResponseMessage.StatusCode
+                };
             }
         }
     }
