@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Enums\LeagueTypeEnum.cs" />
     <Compile Include="Models\League\LeagueDto.cs" />
     <Compile Include="Models\League\MiniSeriesDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
