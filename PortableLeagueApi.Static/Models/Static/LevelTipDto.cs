@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PortableLeagueApi.Static.Models.Static.SummonerSpell
+namespace PortableLeagueApi.Static.Models.Static
 {
     public class LevelTipDto
     {

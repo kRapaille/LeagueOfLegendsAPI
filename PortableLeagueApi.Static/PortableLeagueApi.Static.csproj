@@ -50,21 +50,22 @@
     <Compile Include="Models\Static\Champion\SpellDto.cs" />
     <Compile Include="Models\Static\Champion\StatsDto.cs" />
     <Compile Include="Models\Static\ImageDto.cs" />
-    <Compile Include="Models\Static\Item\BasicDataDto.cs" />
-    <Compile Include="Models\Static\Item\GoldDto.cs" />
+    <Compile Include="Models\Static\BasicDataDto.cs" />
+    <Compile Include="Models\Static\BasicDataStatsDto.cs" />
+    <Compile Include="Models\Static\GoldDto.cs" />
     <Compile Include="Models\Static\Item\GroupDto.cs" />
     <Compile Include="Models\Static\Item\ItemDto.cs" />
     <Compile Include="Models\Static\Item\ItemRuneDto.cs" />
-    <Compile Include="Models\Static\Item\ItemStatsDto.cs" />
     <Compile Include="Models\Static\Item\ItemTreeDto.cs" />
+    <Compile Include="Models\Static\Item\MetaDataDto.cs" />
     <Compile Include="Models\Static\Mastery\MasteryDto.cs" />
     <Compile Include="Models\Static\Mastery\MasteryTreeDto.cs" />
     <Compile Include="Models\Static\RealmDto.cs" />
     <Compile Include="Models\Static\Rune\RuneDto.cs" />
-    <Compile Include="Models\Static\Rune\RuneStatsDto.cs" />
     <Compile Include="Models\Static\Rune\RuneTypeDto.cs" />
-    <Compile Include="Models\Static\SummonerSpell\LevelTipDto.cs" />
+    <Compile Include="Models\Static\LevelTipDto.cs" />
     <Compile Include="Models\Static\SummonerSpell\SummonerSpellDto.cs" />
+    <Compile Include="Models\Static\SummonerSpell\SummonerSpellVarsDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\StaticService.cs" />
   </ItemGroup>

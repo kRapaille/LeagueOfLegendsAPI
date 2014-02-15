@@ -6,7 +6,7 @@ namespace PortableLeagueApi.Static.Models.Static.Rune
     public class RuneListDto
     {
         [JsonProperty("basic")]
-        public BasicRuneDataDto Basic { get; set; }
+        public BasicDataDto Basic { get; set; }
 
         [JsonProperty("data")]
         public Dictionary<string, RuneDto> Data { get; set; }
@@ -18,18 +18,46 @@ namespace PortableLeagueApi.Static.Models.Static.Rune
         public string Version { get; set; }
     }
 
-    public class BasicRuneDataDto {}
-
     public class RuneDto
     {
         [JsonProperty("colloq")]
         public string Colloq { get; set; }
 
+        [JsonProperty("consumeOnFull")]
+        public bool ConsumeOnFull { get; set; }
+
+        [JsonProperty("consumed")]
+        public bool Consumed { get; set; }
+
+        [JsonProperty("depth")]
+        public int Depth { get; set; }
+
         [JsonProperty("description")]
         public string Description { get; set; }
 
+        [JsonProperty("from")]
+        public IList<string> From { get; set; }
+
+        [JsonProperty("gold")]
+        public GoldDto Gold { get; set; }
+
+        [JsonProperty("group")]
+        public string Group { get; set; }
+
+        [JsonProperty("hideFromAll")]
+        public bool HideFromAll { get; set; }
+        
         [JsonProperty("image")]
         public ImageDto Image { get; set; }
+
+        [JsonProperty("inStore")]
+        public bool InStore { get; set; }
+
+        [JsonProperty("into")]
+        public IList<string> Into { get; set; }
+
+        [JsonProperty("maps")]
+        public Dictionary<string, bool> Maps { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -37,13 +65,22 @@ namespace PortableLeagueApi.Static.Models.Static.Rune
         [JsonProperty("plaintext")]
         public object Plaintext { get; set; }
 
+        [JsonProperty("requiredChampion")]
+        public string RequiredChampion { get; set; }
+
         [JsonProperty("rune")]
         public RuneTypeDto Rune { get; set; }
 
+        [JsonProperty("specialRecipe")]
+        public int SpecialRecipe { get; set; }
+
+        [JsonProperty("stacks")]
+        public int Stacks { get; set; }
+
         [JsonProperty("stats")]
-        public RuneStatsDto Stats { get; set; }
+        public BasicDataStatsDto Stats { get; set; }
 
         [JsonProperty("tags")]
-        public string[] Tags { get; set; }
+        public IList<string> Tags { get; set; }
     }
 }
