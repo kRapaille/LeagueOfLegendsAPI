@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using PortableLeagueApi.Static.Models.Static.Item;
 
-namespace PortableLeagueApi.Static.Models.Static.Item
+namespace PortableLeagueApi.Static.Models.Static
 {
     public class BasicDataDto
     {
@@ -32,6 +33,9 @@ namespace PortableLeagueApi.Static.Models.Static.Item
         [JsonProperty("hideFromAll")]
         public bool HideFromAll { get; set; }
 
+        [JsonProperty("image")]
+        public ImageDto Image { get; set; }
+
         [JsonProperty("inStore")]
         public bool InStore { get; set; }
 
@@ -60,7 +64,7 @@ namespace PortableLeagueApi.Static.Models.Static.Item
         public int Stacks { get; set; }
 
         [JsonProperty("stats")]
-        public ItemStatsDto Stats { get; set; }
+        public BasicDataStatsDto Stats { get; set; }
 
         [JsonProperty("tags")]
         public string[] Tags { get; set; }

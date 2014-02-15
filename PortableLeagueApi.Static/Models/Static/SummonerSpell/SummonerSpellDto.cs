@@ -51,6 +51,9 @@ namespace PortableLeagueApi.Static.Models.Static.SummonerSpell
         [JsonProperty("key")]
         public string Key { get; set; }
 
+        [JsonProperty("leveltip")]
+        public LevelTipDto Leveltip { get; set; }
+        
         [JsonProperty("maxrank")]
         public int MaxRank { get; set; }
 
@@ -78,18 +81,5 @@ namespace PortableLeagueApi.Static.Models.Static.SummonerSpell
 
         [JsonProperty("vars")]
         public SummonerSpellVarsDto[] Vars { get; set; }
-    }
-
-    public class SummonerSpellVarsDto
-    {
-        [JsonProperty("coeff")]
-        [JsonConverter(typeof(CoeffArrayJsonConverter))]
-        public float[] Coeff { get; set; }
-
-        [JsonProperty("key")]
-        public string Key { get; set; }
-
-        [JsonProperty("link")]
-        public string Link { get; set; }
     }
 }

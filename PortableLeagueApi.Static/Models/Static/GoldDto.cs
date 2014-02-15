@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PortableLeagueApi.Static.Models.Static.Item
+namespace PortableLeagueApi.Static.Models.Static
 {
     public class GoldDto
     {
