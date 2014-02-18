@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
-using PortableLeagueApi.Core.Interfaces;
+using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Summoner.Models.Summoner;
 
 namespace PortableLeagueApi.Summoner.Services
@@ -15,8 +15,8 @@ namespace PortableLeagueApi.Summoner.Services
         public static async Task<IEnumerable<MasteryPageDto>> GetMasteryPages(
             this ISummoner summoner,
             RegionEnum? region = null)
-        {   
-            return await SummonerService.Instance.GetMasteryPagesBySummonerId(summoner.Id, region);
+        {
+            return await SummonerService.Instance.GetMasteryPagesBySummonerId(summoner.SummonerId, region);
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace PortableLeagueApi.Summoner.Services
             this IEnumerable<ISummoner> summoners,
             RegionEnum? region = null)
         {
-            return await SummonerService.Instance.GetMasteryPagesBySummonerId(summoners.Select(x => x.Id), region);
+            return await SummonerService.Instance.GetMasteryPagesBySummonerId(summoners.Select(x => x.SummonerId), region);
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace PortableLeagueApi.Summoner.Services
             this ISummoner summoner,
             RegionEnum? region = null)
         {
-            return await SummonerService.Instance.GetRunePagesBySummonerId(summoner.Id, region);
+            return await SummonerService.Instance.GetRunePagesBySummonerId(summoner.SummonerId, region);
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace PortableLeagueApi.Summoner.Services
             this IEnumerable<ISummoner> summoners,
             RegionEnum? region = null)
         {
-            return await SummonerService.Instance.GetRunePagesBySummonerId(summoners.Select(x => x.Id), region);
+            return await SummonerService.Instance.GetRunePagesBySummonerId(summoners.Select(x => x.SummonerId), region);
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Game.Models.Game
 {
-    public class RecentGamesDto
+    public class RecentGamesDto : ISummoner
     {
         /// <summary>
         /// List of recent games played (max 10).
@@ -14,10 +15,10 @@ namespace PortableLeagueApi.Game.Models.Game
         /// Summoner ID.
         /// </summary>
         [JsonProperty("summonerId")]
-        public int SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 
-    public class GameDto
+    public class GameDto : IChampion
     {
         /// <summary>
         /// Other players associated with the game.

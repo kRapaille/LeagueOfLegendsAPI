@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
-using PortableLeagueApi.Core.Interfaces;
+using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Team.Models.Team;
 
 namespace PortableLeagueApi.Team.Services
@@ -15,7 +15,7 @@ namespace PortableLeagueApi.Team.Services
             ISummoner summoner,
             RegionEnum? region = null)
         {
-            return await TeamService.Instance.GetTeamsBySummonerId(summoner.Id, region);
+            return await TeamService.Instance.GetTeamsBySummonerId(summoner.SummonerId, region);
         }
     }
 }

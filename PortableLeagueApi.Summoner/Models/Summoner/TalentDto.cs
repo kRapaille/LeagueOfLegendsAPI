@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Summoner.Models.Summoner
 {
-    public class TalentDto
+    public class TalentDto : IMastery
     {
         /// <summary>
         /// Talent id.

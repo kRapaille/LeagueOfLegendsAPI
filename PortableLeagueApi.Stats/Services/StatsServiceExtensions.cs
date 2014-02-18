@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
-using PortableLeagueApi.Core.Interfaces;
+using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Stats.Enums;
 using PortableLeagueApi.Stats.Models.Stats;
 
@@ -17,7 +17,7 @@ namespace PortableLeagueApi.Stats.Services
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            return await StatsService.Instance.GetPlayerStatsSummariesBySummonerId(summoner.Id, season, region);
+            return await StatsService.Instance.GetPlayerStatsSummariesBySummonerId(summoner.SummonerId, season, region);
         }
 
 
@@ -29,7 +29,7 @@ namespace PortableLeagueApi.Stats.Services
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            return await StatsService.Instance.GetRankedStatsSummariesBySummonerId(summoner.Id, season, region);
+            return await StatsService.Instance.GetRankedStatsSummariesBySummonerId(summoner.SummonerId, season, region);
         }
     }
 }

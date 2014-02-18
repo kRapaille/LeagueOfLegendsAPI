@@ -1,8 +1,9 @@
 using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Game.Models.Game
 {
-    public class PlayerDto
+    public class PlayerDto : IChampion, ISummoner
     {
         /// <summary>
         /// Champion id associated with player.
@@ -20,6 +21,6 @@ namespace PortableLeagueApi.Game.Models.Game
         /// Summoner id associated with player.
         /// </summary>
         [JsonProperty("summonerId")]
-        public int SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 }

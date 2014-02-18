@@ -1,14 +1,15 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Stats.Models.Stats
 {
-    public class ChampionStatsDto
+    public class ChampionStatsDto : IChampion
     {
         /// <summary>
         /// Champion id.
         /// </summary>
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int ChampionId { get; set; }
 
         /// <summary>
         /// Aggregated stats associated with the champion.

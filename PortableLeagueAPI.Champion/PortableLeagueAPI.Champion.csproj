@@ -50,6 +50,10 @@
       <Project>{6CC87881-42FB-43D2-8939-F90B4FC7B29B}</Project>
       <Name>PortableLeagueApi.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj">
+      <Project>{DF6B5C82-017D-477D-8780-48E05CFAB0F8}</Project>
+      <Name>PortableLeagueApi.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

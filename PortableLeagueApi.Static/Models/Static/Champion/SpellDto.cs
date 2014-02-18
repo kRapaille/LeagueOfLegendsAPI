@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using PortableLeagueApi.Static.Models.Static.SummonerSpell;
 
 namespace PortableLeagueApi.Static.Models.Static.Champion
 {

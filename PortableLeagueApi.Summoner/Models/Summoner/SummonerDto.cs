@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using PortableLeagueApi.Core.Interfaces;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Summoner.Models.Summoner
 {
@@ -9,7 +9,7 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
         /// Summoner Id.
         /// </summary>
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long SummonerId { get; set; }
 
         /// <summary>
         /// Summoner name.

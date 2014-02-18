@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
-using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Game.Models.Game;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Game.Services
 {
@@ -15,7 +15,7 @@ namespace PortableLeagueApi.Game.Services
             this ISummoner summoner,
             RegionEnum? region = null)
         {
-            return await GameService.Instance.GetRecentGamesBySummonerId(summoner.Id, region);
+            return await GameService.Instance.GetRecentGamesBySummonerId(summoner.SummonerId, region);
         }
     }
 }

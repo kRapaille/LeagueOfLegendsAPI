@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Summoner.Models.Summoner
 {
-    public class RunePagesDto
+    public class RunePagesDto : ISummoner
     {
         /// <summary>
         /// Set of rune pages associated with the summoner.
@@ -14,7 +15,7 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
         /// Summoner Id.
         /// </summary>
         [JsonProperty("summonerId")]
-        public int SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 
     public class RunePageDto

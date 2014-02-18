@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueAPI.Champion.Models.Champion
 {
@@ -14,7 +15,7 @@ namespace PortableLeagueAPI.Champion.Models.Champion
         public ChampionDto[] Champions { get; set; }
     }
 
-    public class ChampionDto
+    public class ChampionDto : IChampion
     {
         /// <summary>
         /// Bot Match Made enabled flag (for Co-op vs. AI games).
@@ -38,7 +39,7 @@ namespace PortableLeagueAPI.Champion.Models.Champion
         /// Champion Id.
         /// </summary>
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int ChampionId { get; set; }
 
         /// <summary>
         /// Ranked play enabled flag.

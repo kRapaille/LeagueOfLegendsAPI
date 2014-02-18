@@ -41,7 +41,6 @@
     <Compile Include="Interfaces\IHttpContent.cs" />
     <Compile Include="Interfaces\IHttpResponseMessage.cs" />
     <Compile Include="Interfaces\IResolver.cs" />
-    <Compile Include="Interfaces\ISummoner.cs" />
     <Compile Include="Models\APIRequestError.cs" />
     <Compile Include="Models\APIRequestException.cs" />
     <Compile Include="Helpers\UriExtensions.cs" />
@@ -61,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj">
+      <Project>{df6b5c82-017d-477d-8780-48e05cfab0f8}</Project>
+      <Name>PortableLeagueApi.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

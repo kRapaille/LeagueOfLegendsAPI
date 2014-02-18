@@ -12,7 +12,7 @@ namespace PortableLeagueAPI.Test
         public OnlineLeagueAPIServiceTests()
         {
             // TODO : Don't forget to pass your api key
-            LeagueAPI.Init("459deaba-2353-47e7-a3a7-3d5119d1f81b");
+            LeagueAPI.Init(string.Empty);
             LeagueAPI.DefaultRegion = RegionEnum.Euw;
             LeagueAPI.WaitToAvoidRateLimit = true;
         }
@@ -30,7 +30,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticChampionsWithParametersTest()
         {
-            var result = await LeagueAPI.Static.GetChampions(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await LeagueAPI.Static.GetChampion(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
@@ -66,7 +66,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticMasteriesWithParametersTest()
         {
-            var result = await LeagueAPI.Static.GetMasteries(4353, MasteryDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await LeagueAPI.Static.GetMastery(4353, MasteryDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
@@ -93,7 +93,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticRunesWithParametersTest()
         {
-            var result = await LeagueAPI.Static.GetRunes(5235, RuneDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await LeagueAPI.Static.GetRune(5235, RuneDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }

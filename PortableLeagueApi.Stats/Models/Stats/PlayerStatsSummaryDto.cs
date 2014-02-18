@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Stats.Models.Stats
 {
-    public class PlayerStatsSummaryListDto
+    public class PlayerStatsSummaryListDto : ISummoner
     {
         /// <summary>
         /// List of player stats summaries associated with the summoner.
@@ -14,7 +15,7 @@ namespace PortableLeagueApi.Stats.Models.Stats
         /// Summoner Id.
         /// </summary>
         [JsonProperty("summonerId")]
-        public int SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 
     public class PlayerStatsSummaryDto

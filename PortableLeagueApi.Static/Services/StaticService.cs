@@ -105,7 +105,7 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion));
         }
 
-        public async Task<ChampionDto> GetChampions(
+        public async Task<ChampionDto> GetChampion(
             int championId,
             ChampDataEnum? champData = null,
             RegionEnum? region = null,
@@ -157,7 +157,7 @@ namespace PortableLeagueApi.Static.Services
         }
 
         public async Task<MasteryListDto> GetMasteries(
-            MasteryDataEnum? itemData = null,
+            MasteryDataEnum? masteryData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
@@ -166,15 +166,15 @@ namespace PortableLeagueApi.Static.Services
                 BuildStaticUri(
                     "mastery",
                     "masteryListData",
-                    itemData,
+                    masteryData,
                     region,
                     languageCode,
                     dataDragonVersion));
         }
 
-        public async Task<MasteryDto> GetMasteries(
+        public async Task<MasteryDto> GetMastery(
             int masteryId,
-            MasteryDataEnum? itemData = null,
+            MasteryDataEnum? masteryData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
@@ -183,7 +183,7 @@ namespace PortableLeagueApi.Static.Services
                 BuildStaticUri(
                     "mastery",
                     "masteryListData",
-                    itemData,
+                    masteryData,
                     region,
                     languageCode,
                     dataDragonVersion,
@@ -198,7 +198,7 @@ namespace PortableLeagueApi.Static.Services
         }
 
         public async Task<RuneListDto> GetRunes(
-            RuneDataEnum? itemData = null,
+            RuneDataEnum? runeData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
@@ -207,15 +207,15 @@ namespace PortableLeagueApi.Static.Services
                 BuildStaticUri(
                     "rune",
                     "runeListData",
-                    itemData,
+                    runeData,
                     region,
                     languageCode,
                     dataDragonVersion));
         }
 
-        public async Task<RuneDto> GetRunes(
+        public async Task<RuneDto> GetRune(
             int runeId,
-            RuneDataEnum? itemData = null,
+            RuneDataEnum? runeData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
@@ -224,7 +224,7 @@ namespace PortableLeagueApi.Static.Services
                 BuildStaticUri(
                     "rune",
                     "runeListData",
-                    itemData,
+                    runeData,
                     region,
                     languageCode,
                     dataDragonVersion,

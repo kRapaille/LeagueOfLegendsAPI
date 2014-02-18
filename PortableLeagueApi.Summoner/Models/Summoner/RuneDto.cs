@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Summoner.Models.Summoner
 {
-    public class RuneDto
+    public class RuneDto : IRune
     {
-
         [JsonProperty("id")]
         public int Id { get; set; }
 

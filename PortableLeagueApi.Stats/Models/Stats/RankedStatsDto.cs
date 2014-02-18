@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Stats.Models.Stats
 {
-    public class RankedStatsDto
+    public class RankedStatsDto : ISummoner
     {
         /// <summary>
         /// Date stats were last modified specified as epoch milliseconds.
@@ -20,6 +21,6 @@ namespace PortableLeagueApi.Stats.Models.Stats
         /// Summoner Id.
         /// </summary>
         [JsonProperty("summonerId")]
-        public int SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 }
