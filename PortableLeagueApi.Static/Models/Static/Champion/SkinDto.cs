@@ -5,7 +5,7 @@ namespace PortableLeagueApi.Static.Models.Static.Champion
     public class SkinDto
     {
         [JsonProperty("id")]
-        public string ID { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }

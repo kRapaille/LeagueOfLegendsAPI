@@ -38,6 +38,7 @@
     <Compile Include="Models\League\MiniSeriesDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LeagueService.cs" />
+    <Compile Include="Services\LeagueServiceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

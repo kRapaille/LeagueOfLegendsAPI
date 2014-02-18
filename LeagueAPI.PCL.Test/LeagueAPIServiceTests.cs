@@ -4,6 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Game.Services;
 using PortableLeagueApi.League.Enums;
 using PortableLeagueApi.League.Models.League;
 using PortableLeagueApi.Stats.Models.Stats;
@@ -15,7 +16,6 @@ namespace PortableLeagueAPI.Test
     {
         public LeagueAPIServiceTests()
         {
-            // TODO : Don't forget to pass your api key
             LeagueAPI.Init(string.Empty, new FakeResolver());
             LeagueAPI.DefaultRegion = RegionEnum.Euw;
             LeagueAPI.WaitToAvoidRateLimit = true;
@@ -48,6 +48,21 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(result);
         }
+
+
+        [Test]
+        [Category("Game")]
+        public async void GetSummonerAndRecentGamesTest()
+        {
+            var summoner = await LeagueAPI.Summoner.GetSummonerByName("TuC Ølen");
+
+            Assert.NotNull(summoner);
+
+            var result = await summoner.GetRecentGames();
+
+            Assert.NotNull(result);
+        }
+
 
         [Test]
         [Category("League")]
@@ -140,7 +155,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetMasteryPagesBySummonerIdTest()
         {
-            var result = await LeagueAPI.Summoner.GetMasteryPagesBySummonerId(19231046);
+            var result = await LeagueAPI.Summoner.GetMasteryPagesBySummonerId(19332836);
 
             Assert.NotNull(result);
         }
@@ -158,7 +173,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetRunePagesBySummonerIdTest()
         {
-            var result = await LeagueAPI.Summoner.GetRunePagesBySummonerId(19231046);
+            var result = await LeagueAPI.Summoner.GetRunePagesBySummonerId(19332836);
 
             Assert.NotNull(result);
         }

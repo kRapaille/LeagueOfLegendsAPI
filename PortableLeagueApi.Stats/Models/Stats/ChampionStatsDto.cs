@@ -8,7 +8,7 @@ namespace PortableLeagueApi.Stats.Models.Stats
         /// Champion id.
         /// </summary>
         [JsonProperty("id")]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Aggregated stats associated with the champion.

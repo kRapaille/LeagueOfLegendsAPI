@@ -40,6 +40,7 @@
     <Compile Include="Models\Summoner\SummonerDto.cs" />
     <Compile Include="Models\Summoner\TalentDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\SummonerServiceExtensions.cs" />
     <Compile Include="Services\SummonerService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,6 @@ namespace PortableLeagueApi.Static.Models.Static.Item
         public string MaxGroupOwnable { get; set; }
 
         [JsonProperty("id")]
-        public string ID { get; set; }
+        public string Id { get; set; }
     }
 }

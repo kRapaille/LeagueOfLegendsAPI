@@ -8,7 +8,7 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
         /// Talent id.
         /// </summary>
         [JsonProperty("id")]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Talent name.
