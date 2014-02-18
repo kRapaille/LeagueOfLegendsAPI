@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using NUnit.Framework;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Static.Enums;
+using PortableLeagueApi.Static.Services;
 
 namespace PortableLeagueAPI.Test
 {
@@ -135,6 +137,66 @@ namespace PortableLeagueAPI.Test
         public async void GetStaticSummonerSpellsWithParametersTest()
         {
             var result = await LeagueAPI.Static.GetSummonerSpells("SummonerTeleport", SpellDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void ChampionExtensionsTest()
+        {
+            var champions = await LeagueAPI.Champion.GetChampions(true);
+            Assert.NotNull(champions);
+
+            var result = await champions.First().GetChampionStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void MasteryExtensionsTest()
+        {
+            var masteriesPage = await LeagueAPI.Summoner.GetMasteryPagesBySummonerId(19231046);
+            Assert.NotNull(masteriesPage);
+
+            var result = await masteriesPage.First().Talents.First().GetMasteryStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void RuneExtensionsTest()
+        {
+            var runesPages = await LeagueAPI.Summoner.GetRunePagesBySummonerId(19231046);
+            Assert.NotNull(runesPages);
+
+            var result = await runesPages.First().Slots.First().Rune.GetRuneStaticInfos();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void ItemsExtensionsTest()
+        {
+            var recentGames = await LeagueAPI.Game.GetRecentGamesBySummonerId(19231046);
+            Assert.NotNull(recentGames);
+
+            var result = await recentGames.First().Stats.GetItemsStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void SummonerSpellExtensionsTest()
+        {
+            var recentGames = await LeagueAPI.Game.GetRecentGamesBySummonerId(19231046);
+            Assert.NotNull(recentGames);
+
+            var result = await recentGames.First().GetSummonerSpellsStaticInfosAsync();
 
             Assert.NotNull(result);
         }
