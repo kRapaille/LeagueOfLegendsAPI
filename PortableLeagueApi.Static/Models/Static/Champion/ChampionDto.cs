@@ -33,7 +33,7 @@ namespace PortableLeagueApi.Static.Models.Static.Champion
         public string[] Enemytips { get; set; }
 
         [JsonProperty("id")]
-        public string ID { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("image")]
         public ImageDto Image { get; set; }

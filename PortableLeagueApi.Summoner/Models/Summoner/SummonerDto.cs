@@ -1,14 +1,15 @@
 ﻿using Newtonsoft.Json;
+using PortableLeagueApi.Core.Interfaces;
 
 namespace PortableLeagueApi.Summoner.Models.Summoner
 {
-    public class SummonerDto
+    public class SummonerDto : ISummoner
     {
         /// <summary>
-        /// Summoner ID.
+        /// Summoner Id.
         /// </summary>
         [JsonProperty("id")]
-        public int ID { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Summoner name.
@@ -17,7 +18,7 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
         public string Name { get; set; }
 
         /// <summary>
-        /// ID of the summoner icon associated with the summoner.
+        /// Id of the summoner icon associated with the summoner.
         /// </summary>
         [JsonProperty("profileIconId")]
         public int ProfileIconId { get; set; }

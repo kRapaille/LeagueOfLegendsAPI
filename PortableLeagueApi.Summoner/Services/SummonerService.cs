@@ -18,13 +18,21 @@ namespace PortableLeagueApi.Summoner.Services
             get { return _instance ?? (_instance = new SummonerService()); }
         }
 
-        public async Task<Dictionary<long, IEnumerable<MasteryPageDto>>> GetMasteryPagesBySummonerId(
+        /// <summary>
+        /// Get mastery pages
+        /// </summary>
+        public async Task<IEnumerable<MasteryPageDto>> GetMasteryPagesBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
-            return await GetMasteryPagesBySummonerId(new[] {summonerId}, region);
+            var result = await GetMasteryPagesBySummonerId(new[] {summonerId}, region);
+
+            return result[summonerId];
         }
 
+        /// <summary>
+        /// Get mastery pages
+        /// </summary>
         public async Task<Dictionary<long, IEnumerable<MasteryPageDto>>> GetMasteryPagesBySummonerId(
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
@@ -37,13 +45,21 @@ namespace PortableLeagueApi.Summoner.Services
             return masteryPagesRoot.ToDictionary(x => x.Key, x => x.Value.Pages.AsEnumerable());
         }
 
-        public async Task<Dictionary<long, IEnumerable<RunePageDto>>> GetRunePagesBySummonerId(
+        /// <summary>
+        /// Get rune pages
+        /// </summary>
+        public async Task<IEnumerable<RunePageDto>> GetRunePagesBySummonerId(
             long summonerId,
             RegionEnum? region = null)
         {
-            return await GetRunePagesBySummonerId(new[] {summonerId}, region);
+            var result = await GetRunePagesBySummonerId(new[] {summonerId}, region);
+
+            return result[summonerId];
         }
 
+        /// <summary>
+        /// Get rune pages
+        /// </summary>
         public async Task<Dictionary<long, IEnumerable<RunePageDto>>> GetRunePagesBySummonerId(
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
@@ -105,6 +121,5 @@ namespace PortableLeagueApi.Summoner.Services
 
             return summonersInfo;
         }
-
     }
 }

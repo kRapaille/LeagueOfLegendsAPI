@@ -41,6 +41,7 @@
     <Compile Include="Interfaces\IHttpContent.cs" />
     <Compile Include="Interfaces\IHttpResponseMessage.cs" />
     <Compile Include="Interfaces\IResolver.cs" />
+    <Compile Include="Interfaces\ISummoner.cs" />
     <Compile Include="Models\APIRequestError.cs" />
     <Compile Include="Models\APIRequestException.cs" />
     <Compile Include="Helpers\UriExtensions.cs" />

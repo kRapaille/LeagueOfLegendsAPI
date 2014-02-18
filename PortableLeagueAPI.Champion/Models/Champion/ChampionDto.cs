@@ -35,10 +35,10 @@ namespace PortableLeagueAPI.Champion.Models.Champion
         public int AttackRank { get; set; }
 
         /// <summary>
-        /// Champion ID.
+        /// Champion Id.
         /// </summary>
         [JsonProperty("id")]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Ranked play enabled flag.

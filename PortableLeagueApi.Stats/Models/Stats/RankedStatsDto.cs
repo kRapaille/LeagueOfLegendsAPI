@@ -17,7 +17,7 @@ namespace PortableLeagueApi.Stats.Models.Stats
         public ChampionStatsDto[] Champions { get; set; }
 
         /// <summary>
-        /// Summoner ID.
+        /// Summoner Id.
         /// </summary>
         [JsonProperty("summonerId")]
         public int SummonerId { get; set; }

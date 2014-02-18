@@ -12,7 +12,7 @@ namespace PortableLeagueAPI.Test
         public OnlineLeagueAPIServiceTests()
         {
             // TODO : Don't forget to pass your api key
-            LeagueAPI.Init(string.Empty);
+            LeagueAPI.Init("459deaba-2353-47e7-a3a7-3d5119d1f81b");
             LeagueAPI.DefaultRegion = RegionEnum.Euw;
             LeagueAPI.WaitToAvoidRateLimit = true;
         }

@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
         public RunePageDto[] Pages { get; set; }
 
         /// <summary>
-        /// Summoner ID.
+        /// Summoner Id.
         /// </summary>
         [JsonProperty("summonerId")]
         public int SummonerId { get; set; }
@@ -20,10 +20,10 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
     public class RunePageDto
     {
         /// <summary>
-        /// Rune page ID.
+        /// Rune page Id.
         /// </summary>
         [JsonProperty("id")]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// List of rune slots associated with the rune page.

@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
         public MasteryPageDto[] Pages { get; set; }
 
         /// <summary>
-        /// Summoner ID.
+        /// Summoner Id.
         /// </summary>
         [JsonProperty("summonerId")]
         public int SummonerId { get; set; }
@@ -20,10 +20,10 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
     public class MasteryPageDto
     {
         /// <summary>
-        /// Mastery page ID.
+        /// Mastery page Id.
         /// </summary>
         [JsonProperty("id")]
-        public long ID { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// List of mastery page talents associated with the mastery page.

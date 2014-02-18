@@ -17,6 +17,9 @@ namespace PortableLeagueApi.Team.Services
             get { return _instance ?? (_instance = new TeamService()); }
         }
 
+        /// <summary>
+        /// Retrieves teams
+        /// </summary>
         public async Task<IEnumerable<TeamDto>> GetTeamsBySummonerId(
             long summonerId,
             RegionEnum? region = null)

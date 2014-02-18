@@ -5,7 +5,7 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
     public class RuneSlotDto
     {
         /// <summary>
-        /// Rune slot ID.
+        /// Rune slot Id.
         /// </summary>
         [JsonProperty("runeSlotId")]
         public int RuneSlotId { get; set; }

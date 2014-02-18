@@ -19,6 +19,9 @@ namespace PortableLeagueApi.Stats.Services
             get { return _instance ?? (_instance = new StatsService()); }
         }
 
+        /// <summary>
+        /// Get player stats summaries. One summary is returned per queue type.
+        /// </summary>
         public async Task<IEnumerable<PlayerStatsSummaryDto>> GetPlayerStatsSummariesBySummonerId(
             long summonerId,
             SeasonEnum? season = null,
@@ -35,6 +38,9 @@ namespace PortableLeagueApi.Stats.Services
             return playerStatvalueRoot.PlayerStatSummaries.AsEnumerable();
         }
 
+        /// <summary>
+        /// Get ranked stats. Includes statistics for Twisted Treeline and Summoner's Rift.
+        /// </summary>
         public async Task<RankedStatsDto> GetRankedStatsSummariesBySummonerId(
             long summonerId,
             SeasonEnum? season = null,

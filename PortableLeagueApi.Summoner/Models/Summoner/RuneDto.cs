@@ -6,7 +6,7 @@ namespace PortableLeagueApi.Summoner.Models.Summoner
     {
 
         [JsonProperty("id")]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("description")]
         public string Description { get; set; }

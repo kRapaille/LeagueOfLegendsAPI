@@ -21,7 +21,7 @@ namespace PortableLeagueApi.Static.Models.Static.Mastery
     public class MasteryDto
     {
         [JsonProperty("id")]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("description")]
         public string[] Description { get; set; }
