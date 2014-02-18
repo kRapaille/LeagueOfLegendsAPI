@@ -16,7 +16,7 @@ namespace PortableLeagueAPI.Test
             LeagueAPI.DefaultRegion = RegionEnum.Euw;
             LeagueAPI.WaitToAvoidRateLimit = true;
         }
-        
+
         [Test]
         [Category("Static")]
         public async void GetStaticChampionsTest()
@@ -24,6 +24,29 @@ namespace PortableLeagueAPI.Test
             var result = await LeagueAPI.Static.GetChampions();
 
             Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void CacheTest()
+        {
+            var sw = new Stopwatch();
+            sw.Start();
+
+            var result = await LeagueAPI.Static.GetChampions();
+            
+            sw.Stop();
+            var firstTime = sw.ElapsedMilliseconds;
+            sw.Restart();
+
+            var result2 = await LeagueAPI.Static.GetChampions();
+
+            sw.Stop();
+            var secondTime = sw.ElapsedMilliseconds;
+
+            Assert.NotNull(result);
+            Assert.NotNull(result2);
+            Assert.Greater(firstTime, secondTime);
         }
 
         [Test]

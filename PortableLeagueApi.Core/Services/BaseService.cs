@@ -72,7 +72,7 @@ namespace PortableLeagueApi.Core.Services
             return await GetResponse<T>(BuildUri(region, relativeUrl));
         }
 
-        protected async Task<T> GetResponse<T>(Uri uri) where T : class
+        protected virtual async Task<T> GetResponse<T>(Uri uri) where T : class
         {
             await ManageRateLimit();
 

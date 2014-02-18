@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Helpers;
@@ -17,6 +18,7 @@ namespace PortableLeagueApi.Static.Services
     public class StaticService : BaseService
     {
         private static StaticService _instance;
+        private static readonly Dictionary<Uri, object> Cache = new Dictionary<Uri, object>();
 
         private StaticService() : base(VersionEnum.V1, "static-data", false) { }
 
@@ -31,6 +33,21 @@ namespace PortableLeagueApi.Static.Services
 
             return LanguageCodeConsts.SupportedLanguages[value];
         }
+        
+        protected override async Task<T> GetResponse<T>(Uri uri)
+        {
+            T response;
+
+            if (Cache.ContainsKey(uri))
+                response = (T)Cache[uri];
+            else
+                response = await base.GetResponse<T>(uri);
+
+            Cache[uri] = response;
+
+            return response;
+        }
+
         protected override Uri BuildUri(RegionEnum? region, string relativeUrl)
         {
             relativeUrl = string.Format("{0}/{1}/{2}/{3}",
