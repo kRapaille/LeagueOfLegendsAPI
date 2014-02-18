@@ -1,8 +1,9 @@
 using Newtonsoft.Json;
+using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Game.Models.Game
 {
-    public class RawStatsDto
+    public class RawStatsDto : ISummonerSpells, IItems
     {
         [JsonProperty("assists")]
         public int Assists { get; set; }
@@ -176,10 +177,10 @@ namespace PortableLeagueApi.Game.Models.Game
         public int Spell4Cast { get; set; }
 
         [JsonProperty("summonSpell1Cast")]
-        public int SummonSpell1Cast { get; set; }
+        public int SummonerSpell1 { get; set; }
 
         [JsonProperty("summonSpell2Cast")]
-        public int SummonSpell2Cast { get; set; }
+        public int SummonerSpell2 { get; set; }
 
         [JsonProperty("superMonsterKilled")]
         public int SuperMonsterKilled { get; set; }

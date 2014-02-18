@@ -18,7 +18,7 @@ namespace PortableLeagueApi.Game.Models.Game
         public long SummonerId { get; set; }
     }
 
-    public class GameDto : IChampion
+    public class GameDto : IChampion, ISummonerSpells
     {
         /// <summary>
         /// Other players associated with the game.
@@ -42,7 +42,7 @@ namespace PortableLeagueApi.Game.Models.Game
         /// ID of first summoner spell.
         /// </summary>
         [JsonProperty("spell1")]
-        public int Spell1 { get; set; }
+        public int SummonerSpell1 { get; set; }
 
         /// <summary>
         /// Team ID associated with game.
@@ -60,7 +60,7 @@ namespace PortableLeagueApi.Game.Models.Game
         /// ID of second summoner spell.
         /// </summary>
         [JsonProperty("spell2")]
-        public int Spell2 { get; set; }
+        public int SummonerSpell2 { get; set; }
 
         /// <summary>
         /// Game mode. (legal values: CLASSIC, ODIN, ARAM, TUTORIAL, ONEFORALL, FIRSTBLOOD)

@@ -37,9 +37,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChampion.cs" />
+    <Compile Include="IItems.cs" />
     <Compile Include="IMastery.cs" />
     <Compile Include="IRune.cs" />
     <Compile Include="ISummoner.cs" />
+    <Compile Include="ISummonerSpells.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
