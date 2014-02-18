@@ -1,4 +1,5 @@
-﻿using PortableLeagueAPI.Champion.Services;
+﻿using System;
+using PortableLeagueAPI.Champion.Services;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Models.IoC;
@@ -37,10 +38,14 @@ namespace PortableLeagueAPI
             string key,
             IResolver resolver = null)
         {
-            IoC.Initialize(resolver ?? new LeagueResolver());
-
-            BaseService.HttpRequestService = IoC.Resolve<IHttpRequestService>();
             BaseService.Key = key;
+
+            IoC.Initialize(resolver ?? new LeagueResolver());
+            var httpRequestService = IoC.Resolve<IHttpRequestService>();
+            if(httpRequestService == null)
+                throw new NullReferenceException("IHttpRequestService cannot be resolve.");
+
+            BaseService.HttpRequestService = httpRequestService;
 
             WaitToAvoidRateLimit = false;
 
