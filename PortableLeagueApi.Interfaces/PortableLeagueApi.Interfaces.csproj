@@ -40,6 +40,7 @@
     <Compile Include="IChampionImage.cs" />
     <Compile Include="IItems.cs" />
     <Compile Include="IMastery.cs" />
+    <Compile Include="IProfileIcon.cs" />
     <Compile Include="IRune.cs" />
     <Compile Include="ISummoner.cs" />
     <Compile Include="ISummonerSpells.cs" />

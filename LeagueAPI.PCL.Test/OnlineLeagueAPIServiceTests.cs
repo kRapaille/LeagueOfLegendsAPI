@@ -22,7 +22,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void CacheTest()
+        public async void CacheTestAsync()
         {
             var sw = new Stopwatch();
             sw.Start();
@@ -44,7 +44,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticChampionsTest()
+        public async void GetStaticChampionsTestAsync()
         {
             var result = await _leagueAPI.Static.GetChampionsAsync();
 
@@ -53,7 +53,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticChampionsWithParametersTest()
+        public async void GetStaticChampionsWithParametersTestAsync()
         {
             var result = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
 
@@ -62,7 +62,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticImageUrlTest()
+        public async void GetStaticImageUrlTestAsync()
         {
             var item = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
 
@@ -80,7 +80,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticChampionsSpasheImagesUrlTest()
+        public async void GetStaticChampionsSpasheImagesUrlTestAsync()
         {
             var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
 
@@ -101,7 +101,25 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticChampionsLoadingImagesUrlTest()
+        public async void GetProfilIconImagesUrlTestAsync()
+        {
+            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Kiwii");
+
+            var url = await summoner.GetProfileIconUrlAsync(_leagueAPI.Static);
+
+            Assert.NotNull(url);
+
+            using (var httpClient = new HttpClient())
+            {
+                var response = await httpClient.GetAsync(url);
+
+                Assert.IsTrue(response.IsSuccessStatusCode);
+            }
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticChampionsLoadingImagesUrlTestAsync()
         {
             var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
 
@@ -122,7 +140,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticItemsTest()
+        public async void GetStaticItemsTestAsync()
         {
             var result = await _leagueAPI.Static.GetItemsAsync();
 
@@ -131,7 +149,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticItemsWithParametersTest()
+        public async void GetStaticItemsWithParametersTestAsync()
         {
             var result = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
 
@@ -140,7 +158,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticMasteriesTest()
+        public async void GetStaticMasteriesTestAsync()
         {
             var result = await _leagueAPI.Static.GetMasteriesAsync();
 
@@ -149,7 +167,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticMasteriesWithParametersTest()
+        public async void GetStaticMasteriesWithParametersTestAsync()
         {
             var result = await _leagueAPI.Static.GetMasteryAsync(4353, MasteryDataEnum.All, languageCode: LanguageEnum.French);
 
@@ -158,7 +176,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetRealm()
+        public async void GetRealmAsync()
         {
             var result = await _leagueAPI.Static.GetRealmAsync();
 
@@ -167,7 +185,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticRunesTest()
+        public async void GetStaticRunesTestAsync()
         {
             var result = await _leagueAPI.Static.GetRunesAsync();
 
@@ -176,7 +194,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticRunesWithParametersTest()
+        public async void GetStaticRunesWithParametersTestAsync()
         {
             var result = await _leagueAPI.Static.GetRuneAsync(5235, RuneDataEnum.All, languageCode: LanguageEnum.French);
 
@@ -185,7 +203,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticSummonerSpellsTest()
+        public async void GetStaticSummonerSpellsTestAsync()
         {
             var result = await _leagueAPI.Static.GetSummonerSpellsAsync();
 
@@ -194,7 +212,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
-        public async void GetStaticSummonerSpellsWithParametersTest()
+        public async void GetStaticSummonerSpellsWithParametersTestAsync()
         {
             var result = await _leagueAPI.Static.GetSummonerSpellsAsync("SummonerTeleport", SpellDataEnum.All, languageCode: LanguageEnum.French);
 
@@ -203,7 +221,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("StaticExtensions")]
-        public async void ChampionExtensionsTest()
+        public async void ChampionExtensionsTestAsync()
         {
             var champions = await _leagueAPI.Champion.GetChampionsAsync(true);
             Assert.NotNull(champions);
@@ -215,7 +233,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("StaticExtensions")]
-        public async void MasteryExtensionsTest()
+        public async void MasteryExtensionsTestAsync()
         {
             var masteriesPage = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(19231046);
             Assert.NotNull(masteriesPage);
@@ -227,7 +245,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("StaticExtensions")]
-        public async void RuneExtensionsTest()
+        public async void RuneExtensionsTestAsync()
         {
             var runesPages = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(19231046);
             Assert.NotNull(runesPages);
@@ -239,7 +257,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("StaticExtensions")]
-        public async void ItemsExtensionsTest()
+        public async void ItemsExtensionsTestAsync()
         {
             var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
             Assert.NotNull(recentGames);
@@ -251,7 +269,30 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("StaticExtensions")]
-        public async void SummonerSpellExtensionsTest()
+        public async void ItemsImageExtensionsTestAsync()
+        {
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
+            Assert.NotNull(recentGames);
+
+            var urls = await recentGames.First().Stats.GetItemsImageUrlsAsync(_leagueAPI.Static);
+            Assert.NotNull(urls);
+
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.GetAsync(url);
+
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
+
+            Assert.NotNull(urls);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void SummonerSpellExtensionsTestAsync()
         {
             var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
             Assert.NotNull(recentGames);
@@ -263,7 +304,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Others")]
-        public async void TenSecRateLimitTest()
+        public async void TenSecRateLimitTestAsync()
         {
             var start = DateTime.Now;
 

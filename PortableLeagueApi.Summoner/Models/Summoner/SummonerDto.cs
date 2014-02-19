@@ -3,7 +3,7 @@ using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Summoner.Models.Summoner
 {
-    public class SummonerDto : ISummoner
+    public class SummonerDto : ISummoner, IProfileIcon
     {
         /// <summary>
         /// Summoner Id.

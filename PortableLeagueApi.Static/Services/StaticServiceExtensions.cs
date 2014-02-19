@@ -63,6 +63,20 @@ namespace PortableLeagueApi.Static.Services
                 dataDragonVersion);
         }
 
+        private static IEnumerable<int> GetItemIds(IItems items)
+        {
+            return new List<int>
+            {
+                items.Item0,
+                items.Item1,
+                items.Item2,
+                items.Item3,
+                items.Item4,
+                items.Item5,
+                items.Item6
+            };
+        }
+
         public static async Task<IEnumerable<ItemDto>> GetItemsStaticInfosAsync(
             this IItems items,
             StaticService staticService,
@@ -73,18 +87,7 @@ namespace PortableLeagueApi.Static.Services
         {
             var result = new List<ItemDto>();
 
-            var itemIds = new List<int>
-            {
-                items.Item0,
-                items.Item1,
-                items.Item2,
-                items.Item3,
-                items.Item4,
-                items.Item5,
-                items.Item6
-            };
-
-            foreach (var itemId in itemIds.Where(x => x > 0))
+            foreach (var itemId in GetItemIds(items).Where(x => x > 0))
             {
                 var item = await staticService.GetItemsAsync(
                     itemId,
@@ -155,6 +158,40 @@ namespace PortableLeagueApi.Static.Services
                 staticService,
                 region,
                 dataDragonVersion);
+        }
+
+        public static async Task<string> GetProfileIconUrlAsync(
+            this IProfileIcon summoner,
+            StaticService staticService,
+            RegionEnum? region = null,
+            string dataDragonVersion = null)
+        {
+            return await GetImageUrlAsync(
+                "profileicon",
+                string.Format("{0}.png", summoner.ProfileIconId),
+                staticService,
+                region,
+                dataDragonVersion);
+        }
+
+        public static async Task<IEnumerable<string>> GetItemsImageUrlsAsync(
+            this IItems items,
+            StaticService staticService,
+            RegionEnum? region = null,
+            string dataDragonVersion = null)
+        {
+            if (string.IsNullOrWhiteSpace(dataDragonVersion))
+            {
+                var realm = await staticService.GetRealmAsync(region);
+                dataDragonVersion = realm.V;
+            }
+
+            return GetItemIds(items)
+                .Where(x => x > 0)
+                .Select(x => 
+                    string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/img/item/{1}.png",
+                    dataDragonVersion,
+                    x));
         }
 
         public static async Task<string> GetChampionImageUrlAsync(
