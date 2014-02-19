@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Constants\RegionConsts.cs" />
     <Compile Include="Constants\VersionConsts.cs" />
     <Compile Include="Enums\MapEnum.cs" />
     <Compile Include="Enums\QueueEnum.cs" />

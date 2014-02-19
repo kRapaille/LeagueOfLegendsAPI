@@ -32,8 +32,7 @@ namespace PortableLeagueApi.Core.Services
 
         protected string VersionText
         {
-            get
-            {
+            get {
                 return _version.HasValue ? VersionConsts.Versions[_version.Value] : string.Empty;
             }
         }
@@ -195,7 +194,7 @@ namespace PortableLeagueApi.Core.Services
         
         protected string GetRegionAsString(RegionEnum? region)
         {
-            return GetRegion(region).ToString().ToLower();
+            return _version.HasValue ? VersionConsts.Versions[_version.Value] : string.Empty;
         }
     }
 }
