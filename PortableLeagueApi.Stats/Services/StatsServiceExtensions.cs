@@ -14,10 +14,11 @@ namespace PortableLeagueApi.Stats.Services
         /// </summary>
         public static async Task<IEnumerable<PlayerStatsSummaryDto>> GetPlayerStatsSummaries(
             this ISummoner summoner,
+            StatsService statsService,
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            return await StatsService.Instance.GetPlayerStatsSummariesBySummonerId(summoner.SummonerId, season, region);
+            return await statsService.GetPlayerStatsSummariesBySummonerId(summoner.SummonerId, season, region);
         }
 
 
@@ -26,10 +27,11 @@ namespace PortableLeagueApi.Stats.Services
         /// </summary>
         public static async Task<RankedStatsDto> GetRankedStatsSummaries(
             this ISummoner summoner,
+            StatsService statsService,
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            return await StatsService.Instance.GetRankedStatsSummariesBySummonerId(summoner.SummonerId, season, region);
+            return await statsService.GetRankedStatsSummariesBySummonerId(summoner.SummonerId, season, region);
         }
     }
 }

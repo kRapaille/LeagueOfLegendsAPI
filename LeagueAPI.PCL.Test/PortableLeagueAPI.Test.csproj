@@ -59,7 +59,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FakeHttpRequestService.cs" />
-    <Compile Include="FakeResolver.cs" />
     <Compile Include="OnlineLeagueAPIServiceTests.cs" />
     <Compile Include="LeagueAPIServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,7 +10,7 @@ namespace PortableLeagueAPI.Test
 {
     class FakeHttpRequestService : IHttpRequestService
     {
-        public async Task<IHttpResponseMessage> SendRequest<T>(Uri uri) where T : class
+        public async Task<IHttpResponseMessage> SendRequest(Uri uri)
         {
             string response = null;
 

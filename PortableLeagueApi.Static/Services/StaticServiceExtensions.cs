@@ -16,12 +16,13 @@ namespace PortableLeagueApi.Static.Services
     {
         public static async Task<ChampionDto> GetChampionStaticInfosAsync(
             this IChampion champion,
+            StaticService staticService,
             ChampDataEnum? champData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await StaticService.Instance.GetChampion(
+            return await staticService.GetChampion(
                     champion.ChampionId,
                     champData,
                     region,
@@ -31,12 +32,13 @@ namespace PortableLeagueApi.Static.Services
 
         public static async Task<MasteryDto> GetMasteryStaticInfosAsync(
             this IMastery mastery,
+            StaticService staticService,
             MasteryDataEnum? masteryData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await StaticService.Instance.GetMastery(
+            return await staticService.GetMastery(
                 mastery.Id,
                 masteryData,
                 region,
@@ -44,14 +46,15 @@ namespace PortableLeagueApi.Static.Services
                 dataDragonVersion);
         }
 
-        public static async Task<RuneDto> GetRuneStaticInfos(
+        public static async Task<RuneDto> GetRuneStaticInfosAsync(
             this IRune rune,
+            StaticService staticService,
             RuneDataEnum? runeData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await StaticService.Instance.GetRune(
+            return await staticService.GetRune(
                 rune.Id, 
                 runeData, 
                 region, 
@@ -61,6 +64,7 @@ namespace PortableLeagueApi.Static.Services
 
         public static async Task<IEnumerable<ItemDto>> GetItemsStaticInfosAsync(
             this IItems items,
+            StaticService staticService,
             ItemDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
@@ -81,7 +85,7 @@ namespace PortableLeagueApi.Static.Services
 
             foreach (var itemId in itemIds.Where(x => x > 0))
             {
-                var item = await StaticService.Instance.GetItems(
+                var item = await staticService.GetItems(
                     itemId,
                     itemData,
                     region,
@@ -96,12 +100,13 @@ namespace PortableLeagueApi.Static.Services
 
         public static async Task<IEnumerable<SummonerSpellDto>> GetSummonerSpellsStaticInfosAsync(
             this ISummonerSpells summonerSpells,
+            StaticService staticService,
             SpellDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            var allSummonerSpells = await StaticService.Instance.GetSummonerSpells(
+            var allSummonerSpells = await staticService.GetSummonerSpells(
                 itemData,
                 region,
                 languageCode,

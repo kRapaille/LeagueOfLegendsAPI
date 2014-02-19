@@ -13,9 +13,10 @@ namespace PortableLeagueApi.Game.Services
         /// </summary>
         public static async Task<IEnumerable<GameDto>> GetRecentGames(
             this ISummoner summoner,
+            GameService gameService,
             RegionEnum? region = null)
         {
-            return await GameService.Instance.GetRecentGamesBySummonerId(summoner.SummonerId, region);
+            return await gameService.GetRecentGamesBySummonerId(summoner.SummonerId, region);
         }
     }
 }

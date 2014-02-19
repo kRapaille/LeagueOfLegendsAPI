@@ -16,34 +16,48 @@ namespace PortableLeagueApi.Core.Services
     public abstract class BaseService
     {
         private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/lol/");
-        private static readonly List<DateTime> LastRequests = new List<DateTime>();
+        private static readonly Dictionary<string, List<DateTime>> LastRequests = new Dictionary<string, List<DateTime>>();
+
+        private readonly IHttpRequestService _httpRequestService;
+        private readonly string _key;
+        private readonly RegionEnum? _defaultRegion;
+        private readonly bool _waitToAvoidRateLimit;
+        private readonly bool _isLimitedByRateLimit;
+        private VersionEnum? _version;
 
         private const int MaxRequestsPer10Sec = 10;
         private const int MaxRequestsPer10Min = 500;
-        
-        public static IHttpRequestService HttpRequestService { private get; set; }
-        public static string Key { private get; set; }
-        public static RegionEnum? DefaultRegion { private get; set; }
-        public static bool WaitToAvoidRateLimit { get; set; }
 
-        protected bool IsLimitedByRateLimit { get; private set; }
-        protected VersionEnum? Version { get; private set; }
+
         protected string Prefix { get; private set; }
 
         protected string VersionText
         {
             get
             {
-                return Version.HasValue ? VersionConsts.Versions[Version.Value] : string.Empty;
+                return _version.HasValue ? VersionConsts.Versions[_version.Value] : string.Empty;
             }
         }
 
-        protected BaseService(VersionEnum? version, string prefix, bool isLimitedByRateLimit = true)
+        protected BaseService(
+            string key,
+            IHttpRequestService httpRequestService,
+            VersionEnum? version, 
+            string prefix,
+            RegionEnum? defaultRegion,
+            bool waitToAvoidRateLimit,
+            bool isLimitedByRateLimit = true)
         {
-            Version = version;
-            IsLimitedByRateLimit = true;
+            _key = key;
+            _httpRequestService = httpRequestService;
+            _version = version;
             Prefix = prefix;
-            IsLimitedByRateLimit = isLimitedByRateLimit;
+            _defaultRegion = defaultRegion;
+            _waitToAvoidRateLimit = waitToAvoidRateLimit;
+            _isLimitedByRateLimit = isLimitedByRateLimit;
+
+            if(!LastRequests.ContainsKey(_key))
+                LastRequests[_key] = new List<DateTime>();
         }
 
         protected virtual Uri BuildUri(RegionEnum? region, string relativeUrl)
@@ -61,7 +75,7 @@ namespace PortableLeagueApi.Core.Services
         {
             var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
 
-            var keyParameter = string.Format("api_key={0}", Key);
+            var keyParameter = string.Format("api_key={0}", _key);
             uriBuilder.AddQueryParameter(keyParameter);
 
             return uriBuilder.Uri;
@@ -76,7 +90,7 @@ namespace PortableLeagueApi.Core.Services
         {
             await ManageRateLimit();
 
-            var response = await HttpRequestService.SendRequest<T>(uri);
+            var response = await _httpRequestService.SendRequest(uri);
 
             T result;
 
@@ -125,12 +139,12 @@ namespace PortableLeagueApi.Core.Services
         {
             var delayInMs = 0;
 
-            if (WaitToAvoidRateLimit && IsLimitedByRateLimit)
+            if (_waitToAvoidRateLimit && _isLimitedByRateLimit)
             {
-                LastRequests.Add(DateTime.Now);
+                LastRequests[_key].Add(DateTime.Now);
 
                 var tenMinutesAgo = DateTime.Now.AddMinutes(-10);
-                LastRequests.RemoveAll(x => x < tenMinutesAgo);
+                LastRequests[_key].RemoveAll(x => x < tenMinutesAgo);
                 
                 delayInMs = CalculateDelay(MaxRequestsPer10Min, 600, delayInMs);
                 delayInMs = CalculateDelay(MaxRequestsPer10Sec, 10, delayInMs);
@@ -145,11 +159,11 @@ namespace PortableLeagueApi.Core.Services
             return Task.Delay(delayInMs);
         }
 
-        private static int CalculateDelay(int maxRequestsInGivenTime, int givenTimeInSeconds, int currentDelay)
+        private int CalculateDelay(int maxRequestsInGivenTime, int givenTimeInSeconds, int currentDelay)
         {
             var givenTimeAgo = DateTime.Now.AddSeconds(-(givenTimeInSeconds + 1));
 
-            var requestsInGivenTime = LastRequests
+            var requestsInGivenTime = LastRequests[_key]
                 .Where(x => x >= givenTimeAgo)
                 .OrderBy(x => x)
                 .ToList();
@@ -172,7 +186,7 @@ namespace PortableLeagueApi.Core.Services
 
         protected RegionEnum GetRegion(RegionEnum? region)
         {
-            region = region.HasValue ? region : DefaultRegion;
+            region = region.HasValue ? region : _defaultRegion;
 
             if (region == null)
                 throw new ArgumentException("There's no default region");

@@ -1,12 +1,9 @@
-﻿using System;
-using PortableLeagueAPI.Champion.Services;
+﻿using PortableLeagueAPI.Champion.Services;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Interfaces;
-using PortableLeagueApi.Core.Models.IoC;
-using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Game.Services;
 using PortableLeagueApi.League.Services;
-using PortableLeagueAPI.Models.IoC;
+using PortableLeagueAPI.Services;
 using PortableLeagueApi.Static.Services;
 using PortableLeagueApi.Stats.Services;
 using PortableLeagueApi.Summoner.Services;
@@ -14,48 +11,31 @@ using PortableLeagueApi.Team.Services;
 
 namespace PortableLeagueAPI
 {
-    public static class LeagueAPI
+    public class LeagueAPI
     {
-        public static ChampionService Champion { get; private set; }
-        public static GameService Game { get; private set; }
-        public static LeagueService League { get; private set; }
-        public static StatsService Stats { get; private set; }
-        public static SummonerService Summoner { get; private set; }
-        public static TeamService Team { get; private set; }
-        public static StaticService Static { get; private set; }
+        public ChampionService Champion { get; private set; }
+        public GameService Game { get; private set; }
+        public LeagueService League { get; private set; }
+        public StatsService Stats { get; private set; }
+        public SummonerService Summoner { get; private set; }
+        public TeamService Team { get; private set; }
+        public StaticService Static { get; private set; }
 
-        public static bool WaitToAvoidRateLimit
-        {
-            set { BaseService.WaitToAvoidRateLimit = value; }
-        }
-
-        public static RegionEnum? DefaultRegion
-        {
-            set { BaseService.DefaultRegion = value; }
-        }
-        
-        public static void Init(
+        public LeagueAPI(
             string key,
-            IResolver resolver = null)
+            RegionEnum? region = null,
+            bool waitToAvoidRateLimit = false,
+            IHttpRequestService httpRequestService = null)
         {
-            BaseService.Key = key;
+            httpRequestService = httpRequestService ?? new HttpRequestService();
 
-            IoC.Initialize(resolver ?? new LeagueResolver());
-            var httpRequestService = IoC.Resolve<IHttpRequestService>();
-            if(httpRequestService == null)
-                throw new NullReferenceException("IHttpRequestService cannot be resolve.");
-
-            BaseService.HttpRequestService = httpRequestService;
-
-            WaitToAvoidRateLimit = false;
-
-            Champion = ChampionService.Instance;
-            Game = GameService.Instance;
-            League = LeagueService.Instance;
-            Stats = StatsService.Instance;
-            Summoner = SummonerService.Instance;
-            Team = TeamService.Instance;
-            Static = StaticService.Instance;
+            Champion = new ChampionService(key, httpRequestService, region, waitToAvoidRateLimit);
+            Game = new GameService(key, httpRequestService, region, waitToAvoidRateLimit);
+            League = new LeagueService(key, httpRequestService, region, waitToAvoidRateLimit);
+            Stats = new StatsService(key, httpRequestService, region, waitToAvoidRateLimit);
+            Summoner = new SummonerService(key, httpRequestService, region, waitToAvoidRateLimit);
+            Team = new TeamService(key, httpRequestService, region, waitToAvoidRateLimit);
+            Static = new StaticService(key, httpRequestService, region, waitToAvoidRateLimit);
         }
     }
 }

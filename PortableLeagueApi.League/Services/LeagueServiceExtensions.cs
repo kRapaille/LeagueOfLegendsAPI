@@ -13,9 +13,10 @@ namespace PortableLeagueApi.League.Services
         /// </summary>
         public static async Task<List<LeagueItemDto>> RetrievesLeaguesEntryData(
             this ISummoner summoner,
+            LeagueService leagueService,
             RegionEnum? region = null)
         {
-            return await LeagueService.Instance.RetrievesLeaguesEntryDataForSummoner(summoner.SummonerId, region);
+            return await leagueService.RetrievesLeaguesEntryDataForSummoner(summoner.SummonerId, region);
         }
 
         
@@ -24,9 +25,10 @@ namespace PortableLeagueApi.League.Services
         /// </summary>
         public static async Task<List<LeagueDto>> RetrievesLeaguesData(
             this ISummoner summoner,
+            LeagueService leagueService,
             RegionEnum? region = null)
         {
-            return await LeagueService.Instance.RetrievesLeaguesDataForSummoner(summoner.SummonerId, region);
+            return await leagueService.RetrievesLeaguesDataForSummoner(summoner.SummonerId, region);
         }
     }
 }

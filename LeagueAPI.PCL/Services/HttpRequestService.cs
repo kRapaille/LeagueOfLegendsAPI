@@ -8,7 +8,7 @@ namespace PortableLeagueAPI.Services
 {
     public class HttpRequestService : IHttpRequestService
     {
-        public async Task<IHttpResponseMessage> SendRequest<T>(Uri uri) where T : class
+        public async Task<IHttpResponseMessage> SendRequest(Uri uri)
         {
             using (var httpClient = new HttpClient())
             {

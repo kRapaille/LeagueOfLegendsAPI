@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Helpers;
+using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Static.Constants;
 using PortableLeagueApi.Static.Enums;
@@ -17,15 +18,15 @@ namespace PortableLeagueApi.Static.Services
 {
     public class StaticService : BaseService
     {
-        private static StaticService _instance;
         private static readonly Dictionary<Uri, object> Cache = new Dictionary<Uri, object>();
 
-        private StaticService() : base(VersionEnum.V1, "static-data", false) { }
-
-        public static StaticService Instance
-        {
-            get { return _instance ?? (_instance = new StaticService()); }
-        }
+        public StaticService(
+            string key,
+            IHttpRequestService httpRequestService, 
+            RegionEnum? defaultRegion, 
+            bool waitToAvoidRateLimit)
+            : base(key, httpRequestService, VersionEnum.V1, "static-data", defaultRegion, waitToAvoidRateLimit, false)
+        { }
 
         private static string GetLanguageCode(LanguageEnum? language)
         {

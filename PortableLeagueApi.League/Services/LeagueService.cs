@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
+using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.League.Enums;
 using PortableLeagueApi.League.Models.League;
@@ -9,14 +10,13 @@ namespace PortableLeagueApi.League.Services
 {
     public class LeagueService : BaseService
     {
-        private LeagueService() : base(VersionEnum.V2Rev3, "league") { }
-
-        private static LeagueService _instance;
-
-        public static LeagueService Instance
-        {
-            get { return _instance ?? (_instance = new LeagueService()); }
-        }
+        public LeagueService(
+            string key,
+            IHttpRequestService httpRequestService, 
+            RegionEnum? defaultRegion, 
+            bool waitToAvoidRateLimit) 
+            : base(key, httpRequestService, VersionEnum.V2Rev3, "league", defaultRegion, waitToAvoidRateLimit)
+        { }
 
         /// <summary>
         /// Retrieves challenger tier leagues.

@@ -14,9 +14,10 @@ namespace PortableLeagueApi.Summoner.Services
         /// </summary>
         public static async Task<IEnumerable<MasteryPageDto>> GetMasteryPages(
             this ISummoner summoner,
+            SummonerService summonerService,
             RegionEnum? region = null)
         {
-            return await SummonerService.Instance.GetMasteryPagesBySummonerId(summoner.SummonerId, region);
+            return await summonerService.GetMasteryPagesBySummonerId(summoner.SummonerId, region);
         }
 
         /// <summary>
@@ -24,9 +25,10 @@ namespace PortableLeagueApi.Summoner.Services
         /// </summary>
         public static async Task<Dictionary<long, IEnumerable<MasteryPageDto>>> GetMasteryPages(
             this IEnumerable<ISummoner> summoners,
+            SummonerService summonerService,
             RegionEnum? region = null)
         {
-            return await SummonerService.Instance.GetMasteryPagesBySummonerId(summoners.Select(x => x.SummonerId), region);
+            return await summonerService.GetMasteryPagesBySummonerId(summoners.Select(x => x.SummonerId), region);
         }
 
         /// <summary>
@@ -34,9 +36,10 @@ namespace PortableLeagueApi.Summoner.Services
         /// </summary>
         public static async Task<IEnumerable<RunePageDto>> GetRunePages(
             this ISummoner summoner,
+            SummonerService summonerService,
             RegionEnum? region = null)
         {
-            return await SummonerService.Instance.GetRunePagesBySummonerId(summoner.SummonerId, region);
+            return await summonerService.GetRunePagesBySummonerId(summoner.SummonerId, region);
         }
 
         /// <summary>
@@ -44,9 +47,10 @@ namespace PortableLeagueApi.Summoner.Services
         /// </summary>
         public static async Task<Dictionary<long, IEnumerable<RunePageDto>>> GetRunePages(
             this IEnumerable<ISummoner> summoners,
+            SummonerService summonerService,
             RegionEnum? region = null)
         {
-            return await SummonerService.Instance.GetRunePagesBySummonerId(summoners.Select(x => x.SummonerId), region);
+            return await summonerService.GetRunePagesBySummonerId(summoners.Select(x => x.SummonerId), region);
         }
     }
 }

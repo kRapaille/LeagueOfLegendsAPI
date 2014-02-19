@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
+using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Summoner.Models.Summoner;
 
@@ -9,15 +10,14 @@ namespace PortableLeagueApi.Summoner.Services
 {
     public class SummonerService : BaseService
     {
-        private SummonerService() : base(VersionEnum.V1Rev3, "summoner") { }
-
-        private static SummonerService _instance;
-
-        public static SummonerService Instance
-        {
-            get { return _instance ?? (_instance = new SummonerService()); }
-        }
-
+        public SummonerService(
+            string key,
+            IHttpRequestService httpRequestService, 
+            RegionEnum? defaultRegion, 
+            bool waitToAvoidRateLimit)
+            : base(key, httpRequestService, VersionEnum.V1Rev3, "summoner", defaultRegion, waitToAvoidRateLimit)
+        { }
+        
         /// <summary>
         /// Get mastery pages
         /// </summary>

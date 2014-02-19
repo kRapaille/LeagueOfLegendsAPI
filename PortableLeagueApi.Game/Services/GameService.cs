@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
+using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Game.Models.Game;
 
@@ -9,14 +10,13 @@ namespace PortableLeagueApi.Game.Services
 {
     public class GameService : BaseService
     {
-        private GameService() : base(VersionEnum.V1Rev3, "game") { }
-
-        private static GameService _instance;
-
-        public static GameService Instance
-        {
-            get { return _instance ?? (_instance = new GameService()); }
-        }
+        public GameService(
+            string key,
+            IHttpRequestService httpRequestService, 
+            RegionEnum? defaultRegion, 
+            bool waitToAvoidRateLimit) 
+            : base(key, httpRequestService, VersionEnum.V1Rev3, "game", defaultRegion, waitToAvoidRateLimit)
+        { }
 
         /// <summary>
         /// Get recent games
