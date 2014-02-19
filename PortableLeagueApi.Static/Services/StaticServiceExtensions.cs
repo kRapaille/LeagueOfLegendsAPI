@@ -22,7 +22,7 @@ namespace PortableLeagueApi.Static.Services
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await staticService.GetChampion(
+            return await staticService.GetChampionAsync(
                     champion.ChampionId,
                     champData,
                     region,
@@ -38,7 +38,7 @@ namespace PortableLeagueApi.Static.Services
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await staticService.GetMastery(
+            return await staticService.GetMasteryAsync(
                 mastery.Id,
                 masteryData,
                 region,
@@ -54,7 +54,7 @@ namespace PortableLeagueApi.Static.Services
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await staticService.GetRune(
+            return await staticService.GetRuneAsync(
                 rune.Id, 
                 runeData, 
                 region, 
@@ -85,7 +85,7 @@ namespace PortableLeagueApi.Static.Services
 
             foreach (var itemId in itemIds.Where(x => x > 0))
             {
-                var item = await staticService.GetItems(
+                var item = await staticService.GetItemsAsync(
                     itemId,
                     itemData,
                     region,
@@ -106,7 +106,7 @@ namespace PortableLeagueApi.Static.Services
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            var allSummonerSpells = await staticService.GetSummonerSpells(
+            var allSummonerSpells = await staticService.GetSummonerSpellsAsync(
                 itemData,
                 region,
                 languageCode,

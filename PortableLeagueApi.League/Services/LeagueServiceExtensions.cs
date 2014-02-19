@@ -16,7 +16,7 @@ namespace PortableLeagueApi.League.Services
             LeagueService leagueService,
             RegionEnum? region = null)
         {
-            return await leagueService.RetrievesLeaguesEntryDataForSummoner(summoner.SummonerId, region);
+            return await leagueService.RetrievesLeaguesEntryDataForSummonerAsync(summoner.SummonerId, region);
         }
 
         
@@ -28,7 +28,7 @@ namespace PortableLeagueApi.League.Services
             LeagueService leagueService,
             RegionEnum? region = null)
         {
-            return await leagueService.RetrievesLeaguesDataForSummoner(summoner.SummonerId, region);
+            return await leagueService.RetrievesLeaguesDataForSummonerAsync(summoner.SummonerId, region);
         }
     }
 }

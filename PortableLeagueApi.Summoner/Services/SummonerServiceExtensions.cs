@@ -17,7 +17,7 @@ namespace PortableLeagueApi.Summoner.Services
             SummonerService summonerService,
             RegionEnum? region = null)
         {
-            return await summonerService.GetMasteryPagesBySummonerId(summoner.SummonerId, region);
+            return await summonerService.GetMasteryPagesBySummonerIdAsync(summoner.SummonerId, region);
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace PortableLeagueApi.Summoner.Services
             SummonerService summonerService,
             RegionEnum? region = null)
         {
-            return await summonerService.GetMasteryPagesBySummonerId(summoners.Select(x => x.SummonerId), region);
+            return await summonerService.GetMasteryPagesBySummonerIdAsync(summoners.Select(x => x.SummonerId), region);
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace PortableLeagueApi.Summoner.Services
             SummonerService summonerService,
             RegionEnum? region = null)
         {
-            return await summonerService.GetRunePagesBySummonerId(summoner.SummonerId, region);
+            return await summonerService.GetRunePagesBySummonerIdAsync(summoner.SummonerId, region);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace PortableLeagueApi.Summoner.Services
             SummonerService summonerService,
             RegionEnum? region = null)
         {
-            return await summonerService.GetRunePagesBySummonerId(summoners.Select(x => x.SummonerId), region);
+            return await summonerService.GetRunePagesBySummonerIdAsync(summoners.Select(x => x.SummonerId), region);
         }
     }
 }

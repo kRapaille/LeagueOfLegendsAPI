@@ -22,7 +22,7 @@ namespace PortableLeagueApi.Stats.Services
         /// <summary>
         /// Get player stats summaries. One summary is returned per queue type.
         /// </summary>
-        public async Task<IEnumerable<PlayerStatsSummaryDto>> GetPlayerStatsSummariesBySummonerId(
+        public async Task<IEnumerable<PlayerStatsSummaryDto>> GetPlayerStatsSummariesBySummonerIdAsync(
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null)
@@ -33,7 +33,7 @@ namespace PortableLeagueApi.Stats.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var playerStatvalueRoot = await GetResponse<PlayerStatsSummaryListDto>(region, url);
+            var playerStatvalueRoot = await GetResponseAsync<PlayerStatsSummaryListDto>(region, url);
 
             return playerStatvalueRoot.PlayerStatSummaries.AsEnumerable();
         }
@@ -41,7 +41,7 @@ namespace PortableLeagueApi.Stats.Services
         /// <summary>
         /// Get ranked stats. Includes statistics for Twisted Treeline and Summoner's Rift.
         /// </summary>
-        public async Task<RankedStatsDto> GetRankedStatsSummariesBySummonerId(
+        public async Task<RankedStatsDto> GetRankedStatsSummariesBySummonerIdAsync(
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null)
@@ -52,7 +52,7 @@ namespace PortableLeagueApi.Stats.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var rankedStatsRoot = await GetResponse<RankedStatsDto>(region, url);
+            var rankedStatsRoot = await GetResponseAsync<RankedStatsDto>(region, url);
 
             return rankedStatsRoot;
         }

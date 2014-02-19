@@ -21,11 +21,11 @@ namespace PortableLeagueApi.Summoner.Services
         /// <summary>
         /// Get mastery pages
         /// </summary>
-        public async Task<IEnumerable<MasteryPageDto>> GetMasteryPagesBySummonerId(
+        public async Task<IEnumerable<MasteryPageDto>> GetMasteryPagesBySummonerIdAsync(
             long summonerId,
             RegionEnum? region = null)
         {
-            var result = await GetMasteryPagesBySummonerId(new[] {summonerId}, region);
+            var result = await GetMasteryPagesBySummonerIdAsync(new[] {summonerId}, region);
 
             return result[summonerId];
         }
@@ -33,14 +33,14 @@ namespace PortableLeagueApi.Summoner.Services
         /// <summary>
         /// Get mastery pages
         /// </summary>
-        public async Task<Dictionary<long, IEnumerable<MasteryPageDto>>> GetMasteryPagesBySummonerId(
+        public async Task<Dictionary<long, IEnumerable<MasteryPageDto>>> GetMasteryPagesBySummonerIdAsync(
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
             var url = string.Format("{0}/masteries",
                 string.Join(",", summonerIds));
 
-            var masteryPagesRoot = await GetResponse<Dictionary<long, MasteryPagesDto>>(region, url);
+            var masteryPagesRoot = await GetResponseAsync<Dictionary<long, MasteryPagesDto>>(region, url);
 
             return masteryPagesRoot.ToDictionary(x => x.Key, x => x.Value.Pages.AsEnumerable());
         }
@@ -48,11 +48,11 @@ namespace PortableLeagueApi.Summoner.Services
         /// <summary>
         /// Get rune pages
         /// </summary>
-        public async Task<IEnumerable<RunePageDto>> GetRunePagesBySummonerId(
+        public async Task<IEnumerable<RunePageDto>> GetRunePagesBySummonerIdAsync(
             long summonerId,
             RegionEnum? region = null)
         {
-            var result = await GetRunePagesBySummonerId(new[] {summonerId}, region);
+            var result = await GetRunePagesBySummonerIdAsync(new[] {summonerId}, region);
 
             return result[summonerId];
         }
@@ -60,64 +60,64 @@ namespace PortableLeagueApi.Summoner.Services
         /// <summary>
         /// Get rune pages
         /// </summary>
-        public async Task<Dictionary<long, IEnumerable<RunePageDto>>> GetRunePagesBySummonerId(
+        public async Task<Dictionary<long, IEnumerable<RunePageDto>>> GetRunePagesBySummonerIdAsync(
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
             var url = string.Format("{0}/runes",
                 string.Join(",", summonerIds));
 
-            var runePageRoot = await GetResponse<Dictionary<long, RunePagesDto>>(region, url);
+            var runePageRoot = await GetResponseAsync<Dictionary<long, RunePagesDto>>(region, url);
 
             return runePageRoot.ToDictionary(x => x.Key, x => x.Value.Pages.AsEnumerable());
         }
 
-        public async Task<SummonerDto> GetSummonerByName(
+        public async Task<SummonerDto> GetSummonerByNameAsync(
             string name,
             RegionEnum? region = null)
         {
             var url = string.Format("by-name/{0}",
                 name);
 
-            var result = await GetResponse<Dictionary<string, SummonerDto>>(region, url);
+            var result = await GetResponseAsync<Dictionary<string, SummonerDto>>(region, url);
 
             return result.Select(x => x.Value).FirstOrDefault();
         }
 
-        public async Task<SummonerDto> GetSummonerById(
+        public async Task<SummonerDto> GetSummonerByIdAsync(
             long summonerId,
             RegionEnum? region = null)
         {
-            var result = await GetSummonerById(new[] { summonerId }, region);
+            var result = await GetSummonerByIdAsync(new[] { summonerId }, region);
 
             return result.FirstOrDefault();
         }
-        public async Task<IEnumerable<SummonerDto>> GetSummonerById(
+        public async Task<IEnumerable<SummonerDto>> GetSummonerByIdAsync(
            IEnumerable<long> summonersId,
            RegionEnum? region = null)
         {
             var url = string.Format("{0}",
                 string.Join(",", summonersId));
 
-            var result = await GetResponse<Dictionary<string, SummonerDto>>(region, url);
+            var result = await GetResponseAsync<Dictionary<string, SummonerDto>>(region, url);
 
             return result.Select(x => x.Value);
         }
-        public async Task<Dictionary<long, string>> GetSummonerNamesById(
+        public async Task<Dictionary<long, string>> GetSummonerNamesByIdAsync(
             long summonerId,
             RegionEnum? region = null)
         {
-            return await GetSummonerNamesById(new[] { summonerId }, region);
+            return await GetSummonerNamesByIdAsync(new[] { summonerId }, region);
         }
 
-        public async Task<Dictionary<long, string>> GetSummonerNamesById(
+        public async Task<Dictionary<long, string>> GetSummonerNamesByIdAsync(
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
             var url = string.Format("{0}/name",
                 string.Join(",", summonerIds));
 
-            var summonersInfo = await GetResponse<Dictionary<long, string>>(region, url);
+            var summonersInfo = await GetResponseAsync<Dictionary<long, string>>(region, url);
 
             return summonersInfo;
         }

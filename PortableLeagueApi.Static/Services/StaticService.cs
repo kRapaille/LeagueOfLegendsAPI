@@ -35,14 +35,14 @@ namespace PortableLeagueApi.Static.Services
             return LanguageCodeConsts.SupportedLanguages[value];
         }
         
-        protected override async Task<T> GetResponse<T>(Uri uri)
+        protected override async Task<T> GetResponseAsync<T>(Uri uri)
         {
             T response;
 
             if (Cache.ContainsKey(uri))
                 response = (T)Cache[uri];
             else
-                response = await base.GetResponse<T>(uri);
+                response = await base.GetResponseAsync<T>(uri);
 
             Cache[uri] = response;
 
@@ -107,13 +107,13 @@ namespace PortableLeagueApi.Static.Services
             return uriBuilder.Uri;
         }
 
-        public async Task<ChampionListDto> GetChampions(
+        public async Task<ChampionListDto> GetChampionsAsync(
             ChampDataEnum? champData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<ChampionListDto>(
+            return await GetResponseAsync<ChampionListDto>(
                 BuildStaticUri(
                     "champion", 
                     "champData", 
@@ -123,14 +123,14 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion));
         }
 
-        public async Task<ChampionDto> GetChampion(
+        public async Task<ChampionDto> GetChampionAsync(
             int championId,
             ChampDataEnum? champData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<ChampionDto>(
+            return await GetResponseAsync<ChampionDto>(
                 BuildStaticUri(
                     "champion", 
                     "champData", 
@@ -140,13 +140,13 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion, 
                     championId));
         }
-        public async Task<ItemListDto> GetItems(
+        public async Task<ItemListDto> GetItemsAsync(
             ItemDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<ItemListDto>(
+            return await GetResponseAsync<ItemListDto>(
                 BuildStaticUri(
                     "item",
                     "itemListData",
@@ -156,14 +156,14 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion));
         }
 
-        public async Task<ItemDto> GetItems(
+        public async Task<ItemDto> GetItemsAsync(
             int itemId,
             ItemDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<ItemDto>(
+            return await GetResponseAsync<ItemDto>(
                 BuildStaticUri(
                     "item",
                     "itemListData",
@@ -174,13 +174,13 @@ namespace PortableLeagueApi.Static.Services
                     itemId));
         }
 
-        public async Task<MasteryListDto> GetMasteries(
+        public async Task<MasteryListDto> GetMasteriesAsync(
             MasteryDataEnum? masteryData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<MasteryListDto>(
+            return await GetResponseAsync<MasteryListDto>(
                 BuildStaticUri(
                     "mastery",
                     "masteryListData",
@@ -190,14 +190,14 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion));
         }
 
-        public async Task<MasteryDto> GetMastery(
+        public async Task<MasteryDto> GetMasteryAsync(
             int masteryId,
             MasteryDataEnum? masteryData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<MasteryDto>(
+            return await GetResponseAsync<MasteryDto>(
                 BuildStaticUri(
                     "mastery",
                     "masteryListData",
@@ -208,20 +208,20 @@ namespace PortableLeagueApi.Static.Services
                     masteryId));
         }
 
-        public async Task<RealmDto> GetRealm(
+        public async Task<RealmDto> GetRealmAsync(
             RegionEnum? region = null)
         {
-            return await GetResponse<RealmDto>(
+            return await GetResponseAsync<RealmDto>(
                 BuildUri(region, "realm"));
         }
 
-        public async Task<RuneListDto> GetRunes(
+        public async Task<RuneListDto> GetRunesAsync(
             RuneDataEnum? runeData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<RuneListDto>(
+            return await GetResponseAsync<RuneListDto>(
                 BuildStaticUri(
                     "rune",
                     "runeListData",
@@ -231,14 +231,14 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion));
         }
 
-        public async Task<RuneDto> GetRune(
+        public async Task<RuneDto> GetRuneAsync(
             int runeId,
             RuneDataEnum? runeData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<RuneDto>(
+            return await GetResponseAsync<RuneDto>(
                 BuildStaticUri(
                     "rune",
                     "runeListData",
@@ -249,13 +249,13 @@ namespace PortableLeagueApi.Static.Services
                     runeId));
         }
 
-        public async Task<SummonerSpellListDto> GetSummonerSpells(
+        public async Task<SummonerSpellListDto> GetSummonerSpellsAsync(
             SpellDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<SummonerSpellListDto>(
+            return await GetResponseAsync<SummonerSpellListDto>(
                 BuildStaticUri(
                     "summoner-spell",
                     "spellData",
@@ -265,14 +265,14 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion));
         }
 
-        public async Task<SummonerSpellDto> GetSummonerSpells(
+        public async Task<SummonerSpellDto> GetSummonerSpellsAsync(
             string spellId,
             SpellDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponse<SummonerSpellDto>(
+            return await GetResponseAsync<SummonerSpellDto>(
                 BuildStaticUri(
                     "summoner-spell",
                     "spellData",

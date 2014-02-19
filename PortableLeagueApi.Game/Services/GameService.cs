@@ -21,14 +21,14 @@ namespace PortableLeagueApi.Game.Services
         /// <summary>
         /// Get recent games
         /// </summary>
-        public async Task<IEnumerable<GameDto>> GetRecentGamesBySummonerId(
+        public async Task<IEnumerable<GameDto>> GetRecentGamesBySummonerIdAsync(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}/recent",
                 summonerId);
 
-            var recentGamesRoot = await GetResponse<RecentGamesDto>(region, url);
+            var recentGamesRoot = await GetResponseAsync<RecentGamesDto>(region, url);
 
             return recentGamesRoot.Games.AsEnumerable();
         }

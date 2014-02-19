@@ -18,14 +18,14 @@ namespace PortableLeagueAPI.Champion.Services
             : base(key, httpRequestService, VersionEnum.V1Rev1, "champion", defaultRegion, waitToAvoidRateLimit)
         { }
 
-        public async Task<IEnumerable<ChampionDto>> GetChampions(
+        public async Task<IEnumerable<ChampionDto>> GetChampionsAsync(
             bool freeToPlay,
             RegionEnum? region = null)
         {
             var url = string.Format("?freeToPlay={0}",
                 freeToPlay);
 
-            var championsRoot = await GetResponse<ChampionListDto>(region, url);
+            var championsRoot = await GetResponseAsync<ChampionListDto>(region, url);
 
             return championsRoot.Champions.AsEnumerable();
         }

@@ -20,14 +20,14 @@ namespace PortableLeagueApi.Team.Services
         /// <summary>
         /// Retrieves teams
         /// </summary>
-        public async Task<IEnumerable<TeamDto>> GetTeamsBySummonerId(
+        public async Task<IEnumerable<TeamDto>> GetTeamsBySummonerIdAsync(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}",
                 summonerId);
 
-            return await GetResponse<List<TeamDto>>(region, url);
+            return await GetResponseAsync<List<TeamDto>>(region, url);
         }
     }
 }

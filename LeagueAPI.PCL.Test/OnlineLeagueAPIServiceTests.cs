@@ -26,12 +26,12 @@ namespace PortableLeagueAPI.Test
             var sw = new Stopwatch();
             sw.Start();
 
-            var result = await _leagueAPI.Static.GetChampions();
+            var result = await _leagueAPI.Static.GetChampionsAsync();
 
             sw.Stop();
             sw.Restart();
 
-            var result2 = await _leagueAPI.Static.GetChampions();
+            var result2 = await _leagueAPI.Static.GetChampionsAsync();
 
             sw.Stop();
             var secondTime = sw.ElapsedMilliseconds;
@@ -45,7 +45,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticChampionsTest()
         {
-            var result = await _leagueAPI.Static.GetChampions();
+            var result = await _leagueAPI.Static.GetChampionsAsync();
 
             Assert.NotNull(result);
         }
@@ -54,7 +54,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticChampionsWithParametersTest()
         {
-            var result = await _leagueAPI.Static.GetChampion(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
@@ -63,7 +63,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticItemsTest()
         {
-            var result = await _leagueAPI.Static.GetItems();
+            var result = await _leagueAPI.Static.GetItemsAsync();
 
             Assert.NotNull(result);
         }
@@ -72,7 +72,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticItemsWithParametersTest()
         {
-            var result = await _leagueAPI.Static.GetItems(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
@@ -81,7 +81,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticMasteriesTest()
         {
-            var result = await _leagueAPI.Static.GetMasteries();
+            var result = await _leagueAPI.Static.GetMasteriesAsync();
 
             Assert.NotNull(result);
         }
@@ -90,7 +90,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticMasteriesWithParametersTest()
         {
-            var result = await _leagueAPI.Static.GetMastery(4353, MasteryDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await _leagueAPI.Static.GetMasteryAsync(4353, MasteryDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
@@ -99,7 +99,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetRealm()
         {
-            var result = await _leagueAPI.Static.GetRealm();
+            var result = await _leagueAPI.Static.GetRealmAsync();
 
             Assert.NotNull(result);
         }
@@ -108,7 +108,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticRunesTest()
         {
-            var result = await _leagueAPI.Static.GetRunes();
+            var result = await _leagueAPI.Static.GetRunesAsync();
 
             Assert.NotNull(result);
         }
@@ -117,7 +117,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticRunesWithParametersTest()
         {
-            var result = await _leagueAPI.Static.GetRune(5235, RuneDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await _leagueAPI.Static.GetRuneAsync(5235, RuneDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
@@ -126,7 +126,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticSummonerSpellsTest()
         {
-            var result = await _leagueAPI.Static.GetSummonerSpells();
+            var result = await _leagueAPI.Static.GetSummonerSpellsAsync();
 
             Assert.NotNull(result);
         }
@@ -135,7 +135,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticSummonerSpellsWithParametersTest()
         {
-            var result = await _leagueAPI.Static.GetSummonerSpells("SummonerTeleport", SpellDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await _leagueAPI.Static.GetSummonerSpellsAsync("SummonerTeleport", SpellDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
@@ -144,7 +144,7 @@ namespace PortableLeagueAPI.Test
         [Category("StaticExtensions")]
         public async void ChampionExtensionsTest()
         {
-            var champions = await _leagueAPI.Champion.GetChampions(true);
+            var champions = await _leagueAPI.Champion.GetChampionsAsync(true);
             Assert.NotNull(champions);
 
             var result = await champions.First().GetChampionStaticInfosAsync(_leagueAPI.Static);
@@ -156,7 +156,7 @@ namespace PortableLeagueAPI.Test
         [Category("StaticExtensions")]
         public async void MasteryExtensionsTest()
         {
-            var masteriesPage = await _leagueAPI.Summoner.GetMasteryPagesBySummonerId(19231046);
+            var masteriesPage = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(19231046);
             Assert.NotNull(masteriesPage);
 
             var result = await masteriesPage.First().Talents.First().GetMasteryStaticInfosAsync(_leagueAPI.Static);
@@ -168,7 +168,7 @@ namespace PortableLeagueAPI.Test
         [Category("StaticExtensions")]
         public async void RuneExtensionsTest()
         {
-            var runesPages = await _leagueAPI.Summoner.GetRunePagesBySummonerId(19231046);
+            var runesPages = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(19231046);
             Assert.NotNull(runesPages);
 
             var result = await runesPages.First().Slots.First().Rune.GetRuneStaticInfosAsync(_leagueAPI.Static);
@@ -180,7 +180,7 @@ namespace PortableLeagueAPI.Test
         [Category("StaticExtensions")]
         public async void ItemsExtensionsTest()
         {
-            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerId(19231046);
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
             Assert.NotNull(recentGames);
 
             var result = await recentGames.First().Stats.GetItemsStaticInfosAsync(_leagueAPI.Static);
@@ -192,7 +192,7 @@ namespace PortableLeagueAPI.Test
         [Category("StaticExtensions")]
         public async void SummonerSpellExtensionsTest()
         {
-            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerId(19231046);
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
             Assert.NotNull(recentGames);
 
             var result = await recentGames.First().GetSummonerSpellsStaticInfosAsync(_leagueAPI.Static);
@@ -209,7 +209,7 @@ namespace PortableLeagueAPI.Test
             for (var i = 0; i < 15; i++)
             {
                 Debug.WriteLine(i);
-                await _leagueAPI.Champion.GetChampions(true);
+                await _leagueAPI.Champion.GetChampionsAsync(true);
             }
 
             var diff = DateTime.Now.Subtract(start).TotalSeconds;

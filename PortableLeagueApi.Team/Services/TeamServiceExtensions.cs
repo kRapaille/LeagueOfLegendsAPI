@@ -16,7 +16,7 @@ namespace PortableLeagueApi.Team.Services
             TeamService teamService,
             RegionEnum? region = null)
         {
-            return await teamService.GetTeamsBySummonerId(summoner.SummonerId, region);
+            return await teamService.GetTeamsBySummonerIdAsync(summoner.SummonerId, region);
         }
     }
 }

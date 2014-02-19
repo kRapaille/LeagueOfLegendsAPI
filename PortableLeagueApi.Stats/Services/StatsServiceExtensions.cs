@@ -18,7 +18,7 @@ namespace PortableLeagueApi.Stats.Services
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            return await statsService.GetPlayerStatsSummariesBySummonerId(summoner.SummonerId, season, region);
+            return await statsService.GetPlayerStatsSummariesBySummonerIdAsync(summoner.SummonerId, season, region);
         }
 
 
@@ -31,7 +31,7 @@ namespace PortableLeagueApi.Stats.Services
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            return await statsService.GetRankedStatsSummariesBySummonerId(summoner.SummonerId, season, region);
+            return await statsService.GetRankedStatsSummariesBySummonerIdAsync(summoner.SummonerId, season, region);
         }
     }
 }

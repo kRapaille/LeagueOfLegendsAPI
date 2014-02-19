@@ -5,6 +5,6 @@ namespace PortableLeagueApi.Core.Interfaces
 {
     public interface IHttpRequestService
     {
-        Task<IHttpResponseMessage> SendRequest(Uri uri);
+        Task<IHttpResponseMessage> SendRequestAsync(Uri uri);
     }
 }

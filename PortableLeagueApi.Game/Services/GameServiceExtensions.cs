@@ -16,7 +16,7 @@ namespace PortableLeagueApi.Game.Services
             GameService gameService,
             RegionEnum? region = null)
         {
-            return await gameService.GetRecentGamesBySummonerId(summoner.SummonerId, region);
+            return await gameService.GetRecentGamesBySummonerIdAsync(summoner.SummonerId, region);
         }
     }
 }

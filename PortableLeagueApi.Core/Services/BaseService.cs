@@ -81,16 +81,16 @@ namespace PortableLeagueApi.Core.Services
             return uriBuilder.Uri;
         }
 
-        protected async Task<T> GetResponse<T>(RegionEnum? region, string relativeUrl) where T : class
+        protected async Task<T> GetResponseAsync<T>(RegionEnum? region, string relativeUrl) where T : class
         {
-            return await GetResponse<T>(BuildUri(region, relativeUrl));
+            return await GetResponseAsync<T>(BuildUri(region, relativeUrl));
         }
 
-        protected virtual async Task<T> GetResponse<T>(Uri uri) where T : class
+        protected virtual async Task<T> GetResponseAsync<T>(Uri uri) where T : class
         {
             await ManageRateLimit();
 
-            var response = await _httpRequestService.SendRequest(uri);
+            var response = await _httpRequestService.SendRequestAsync(uri);
 
             T result;
 
