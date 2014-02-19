@@ -194,7 +194,7 @@ namespace PortableLeagueApi.Core.Services
         
         protected string GetRegionAsString(RegionEnum? region)
         {
-            return _version.HasValue ? VersionConsts.Versions[_version.Value] : string.Empty;
+            return RegionConsts.Regions[GetRegion(region)];
         }
     }
 }

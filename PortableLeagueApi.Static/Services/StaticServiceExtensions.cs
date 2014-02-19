@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Static.Enums;
+using PortableLeagueApi.Static.Models.Static;
 using PortableLeagueApi.Static.Models.Static.Champion;
 using PortableLeagueApi.Static.Models.Static.Item;
 using PortableLeagueApi.Static.Models.Static.Mastery;
@@ -121,6 +122,92 @@ namespace PortableLeagueApi.Static.Services
             return allSummonerSpells.Data
                 .Where(x => summonerSpellsList.Contains(x.Value.Key))
                 .Select(x => x.Value);
+        }
+
+        private static async Task<string> GetImageUrlAsync(
+            string group,
+            string image,
+            StaticService staticService,
+            RegionEnum? region = null,
+            string dataDragonVersion = null)
+        {
+            if (string.IsNullOrWhiteSpace(dataDragonVersion))
+            {
+                var realm = await staticService.GetRealmAsync(region);
+                dataDragonVersion = realm.V;
+            }
+
+            return string.Format("http://ddragon.leagueoflegends.com/cdn/{0}/img/{1}/{2}",
+                dataDragonVersion,
+                group,
+                image);
+        }
+
+        public static async Task<string> GetUrlAsync(
+            this ImageDto imageDto,
+            StaticService staticService,
+            RegionEnum? region = null,
+            string dataDragonVersion = null)
+        {
+            return await GetImageUrlAsync(
+                imageDto.Group,
+                imageDto.Full,
+                staticService,
+                region,
+                dataDragonVersion);
+        }
+
+        public static async Task<string> GetChampionImageUrlAsync(
+            this IChampionImage championImage,
+            StaticService staticService,
+            RegionEnum? region = null,
+            string dataDragonVersion = null)
+        {
+            return await GetImageUrlAsync(
+                "champion",
+                string.Format("{0}.png", championImage.Name),
+                staticService,
+                region,
+                dataDragonVersion);
+        }
+
+        public static async Task<string> GetSpriteUrlAsync(
+            this ImageDto imageDto,
+            StaticService staticService,
+            RegionEnum? region = null,
+            string dataDragonVersion = null)
+        {
+            if (imageDto == null)
+                return string.Empty;
+
+            return await GetImageUrlAsync(
+                "sprite",
+                imageDto.Sprite,
+                staticService,
+                region,
+                dataDragonVersion);
+        }
+
+        public static IEnumerable<string> GetSpasheImmagesUrls(
+            this ChampionDto championDto,
+            StaticService staticService,
+            RegionEnum? region = null)
+        {
+            return championDto.Skins.Select(
+                    skin => string.Format("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{0}_{1}.jpg",
+                        championDto.Name,
+                        skin.Num));
+        }
+
+        public static IEnumerable<string> GetLoadingImagesUrls(
+            this ChampionDto championDto,
+            StaticService staticService,
+            RegionEnum? region = null)
+        {
+            return championDto.Skins.Select(
+                    skin => string.Format("http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{0}_{1}.jpg",
+                        championDto.Name,
+                        skin.Num));
         }
     }
 }

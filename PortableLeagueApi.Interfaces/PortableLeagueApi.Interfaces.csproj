@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChampion.cs" />
+    <Compile Include="IChampionImage.cs" />
     <Compile Include="IItems.cs" />
     <Compile Include="IMastery.cs" />
     <Compile Include="IRune.cs" />

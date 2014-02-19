@@ -15,7 +15,7 @@ namespace PortableLeagueAPI.Champion.Models.Champion
         public ChampionDto[] Champions { get; set; }
     }
 
-    public class ChampionDto : IChampion
+    public class ChampionDto : IChampion, IChampionImage
     {
         /// <summary>
         /// Bot Match Made enabled flag (for Co-op vs. AI games).

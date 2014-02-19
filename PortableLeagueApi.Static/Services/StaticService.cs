@@ -166,7 +166,7 @@ namespace PortableLeagueApi.Static.Services
             return await GetResponseAsync<ItemDto>(
                 BuildStaticUri(
                     "item",
-                    "itemListData",
+                    "itemData",
                     itemData,
                     region,
                     languageCode,
@@ -200,7 +200,7 @@ namespace PortableLeagueApi.Static.Services
             return await GetResponseAsync<MasteryDto>(
                 BuildStaticUri(
                     "mastery",
-                    "masteryListData",
+                    "masteryData",
                     masteryData,
                     region,
                     languageCode,
@@ -241,7 +241,7 @@ namespace PortableLeagueApi.Static.Services
             return await GetResponseAsync<RuneDto>(
                 BuildStaticUri(
                     "rune",
-                    "runeListData",
+                    "runeData",
                     runeData,
                     region,
                     languageCode,

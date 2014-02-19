@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using NUnit.Framework;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Static.Enums;
@@ -57,6 +58,66 @@ namespace PortableLeagueAPI.Test
             var result = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticImageUrlTest()
+        {
+            var item = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
+
+            var url = await item.Image.GetUrlAsync(_leagueAPI.Static);
+
+            Assert.NotNull(url);
+
+            using (var httpClient = new HttpClient())
+            {
+                var response = await httpClient.GetAsync(url);
+
+                Assert.IsTrue(response.IsSuccessStatusCode);
+            }
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticChampionsSpasheImagesUrlTest()
+        {
+            var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+
+            var urls = champion.GetSpasheImmagesUrls(_leagueAPI.Static);
+
+            Assert.NotNull(urls);
+
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.GetAsync(url);
+
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticChampionsLoadingImagesUrlTest()
+        {
+            var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+
+            var urls = champion.GetLoadingImagesUrls(_leagueAPI.Static);
+
+            Assert.NotNull(urls);
+
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.GetAsync(url);
+
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
         }
 
         [Test]
