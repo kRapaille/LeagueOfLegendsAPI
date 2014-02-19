@@ -27,8 +27,7 @@ namespace PortableLeagueApi.Core.Services
 
         private const int MaxRequestsPer10Sec = 10;
         private const int MaxRequestsPer10Min = 500;
-
-
+        
         protected string Prefix { get; private set; }
 
         protected string VersionText

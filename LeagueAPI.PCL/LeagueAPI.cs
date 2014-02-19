@@ -20,7 +20,7 @@ namespace PortableLeagueAPI
         public SummonerService Summoner { get; private set; }
         public TeamService Team { get; private set; }
         public StaticService Static { get; private set; }
-
+        
         public LeagueAPI(
             string key,
             RegionEnum? region = null,
