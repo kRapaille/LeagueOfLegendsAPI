@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PortableLeagueApi.Interfaces;
 
-namespace PortableLeagueApi.Stats.Models.Stats
+namespace PortableLeagueApi.Stats.Models.DTO
 {
     public class PlayerStatsSummaryListDto : ISummoner
     {

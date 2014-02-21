@@ -7,9 +7,11 @@ using PortableLeagueApi.Game.Models;
 using PortableLeagueApi.Game.Services;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
+using PortableLeagueApi.Interfaces.Stats;
 using PortableLeagueApi.League.Models;
 using PortableLeagueApi.League.Models.DTO;
-using PortableLeagueApi.Stats.Models.Stats;
+using PortableLeagueApi.Stats.Models;
+using PortableLeagueApi.Stats.Models.DTO;
 
 namespace PortableLeagueAPI.Test
 {
@@ -138,7 +140,7 @@ namespace PortableLeagueAPI.Test
         [Category("Stats")]
         public async void GetRankedStatsSummariesBySummonerIdTest()
         {
-            RankedStatsDto result;
+            IRankedStats result;
 
             try
             {

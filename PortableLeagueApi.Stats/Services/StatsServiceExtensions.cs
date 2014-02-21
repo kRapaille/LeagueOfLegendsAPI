@@ -1,11 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using PortableLeagueApi.Interfaces;
-using PortableLeagueApi.Interfaces.Enums;
-using PortableLeagueApi.Stats.Enums;
-using PortableLeagueApi.Stats.Models.Stats;
-
-namespace PortableLeagueApi.Stats.Services
+﻿namespace PortableLeagueApi.Stats.Services
 {
     public static class StatsServiceExtensions
     {

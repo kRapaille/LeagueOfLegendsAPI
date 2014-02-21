@@ -1,26 +1,28 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
-using PortableLeagueApi.Stats.Enums;
-using PortableLeagueApi.Stats.Models.Stats;
+using PortableLeagueApi.Interfaces.Stats;
+using PortableLeagueApi.Stats.Models;
+using PortableLeagueApi.Stats.Models.DTO;
 
 namespace PortableLeagueApi.Stats.Services
 {
-    public class StatsService : BaseService
+    public class StatsService : BaseService, IStatsService
     {
         public StatsService(
             ILeagueAPI source)
             : base(source, VersionEnum.V1Rev2, "stats")
-        { }
+        {
+            RankedStats.CreateMap(source);
+            PlayerStatsSummary.CreateMap(source);
+        }
 
         /// <summary>
         /// Get player stats summaries. One summary is returned per queue type.
         /// </summary>
-        public async Task<IEnumerable<PlayerStatsSummaryDto>> GetPlayerStatsSummariesBySummonerIdAsync(
+        public async Task<IEnumerable<IPlayerStatsSummary>> GetPlayerStatsSummariesBySummonerIdAsync(
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null)
@@ -31,15 +33,13 @@ namespace PortableLeagueApi.Stats.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var playerStatvalueRoot = await GetResponseAsync<PlayerStatsSummaryListDto>(region, url);
-
-            return playerStatvalueRoot.PlayerStatSummaries.AsEnumerable();
+            return await GetResponseAsync<PlayerStatsSummaryListDto, IEnumerable<IPlayerStatsSummary>>(region, url);
         }
 
         /// <summary>
         /// Get ranked stats. Includes statistics for Twisted Treeline and Summoner's Rift.
         /// </summary>
-        public async Task<RankedStatsDto> GetRankedStatsSummariesBySummonerIdAsync(
+        public async Task<IRankedStats> GetRankedStatsSummariesBySummonerIdAsync(
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null)
@@ -50,9 +50,7 @@ namespace PortableLeagueApi.Stats.Services
             if (season.HasValue)
                 url += string.Concat("?season=", season.ToString().ToUpper());
 
-            var rankedStatsRoot = await GetResponseAsync<RankedStatsDto>(region, url);
-
-            return rankedStatsRoot;
+            return await GetResponseAsync<RankedStatsDto, IRankedStats>(region, url);
         }
     }
 }

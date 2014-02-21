@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Models;
-using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueAPI.Test.Responses;
 

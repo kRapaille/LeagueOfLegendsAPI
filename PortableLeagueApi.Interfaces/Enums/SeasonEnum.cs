@@ -1,4 +1,4 @@
-﻿namespace PortableLeagueApi.Stats.Enums
+﻿namespace PortableLeagueApi.Interfaces.Enums
 {
     public enum SeasonEnum
     {

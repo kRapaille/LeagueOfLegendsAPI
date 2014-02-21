@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PortableLeagueApi.Stats.Models.Stats
+namespace PortableLeagueApi.Stats.Models.DTO
 {
     public class AggregatedStatsDto
     {
