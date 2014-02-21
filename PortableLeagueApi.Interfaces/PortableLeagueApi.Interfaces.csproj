@@ -41,8 +41,10 @@
     <Compile Include="Enums\GameModeEnum.cs" />
     <Compile Include="Enums\GameSubTypeEnum.cs" />
     <Compile Include="Enums\GameTypeEnum.cs" />
+    <Compile Include="Enums\LeagueTypeEnum.cs" />
     <Compile Include="Enums\MapEnum.cs" />
     <Compile Include="Enums\RegionEnum.cs" />
+    <Compile Include="Enums\TierEnum.cs" />
     <Compile Include="Enums\VersionEnum.cs" />
     <Compile Include="Game\IGame.cs" />
     <Compile Include="Game\IGameService.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="ISummonerSpells.cs" />
     <Compile Include="League\ILeague.cs" />
     <Compile Include="League\ILeagueItem.cs" />
+    <Compile Include="League\ILeagueService.cs" />
     <Compile Include="League\IMiniSeries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

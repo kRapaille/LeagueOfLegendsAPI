@@ -1,6 +1,7 @@
 ﻿using PortableLeagueApi.Interfaces.Champion;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.Game;
+using PortableLeagueApi.Interfaces.League;
 
 namespace PortableLeagueApi.Interfaces.Core
 {
@@ -8,6 +9,7 @@ namespace PortableLeagueApi.Interfaces.Core
     {
         IChampionService Champion { get; }
         IGameService Game { get; }
+        ILeagueService League { get; }
 
         string Key { get; }
         RegionEnum? DefaultRegion { get; }

@@ -7,7 +7,6 @@ using PortableLeagueApi.Game.Models;
 using PortableLeagueApi.Game.Services;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
-using PortableLeagueApi.League.Enums;
 using PortableLeagueApi.League.Models;
 using PortableLeagueApi.League.Models.DTO;
 using PortableLeagueApi.Stats.Models.Stats;
@@ -73,7 +72,7 @@ namespace PortableLeagueAPI.Test
         [Category("League")]
         public async void RetrievesChallengerTierLeaguesTest()
         {
-            var result = await _leagueAPI.League.RetrievesChallengerTierLeaguesAsync(LeagueTypeEnum.RANKED_SOLO_5x5);
+            var result = await _leagueAPI.League.RetrievesChallengerTierLeaguesAsync(LeagueTypeEnum.RankedSolo5X5);
             
             Assert.NotNull(result);
         }

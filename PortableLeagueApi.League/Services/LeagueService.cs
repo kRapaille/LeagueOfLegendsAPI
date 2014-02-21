@@ -4,13 +4,11 @@ using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
-using PortableLeagueApi.League.Enums;
-using PortableLeagueApi.League.Models;
 using PortableLeagueApi.League.Models.DTO;
 
 namespace PortableLeagueApi.League.Services
 {
-    public class LeagueService : BaseService
+    public class LeagueService : BaseService, ILeagueService
     {
         public LeagueService(
             ILeagueAPI source)
