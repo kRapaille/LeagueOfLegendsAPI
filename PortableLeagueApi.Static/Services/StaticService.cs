@@ -5,6 +5,9 @@ using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Helpers;
 using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
+using PortableLeagueApi.Interfaces;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Static.Constants;
 using PortableLeagueApi.Static.Enums;
 using PortableLeagueApi.Static.Models.Static;
@@ -21,11 +24,8 @@ namespace PortableLeagueApi.Static.Services
         private static readonly Dictionary<Uri, object> Cache = new Dictionary<Uri, object>();
 
         public StaticService(
-            string key,
-            IHttpRequestService httpRequestService, 
-            RegionEnum? defaultRegion, 
-            bool waitToAvoidRateLimit)
-            : base(key, httpRequestService, VersionEnum.V1, "static-data", defaultRegion, waitToAvoidRateLimit, false)
+            ILeagueAPI source)
+            : base(source, VersionEnum.V1, "static-data", false)
         { }
 
         private static string GetLanguageCode(LanguageEnum? language)

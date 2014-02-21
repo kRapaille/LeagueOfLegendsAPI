@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
+using PortableLeagueApi.Interfaces;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Summoner.Models.Summoner;
 
 namespace PortableLeagueApi.Summoner.Services
@@ -11,11 +14,8 @@ namespace PortableLeagueApi.Summoner.Services
     public class SummonerService : BaseService
     {
         public SummonerService(
-            string key,
-            IHttpRequestService httpRequestService, 
-            RegionEnum? defaultRegion, 
-            bool waitToAvoidRateLimit)
-            : base(key, httpRequestService, VersionEnum.V1Rev3, "summoner", defaultRegion, waitToAvoidRateLimit)
+            ILeagueAPI source)
+            : base(source, VersionEnum.V1Rev3, "summoner")
         { }
         
         /// <summary>

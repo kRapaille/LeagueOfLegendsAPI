@@ -33,11 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Models\Champion\ChampionDto.cs" />
+    <Compile Include="Models\Champion.cs" />
+    <Compile Include="Models\DTO\ChampionDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ChampionService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.0-ci1003\lib\portable-windows8+net40+wp8+sl5+MonoAndroid+MonoTouch\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>

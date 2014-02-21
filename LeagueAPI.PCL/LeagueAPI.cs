@@ -1,7 +1,11 @@
 ﻿using PortableLeagueAPI.Champion.Services;
-using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Game.Services;
+using PortableLeagueApi.Interfaces;
+using PortableLeagueApi.Interfaces.Champion;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.Game;
 using PortableLeagueApi.League.Services;
 using PortableLeagueAPI.Services;
 using PortableLeagueApi.Static.Services;
@@ -11,15 +15,20 @@ using PortableLeagueApi.Team.Services;
 
 namespace PortableLeagueAPI
 {
-    public class LeagueAPI
+    public class LeagueAPI : ILeagueAPI
     {
-        public ChampionService Champion { get; private set; }
-        public GameService Game { get; private set; }
+        public IChampionService Champion { get; private set; }
+        public IGameService Game { get; private set; }
         public LeagueService League { get; private set; }
         public StatsService Stats { get; private set; }
         public SummonerService Summoner { get; private set; }
         public TeamService Team { get; private set; }
         public StaticService Static { get; private set; }
+
+        public string Key { get; private set; }
+        public RegionEnum? DefaultRegion { get; private set; }
+        public bool WaitToAvoidRateLimit { get; private set; }
+        public IHttpRequestService HttpRequestService { get; private set; }
         
         public LeagueAPI(
             string key,
@@ -29,13 +38,18 @@ namespace PortableLeagueAPI
         {
             httpRequestService = httpRequestService ?? new HttpRequestService();
 
-            Champion = new ChampionService(key, httpRequestService, region, waitToAvoidRateLimit);
-            Game = new GameService(key, httpRequestService, region, waitToAvoidRateLimit);
-            League = new LeagueService(key, httpRequestService, region, waitToAvoidRateLimit);
-            Stats = new StatsService(key, httpRequestService, region, waitToAvoidRateLimit);
-            Summoner = new SummonerService(key, httpRequestService, region, waitToAvoidRateLimit);
-            Team = new TeamService(key, httpRequestService, region, waitToAvoidRateLimit);
-            Static = new StaticService(key, httpRequestService, region, waitToAvoidRateLimit);
+            Key = key;
+            DefaultRegion = region;
+            WaitToAvoidRateLimit = waitToAvoidRateLimit;
+            HttpRequestService = httpRequestService;
+
+            Champion = new ChampionService(this);
+            Game = new GameService(this);
+            League = new LeagueService(this);
+            Stats = new StatsService(this);
+            Summoner = new SummonerService(this);
+            Team = new TeamService(this);
+            Static = new StaticService(this);
         }
     }
 }

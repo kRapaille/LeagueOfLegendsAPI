@@ -2,16 +2,17 @@
 using System.Diagnostics;
 using System.Linq;
 using NUnit.Framework;
-using PortableLeagueAPI;
-using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Game.Models;
 using PortableLeagueApi.Game.Services;
+using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.League.Enums;
-using PortableLeagueApi.League.Models.League;
+using PortableLeagueApi.League.Models;
+using PortableLeagueApi.League.Models.DTO;
 using PortableLeagueApi.Stats.Models.Stats;
-using PortableLeagueAPI.Test;
 
-namespace PortableLeagueApi.Test
+namespace PortableLeagueAPI.Test
 {
     [TestFixture]
     public class LeagueAPIServiceTests
@@ -49,30 +50,31 @@ namespace PortableLeagueApi.Test
         {
             var result = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
 
-            Assert.NotNull(result);
-        }
-
-
-        [Test]
-        [Category("Game")]
-        public async void GetSummonerAndRecentGamesTest()
-        {
-            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
-
-            Assert.NotNull(summoner);
-
-            var result = await summoner.GetRecentGames(_leagueAPI.Game);
+            var list = result.ToList();
 
             Assert.NotNull(result);
+            Assert.NotNull(list);
         }
+        
+        //[Test]
+        //[Category("Game")]
+        //public async void GetSummonerAndRecentGamesTest()
+        //{
+        //    var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
 
+        //    Assert.NotNull(summoner);
+
+        //    var result = await summoner.GetRecentGames(_leagueAPI.Game);
+
+        //    Assert.NotNull(result);
+        //}
 
         [Test]
         [Category("League")]
         public async void RetrievesChallengerTierLeaguesTest()
         {
             var result = await _leagueAPI.League.RetrievesChallengerTierLeaguesAsync(LeagueTypeEnum.RANKED_SOLO_5x5);
-
+            
             Assert.NotNull(result);
         }
 
@@ -80,11 +82,12 @@ namespace PortableLeagueApi.Test
         [Category("League")]
         public async void RetrievesLeaguesEntryDataForSummonerTest()
         {
-            List<LeagueItemDto> result;
+            List<ILeagueItem> result;
 
             try
             {
-                result = await _leagueAPI.League.RetrievesLeaguesEntryDataForSummonerAsync(19332836);
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesEntryDataForSummonerAsync(19332836);
+                result = enumerable.ToList();
             }
             catch (APIRequestException are)
             {
@@ -103,11 +106,12 @@ namespace PortableLeagueApi.Test
         [Category("League")]
         public async void RetrievesLeaguesDataForSummonerTest()
         {
-            List<LeagueDto> result;
+            List<ILeague> result;
 
             try
             {
-                result = await _leagueAPI.League.RetrievesLeaguesDataForSummonerAsync(19332836);
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesDataForSummonerAsync(19332836);
+                result = enumerable.ToList();
             }
             catch (APIRequestException are)
             {

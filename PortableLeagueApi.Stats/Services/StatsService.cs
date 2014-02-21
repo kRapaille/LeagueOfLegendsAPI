@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PortableLeagueApi.Core.Enums;
-using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
+using PortableLeagueApi.Interfaces;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Stats.Enums;
 using PortableLeagueApi.Stats.Models.Stats;
 
@@ -12,11 +13,8 @@ namespace PortableLeagueApi.Stats.Services
     public class StatsService : BaseService
     {
         public StatsService(
-            string key,
-            IHttpRequestService httpRequestService, 
-            RegionEnum? defaultRegion, 
-            bool waitToAvoidRateLimit) 
-            : base(key, httpRequestService, VersionEnum.V1Rev2, "stats", defaultRegion, waitToAvoidRateLimit)
+            ILeagueAPI source)
+            : base(source, VersionEnum.V1Rev2, "stats")
         { }
 
         /// <summary>

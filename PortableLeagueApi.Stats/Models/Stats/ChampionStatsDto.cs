@@ -3,7 +3,7 @@ using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Stats.Models.Stats
 {
-    public class ChampionStatsDto : IChampion
+    public class ChampionStatsDto : IChampionId
     {
         /// <summary>
         /// Champion id.

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using PortableLeagueApi.Core.Enums;
+using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Core.Constants
 {

@@ -33,14 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Models\Game\GameDto.cs" />
-    <Compile Include="Models\Game\PlayerDto.cs" />
-    <Compile Include="Models\Game\RawStatsDto.cs" />
+    <Compile Include="Models\DTO\GameDto.cs" />
+    <Compile Include="Models\DTO\PlayerDto.cs" />
+    <Compile Include="Models\DTO\RawStatsDto.cs" />
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\RawStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GameService.cs" />
     <Compile Include="Services\GameServiceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.0-ci1003\lib\portable-windows8+net40+wp8+sl5+MonoAndroid+MonoTouch\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>

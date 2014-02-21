@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
+using PortableLeagueApi.Interfaces;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Team.Models.Team;
 
 namespace PortableLeagueApi.Team.Services
@@ -10,11 +13,8 @@ namespace PortableLeagueApi.Team.Services
     public class TeamService : BaseService
     {
         public TeamService(
-            string key,
-            IHttpRequestService httpRequestService, 
-            RegionEnum? defaultRegion, 
-            bool waitToAvoidRateLimit)
-            : base(key, httpRequestService, VersionEnum.V2Rev2, "team", defaultRegion, waitToAvoidRateLimit)
+            ILeagueAPI source)
+            : base(source, VersionEnum.V2Rev2, "team")
         { }
 
         /// <summary>
