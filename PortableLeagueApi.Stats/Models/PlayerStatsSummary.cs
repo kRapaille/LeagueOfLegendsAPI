@@ -19,7 +19,7 @@ namespace PortableLeagueApi.Stats.Models
         public DateTime ModifyDate { get; set; }
         public int Wins { get; set; }
 
-        public static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(ILeagueAPI source)
         {
             Models.AggregatedStats.CreateMap(source);
 

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PortableLeagueApi.Interfaces;
 
-namespace PortableLeagueApi.Summoner.Models.Summoner
+namespace PortableLeagueApi.Summoner.Models.DTO
 {
     public class MasteryPagesDto : ISummoner
     {

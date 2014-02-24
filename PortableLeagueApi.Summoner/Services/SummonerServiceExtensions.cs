@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Interfaces.Enums;
-using PortableLeagueApi.Summoner.Models.Summoner;
 
 namespace PortableLeagueApi.Summoner.Services
 {

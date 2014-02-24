@@ -12,7 +12,7 @@ namespace PortableLeagueApi.Stats.Models
         public IAggregatedStats Stats { get; set; }
         public string Name { get; set; }
 
-        public static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(ILeagueAPI source)
         {
             AggregatedStats.CreateMap(source);
 

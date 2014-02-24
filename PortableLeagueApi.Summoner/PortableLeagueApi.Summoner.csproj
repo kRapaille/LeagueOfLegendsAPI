@@ -33,17 +33,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Models\Summoner\MasteryPageDto.cs" />
-    <Compile Include="Models\Summoner\RuneDto.cs" />
-    <Compile Include="Models\Summoner\RunePageDto.cs" />
-    <Compile Include="Models\Summoner\RuneSlotDto.cs" />
-    <Compile Include="Models\Summoner\SummonerDto.cs" />
-    <Compile Include="Models\Summoner\TalentDto.cs" />
+    <Compile Include="Models\DTO\MasteryPageDto.cs" />
+    <Compile Include="Models\DTO\RuneDto.cs" />
+    <Compile Include="Models\DTO\RunePageDto.cs" />
+    <Compile Include="Models\DTO\RuneSlotDto.cs" />
+    <Compile Include="Models\DTO\SummonerDto.cs" />
+    <Compile Include="Models\DTO\TalentDto.cs" />
+    <Compile Include="Models\MasteryPage.cs" />
+    <Compile Include="Models\Rune.cs" />
+    <Compile Include="Models\RunePage.cs" />
+    <Compile Include="Models\RuneSlot.cs" />
+    <Compile Include="Models\Summoner.cs" />
+    <Compile Include="Models\Talent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SummonerServiceExtensions.cs" />
     <Compile Include="Services\SummonerService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.0-ci1004\lib\portable-windows8+net40+wp8+sl5+MonoAndroid+MonoTouch\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>

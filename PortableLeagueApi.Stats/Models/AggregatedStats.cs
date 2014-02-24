@@ -65,7 +65,7 @@ namespace PortableLeagueApi.Stats.Models
         public int TotalTurretsKilled { get; set; }
         public int TotalUnrealKills { get; set; }
 
-        public static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(ILeagueAPI source)
         {
             Mapper.CreateMap<AggregatedStatsDto, IAggregatedStats>().As<AggregatedStats>();
             Mapper.CreateMap<AggregatedStatsDto, AggregatedStats>()

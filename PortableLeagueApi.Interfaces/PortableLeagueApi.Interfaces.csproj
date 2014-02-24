@@ -70,6 +70,12 @@
     <Compile Include="League\ILeagueService.cs" />
     <Compile Include="League\IMiniSeries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Summoner\IMasteryPage.cs" />
+    <Compile Include="Summoner\IRune.cs" />
+    <Compile Include="Summoner\IRunePage.cs" />
+    <Compile Include="Summoner\IRuneSlot.cs" />
+    <Compile Include="Summoner\ISummoner.cs" />
+    <Compile Include="Summoner\ITalent.cs" />
     <Compile Include="Stats\IAggregatedStats.cs" />
     <Compile Include="Stats\IChampionStats.cs" />
     <Compile Include="Stats\IPlayerStatsSummary.cs" />

@@ -17,7 +17,7 @@ namespace PortableLeagueApi.Stats.Models
         public IChampionStats[] Champions { get; set; }
         public long SummonerId { get; set; }
 
-        public static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(ILeagueAPI source)
         {
             ChampionStats.CreateMap(source);
 

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PortableLeagueApi.Summoner.Models.Summoner
+namespace PortableLeagueApi.Summoner.Models.DTO
 {
     public class RuneSlotDto
     {
