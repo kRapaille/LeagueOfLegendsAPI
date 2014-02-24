@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using AutoMapper;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Game.Models.DTO;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Game;
@@ -80,10 +80,10 @@ namespace PortableLeagueApi.Game.Models
         public int WardPlaced { get; set; }
         public bool Win { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            Mapper.CreateMap<RawStatsDto, IRawStats>().As<RawStats>();
-            Mapper.CreateMap<RawStatsDto, RawStats>()
+            autoMapperService.CreateMap<RawStatsDto, IRawStats>().As<RawStats>();
+            autoMapperService.CreateMap<RawStatsDto, RawStats>()
                 .ForSourceMember(x => x.Item0, x => x.Ignore())
                 .ForSourceMember(x => x.Item1, x => x.Ignore())
                 .ForSourceMember(x => x.Item2, x => x.Ignore())

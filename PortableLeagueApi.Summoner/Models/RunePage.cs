@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Summoner;
 using PortableLeagueApi.Summoner.Models.DTO;
@@ -18,19 +18,19 @@ namespace PortableLeagueApi.Summoner.Models
 
         public bool Current { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            RuneSlot.CreateMap(source);
+            RuneSlot.CreateMap(autoMapperService, source);
 
-            Mapper.CreateMap<RunePageDto, IRunePage>().As<RunePage>();
-            Mapper.CreateMap<RunePageDto, RunePage>()
+            autoMapperService.CreateMap<RunePageDto, IRunePage>().As<RunePage>();
+            autoMapperService.CreateMap<RunePageDto, RunePage>()
                 .BeforeMap((s, d) =>
                            {
                                d.Source = source;
                            });
-            
-            Mapper.CreateMap<RunePagesDto, IEnumerable<IRunePage>>()
-                .ConvertUsing(x => x.Pages.Select(Mapper.Map<RunePageDto, IRunePage>));
+
+            autoMapperService.CreateMap<RunePagesDto, IEnumerable<IRunePage>>()
+                .ConvertUsing(x => x.Pages.Select(autoMapperService.Map<RunePageDto, IRunePage>));
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Interfaces.Enums;
-using PortableLeagueApi.Team.Models.Team;
 
 namespace PortableLeagueApi.Team.Services
 {

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PortableLeagueApi.Team.Models.Team
+namespace PortableLeagueApi.Team.Models.DTO
 {
     public class MessageOfDayDto
     {

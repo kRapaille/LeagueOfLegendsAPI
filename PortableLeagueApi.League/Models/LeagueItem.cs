@@ -1,6 +1,6 @@
 ﻿using System;
-using AutoMapper;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.League.Models.DTO;
@@ -24,12 +24,12 @@ namespace PortableLeagueApi.League.Models
         public string Tier { get; set; }
         public int Wins { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            Models.MiniSeries.CreateMap(source);
+            Models.MiniSeries.CreateMap(autoMapperService, source);
 
-            Mapper.CreateMap<LeagueItemDto, ILeagueItem>().As<LeagueItem>();
-            Mapper.CreateMap<LeagueItemDto, LeagueItem>()
+            autoMapperService.CreateMap<LeagueItemDto, ILeagueItem>().As<LeagueItem>();
+            autoMapperService.CreateMap<LeagueItemDto, LeagueItem>()
                 .BeforeMap((s, d) =>
                            {
                                d.Source = source;

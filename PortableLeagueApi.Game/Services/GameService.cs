@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Game.Models;
 using PortableLeagueApi.Game.Models.DTO;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -15,7 +14,7 @@ namespace PortableLeagueApi.Game.Services
             ILeagueAPI source)
             : base(source, VersionEnum.V1Rev3, "game")
         {
-            Models.Game.CreateMap(source);
+            Models.Game.CreateMap(AutoMapperService, source);
         }
 
         /// <summary>

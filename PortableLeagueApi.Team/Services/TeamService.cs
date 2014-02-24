@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
-using PortableLeagueApi.Team.Models.Team;
+using PortableLeagueApi.Interfaces.Team;
+using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Services
 {
@@ -13,37 +13,39 @@ namespace PortableLeagueApi.Team.Services
         public TeamService(
             ILeagueAPI source)
             : base(source, VersionEnum.V2Rev2, "team")
-        { }
+        {
+            Models.Team.CreateMap(AutoMapperService, source);
+        }
 
         /// <summary>
         /// Retrieves teams
         /// </summary>
-        public async Task<IEnumerable<TeamDto>> GetTeamsBySummonerIdAsync(
+        public async Task<IEnumerable<ITeam>> GetTeamsBySummonerIdAsync(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}",
                 summonerId);
 
-            return await GetResponseAsync<List<TeamDto>>(region, url);
+            return await GetResponseAsync<IEnumerable<TeamDto>, IEnumerable<ITeam>>(region, url);
         }
 
         /// <summary>
         /// Get teams mapped by team ID for a given list of team IDs
         /// </summary>
-        public async Task<Dictionary<string, TeamDto>> GetTeamsByTeamIdsAsync(
+        public async Task<Dictionary<string, ITeam>> GetTeamsByTeamIdsAsync(
             IEnumerable<string> teamIds,
             RegionEnum? region = null)
         {
             var url = string.Join(",", teamIds);
 
-            return await GetResponseAsync<Dictionary<string, TeamDto>>(region, url);
+            return await GetResponseAsync<Dictionary<string, TeamDto>, Dictionary<string, ITeam>>(region, url);
         }
 
         /// <summary>
         /// Get team for a given team ID
         /// </summary>
-        public async Task<TeamDto> GetTeamByTeamIdAsync(
+        public async Task<ITeam> GetTeamByTeamIdAsync(
             string teamId,
             RegionEnum? region = null)
         {

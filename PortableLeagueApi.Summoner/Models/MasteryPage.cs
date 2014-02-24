@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Summoner;
 using PortableLeagueApi.Summoner.Models.DTO;
@@ -19,19 +19,19 @@ namespace PortableLeagueApi.Summoner.Models
 
         public bool Current { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            Talent.CreateMap(source);
+            Talent.CreateMap(autoMapperService, source);
 
-            Mapper.CreateMap<MasteryPageDto, IMasteryPage>().As<MasteryPage>();
-            Mapper.CreateMap<MasteryPageDto, MasteryPage>()
+            autoMapperService.CreateMap<MasteryPageDto, IMasteryPage>().As<MasteryPage>();
+            autoMapperService.CreateMap<MasteryPageDto, MasteryPage>()
                 .BeforeMap((s, d) =>
                            {
                                d.Source = source;
                            });
 
-            Mapper.CreateMap<MasteryPagesDto, IEnumerable<IMasteryPage>>()
-                .ConvertUsing(x => x.Pages.Select(Mapper.Map<MasteryPageDto, IMasteryPage>));
+            autoMapperService.CreateMap<MasteryPagesDto, IEnumerable<IMasteryPage>>()
+                .ConvertUsing(x => x.Pages.Select(autoMapperService.Map<MasteryPageDto, IMasteryPage>));
         }
     }
 }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using PortableLeagueApi.Core.Models;
+﻿using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Stats;
 using PortableLeagueApi.Stats.Models.DTO;
@@ -17,12 +12,12 @@ namespace PortableLeagueApi.Stats.Models
         public IChampionStats[] Champions { get; set; }
         public long SummonerId { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            ChampionStats.CreateMap(source);
+            ChampionStats.CreateMap(autoMapperService, source);
 
-            Mapper.CreateMap<RankedStatsDto, IRankedStats>().As<RankedStats>();
-            Mapper.CreateMap<RankedStatsDto, RankedStats>()
+            autoMapperService.CreateMap<RankedStatsDto, IRankedStats>().As<RankedStats>();
+            autoMapperService.CreateMap<RankedStatsDto, RankedStats>()
                 .BeforeMap((s, d) =>
                 {
                     d.Source = source;

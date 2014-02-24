@@ -14,7 +14,7 @@ namespace PortableLeagueApi.League.Services
             ILeagueAPI source)
             : base(source, VersionEnum.V2Rev3, "league")
         {
-            Models.League.CreateMap(source);
+            Models.League.CreateMap(AutoMapperService, source);
         }
 
         /// <summary>

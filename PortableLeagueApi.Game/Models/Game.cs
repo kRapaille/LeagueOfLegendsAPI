@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Game.Models.DTO;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -27,25 +27,25 @@ namespace PortableLeagueApi.Game.Models
         public int ChampionId { get; set; }
         public DateTime CreateDate { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            Player.CreateMap(source);
-            RawStats.CreateMap(source);
+            Player.CreateMap(autoMapperService, source);
+            RawStats.CreateMap(autoMapperService, source);
 
-            Mapper.CreateMap<string, GameTypeEnum>()
+            autoMapperService.CreateMap<string, GameTypeEnum>()
                 .ConvertUsing(s => GameTypeConsts.GameTypes
                     .First(x => x.Value == s).Key);
 
-            Mapper.CreateMap<string, GameModeEnum>()
+            autoMapperService.CreateMap<string, GameModeEnum>()
                 .ConvertUsing(s => GameModeConsts.GameModes
                     .First(x => x.Value == s).Key);
 
-            Mapper.CreateMap<string, GameSubTypeEnum>()
+            autoMapperService.CreateMap<string, GameSubTypeEnum>()
                 .ConvertUsing(s => GameSubTypeConsts.GameSubTypes
                     .First(x => x.Value == s).Key);
 
-            Mapper.CreateMap<GameDto, IGame>().As<Game>();
-            Mapper.CreateMap<GameDto, Game>()
+            autoMapperService.CreateMap<GameDto, IGame>().As<Game>();
+            autoMapperService.CreateMap<GameDto, Game>()
                 .ForMember(x => x.OtherPlayers, x => x.MapFrom(g => g.FellowPlayers))
                 .ForSourceMember(x => x.SummonerSpell1, x => x.Ignore())
                 .ForSourceMember(x => x.SummonerSpell2, x => x.Ignore())
@@ -61,8 +61,8 @@ namespace PortableLeagueApi.Game.Models
                                         };
                 });
 
-            Mapper.CreateMap<RecentGamesDto, IEnumerable<IGame>>()
-                .ConvertUsing(x => x.Games.Select(Mapper.Map<GameDto, IGame>));
+            autoMapperService.CreateMap<RecentGamesDto, IEnumerable<IGame>>()
+                .ConvertUsing(x => x.Games.Select(autoMapperService.Map<GameDto, IGame>));
         }
     }
 }

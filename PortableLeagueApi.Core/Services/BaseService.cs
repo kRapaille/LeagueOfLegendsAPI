@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using AutoMapper;
 using Newtonsoft.Json;
 using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Helpers;
@@ -25,10 +24,11 @@ namespace PortableLeagueApi.Core.Services
         private readonly bool _waitToAvoidRateLimit;
         private readonly bool _isLimitedByRateLimit;
         private VersionEnum? _version;
-        private ILeagueAPI _source;
 
         private const int MaxRequestsPer10Sec = 10;
         private const int MaxRequestsPer10Min = 500;
+
+        protected readonly AutoMapperService AutoMapperService;
 
         protected string Prefix { get; private set; }
 
@@ -45,7 +45,6 @@ namespace PortableLeagueApi.Core.Services
             string prefix,
             bool isLimitedByRateLimit = true)
         {
-            _source = source;
             _key = source.Key;
             _defaultRegion = source.DefaultRegion;
             _waitToAvoidRateLimit = source.WaitToAvoidRateLimit;
@@ -58,7 +57,9 @@ namespace PortableLeagueApi.Core.Services
             if(!LastRequests.ContainsKey(_key))
                 LastRequests[_key] = new List<DateTime>();
 
-            Mapper.CreateMap<long, DateTime>()
+            AutoMapperService = new AutoMapperService();
+
+            AutoMapperService.CreateMap<long, DateTime>()
                 .ConvertUsing(DateTime.FromBinary);
         }
 
@@ -88,7 +89,7 @@ namespace PortableLeagueApi.Core.Services
         {
             var result = await GetResponseAsync<TSource>(BuildUri(region, relativeUrl));
 
-            return AutoMapperService.Map<TSource, TDestination>(result, _source);
+            return AutoMapperService.Map<TSource, TDestination>(result);
         }
 
         protected async Task<T> GetResponseAsync<T>(RegionEnum? region, string relativeUrl) where T : class

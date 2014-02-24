@@ -3,6 +3,7 @@ using System.Linq;
 using AutoMapper;
 using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
@@ -18,18 +19,18 @@ namespace PortableLeagueApi.League.Models
         public LeagueTypeEnum LeagueType { get; set; }
         public TierEnum Tier { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            LeagueItem.CreateMap(source);
+            LeagueItem.CreateMap(autoMapperService, source);
 
-            Mapper.CreateMap<string, LeagueTypeEnum>()
+            autoMapperService.CreateMap<string, LeagueTypeEnum>()
                 .ConvertUsing(x => LeagueTypeConsts.LeagueTypes.First(z => z.Value == x).Key);
 
-            Mapper.CreateMap<string, TierEnum>()
+            autoMapperService.CreateMap<string, TierEnum>()
                 .ConvertUsing(x => TierConsts.Tiers.First(z => z.Value == x).Key);
 
-            Mapper.CreateMap<LeagueDto, ILeague>().As<League>();
-            Mapper.CreateMap<LeagueDto, League>()
+            autoMapperService.CreateMap<LeagueDto, ILeague>().As<League>();
+            autoMapperService.CreateMap<LeagueDto, League>()
                 .BeforeMap((s, d) =>
                            {
                                d.Source = source;

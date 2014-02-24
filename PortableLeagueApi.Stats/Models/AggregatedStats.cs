@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using PortableLeagueApi.Core.Models;
+﻿using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Stats;
 using PortableLeagueApi.Stats.Models.DTO;
@@ -65,10 +65,10 @@ namespace PortableLeagueApi.Stats.Models
         public int TotalTurretsKilled { get; set; }
         public int TotalUnrealKills { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            Mapper.CreateMap<AggregatedStatsDto, IAggregatedStats>().As<AggregatedStats>();
-            Mapper.CreateMap<AggregatedStatsDto, AggregatedStats>()
+            autoMapperService.CreateMap<AggregatedStatsDto, IAggregatedStats>().As<AggregatedStats>();
+            autoMapperService.CreateMap<AggregatedStatsDto, AggregatedStats>()
                 .BeforeMap((s, d) =>
                 {
                     d.Source = source;

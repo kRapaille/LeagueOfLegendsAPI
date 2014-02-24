@@ -15,8 +15,8 @@ namespace PortableLeagueApi.Stats.Services
             ILeagueAPI source)
             : base(source, VersionEnum.V1Rev2, "stats")
         {
-            RankedStats.CreateMap(source);
-            PlayerStatsSummary.CreateMap(source);
+            RankedStats.CreateMap(AutoMapperService, source);
+            PlayerStatsSummary.CreateMap(AutoMapperService, source);
         }
 
         /// <summary>

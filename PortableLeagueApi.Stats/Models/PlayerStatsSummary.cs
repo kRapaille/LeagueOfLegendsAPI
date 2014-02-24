@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.Stats;
@@ -19,20 +19,20 @@ namespace PortableLeagueApi.Stats.Models
         public DateTime ModifyDate { get; set; }
         public int Wins { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            Models.AggregatedStats.CreateMap(source);
+            Models.AggregatedStats.CreateMap(autoMapperService, source);
 
-            Mapper.CreateMap<string, PlayerStatsSummaryTypeEnum>()
+            autoMapperService.CreateMap<string, PlayerStatsSummaryTypeEnum>()
                 .ConvertUsing(s => PlayerStatsSummaryTypeConsts.PlayerStatsSummaryTypes
                     .First(x => x.Value == s).Key);
 
-            Mapper.CreateMap<PlayerStatsSummaryListDto, IEnumerable<IPlayerStatsSummary>>()
+            autoMapperService.CreateMap<PlayerStatsSummaryListDto, IEnumerable<IPlayerStatsSummary>>()
                 .ConvertUsing(x => x.PlayerStatSummaries
-                    .Select(Mapper.Map<PlayerStatsSummaryDto, PlayerStatsSummary>));
+                    .Select(autoMapperService.Map<PlayerStatsSummaryDto, PlayerStatsSummary>));
 
-            Mapper.CreateMap<PlayerStatsSummaryDto, IPlayerStatsSummary>().As<PlayerStatsSummary>();
-            Mapper.CreateMap<PlayerStatsSummaryDto, PlayerStatsSummary>()
+            autoMapperService.CreateMap<PlayerStatsSummaryDto, IPlayerStatsSummary>().As<PlayerStatsSummary>();
+            autoMapperService.CreateMap<PlayerStatsSummaryDto, PlayerStatsSummary>()
                 .BeforeMap((s, d) =>
                 {
                     d.Source = source;

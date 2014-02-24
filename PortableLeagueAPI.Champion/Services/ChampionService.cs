@@ -14,7 +14,7 @@ namespace PortableLeagueAPI.Champion.Services
             ILeagueAPI source)
             : base(source, VersionEnum.V1Rev1, "champion")
         {
-            Models.Champion.CreateMap(source);
+            Models.Champion.CreateMap(AutoMapperService, source);
         }
 
         public async Task<IEnumerable<IChampion>> GetChampionsAsync(

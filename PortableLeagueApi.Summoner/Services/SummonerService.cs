@@ -16,9 +16,9 @@ namespace PortableLeagueApi.Summoner.Services
             ILeagueAPI source)
             : base(source, VersionEnum.V1Rev3, "summoner")
         {
-            MasteryPage.CreateMap(source);
-            RunePage.CreateMap(source);
-            Models.Summoner.CreateMap(source);
+            MasteryPage.CreateMap(AutoMapperService, source);
+            RunePage.CreateMap(AutoMapperService, source);
+            Models.Summoner.CreateMap(AutoMapperService, source);
         }
         
         /// <summary>
@@ -91,6 +91,7 @@ namespace PortableLeagueApi.Summoner.Services
 
             return result.FirstOrDefault();
         }
+
         public async Task<IEnumerable<ISummoner>> GetSummonerByIdAsync(
            IEnumerable<long> summonersId,
            RegionEnum? region = null)
@@ -102,6 +103,7 @@ namespace PortableLeagueApi.Summoner.Services
 
             return result.Select(x => x.Value);
         }
+
         public async Task<Dictionary<long, string>> GetSummonerNamesByIdAsync(
             long summonerId,
             RegionEnum? region = null)

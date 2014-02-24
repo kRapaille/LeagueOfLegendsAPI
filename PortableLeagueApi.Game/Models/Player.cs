@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using PortableLeagueApi.Core.Models;
+﻿using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Game.Models.DTO;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Game;
@@ -12,10 +12,10 @@ namespace PortableLeagueApi.Game.Models
         public int TeamId { get; set; }
         public long SummonerId { get; set; }
 
-        internal static void CreateMap(ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {
-            Mapper.CreateMap<PlayerDto, IPlayer>().As<Player>();
-            Mapper.CreateMap<PlayerDto, Player>()
+            autoMapperService.CreateMap<PlayerDto, IPlayer>().As<Player>();
+            autoMapperService.CreateMap<PlayerDto, Player>()
                 .BeforeMap((s, d) =>
                 {
                     d.Source = source;

@@ -21,6 +21,21 @@ namespace PortableLeagueAPI.Test
         }
 
         [Test]
+        [Category("Others")]
+        public async void SourceMappingTestAsync()
+        {
+            var fromSource1 = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
+
+            var source2 = new LeagueAPI(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
+
+            var fromSource2 = await source2.Summoner.GetSummonerByNameAsync("TuC Ølen");
+
+            Assert.AreNotEqual(fromSource1.Source, fromSource2.Source);
+            Assert.AreEqual(fromSource1.Source, _leagueAPI);
+            Assert.AreEqual(fromSource2.Source, source2);
+        }
+
+        [Test]
         [Category("Champion")]
         public async void GetFreeChampionsTest()
         {
