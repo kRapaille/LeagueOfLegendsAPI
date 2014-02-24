@@ -16,6 +16,7 @@
         ARAMUnranked5X5, 
         OneForAll5X5, 
         FirstBlood1X1, 
-        FirstBlood2X2
+        FirstBlood2X2,
+        SR6X6
     }
 }

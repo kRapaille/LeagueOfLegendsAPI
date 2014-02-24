@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -12,7 +13,7 @@ namespace PortableLeagueApi.Stats.Models
 {
     public class PlayerStatsSummary : LeagueApiModel, IPlayerStatsSummary
     {
-        public GameSubTypeEnum PlayerStatsSummaryType { get; set; }
+        public PlayerStatsSummaryTypeEnum PlayerStatsSummaryType { get; set; }
         public IAggregatedStats AggregatedStats { get; set; }
         public int Losses { get; set; }
         public DateTime ModifyDate { get; set; }
@@ -21,6 +22,10 @@ namespace PortableLeagueApi.Stats.Models
         public static void CreateMap(ILeagueAPI source)
         {
             Models.AggregatedStats.CreateMap(source);
+
+            Mapper.CreateMap<string, PlayerStatsSummaryTypeEnum>()
+                .ConvertUsing(s => PlayerStatsSummaryTypeConsts.PlayerStatsSummaryTypes
+                    .First(x => x.Value == s).Key);
 
             Mapper.CreateMap<PlayerStatsSummaryListDto, IEnumerable<IPlayerStatsSummary>>()
                 .ConvertUsing(x => x.PlayerStatSummaries

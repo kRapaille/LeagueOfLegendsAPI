@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Constants\PlayerStatsSummaryTypeConsts.cs" />
     <Compile Include="Constants\TierConsts.cs" />
     <Compile Include="Constants\LeagueTypeConsts .cs" />
     <Compile Include="Constants\GameModeConsts.cs" />

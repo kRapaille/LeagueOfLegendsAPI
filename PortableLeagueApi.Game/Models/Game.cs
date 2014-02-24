@@ -47,10 +47,6 @@ namespace PortableLeagueApi.Game.Models
             Mapper.CreateMap<GameDto, IGame>().As<Game>();
             Mapper.CreateMap<GameDto, Game>()
                 .ForMember(x => x.OtherPlayers, x => x.MapFrom(g => g.FellowPlayers))
-                .ForSourceMember(x => x.GameMode, x => x.Ignore())
-                .ForSourceMember(x => x.SubType, x => x.Ignore())
-                .ForSourceMember(x => x.MapId, x => x.Ignore())
-                .ForSourceMember(x => x.CreateDate, x => x.Ignore())
                 .ForSourceMember(x => x.SummonerSpell1, x => x.Ignore())
                 .ForSourceMember(x => x.SummonerSpell2, x => x.Ignore())
                 .BeforeMap((s, d) =>

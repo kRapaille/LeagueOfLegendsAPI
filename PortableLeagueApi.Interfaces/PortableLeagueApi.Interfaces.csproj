@@ -39,6 +39,7 @@
     <Compile Include="Champion\IChampion.cs" />
     <Compile Include="Champion\IChampionService.cs" />
     <Compile Include="Enums\GameModeEnum.cs" />
+    <Compile Include="Enums\PlayerStatsSummaryTypeEnum.cs" />
     <Compile Include="Enums\GameSubTypeEnum.cs" />
     <Compile Include="Enums\GameTypeEnum.cs" />
     <Compile Include="Enums\LeagueTypeEnum.cs" />
