@@ -42,7 +42,6 @@
     <Compile Include="Models\PlayerStatsSummary.cs" />
     <Compile Include="Models\RankedStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\StatsServiceExtensions.cs" />
     <Compile Include="Services\StatsService.cs" />
   </ItemGroup>
   <ItemGroup>

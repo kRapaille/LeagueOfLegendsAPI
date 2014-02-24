@@ -2,15 +2,15 @@
 
 namespace PortableLeagueApi.Team.Models.DTO
 {
-    public class MessageOfDayDto
+    internal class MessageOfDayDto
     {
         [JsonProperty("createDate")]
-        public long CreateDate { get; set; }
+        internal long CreateDate { get; set; }
 
         [JsonProperty("message")]
-        public string Message { get; set; }
+        internal string Message { get; set; }
 
         [JsonProperty("version")]
-        public int Version { get; set; }
+        internal int Version { get; set; }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
+using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Interfaces.Team
 {
-    public interface IMatchHistorySummary
+    public interface IMatchHistorySummary : ILeagueModel
     {
         int Assists { get; set; }
         DateTime Date { get; set; }

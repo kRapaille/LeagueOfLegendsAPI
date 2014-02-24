@@ -46,7 +46,6 @@
     <Compile Include="Models\Summoner.cs" />
     <Compile Include="Models\Talent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\SummonerServiceExtensions.cs" />
     <Compile Include="Services\SummonerService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,8 @@
-﻿namespace PortableLeagueApi.Interfaces.League
+﻿using PortableLeagueApi.Interfaces.Core;
+
+namespace PortableLeagueApi.Interfaces.League
 {
-    public interface IMiniSeries
+    public interface IMiniSeries : ILeagueModel
     {
         string Progress { get; set; }
         int Target { get; set; }

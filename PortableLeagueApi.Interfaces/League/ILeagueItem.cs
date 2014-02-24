@@ -1,14 +1,18 @@
 ﻿using System;
+using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.League
 {
-    public interface ILeagueItem
+    public interface ILeagueItem : ILeagueModel
     {
         bool IsFreshBlood { get; set; }
         bool IsHotStreak { get; set; }
         bool IsInactive { get; set; }
         bool IsVeteran { get; set; }
         DateTime LastPlayed { get; set; }
+        /// <summary>
+        /// This name is an internal place-holder name only. Display and localization of names in the client are handled client-side.
+        /// </summary>
         string LeagueName { get; set; }
         int LeaguePoints { get; set; }
         IMiniSeries MiniSeries { get; set; }

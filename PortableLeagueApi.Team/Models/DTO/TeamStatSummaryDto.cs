@@ -2,12 +2,12 @@
 
 namespace PortableLeagueApi.Team.Models.DTO
 {
-    public class TeamStatSummaryDto
+    internal class TeamStatSummaryDto
     {
         [JsonProperty("fullId")]
-        public string FullId { get; set; }
+        internal string FullId { get; set; }
 
         [JsonProperty("teamStatDetails")]
-        public TeamStatDetailDto[] TeamStatDetails { get; set; }
+        internal TeamStatDetailDto[] TeamStatDetails { get; set; }
     }
 }

@@ -48,7 +48,6 @@
     <Compile Include="Models\TeamStatDetail.cs" />
     <Compile Include="Models\TeamStatSummary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\TeamServiceExtensions.cs" />
     <Compile Include="Services\TeamService.cs" />
   </ItemGroup>
   <ItemGroup>

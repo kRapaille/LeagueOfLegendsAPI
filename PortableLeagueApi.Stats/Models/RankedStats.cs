@@ -1,4 +1,5 @@
-﻿using PortableLeagueApi.Core.Models;
+﻿using System;
+using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Stats;
@@ -8,7 +9,7 @@ namespace PortableLeagueApi.Stats.Models
 {
     public class RankedStats : LeagueApiModel, IRankedStats
     {
-        public long ModifyDate { get; set; }
+        public DateTime ModifyDate { get; set; }
         public IChampionStats[] Champions { get; set; }
         public long SummonerId { get; set; }
 

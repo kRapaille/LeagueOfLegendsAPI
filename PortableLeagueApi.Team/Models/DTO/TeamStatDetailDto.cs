@@ -2,21 +2,21 @@
 
 namespace PortableLeagueApi.Team.Models.DTO
 {
-    public class TeamStatDetailDto
+    internal class TeamStatDetailDto
     {
         [JsonProperty("averageGamesPlayed")]
-        public int AverageGamesPlayed { get; set; }
+        internal int AverageGamesPlayed { get; set; }
 
         [JsonProperty("fullId")]
-        public string FullId { get; set; }
+        internal string FullId { get; set; }
 
         [JsonProperty("losses")]
-        public int Losses { get; set; }
+        internal int Losses { get; set; }
 
         [JsonProperty("teamStatType")]
-        public string TeamStatType { get; set; }
+        internal string TeamStatType { get; set; }
         
         [JsonProperty("wins")]
-        public int Wins { get; set; }
+        internal int Wins { get; set; }
     }
 }

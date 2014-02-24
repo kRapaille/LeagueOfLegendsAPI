@@ -1,8 +1,9 @@
 using System;
+using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Team
 {
-    public interface ITeamMemberInfo
+    public interface ITeamMemberInfo : ILeagueModel
     {
         DateTime InviteDate { get; set; }
         DateTime JoinDate { get; set; }

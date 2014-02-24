@@ -6,6 +6,8 @@ using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.Game;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
+using PortableLeagueApi.Interfaces.Summoner;
+using PortableLeagueApi.Interfaces.Team;
 using PortableLeagueApi.League.Services;
 using PortableLeagueAPI.Services;
 using PortableLeagueApi.Static.Services;
@@ -21,8 +23,8 @@ namespace PortableLeagueAPI
         public IGameService Game { get; private set; }
         public ILeagueService League { get; private set; }
         public IStatsService Stats { get; private set; }
-        public SummonerService Summoner { get; private set; }
-        public TeamService Team { get; private set; }
+        public ISummonerService Summoner { get; private set; }
+        public ITeamService Team { get; private set; }
         public StaticService Static { get; private set; }
 
         public string Key { get; private set; }

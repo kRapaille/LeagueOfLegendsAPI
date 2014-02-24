@@ -22,6 +22,9 @@ namespace PortableLeagueApi.Interfaces.Game
         int LargestCriticalStrike { get; set; }
         int LargestKillingSpree { get; set; }
         int LargestMultiKill { get; set; }
+        /// <summary>
+        /// Number of tier 3 items built.
+        /// </summary>
         int LegendaryItemsCreated { get; set; }
         int Level { get; set; }
         int MagicDamageDealtPlayer { get; set; }
@@ -32,6 +35,9 @@ namespace PortableLeagueApi.Interfaces.Game
         int NeutralMinionsKilled { get; set; }
         int NeutralMinionsKilledEnemyJungle { get; set; }
         int NeutralMinionsKilledYourJungle { get; set; }
+        /// <summary>
+        /// Flag specifying if the summoner got the killing blow on the nexus.
+        /// </summary>
         bool NexusKilled { get; set; }
         int NodeCapture { get; set; }
         int NodeCaptureAssist { get; set; }
@@ -46,9 +52,21 @@ namespace PortableLeagueApi.Interfaces.Game
         int PhysicalDamageTaken { get; set; }
         int QuadraKills { get; set; }
         int SightWardsBought { get; set; }
+        /// <summary>
+        /// Number of times first champion spell was cast.
+        /// </summary>
         int Spell1Cast { get; set; }
+        /// <summary>
+        /// Number of times second champion spell was cast.
+        /// </summary>
         int Spell2Cast { get; set; }
+        /// <summary>
+        /// Number of times third champion spell was cast.
+        /// </summary>
         int Spell3Cast { get; set; }
+        /// <summary>
+        /// Number of times fourth champion spell was cast.
+        /// </summary>
         int Spell4Cast { get; set; }
         int SummonerSpell1 { get; set; }
         int SummonerSpell2 { get; set; }
@@ -74,6 +92,9 @@ namespace PortableLeagueApi.Interfaces.Game
         int VisionWardsBought { get; set; }
         int WardKilled { get; set; }
         int WardPlaced { get; set; }
+        /// <summary>
+        /// Flag specifying whether or not this game was won.
+        /// </summary>
         bool Win { get; set; }
     }
 }

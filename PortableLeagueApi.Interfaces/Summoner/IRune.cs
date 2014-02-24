@@ -1,6 +1,8 @@
+using PortableLeagueApi.Interfaces.Core;
+
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface IRune
+    public interface IRune : ILeagueModel
     {
         int Id { get; set; }
         string Description { get; set; }

@@ -1,20 +1,19 @@
 ﻿using Newtonsoft.Json;
-using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Summoner.Models.DTO
 {
-    public class RuneDto : IRune
+    internal class RuneDto
     {
         [JsonProperty("id")]
-        public int Id { get; set; }
+        internal int Id { get; set; }
 
         [JsonProperty("description")]
-        public string Description { get; set; }
+        internal string Description { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        internal string Name { get; set; }
 
         [JsonProperty("tier")]
-        public int Tier { get; set; }
+        internal int Tier { get; set; }
     }
 }

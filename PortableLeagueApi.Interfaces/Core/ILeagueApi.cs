@@ -3,6 +3,8 @@ using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.Game;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
+using PortableLeagueApi.Interfaces.Summoner;
+using PortableLeagueApi.Interfaces.Team;
 
 namespace PortableLeagueApi.Interfaces.Core
 {
@@ -12,6 +14,8 @@ namespace PortableLeagueApi.Interfaces.Core
         IGameService Game { get; }
         ILeagueService League { get; }
         IStatsService Stats { get; }
+        ISummonerService Summoner { get; }
+        ITeamService Team { get; }
 
         string Key { get; }
         RegionEnum? DefaultRegion { get; }

@@ -41,7 +41,6 @@
     <Compile Include="Models\RawStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GameService.cs" />
-    <Compile Include="Services\GameServiceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">

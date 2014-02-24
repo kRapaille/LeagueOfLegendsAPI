@@ -32,7 +32,7 @@ namespace PortableLeagueApi.League.Services
         /// <summary>
         /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
         /// </summary>
-        public async Task<IEnumerable<ILeagueItem>> RetrievesLeaguesEntryDataForSummonerAsync(
+        public async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataForSummonerAsync(
             long summonerId,
             RegionEnum? region = null)
         {

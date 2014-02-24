@@ -1,20 +1,19 @@
 ﻿using Newtonsoft.Json;
-using PortableLeagueApi.Interfaces;
 
 namespace PortableLeagueApi.Team.Models.DTO
 {
-    public class TeamMemberInfoDto : ISummoner
+    internal class TeamMemberInfoDto
     {
         [JsonProperty("inviteDate")]
-        public long InviteDate { get; set; }
+        internal long InviteDate { get; set; }
 
         [JsonProperty("joinDate")]
-        public long JoinDate { get; set; }
+        internal long JoinDate { get; set; }
 
         [JsonProperty("playerId")]
-        public long SummonerId { get; set; }
+        internal long SummonerId { get; set; }
         
         [JsonProperty("status")]
-        public string Status { get; set; }
+        internal string Status { get; set; }
     }
 }

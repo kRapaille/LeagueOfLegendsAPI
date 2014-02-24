@@ -8,7 +8,7 @@ using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Services
 {
-    public class TeamService : BaseService
+    public class TeamService : BaseService, ITeamService
     {
         public TeamService(
             ILeagueAPI source)

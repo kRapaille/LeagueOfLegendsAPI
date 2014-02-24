@@ -10,7 +10,7 @@ using PortableLeagueApi.Summoner.Models.DTO;
 
 namespace PortableLeagueApi.Summoner.Services
 {
-    public class SummonerService : BaseService
+    public class SummonerService : BaseService, ISummonerService
     {
         public SummonerService(
             ILeagueAPI source)

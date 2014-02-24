@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;

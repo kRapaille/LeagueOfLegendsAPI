@@ -4,6 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.Game;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
 
@@ -65,19 +66,19 @@ namespace PortableLeagueAPI.Test
             Assert.NotNull(result);
             Assert.NotNull(list);
         }
-        
-        //[Test]
-        //[Category("Game")]
-        //public async void GetSummonerAndRecentGamesTest()
-        //{
-        //    var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
 
-        //    Assert.NotNull(summoner);
+        [Test]
+        [Category("Game")]
+        public async void GetSummonerAndRecentGamesTest()
+        {
+            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
 
-        //    var result = await summoner.GetRecentGames(_leagueAPI.Game);
+            Assert.NotNull(summoner);
 
-        //    Assert.NotNull(result);
-        //}
+            var result = await summoner.GetRecentGames();
+
+            Assert.NotNull(result);
+        }
 
         [Test]
         [Category("League")]
@@ -96,7 +97,7 @@ namespace PortableLeagueAPI.Test
 
             try
             {
-                var enumerable = await _leagueAPI.League.RetrievesLeaguesEntryDataForSummonerAsync(19332836);
+                var enumerable = await _leagueAPI.League.RetrieveLeaguesEntryDataForSummonerAsync(19332836);
                 result = enumerable.ToList();
             }
             catch (APIRequestException are)

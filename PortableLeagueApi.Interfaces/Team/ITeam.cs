@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Team
 {
-    public interface ITeam
+    public interface ITeam : ILeagueModel
     {
         DateTime CreateDate { get; set; }
         string FullId { get; set; }

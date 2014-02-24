@@ -1,9 +1,20 @@
+using PortableLeagueApi.Interfaces.Core;
+
 namespace PortableLeagueApi.Interfaces.Stats
 {
-    public interface IChampionStats
+    public interface IChampionStats : ILeagueModel
     {
+        /// <summary>
+        /// Champion id.
+        /// </summary>
         int ChampionId { get; set; }
+        /// <summary>
+        /// Aggregated stats associated with the champion.
+        /// </summary>
         IAggregatedStats Stats { get; set; }
+        /// <summary>
+        /// Champion name.
+        /// </summary>
         string Name { get; set; }
     }
 }

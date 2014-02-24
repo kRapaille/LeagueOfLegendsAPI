@@ -16,6 +16,8 @@ namespace PortableLeagueApi.Static.Services
 {
     public static class StaticServiceExtensions
     {
+        // -> ChampionId = ChampionDto, ChampionStatsDto, PlayerDto, GameDto
+
         //public static async Task<ChampionDto> GetChampionStaticInfosAsync(
         //    this IChampionId championId,
         //    StaticService staticService,
@@ -32,6 +34,8 @@ namespace PortableLeagueApi.Static.Services
         //            dataDragonVersion);
         //}
 
+        // IMastery = TalentDto
+
         //public static async Task<MasteryDto> GetMasteryStaticInfosAsync(
         //    this IMastery mastery,
         //    StaticService staticService,
@@ -47,6 +51,8 @@ namespace PortableLeagueApi.Static.Services
         //        languageCode,
         //        dataDragonVersion);
         //}
+
+        // IRune = RuneDto
 
         //public static async Task<RuneDto> GetRuneStaticInfosAsync(
         //    this IRune rune,
@@ -78,6 +84,8 @@ namespace PortableLeagueApi.Static.Services
         //    };
         //}
 
+        // ITems = RawStatsDto
+
         //public static async Task<IEnumerable<ItemDto>> GetItemsStaticInfosAsync(
         //    this IItems items,
         //    StaticService staticService,
@@ -102,6 +110,8 @@ namespace PortableLeagueApi.Static.Services
 
         //    return result;
         //}
+
+        // ISummonerSpells = RawStatsDto, GameDto
 
         //public static async Task<IEnumerable<SummonerSpellDto>> GetSummonerSpellsStaticInfosAsync(
         //    this ISummonerSpells summonerSpells,
@@ -161,6 +171,8 @@ namespace PortableLeagueApi.Static.Services
         //        dataDragonVersion);
         //}
 
+        // IProfileIcon = SummonerDto
+
         //public static async Task<string> GetProfileIconUrlAsync(
         //    this IProfileIcon summoner,
         //    StaticService staticService,
@@ -194,6 +206,8 @@ namespace PortableLeagueApi.Static.Services
         //            dataDragonVersion,
         //            x));
         //}
+
+        // IChampionImage = ChampionDto
 
         //public static async Task<string> GetChampionImageUrlAsync(
         //    this IChampionImage championImage,

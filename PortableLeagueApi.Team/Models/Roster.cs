@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Team.Models
     {
         public IList<ITeamMemberInfo> MemberList { get; set; }
 
-        public int OwnerId { get; set; }
+        public long OwnerId { get; set; }
 
         internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
         {

@@ -2,6 +2,6 @@
 {
     public interface ILeagueModel
     {
-        ILeagueAPI Source { get; set; }
+        ILeagueAPI Source { get; }
     }
 }
