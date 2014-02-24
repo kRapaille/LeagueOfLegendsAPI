@@ -26,6 +26,7 @@ namespace PortableLeagueAPI.Test
         public async void SourceMappingTestAsync()
         {
             var fromSource1 = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
+            var otherFromSource1 = await _leagueAPI.Summoner.GetSummonerByIdAsync(19231046);
 
             var source2 = new LeagueAPI(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
 
@@ -34,6 +35,7 @@ namespace PortableLeagueAPI.Test
             Assert.AreNotEqual(fromSource1.Source, fromSource2.Source);
             Assert.AreEqual(fromSource1.Source, _leagueAPI);
             Assert.AreEqual(fromSource2.Source, source2);
+            Assert.AreEqual(fromSource1.Source, otherFromSource1.Source);
         }
 
         [Test]
