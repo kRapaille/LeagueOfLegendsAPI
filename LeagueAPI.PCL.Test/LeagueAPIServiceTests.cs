@@ -3,15 +3,9 @@ using System.Diagnostics;
 using System.Linq;
 using NUnit.Framework;
 using PortableLeagueApi.Core.Models;
-using PortableLeagueApi.Game.Models;
-using PortableLeagueApi.Game.Services;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
-using PortableLeagueApi.League.Models;
-using PortableLeagueApi.League.Models.DTO;
-using PortableLeagueApi.Stats.Models;
-using PortableLeagueApi.Stats.Models.DTO;
 
 namespace PortableLeagueAPI.Test
 {
@@ -245,6 +239,19 @@ namespace PortableLeagueAPI.Test
         public async void GetTeamsBySummonerIdTest()
         {
             var result = await _leagueAPI.Team.GetTeamsBySummonerIdAsync(19231046);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Team")]
+        public async void GetTeamsByTeamIdsTest()
+        {
+            var result = await _leagueAPI.Team.GetTeamsByTeamIdsAsync(new []
+            {
+                "TEAM-1dc55d56-c3d7-471c-8b28-3f21b5d99582",
+                "TEAM-d9ecabd1-7315-11e2-b227-782bcb497d6f"
+            });
 
             Assert.NotNull(result);
         }

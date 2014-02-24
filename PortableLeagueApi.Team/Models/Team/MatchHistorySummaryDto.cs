@@ -7,6 +7,9 @@ namespace PortableLeagueApi.Team.Models.Team
         [JsonProperty("assists")]
         public int Assists { get; set; }
 
+        [JsonProperty("date")]
+        public long Date { get; set; }
+
         [JsonProperty("deaths")]
         public int Deaths { get; set; }
 

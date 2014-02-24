@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using PortableLeagueApi.Core.Enums;
-using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Team.Models.Team;
@@ -28,6 +26,30 @@ namespace PortableLeagueApi.Team.Services
                 summonerId);
 
             return await GetResponseAsync<List<TeamDto>>(region, url);
+        }
+
+        /// <summary>
+        /// Get teams mapped by team ID for a given list of team IDs
+        /// </summary>
+        public async Task<Dictionary<string, TeamDto>> GetTeamsByTeamIdsAsync(
+            IEnumerable<string> teamIds,
+            RegionEnum? region = null)
+        {
+            var url = string.Join(",", teamIds);
+
+            return await GetResponseAsync<Dictionary<string, TeamDto>>(region, url);
+        }
+
+        /// <summary>
+        /// Get team for a given team ID
+        /// </summary>
+        public async Task<TeamDto> GetTeamByTeamIdAsync(
+            string teamId,
+            RegionEnum? region = null)
+        {
+            var response = await GetTeamsByTeamIdsAsync(new[] {teamId}, region);
+
+            return response[teamId];
         }
     }
 }
