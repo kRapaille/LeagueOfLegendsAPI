@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Helpers;
-using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Static.Constants;

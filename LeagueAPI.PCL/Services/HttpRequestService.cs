@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Models;
-using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueAPI.Services

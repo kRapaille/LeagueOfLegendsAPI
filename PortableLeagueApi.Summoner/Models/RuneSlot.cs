@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using PortableLeagueApi.Core.Models;
+﻿using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Summoner;
