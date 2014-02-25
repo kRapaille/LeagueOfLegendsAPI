@@ -8,13 +8,13 @@ namespace PortableLeagueApi.Core.Services
     {
         private readonly ConfigurationStore _configurationStore;
         private readonly MappingEngine _mappingEngine;
-        private readonly ILeagueApiConfiguration _source;
+        private readonly ILeagueApiConfiguration _apiConfiguration;
 
-        internal AutoMapperService(ILeagueApiConfiguration source)
+        internal AutoMapperService(ILeagueApiConfiguration apiConfiguration)
         {
             _configurationStore = new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers);
             _mappingEngine = new MappingEngine(_configurationStore);
-            _source = source;
+            _apiConfiguration = apiConfiguration;
         }
 
         public void AssertConfigurationIsValid()
@@ -38,11 +38,11 @@ namespace PortableLeagueApi.Core.Services
         public IMappingExpression<TSource, TDestination> CreateApiModelMap<TSource, TDestination>()
             where TDestination : IApiModel
         {
-            return _configurationStore.CreateMap<TSource, TDestination>()
+            return CreateMap<TSource, TDestination>()
                 .ForMember(x => x.ApiConfiguration, x => x.Ignore())
                 .AfterMap((s, d) =>
                             {
-                                d.ApiConfiguration = _source;
+                                d.ApiConfiguration = _apiConfiguration;
                             });
         }
 
