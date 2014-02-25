@@ -2,7 +2,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Stats
 {
-    public interface IChampionStats : ILeagueModel
+    public interface IChampionStats : IApiModel
     {
         /// <summary>
         /// Champion id.

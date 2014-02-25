@@ -4,7 +4,7 @@ using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Interfaces.Team
 {
-    public interface IMatchHistorySummary : ILeagueModel
+    public interface IMatchHistorySummary : IApiModel
     {
         int Assists { get; set; }
         DateTime Date { get; set; }

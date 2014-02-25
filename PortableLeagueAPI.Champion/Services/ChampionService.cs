@@ -11,10 +11,14 @@ namespace PortableLeagueAPI.Champion.Services
     public class ChampionService : BaseService, IChampionService
     {
         public ChampionService(
-            ILeagueAPI source)
-            : base(source, VersionEnum.V1Rev1, "champion")
+            ILeagueApiConfiguration config)
+            : base(config, VersionEnum.V1Rev1, "champion")
         {
-            Models.Champion.CreateMap(AutoMapperService, source);
+            Models.Champion.CreateMap(AutoMapperService);
+
+#if DEBUG
+            AutoMapperService.AssertConfigurationIsValid();
+#endif
         }
 
         public async Task<IEnumerable<IChampion>> GetChampionsAsync(

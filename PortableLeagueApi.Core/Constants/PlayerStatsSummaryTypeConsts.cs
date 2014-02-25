@@ -19,21 +19,21 @@ namespace PortableLeagueApi.Core.Constants
         public const string FirstBlood2X2 = "FirstBlood2x2";
         public const string SummonersRift6X6 = "SummonersRift6x6";
 
-        public static readonly Dictionary<PlayerStatsSummaryTypeEnum, string> PlayerStatsSummaryTypes = new Dictionary<PlayerStatsSummaryTypeEnum, string>
+        public static readonly Dictionary<PlayerStatSummaryTypeEnum, string> PlayerStatsSummaryTypes = new Dictionary<PlayerStatSummaryTypeEnum, string>
         {
-            { PlayerStatsSummaryTypeEnum.Unranked, Unranked },
-            { PlayerStatsSummaryTypeEnum.Unranked3X3, Unranked3X3 },
-            { PlayerStatsSummaryTypeEnum.OdinUnranked, OdinUnranked },
-            { PlayerStatsSummaryTypeEnum.AramUnranked5X5, AramUnranked5X5 },
-            { PlayerStatsSummaryTypeEnum.CoopVsAI, CoopVsAI },
-            { PlayerStatsSummaryTypeEnum.CoopVsAI3X3, CoopVsAI3X3 },
-            { PlayerStatsSummaryTypeEnum.RankedSolo5X5, RankedSolo5X5 },
-            { PlayerStatsSummaryTypeEnum.RankedTeam3X3, RankedTeam3X3 },
-            { PlayerStatsSummaryTypeEnum.RankedTeam5X5, RankedTeam5X5 },
-            { PlayerStatsSummaryTypeEnum.OneForAll5X5, OneForAll5X5 },
-            { PlayerStatsSummaryTypeEnum.FirstBlood1X1, FirstBlood1X1 },
-            { PlayerStatsSummaryTypeEnum.FirstBlood2X2, FirstBlood2X2 },
-            { PlayerStatsSummaryTypeEnum.SummonersRift6X6, SummonersRift6X6 }
+            { PlayerStatSummaryTypeEnum.Unranked, Unranked },
+            { PlayerStatSummaryTypeEnum.Unranked3X3, Unranked3X3 },
+            { PlayerStatSummaryTypeEnum.OdinUnranked, OdinUnranked },
+            { PlayerStatSummaryTypeEnum.AramUnranked5X5, AramUnranked5X5 },
+            { PlayerStatSummaryTypeEnum.CoopVsAI, CoopVsAI },
+            { PlayerStatSummaryTypeEnum.CoopVsAI3X3, CoopVsAI3X3 },
+            { PlayerStatSummaryTypeEnum.RankedSolo5X5, RankedSolo5X5 },
+            { PlayerStatSummaryTypeEnum.RankedTeam3X3, RankedTeam3X3 },
+            { PlayerStatSummaryTypeEnum.RankedTeam5X5, RankedTeam5X5 },
+            { PlayerStatSummaryTypeEnum.OneForAll5X5, OneForAll5X5 },
+            { PlayerStatSummaryTypeEnum.FirstBlood1X1, FirstBlood1X1 },
+            { PlayerStatSummaryTypeEnum.FirstBlood2X2, FirstBlood2X2 },
+            { PlayerStatSummaryTypeEnum.SummonersRift6X6, SummonersRift6X6 }
         };
     }
 }

@@ -1,13 +1,12 @@
 using System;
-using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Team
 {
-    public interface ITeamMemberInfo : ILeagueModel
+    public interface ITeamMemberInfo : IHasSummonerId
     {
         DateTime InviteDate { get; set; }
         DateTime JoinDate { get; set; }
-        long SummonerId { get; set; }
         string Status { get; set; }
     }
 }

@@ -1,8 +1,8 @@
-﻿using PortableLeagueApi.Interfaces.Core;
+﻿using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Game
 {
-    public interface IPlayer : ILeagueModel
+    public interface IPlayer : IHasSummonerId
     {
         /// <summary>
         /// Champion id associated with player.
@@ -12,9 +12,5 @@ namespace PortableLeagueApi.Interfaces.Game
         /// Team id associated with player.
         /// </summary>
         int TeamId { get; set; }
-        /// <summary>
-        /// Summoner id associated with player.
-        /// </summary>
-        long SummonerId { get; set; }
     }
 }

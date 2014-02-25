@@ -18,10 +18,8 @@ namespace PortableLeagueApi.Core.Services
         private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/lol/");
         private static readonly Dictionary<string, List<DateTime>> LastRequests = new Dictionary<string, List<DateTime>>();
 
-        private readonly IHttpRequestService _httpRequestService;
-        private readonly string _key;
-        private readonly RegionEnum? _defaultRegion;
-        private readonly bool _waitToAvoidRateLimit;
+        private readonly ILeagueApiConfiguration _apiConfiguration;
+        
         private readonly bool _isLimitedByRateLimit;
         private VersionEnum? _version;
 
@@ -40,24 +38,21 @@ namespace PortableLeagueApi.Core.Services
         }
 
         protected BaseService(
-            ILeagueAPI source,
+            ILeagueApiConfiguration config,
             VersionEnum? version, 
             string prefix,
             bool isLimitedByRateLimit = true)
         {
-            _key = source.Key;
-            _defaultRegion = source.DefaultRegion;
-            _waitToAvoidRateLimit = source.WaitToAvoidRateLimit;
-            _httpRequestService = source.HttpRequestService;
+            _apiConfiguration = config;
 
             _version = version;
             Prefix = prefix;
             _isLimitedByRateLimit = isLimitedByRateLimit;
 
-            if(!LastRequests.ContainsKey(_key))
-                LastRequests[_key] = new List<DateTime>();
+            if (!LastRequests.ContainsKey(_apiConfiguration.Key))
+                LastRequests[_apiConfiguration.Key] = new List<DateTime>();
 
-            AutoMapperService = new AutoMapperService();
+            AutoMapperService = new AutoMapperService(config);
 
             AutoMapperService.CreateMap<long, DateTime>()
                 .ConvertUsing(DateTime.FromBinary);
@@ -78,7 +73,7 @@ namespace PortableLeagueApi.Core.Services
         {
             var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
 
-            var keyParameter = string.Format("api_key={0}", _key);
+            var keyParameter = string.Format("api_key={0}", _apiConfiguration.Key);
             uriBuilder.AddQueryParameter(keyParameter);
 
             return uriBuilder.Uri;
@@ -101,7 +96,7 @@ namespace PortableLeagueApi.Core.Services
         {
             await ManageRateLimit();
 
-            var response = await _httpRequestService.SendRequestAsync(uri);
+            var response = await _apiConfiguration.HttpRequestService.SendRequestAsync(uri);
 
             T result;
 
@@ -150,12 +145,12 @@ namespace PortableLeagueApi.Core.Services
         {
             var delayInMs = 0;
 
-            if (_waitToAvoidRateLimit && _isLimitedByRateLimit)
+            if (_apiConfiguration.WaitToAvoidRateLimit && _isLimitedByRateLimit)
             {
-                LastRequests[_key].Add(DateTime.Now);
+                LastRequests[_apiConfiguration.Key].Add(DateTime.Now);
 
                 var tenMinutesAgo = DateTime.Now.AddMinutes(-10);
-                LastRequests[_key].RemoveAll(x => x < tenMinutesAgo);
+                LastRequests[_apiConfiguration.Key].RemoveAll(x => x < tenMinutesAgo);
                 
                 delayInMs = CalculateDelay(MaxRequestsPer10Min, 600, delayInMs);
                 delayInMs = CalculateDelay(MaxRequestsPer10Sec, 10, delayInMs);
@@ -174,7 +169,7 @@ namespace PortableLeagueApi.Core.Services
         {
             var givenTimeAgo = DateTime.Now.AddSeconds(-(givenTimeInSeconds + 1));
 
-            var requestsInGivenTime = LastRequests[_key]
+            var requestsInGivenTime = LastRequests[_apiConfiguration.Key]
                 .Where(x => x >= givenTimeAgo)
                 .OrderBy(x => x)
                 .ToList();
@@ -197,7 +192,7 @@ namespace PortableLeagueApi.Core.Services
 
         protected RegionEnum GetRegion(RegionEnum? region)
         {
-            region = region.HasValue ? region : _defaultRegion;
+            region = region.HasValue ? region : _apiConfiguration.DefaultRegion;
 
             if (region == null)
                 throw new ArgumentException("There's no default region");

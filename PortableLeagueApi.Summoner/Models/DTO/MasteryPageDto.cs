@@ -5,24 +5,24 @@ namespace PortableLeagueApi.Summoner.Models.DTO
     internal class MasteryPagesDto
     {
         [JsonProperty("pages")]
-        internal MasteryPageDto[] Pages { get; set; }
+        public MasteryPageDto[] Pages { get; set; }
 
         [JsonProperty("summonerId")]
-        internal long SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 
     internal class MasteryPageDto
     {
         [JsonProperty("id")]
-        internal long Id { get; set; }
+        public long Id { get; set; }
 
         [JsonProperty("talents")]
-        internal TalentDto[] Talents { get; set; }
+        public TalentDto[] Talents { get; set; }
 
         [JsonProperty("name")]
-        internal string Name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("current")]
-        internal bool Current { get; set; }
+        public bool Current { get; set; }
     }
 }

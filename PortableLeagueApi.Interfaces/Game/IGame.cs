@@ -5,7 +5,7 @@ using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Interfaces.Game
 {
-    public interface IGame : ILeagueModel
+    public interface IGame : IApiModel
     {
         /// <summary>
         /// Game ID.

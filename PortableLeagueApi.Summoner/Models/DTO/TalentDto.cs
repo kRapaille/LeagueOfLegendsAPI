@@ -5,12 +5,12 @@ namespace PortableLeagueApi.Summoner.Models.DTO
     internal class TalentDto
     {
         [JsonProperty("id")]
-        internal int Id { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("rank")]
-        internal int Rank { get; set; }
+        public int Rank { get; set; }
 
         [JsonProperty("name")]
-        internal string Name { get; set; }
+        public string Name { get; set; }
     }
 }

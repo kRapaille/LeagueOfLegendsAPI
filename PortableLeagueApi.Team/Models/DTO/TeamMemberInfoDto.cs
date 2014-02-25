@@ -5,15 +5,15 @@ namespace PortableLeagueApi.Team.Models.DTO
     internal class TeamMemberInfoDto
     {
         [JsonProperty("inviteDate")]
-        internal long InviteDate { get; set; }
+        public long InviteDate { get; set; }
 
         [JsonProperty("joinDate")]
-        internal long JoinDate { get; set; }
+        public long JoinDate { get; set; }
 
         [JsonProperty("playerId")]
-        internal long SummonerId { get; set; }
+        public long SummonerId { get; set; }
         
         [JsonProperty("status")]
-        internal string Status { get; set; }
+        public string Status { get; set; }
     }
 }

@@ -3,8 +3,8 @@ using System.Diagnostics;
 using System.Linq;
 using NUnit.Framework;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Game.Extensions;
 using PortableLeagueApi.Interfaces.Enums;
-using PortableLeagueApi.Interfaces.Game;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
 
@@ -13,12 +13,12 @@ namespace PortableLeagueAPI.Test
     [TestFixture]
     public class LeagueAPIServiceTests
     {
-        private readonly LeagueAPI _leagueAPI;
+        private readonly LeagueApi _leagueAPI;
 
         public LeagueAPIServiceTests()
         {
 
-            _leagueAPI = new LeagueAPI(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
+            _leagueAPI = new LeagueApi(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
         }
 
         [Test]
@@ -28,14 +28,15 @@ namespace PortableLeagueAPI.Test
             var fromSource1 = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
             var otherFromSource1 = await _leagueAPI.Summoner.GetSummonerByIdAsync(19231046);
 
-            var source2 = new LeagueAPI(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
+            var source2 = new LeagueApi(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
 
             var fromSource2 = await source2.Summoner.GetSummonerByNameAsync("TuC Ølen");
 
-            Assert.AreNotEqual(fromSource1.Source, fromSource2.Source);
-            Assert.AreEqual(fromSource1.Source, _leagueAPI);
-            Assert.AreEqual(fromSource2.Source, source2);
-            Assert.AreEqual(fromSource1.Source, otherFromSource1.Source);
+            Assert.IsNotNull(fromSource1.ApiConfiguration);
+            Assert.IsNotNull(otherFromSource1.ApiConfiguration);
+            Assert.IsNotNull(fromSource2.ApiConfiguration);
+            Assert.AreNotEqual(fromSource1.ApiConfiguration, fromSource2.ApiConfiguration);
+            Assert.AreEqual(fromSource1.ApiConfiguration, otherFromSource1.ApiConfiguration);
         }
 
         [Test]

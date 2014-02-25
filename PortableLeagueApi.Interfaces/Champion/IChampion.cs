@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Interfaces.Champion
 {
-    public interface IChampion: ILeagueModel
+    public interface IChampion: IApiModel
     {
         /// <summary>
         /// Champion Id.

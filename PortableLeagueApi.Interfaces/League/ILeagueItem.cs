@@ -3,7 +3,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.League
 {
-    public interface ILeagueItem : ILeagueModel
+    public interface ILeagueItem : IApiModel
     {
         bool IsFreshBlood { get; set; }
         bool IsHotStreak { get; set; }

@@ -1,14 +1,10 @@
 using System;
-using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface ISummoner : ILeagueModel
+    public interface ISummoner : IHasSummonerId
     {
-        /// <summary>
-        /// Summoner Id.
-        /// </summary>
-        long SummonerId { get; set; }
         /// <summary>
         /// Summoner name.
         /// </summary>

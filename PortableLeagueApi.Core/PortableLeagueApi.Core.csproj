@@ -50,6 +50,7 @@
     <Compile Include="Helpers\UriExtensions.cs" />
     <Compile Include="Models\HttpContentWrapper.cs" />
     <Compile Include="Models\HttpResponseMessageWrapper.cs" />
+    <Compile Include="Models\LeagueApiConfiguration.cs" />
     <Compile Include="Models\LeagueApiModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AutoMapperService.cs" />

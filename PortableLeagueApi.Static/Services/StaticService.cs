@@ -7,12 +7,12 @@ using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Static.Constants;
 using PortableLeagueApi.Static.Enums;
-using PortableLeagueApi.Static.Models.Static;
-using PortableLeagueApi.Static.Models.Static.Champion;
-using PortableLeagueApi.Static.Models.Static.Item;
-using PortableLeagueApi.Static.Models.Static.Mastery;
-using PortableLeagueApi.Static.Models.Static.Rune;
-using PortableLeagueApi.Static.Models.Static.SummonerSpell;
+using PortableLeagueApi.Static.Models.DTO;
+using PortableLeagueApi.Static.Models.DTO.Champion;
+using PortableLeagueApi.Static.Models.DTO.Item;
+using PortableLeagueApi.Static.Models.DTO.Mastery;
+using PortableLeagueApi.Static.Models.DTO.Rune;
+using PortableLeagueApi.Static.Models.DTO.SummonerSpell;
 
 namespace PortableLeagueApi.Static.Services
 {
@@ -21,9 +21,14 @@ namespace PortableLeagueApi.Static.Services
         private static readonly Dictionary<Uri, object> Cache = new Dictionary<Uri, object>();
 
         public StaticService(
-            ILeagueAPI source)
-            : base(source, VersionEnum.V1, "static-data", false)
-        { }
+            ILeagueApiConfiguration config)
+            : base(config, VersionEnum.V1, "static-data", false)
+        { 
+
+#if DEBUG
+            AutoMapperService.AssertConfigurationIsValid();
+#endif
+        }
 
         private static string GetLanguageCode(LanguageEnum? language)
         {

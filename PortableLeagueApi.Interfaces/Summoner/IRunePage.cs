@@ -2,7 +2,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface IRunePage : ILeagueModel
+    public interface IRunePage : IApiModel
     {
         /// <summary>
         /// Rune page Id.

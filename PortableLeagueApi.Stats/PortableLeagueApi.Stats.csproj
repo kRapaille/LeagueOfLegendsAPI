@@ -33,6 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Extensions\PlayerStatsSummariesExtensions.cs" />
+    <Compile Include="Extensions\RankedStatsSummariesExtensions.cs" />
     <Compile Include="Models\AggregatedStats.cs" />
     <Compile Include="Models\ChampionStats.cs" />
     <Compile Include="Models\DTO\AggregatedStatsDto.cs" />

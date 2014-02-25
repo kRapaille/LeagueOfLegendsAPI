@@ -5,9 +5,9 @@ namespace PortableLeagueApi.Team.Models.DTO
     internal class RosterDto
     {
         [JsonProperty("memberList")]
-        internal TeamMemberInfoDto[] MemberList { get; set; }
+        public TeamMemberInfoDto[] MemberList { get; set; }
 
         [JsonProperty("ownerId")]
-        internal int OwnerId { get; set; }
+        public long OwnerId { get; set; }
     }
 }

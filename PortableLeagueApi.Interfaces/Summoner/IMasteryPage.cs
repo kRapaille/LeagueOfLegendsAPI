@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface IMasteryPage : ILeagueModel
+    public interface IMasteryPage : IApiModel
     {
         /// <summary>
         /// Mastery page Id.

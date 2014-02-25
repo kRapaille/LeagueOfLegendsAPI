@@ -5,12 +5,12 @@ namespace PortableLeagueApi.Game.Models.DTO
     internal class PlayerDto
     {
         [JsonProperty("championId")]
-        internal int ChampionId { get; set; }
+        public int ChampionId { get; set; }
 
         [JsonProperty("teamId")]
-        internal int TeamId { get; set; }
+        public int TeamId { get; set; }
 
         [JsonProperty("summonerId")]
-        internal long SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 }

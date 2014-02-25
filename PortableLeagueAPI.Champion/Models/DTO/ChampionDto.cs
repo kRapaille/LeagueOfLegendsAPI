@@ -5,42 +5,42 @@ namespace PortableLeagueAPI.Champion.Models.DTO
     internal class ChampionListDto
     {
         [JsonProperty("champions")]
-        internal ChampionDto[] Champions { get; set; }
+        public ChampionDto[] Champions { get; set; }
     }
 
     internal class ChampionDto
     {
         [JsonProperty("botMmEnabled")]
-        internal bool BotMmEnabled { get; set; }
+        public bool BotMmEnabled { get; set; }
 
         [JsonProperty("defenseRank")]
-        internal int DefenseRank { get; set; }
+        public int DefenseRank { get; set; }
 
         [JsonProperty("attackRank")]
-        internal int AttackRank { get; set; }
+        public int AttackRank { get; set; }
 
         [JsonProperty("id")]
-        internal int ChampionId { get; set; }
+        public int ChampionId { get; set; }
 
         [JsonProperty("rankedPlayEnabled")]
-        internal bool RankedPlayEnabled { get; set; }
+        public bool RankedPlayEnabled { get; set; }
 
         [JsonProperty("name")]
-        internal string Name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("botEnabled")]
-        internal bool BotEnabled { get; set; }
+        public bool BotEnabled { get; set; }
 
         [JsonProperty("difficultyRank")]
-        internal int DifficultyRank { get; set; }
+        public int DifficultyRank { get; set; }
 
         [JsonProperty("active")]
-        internal bool Active { get; set; }
+        public bool Active { get; set; }
 
         [JsonProperty("freeToPlay")]
-        internal bool FreeToPlay { get; set; }
+        public bool FreeToPlay { get; set; }
 
         [JsonProperty("magicRank")]
-        internal int MagicRank { get; set; }
+        public int MagicRank { get; set; }
     }
 }

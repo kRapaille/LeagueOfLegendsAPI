@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Team;
 using PortableLeagueApi.Team.Models.DTO;
 
@@ -40,19 +39,15 @@ namespace PortableLeagueApi.Team.Models
 
         public DateTime ThirdLastJoinDate { get; set; }
 
-        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            MatchHistorySummary.CreateMap(autoMapperService, source);
-            Models.MessageOfDay.CreateMap(autoMapperService, source);
-            Models.Roster.CreateMap(autoMapperService, source);
-            Models.TeamStatSummary.CreateMap(autoMapperService, source);
+            MatchHistorySummary.CreateMap(autoMapperService);
+            Models.MessageOfDay.CreateMap(autoMapperService);
+            Models.Roster.CreateMap(autoMapperService);
+            Models.TeamStatSummary.CreateMap(autoMapperService);
 
-            autoMapperService.CreateMap<TeamDto, ITeam>().As<Team>();
-            autoMapperService.CreateMap<TeamDto, Team>()
-                .BeforeMap((s, d) =>
-                           {
-                               d.Source = source;
-                           });
+            autoMapperService.CreateApiModelMap<TeamDto, ITeam>().As<Team>();
+            autoMapperService.CreateApiModelMap<TeamDto, Team>();
         }
     }
 }

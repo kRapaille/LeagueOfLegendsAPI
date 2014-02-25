@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Interfaces.League
 {
-    public interface IMiniSeries : ILeagueModel
+    public interface IMiniSeries : IApiModel
     {
         string Progress { get; set; }
         int Target { get; set; }

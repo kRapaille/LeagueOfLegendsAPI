@@ -5,24 +5,24 @@ namespace PortableLeagueApi.Summoner.Models.DTO
     internal class RunePagesDto
     {
         [JsonProperty("pages")]
-        internal RunePageDto[] Pages { get; set; }
+        public RunePageDto[] Pages { get; set; }
 
         [JsonProperty("summonerId")]
-        internal long SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 
     internal class RunePageDto
     {
         [JsonProperty("id")]
-        internal int Id { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("slots")]
-        internal RuneSlotDto[] Slots { get; set; }
+        public RuneSlotDto[] Slots { get; set; }
 
         [JsonProperty("name")]
-        internal string Name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("current")]
-        internal bool Current { get; set; }
+        public bool Current { get; set; }
     }
 }

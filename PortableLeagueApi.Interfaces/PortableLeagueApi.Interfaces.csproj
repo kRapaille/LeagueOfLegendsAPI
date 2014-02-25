@@ -38,8 +38,9 @@
   <ItemGroup>
     <Compile Include="Champion\IChampion.cs" />
     <Compile Include="Champion\IChampionService.cs" />
+    <Compile Include="Core\ILeagueApiConfiguration.cs" />
     <Compile Include="Enums\GameModeEnum.cs" />
-    <Compile Include="Enums\PlayerStatsSummaryTypeEnum.cs" />
+    <Compile Include="Enums\PlayerStatSummaryTypeEnum.cs" />
     <Compile Include="Enums\GameSubTypeEnum.cs" />
     <Compile Include="Enums\GameTypeEnum.cs" />
     <Compile Include="Enums\LeagueTypeEnum.cs" />
@@ -48,7 +49,7 @@
     <Compile Include="Enums\SeasonEnum.cs" />
     <Compile Include="Enums\TierEnum.cs" />
     <Compile Include="Enums\VersionEnum.cs" />
-    <Compile Include="Game\RecentGamesExtensions.cs" />
+    <Compile Include="Extensions\IHasSummonerId.cs" />
     <Compile Include="Game\IGame.cs" />
     <Compile Include="Game\IGameService.cs" />
     <Compile Include="Game\IPlayer.cs" />
@@ -56,17 +57,14 @@
     <Compile Include="Core\IHttpContent.cs" />
     <Compile Include="Core\IHttpRequestService.cs" />
     <Compile Include="Core\IHttpResponseMessage.cs" />
-    <Compile Include="Core\ILeagueApi.cs" />
-    <Compile Include="Core\ILeagueModel.cs" />
+    <Compile Include="Core\IApiModel.cs" />
+    <Compile Include="Static\IBlock.cs" />
     <Compile Include="League\ILeague.cs" />
     <Compile Include="League\ILeagueItem.cs" />
     <Compile Include="League\ILeagueService.cs" />
     <Compile Include="League\IMiniSeries.cs" />
-    <Compile Include="League\RetrieveLeaguesEntryDataExtensions.cs" />
-    <Compile Include="League\RetrieveLeaguesDataExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stats\PlayerStatsSummariesExtensions.cs" />
-    <Compile Include="Stats\RankedStatsSummariesExtensions.cs" />
+    <Compile Include="Static\IBlockItem.cs" />
     <Compile Include="Summoner\IMasteryPage.cs" />
     <Compile Include="Summoner\IRune.cs" />
     <Compile Include="Summoner\IRunePage.cs" />
@@ -79,8 +77,6 @@
     <Compile Include="Stats\IPlayerStatsSummary.cs" />
     <Compile Include="Stats\IRankedStats.cs" />
     <Compile Include="Stats\IStatsService.cs" />
-    <Compile Include="Summoner\SummonerRunePageExtensions.cs" />
-    <Compile Include="Summoner\SummonerMasteryPageExtensions.cs" />
     <Compile Include="Team\IMatchHistorySummary.cs" />
     <Compile Include="Team\IMessageOfDay.cs" />
     <Compile Include="Team\IRoster.cs" />
@@ -89,7 +85,6 @@
     <Compile Include="Team\ITeamService.cs" />
     <Compile Include="Team\ITeamStatDetail.cs" />
     <Compile Include="Team\ITeamStatSummary.cs" />
-    <Compile Include="Team\TeamsBySummonerIdExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

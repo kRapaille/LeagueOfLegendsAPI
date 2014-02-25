@@ -5,9 +5,9 @@ namespace PortableLeagueApi.Summoner.Models.DTO
     internal class RuneSlotDto
     {
         [JsonProperty("runeSlotId")]
-        internal int RuneSlotId { get; set; }
+        public int RuneSlotId { get; set; }
 
         [JsonProperty("rune")]
-        internal RuneDto Rune { get; set; }
+        public RuneDto Rune { get; set; }
     }
 }

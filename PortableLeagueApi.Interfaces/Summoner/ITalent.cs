@@ -2,7 +2,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface ITalent : ILeagueModel
+    public interface ITalent : IApiModel
     {
         /// <summary>
         /// Talent id.

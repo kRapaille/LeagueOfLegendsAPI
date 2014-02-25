@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Extensions\RecentGamesExtensions.cs" />
     <Compile Include="Models\DTO\GameDto.cs" />
     <Compile Include="Models\DTO\PlayerDto.cs" />
     <Compile Include="Models\DTO\RawStatsDto.cs" />

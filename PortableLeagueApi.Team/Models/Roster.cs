@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Team;
 using PortableLeagueApi.Team.Models.DTO;
 
@@ -13,16 +12,12 @@ namespace PortableLeagueApi.Team.Models
 
         public long OwnerId { get; set; }
 
-        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            TeamMemberInfo.CreateMap(autoMapperService, source);
+            TeamMemberInfo.CreateMap(autoMapperService);
 
-            autoMapperService.CreateMap<RosterDto, IRoster>().As<Roster>();
-            autoMapperService.CreateMap<RosterDto, Roster>()
-                .BeforeMap((s, d) =>
-                           {
-                               d.Source = source;
-                           });
+            autoMapperService.CreateApiModelMap<RosterDto, IRoster>().As<Roster>();
+            autoMapperService.CreateApiModelMap<RosterDto, Roster>();
         }
     }
 }

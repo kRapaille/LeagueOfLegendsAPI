@@ -2,7 +2,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Team
 {
-    public interface ITeamStatDetail : ILeagueModel
+    public interface ITeamStatDetail : IApiModel
     {
         int AverageGamesPlayed { get; set; }
         string FullId { get; set; }

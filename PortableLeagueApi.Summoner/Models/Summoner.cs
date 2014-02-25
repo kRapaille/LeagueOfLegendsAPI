@@ -1,7 +1,6 @@
 ﻿using System;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Summoner;
 using PortableLeagueApi.Summoner.Models.DTO;
 
@@ -19,14 +18,10 @@ namespace PortableLeagueApi.Summoner.Models
 
         public long SummonerLevel { get; set; }
 
-        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            autoMapperService.CreateMap<SummonerDto, ISummoner>().As<Summoner>();
-            autoMapperService.CreateMap<SummonerDto, Summoner>()
-                .BeforeMap((s, d) =>
-                           {
-                               d.Source = source;
-                           });
+            autoMapperService.CreateApiModelMap<SummonerDto, ISummoner>().As<Summoner>();
+            autoMapperService.CreateApiModelMap<SummonerDto, Summoner>();
         }
     }
 }

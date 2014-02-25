@@ -5,54 +5,54 @@ namespace PortableLeagueApi.Game.Models.DTO
     internal class RecentGamesDto
     {
         [JsonProperty("games")]
-        internal GameDto[] Games { get; set; }
+        public GameDto[] Games { get; set; }
 
         [JsonProperty("summonerId")]
-        internal long SummonerId { get; set; }
+        public long SummonerId { get; set; }
     }
 
     internal class GameDto
     {
         [JsonProperty("fellowPlayers")]
-        internal PlayerDto[] FellowPlayers { get; set; }
+        public PlayerDto[] FellowPlayers { get; set; }
 
         [JsonProperty("gameType")]
-        internal string GameType { get; set; }
+        public string GameType { get; set; }
 
         [JsonProperty("gameId")]
-        internal int GameId { get; set; }
+        public int GameId { get; set; }
 
         [JsonProperty("spell1")]
-        internal int SummonerSpell1 { get; set; }
+        public int SummonerSpell1 { get; set; }
 
         [JsonProperty("teamId")]
-        internal int TeamId { get; set; }
+        public int TeamId { get; set; }
 
         [JsonProperty("stats")]
-        internal RawStatsDto Stats { get; set; }
+        public RawStatsDto Stats { get; set; }
 
         [JsonProperty("spell2")]
-        internal int SummonerSpell2 { get; set; }
+        public int SummonerSpell2 { get; set; }
 
         [JsonProperty("gameMode")]
-        internal string GameMode { get; set; }
+        public string GameMode { get; set; }
 
         [JsonProperty("mapId")]
-        internal int MapId { get; set; }
+        public int MapId { get; set; }
 
         [JsonProperty("level")]
-        internal int Level { get; set; }
+        public int Level { get; set; }
 
         [JsonProperty("invalid")]
-        internal bool Invalid { get; set; }
+        public bool Invalid { get; set; }
 
         [JsonProperty("subType")]
-        internal string SubType { get; set; }
+        public string SubType { get; set; }
 
         [JsonProperty("championId")]
-        internal int ChampionId { get; set; }
+        public int ChampionId { get; set; }
 
         [JsonProperty("createDate")]
-        internal long CreateDate { get; set; }
+        public long CreateDate { get; set; }
     }
 }

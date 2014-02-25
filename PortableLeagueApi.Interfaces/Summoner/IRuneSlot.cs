@@ -2,7 +2,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface IRuneSlot : ILeagueModel
+    public interface IRuneSlot : IApiModel
     {
         /// <summary>
         /// Rune slot Id.

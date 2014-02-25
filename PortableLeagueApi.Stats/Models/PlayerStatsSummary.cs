@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AutoMapper;
 using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.Stats;
 using PortableLeagueApi.Stats.Models.DTO;
@@ -13,17 +13,17 @@ namespace PortableLeagueApi.Stats.Models
 {
     public class PlayerStatsSummary : LeagueApiModel, IPlayerStatsSummary
     {
-        public PlayerStatsSummaryTypeEnum PlayerStatsSummaryType { get; set; }
+        public PlayerStatSummaryTypeEnum PlayerStatSummaryType { get; set; }
         public IAggregatedStats AggregatedStats { get; set; }
         public int Losses { get; set; }
         public DateTime ModifyDate { get; set; }
         public int Wins { get; set; }
 
-        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            Models.AggregatedStats.CreateMap(autoMapperService, source);
+            Models.AggregatedStats.CreateMap(autoMapperService);
 
-            autoMapperService.CreateMap<string, PlayerStatsSummaryTypeEnum>()
+            autoMapperService.CreateMap<string, PlayerStatSummaryTypeEnum>()
                 .ConvertUsing(s => PlayerStatsSummaryTypeConsts.PlayerStatsSummaryTypes
                     .First(x => x.Value == s).Key);
 
@@ -31,12 +31,8 @@ namespace PortableLeagueApi.Stats.Models
                 .ConvertUsing(x => x.PlayerStatSummaries
                     .Select(autoMapperService.Map<PlayerStatsSummaryDto, PlayerStatsSummary>));
 
-            autoMapperService.CreateMap<PlayerStatsSummaryDto, IPlayerStatsSummary>().As<PlayerStatsSummary>();
-            autoMapperService.CreateMap<PlayerStatsSummaryDto, PlayerStatsSummary>()
-                .BeforeMap((s, d) =>
-                {
-                    d.Source = source;
-                });
+            autoMapperService.CreateApiModelMap<PlayerStatsSummaryDto, IPlayerStatsSummary>().As<PlayerStatsSummary>();
+            autoMapperService.CreateApiModelMap<PlayerStatsSummaryDto, PlayerStatsSummary>();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
+using AutoMapper;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.Team;
 using PortableLeagueApi.Team.Models.DTO;
@@ -32,16 +32,21 @@ namespace PortableLeagueApi.Team.Models
 
         public bool Win { get; set; }
 
-        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            autoMapperService.CreateMap<MatchHistorySummaryDto, IMatchHistorySummary>().As<MatchHistorySummary>();
-            autoMapperService.CreateMap<MatchHistorySummaryDto, MatchHistorySummary>()
-                .BeforeMap((s, d) =>
-                           {
-                               d.Map = (MapEnum)s.MapId;
+            CreateMap<MatchHistorySummary>(autoMapperService);
+            CreateMap<IMatchHistorySummary>(autoMapperService).As<MatchHistorySummary>();
+        }
 
-                               d.Source = source;
-                           });
+        private static IMappingExpression<MatchHistorySummaryDto, T> CreateMap<T>(AutoMapperService autoMapperService)
+            where T : IMatchHistorySummary
+        {
+            return autoMapperService.CreateApiModelMap<MatchHistorySummaryDto, T>()
+                .ForMember(x => x.Map, x => x.Ignore())
+                .AfterMap((s, d) =>
+                {
+                    d.Map = (MapEnum)s.MapId;
+                });
         }
     }
 }

@@ -2,7 +2,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Stats
 {
-    public interface IAggregatedStats : ILeagueModel
+    public interface IAggregatedStats : IApiModel
     {
         /// <summary>
         /// Dominion only.

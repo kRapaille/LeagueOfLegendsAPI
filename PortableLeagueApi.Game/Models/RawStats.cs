@@ -1,8 +1,8 @@
 using System.Collections.Generic;
+using AutoMapper;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Game.Models.DTO;
-using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Game;
 
 namespace PortableLeagueApi.Game.Models
@@ -80,10 +80,16 @@ namespace PortableLeagueApi.Game.Models
         public int WardPlaced { get; set; }
         public bool Win { get; set; }
 
-        internal static void CreateMap(AutoMapperService autoMapperService, ILeagueAPI source)
+        internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            autoMapperService.CreateMap<RawStatsDto, IRawStats>().As<RawStats>();
-            autoMapperService.CreateMap<RawStatsDto, RawStats>()
+            CreateMap<RawStats>(autoMapperService);
+            CreateMap<IRawStats>(autoMapperService).As<RawStats>();
+        }
+
+        private static IMappingExpression<RawStatsDto, T> CreateMap<T>(AutoMapperService autoMapperService)
+            where T : IRawStats
+        {
+            return autoMapperService.CreateApiModelMap<RawStatsDto, T>()
                 .ForSourceMember(x => x.Item0, x => x.Ignore())
                 .ForSourceMember(x => x.Item1, x => x.Ignore())
                 .ForSourceMember(x => x.Item2, x => x.Ignore())
@@ -91,10 +97,9 @@ namespace PortableLeagueApi.Game.Models
                 .ForSourceMember(x => x.Item4, x => x.Ignore())
                 .ForSourceMember(x => x.Item5, x => x.Ignore())
                 .ForSourceMember(x => x.Item6, x => x.Ignore())
+                .ForMember(x => x.ItemIds, x=> x.Ignore())
                 .BeforeMap((s, d) =>
                 {
-                    d.Source = source;
-
                     d.ItemIds = new List<int>
                                 {
                                     s.Item0,

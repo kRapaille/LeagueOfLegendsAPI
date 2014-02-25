@@ -5,12 +5,6 @@ using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Interfaces;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Static.Enums;
-using PortableLeagueApi.Static.Models.Static;
-using PortableLeagueApi.Static.Models.Static.Champion;
-using PortableLeagueApi.Static.Models.Static.Item;
-using PortableLeagueApi.Static.Models.Static.Mastery;
-using PortableLeagueApi.Static.Models.Static.Rune;
-using PortableLeagueApi.Static.Models.Static.SummonerSpell;
 
 namespace PortableLeagueApi.Static.Services
 {

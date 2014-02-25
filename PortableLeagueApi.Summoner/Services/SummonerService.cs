@@ -13,12 +13,16 @@ namespace PortableLeagueApi.Summoner.Services
     public class SummonerService : BaseService, ISummonerService
     {
         public SummonerService(
-            ILeagueAPI source)
-            : base(source, VersionEnum.V1Rev3, "summoner")
+            ILeagueApiConfiguration config)
+            : base(config, VersionEnum.V1Rev3, "summoner")
         {
-            MasteryPage.CreateMap(AutoMapperService, source);
-            RunePage.CreateMap(AutoMapperService, source);
-            Models.Summoner.CreateMap(AutoMapperService, source);
+            MasteryPage.CreateMap(AutoMapperService);
+            RunePage.CreateMap(AutoMapperService);
+            Models.Summoner.CreateMap(AutoMapperService);
+
+#if DEBUG
+            AutoMapperService.AssertConfigurationIsValid();
+#endif
         }
         
         /// <summary>

@@ -3,7 +3,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Game
 {
-    public interface IRawStats : ILeagueModel
+    public interface IRawStats : IApiModel
     {
         int Assists { get; set; }
         int BarracksKilled { get; set; }

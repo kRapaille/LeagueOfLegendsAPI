@@ -12,11 +12,15 @@ namespace PortableLeagueApi.Stats.Services
     public class StatsService : BaseService, IStatsService
     {
         public StatsService(
-            ILeagueAPI source)
-            : base(source, VersionEnum.V1Rev2, "stats")
+            ILeagueApiConfiguration config)
+            : base(config, VersionEnum.V1Rev2, "stats")
         {
-            RankedStats.CreateMap(AutoMapperService, source);
-            PlayerStatsSummary.CreateMap(AutoMapperService, source);
+            RankedStats.CreateMap(AutoMapperService);
+            PlayerStatsSummary.CreateMap(AutoMapperService);
+
+#if DEBUG
+            AutoMapperService.AssertConfigurationIsValid();
+#endif
         }
 
         /// <summary>

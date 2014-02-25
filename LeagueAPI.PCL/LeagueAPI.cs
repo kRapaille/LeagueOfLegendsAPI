@@ -1,4 +1,5 @@
 ﻿using PortableLeagueAPI.Champion.Services;
+using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Game.Services;
 using PortableLeagueApi.Interfaces.Champion;
 using PortableLeagueApi.Interfaces.Core;
@@ -17,7 +18,7 @@ using PortableLeagueApi.Team.Services;
 
 namespace PortableLeagueAPI
 {
-    public class LeagueAPI : ILeagueAPI
+    public class LeagueApi
     {
         public IChampionService Champion { get; private set; }
         public IGameService Game { get; private set; }
@@ -27,12 +28,7 @@ namespace PortableLeagueAPI
         public ITeamService Team { get; private set; }
         public StaticService Static { get; private set; }
 
-        public string Key { get; private set; }
-        public RegionEnum? DefaultRegion { get; private set; }
-        public bool WaitToAvoidRateLimit { get; private set; }
-        public IHttpRequestService HttpRequestService { get; private set; }
-        
-        public LeagueAPI(
+        public LeagueApi(
             string key,
             RegionEnum? region = null,
             bool waitToAvoidRateLimit = false,
@@ -40,18 +36,15 @@ namespace PortableLeagueAPI
         {
             httpRequestService = httpRequestService ?? new HttpRequestService();
 
-            Key = key;
-            DefaultRegion = region;
-            WaitToAvoidRateLimit = waitToAvoidRateLimit;
-            HttpRequestService = httpRequestService;
+            var leagueApiConfiguration = new LeagueApiConfiguration(key, region, waitToAvoidRateLimit, httpRequestService);
 
-            Champion = new ChampionService(this);
-            Game = new GameService(this);
-            League = new LeagueService(this);
-            Stats = new StatsService(this);
-            Summoner = new SummonerService(this);
-            Team = new TeamService(this);
-            Static = new StaticService(this);
+            Champion = new ChampionService(leagueApiConfiguration);
+            Game = new GameService(leagueApiConfiguration);
+            League = new LeagueService(leagueApiConfiguration);
+            Stats = new StatsService(leagueApiConfiguration);
+            Summoner = new SummonerService(leagueApiConfiguration);
+            Team = new TeamService(leagueApiConfiguration);
+            Static = new StaticService(leagueApiConfiguration);
         }
     }
 }

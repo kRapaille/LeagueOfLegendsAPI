@@ -4,7 +4,7 @@ using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Interfaces.League
 {
-    public interface ILeague : ILeagueModel
+    public interface ILeague : IApiModel
     {
         IList<ILeagueItem> LeagueItems { get; set; }
         string Name { get; set; }

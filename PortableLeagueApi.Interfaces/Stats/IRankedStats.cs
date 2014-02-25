@@ -1,9 +1,9 @@
 ﻿using System;
-using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Stats
 {
-    public interface IRankedStats : ILeagueModel
+    public interface IRankedStats : IHasSummonerId
     {
         /// <summary>
         /// Date stats were last modified specified as epoch milliseconds.
@@ -13,9 +13,5 @@ namespace PortableLeagueApi.Interfaces.Stats
         /// List of aggregated stats summarized by champion.
         /// </summary>
         IChampionStats[] Champions { get; set; }
-        /// <summary>
-        /// Summoner Id.
-        /// </summary>
-        long SummonerId { get; set; }
     }
 }

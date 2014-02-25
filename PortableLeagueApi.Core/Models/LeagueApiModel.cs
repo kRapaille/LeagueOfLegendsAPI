@@ -2,8 +2,8 @@
 
 namespace PortableLeagueApi.Core.Models
 {
-    public abstract class LeagueApiModel : ILeagueModel
+    public abstract class LeagueApiModel : IApiModel
     {
-        public ILeagueAPI Source { get; set; }
+        public ILeagueApiConfiguration ApiConfiguration { get; set; }
     }
 }

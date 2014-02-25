@@ -4,7 +4,7 @@ using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Team
 {
-    public interface ITeam : ILeagueModel
+    public interface ITeam : IApiModel
     {
         DateTime CreateDate { get; set; }
         string FullId { get; set; }

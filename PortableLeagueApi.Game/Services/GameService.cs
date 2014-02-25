@@ -11,10 +11,14 @@ namespace PortableLeagueApi.Game.Services
     public class GameService : BaseService, IGameService
     {
         public GameService(
-            ILeagueAPI source)
-            : base(source, VersionEnum.V1Rev3, "game")
+            ILeagueApiConfiguration config)
+            : base(config, VersionEnum.V1Rev3, "game")
         {
-            Models.Game.CreateMap(AutoMapperService, source);
+            Models.Game.CreateMap(AutoMapperService);
+
+#if DEBUG
+            AutoMapperService.AssertConfigurationIsValid();
+#endif
         }
 
         /// <summary>
