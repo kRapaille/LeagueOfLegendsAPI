@@ -7,7 +7,7 @@ using PortableLeagueApi.Interfaces.Game;
 
 namespace PortableLeagueApi.Game.Models
 {
-    public class RawStats : LeagueApiModel, IRawStats
+    public class RawStats : ApiModel, IRawStats
     {
         public int Assists { get; set; }
         public int BarracksKilled { get; set; }

@@ -6,7 +6,7 @@ using PortableLeagueApi.Summoner.Models.DTO;
 
 namespace PortableLeagueApi.Summoner.Models
 {
-    public class Summoner : LeagueApiModel, ISummoner
+    public class Summoner : ApiModel, ISummoner
     {
         public long SummonerId { get; set; }
 

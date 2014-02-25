@@ -7,7 +7,7 @@ using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Models
 {
-    public class Team : LeagueApiModel, ITeam
+    public class Team : ApiModel, ITeam
     {
         public DateTime CreateDate { get; set; }
 

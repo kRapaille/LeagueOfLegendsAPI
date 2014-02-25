@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace PortableLeagueApi.Static.Models.DTO.Champion
 {
-    public class ChampionListDto
+    internal class ChampionListDto
     {
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -21,7 +21,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
         public Dictionary<string, ChampionDto> Data { get; set; }
     }
 
-    public class ChampionDto
+    internal class ChampionDto
     {
         [JsonProperty("allytips")]
         public string[] AllyTips { get; set; }

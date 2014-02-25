@@ -1,6 +1,6 @@
 ﻿using PortableLeagueApi.Interfaces.Core;
 
-namespace PortableLeagueApi.Interfaces.Static
+namespace PortableLeagueApi.Interfaces.Static.Champion
 {
     public interface IBlock : IApiModel
     {

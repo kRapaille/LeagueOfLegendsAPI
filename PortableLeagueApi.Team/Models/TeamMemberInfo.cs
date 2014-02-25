@@ -6,7 +6,7 @@ using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Models
 {
-    public class TeamMemberInfo : LeagueApiModel, ITeamMemberInfo
+    public class TeamMemberInfo : ApiModel, ITeamMemberInfo
     {
         public DateTime InviteDate { get; set; }
 

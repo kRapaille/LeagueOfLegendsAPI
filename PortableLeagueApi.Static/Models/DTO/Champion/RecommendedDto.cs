@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Champion
 {
-    public class RecommendedDto
+    internal class RecommendedDto
     {
         [JsonProperty("blocks")]
         public BlockDto[] Blocks { get; set; }

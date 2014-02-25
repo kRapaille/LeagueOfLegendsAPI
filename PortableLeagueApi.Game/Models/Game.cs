@@ -11,7 +11,7 @@ using PortableLeagueApi.Interfaces.Game;
 
 namespace PortableLeagueApi.Game.Models
 {
-    public class Game : LeagueApiModel, IGame
+    public class Game : ApiModel, IGame
     {
         public int GameId { get; set; }
         public IList<IPlayer> OtherPlayers { get; set; }

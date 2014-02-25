@@ -6,7 +6,7 @@ using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Models
 {
-    public class Roster : LeagueApiModel, IRoster
+    public class Roster : ApiModel, IRoster
     {
         public IList<ITeamMemberInfo> MemberList { get; set; }
 

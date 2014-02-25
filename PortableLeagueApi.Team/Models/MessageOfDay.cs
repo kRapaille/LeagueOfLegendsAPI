@@ -6,7 +6,7 @@ using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Models
 {
-    public class MessageOfDay : LeagueApiModel, IMessageOfDay
+    public class MessageOfDay : ApiModel, IMessageOfDay
     {
         public DateTime CreateDate { get; set; }
 

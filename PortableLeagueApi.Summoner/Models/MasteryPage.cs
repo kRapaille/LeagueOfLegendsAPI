@@ -7,7 +7,7 @@ using PortableLeagueApi.Summoner.Models.DTO;
 
 namespace PortableLeagueApi.Summoner.Models
 {
-    public class MasteryPage : LeagueApiModel, IMasteryPage
+    public class MasteryPage : ApiModel, IMasteryPage
     {
         public long Id { get; set; }
 

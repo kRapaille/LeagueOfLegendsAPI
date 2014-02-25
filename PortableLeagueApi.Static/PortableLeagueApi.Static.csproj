@@ -40,8 +40,15 @@
     <Compile Include="Enums\MasteryDataEnum.cs" />
     <Compile Include="Enums\RuneDataEnum.cs" />
     <Compile Include="Enums\SpellDataEnum.cs" />
-    <Compile Include="Models\BlockItem.cs" />
-    <Compile Include="Models\Block.cs" />
+    <Compile Include="Models\Champion\BlockItem.cs" />
+    <Compile Include="Models\Champion\Block.cs" />
+    <Compile Include="Models\Champion\Champion.cs" />
+    <Compile Include="Models\Champion\ChampionList.cs" />
+    <Compile Include="Models\Champion\Info.cs" />
+    <Compile Include="Models\Champion\Passive.cs" />
+    <Compile Include="Models\Champion\Skin.cs" />
+    <Compile Include="Models\Champion\Spell.cs" />
+    <Compile Include="Models\Champion\Stats.cs" />
     <Compile Include="Models\DTO\Champion\BlockDto.cs" />
     <Compile Include="Models\DTO\Champion\BlockItemDto.cs" />
     <Compile Include="Models\DTO\Champion\ChampionDto.cs" />
@@ -68,6 +75,9 @@
     <Compile Include="Models\DTO\LevelTipDto.cs" />
     <Compile Include="Models\DTO\SummonerSpell\SummonerSpellDto.cs" />
     <Compile Include="Models\DTO\SummonerSpell\SummonerSpellVarsDto.cs" />
+    <Compile Include="Models\Champion\Recommended.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\LevelTip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\StaticService.cs" />
     <Compile Include="Services\StaticServiceExtensions.cs" />

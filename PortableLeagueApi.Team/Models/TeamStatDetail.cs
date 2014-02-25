@@ -5,7 +5,7 @@ using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Models
 {
-    public class TeamStatDetail : LeagueApiModel, ITeamStatDetail
+    public class TeamStatDetail : ApiModel, ITeamStatDetail
     {
         public int AverageGamesPlayed { get; set; }
 

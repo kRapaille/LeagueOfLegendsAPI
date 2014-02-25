@@ -6,7 +6,7 @@ using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Models
 {
-    public class TeamStatSummary : LeagueApiModel, ITeamStatSummary
+    public class TeamStatSummary : ApiModel, ITeamStatSummary
     {
         public string FullId { get; set; }
 

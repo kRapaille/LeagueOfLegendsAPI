@@ -5,7 +5,7 @@ using PortableLeagueApi.Interfaces.Game;
 
 namespace PortableLeagueApi.Game.Models
 {
-    public class Player : LeagueApiModel, IPlayer
+    public class Player : ApiModel, IPlayer
     {
         public int ChampionId { get; set; }
         public int TeamId { get; set; }

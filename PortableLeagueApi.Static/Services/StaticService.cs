@@ -5,6 +5,7 @@ using PortableLeagueApi.Core.Helpers;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.Static.Champion;
 using PortableLeagueApi.Static.Constants;
 using PortableLeagueApi.Static.Enums;
 using PortableLeagueApi.Static.Models.DTO;
@@ -109,13 +110,13 @@ namespace PortableLeagueApi.Static.Services
             return uriBuilder.Uri;
         }
 
-        public async Task<ChampionListDto> GetChampionsAsync(
+        public async Task<IChampionList> GetChampionsAsync(
             ChampDataEnum? champData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponseAsync<ChampionListDto>(
+            return await GetResponseAsync<ChampionListDto, IChampionList>(
                 BuildStaticUri(
                     "champion", 
                     "champData", 
@@ -125,14 +126,14 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion));
         }
 
-        public async Task<ChampionDto> GetChampionAsync(
+        public async Task<IChampion> GetChampionAsync(
             int championId,
             ChampDataEnum? champData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
-            return await GetResponseAsync<ChampionDto>(
+            return await GetResponseAsync<ChampionDto, IChampion>(
                 BuildStaticUri(
                     "champion", 
                     "champData", 

@@ -5,7 +5,7 @@ using PortableLeagueApi.Stats.Models.DTO;
 
 namespace PortableLeagueApi.Stats.Models
 {
-    public class AggregatedStats : LeagueApiModel, IAggregatedStats
+    public class AggregatedStats : ApiModel, IAggregatedStats
     {
         public int AverageAssists { get; set; }
         public int AverageChampionsKilled { get; set; }

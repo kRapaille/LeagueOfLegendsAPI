@@ -27,6 +27,14 @@ namespace PortableLeagueApi.Core.Services
             return _configurationStore.CreateMap<TSource, TDestination>();
         }
 
+        public void CreateApiModelMapWithInterface<TSource, TDestination, T>()
+            where T : IApiModel
+            where TDestination : IApiModel, T
+        {
+            CreateApiModelMap<TSource, TDestination>();
+            CreateApiModelMap<TSource, T>().As<TDestination>();
+        }
+
         public IMappingExpression<TSource, TDestination> CreateApiModelMap<TSource, TDestination>()
             where TDestination : IApiModel
         {

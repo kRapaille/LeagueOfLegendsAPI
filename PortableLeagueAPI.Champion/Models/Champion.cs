@@ -8,7 +8,7 @@ using PortableLeagueApi.Interfaces.Champion;
 
 namespace PortableLeagueAPI.Champion.Models
 {
-    public class Champion : LeagueApiModel, IChampion
+    public class Champion : ApiModel, IChampion
     {
         public int ChampionId { get; set; }
         public string Name { get; set; }

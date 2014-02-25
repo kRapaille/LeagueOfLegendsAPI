@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
@@ -11,7 +10,7 @@ using PortableLeagueApi.Stats.Models.DTO;
 
 namespace PortableLeagueApi.Stats.Models
 {
-    public class PlayerStatsSummary : LeagueApiModel, IPlayerStatsSummary
+    public class PlayerStatsSummary : ApiModel, IPlayerStatsSummary
     {
         public PlayerStatSummaryTypeEnum PlayerStatSummaryType { get; set; }
         public IAggregatedStats AggregatedStats { get; set; }

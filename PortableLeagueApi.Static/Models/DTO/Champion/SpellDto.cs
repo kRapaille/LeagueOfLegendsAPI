@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Champion
 {
-    public class SpellDto
+    internal class SpellDto
     {
         [JsonProperty("cooldown")]
         public int[] Cooldown { get; set; }

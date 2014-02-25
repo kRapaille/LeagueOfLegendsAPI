@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Champion
 {
-    public class PassiveDto
+    internal class PassiveDto
     {
         [JsonProperty("description")]
         public string Description { get; set; }

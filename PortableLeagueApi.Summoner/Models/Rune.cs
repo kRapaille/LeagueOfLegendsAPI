@@ -5,7 +5,7 @@ using PortableLeagueApi.Summoner.Models.DTO;
 
 namespace PortableLeagueApi.Summoner.Models
 {
-    public class Rune : LeagueApiModel, IRune
+    public class Rune : ApiModel, IRune
     {
         public int Id { get; set; }
 

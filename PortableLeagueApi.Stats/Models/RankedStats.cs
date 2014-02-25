@@ -6,7 +6,7 @@ using PortableLeagueApi.Stats.Models.DTO;
 
 namespace PortableLeagueApi.Stats.Models
 {
-    public class RankedStats : LeagueApiModel, IRankedStats
+    public class RankedStats : ApiModel, IRankedStats
     {
         public DateTime ModifyDate { get; set; }
         public IChampionStats[] Champions { get; set; }

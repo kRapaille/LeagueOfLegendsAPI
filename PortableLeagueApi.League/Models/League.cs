@@ -10,7 +10,7 @@ using PortableLeagueApi.League.Models.DTO;
 
 namespace PortableLeagueApi.League.Models
 {
-    public class League : LeagueApiModel, ILeague
+    public class League : ApiModel, ILeague
     {
         public IList<ILeagueItem> LeagueItems { get; set; }
         public string Name { get; set; }

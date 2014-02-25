@@ -87,6 +87,14 @@ namespace PortableLeagueApi.Core.Services
             return AutoMapperService.Map<TSource, TDestination>(result);
         }
 
+        protected async Task<TDestination> GetResponseAsync<TSource, TDestination>(Uri uri)
+            where TSource : class
+        {
+            var result = await GetResponseAsync<TSource>(uri);
+
+            return AutoMapperService.Map<TSource, TDestination>(result);
+        }
+
         protected async Task<T> GetResponseAsync<T>(RegionEnum? region, string relativeUrl) where T : class
         {
             return await GetResponseAsync<T>(BuildUri(region, relativeUrl));

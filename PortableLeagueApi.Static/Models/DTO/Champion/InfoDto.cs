@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Champion
 {
-    public class InfoDto
+    internal class InfoDto
     {
         [JsonProperty("attack")]
         public int Attack { get; set; }

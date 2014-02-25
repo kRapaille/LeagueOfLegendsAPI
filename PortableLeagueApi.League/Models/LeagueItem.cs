@@ -6,7 +6,7 @@ using PortableLeagueApi.League.Models.DTO;
 
 namespace PortableLeagueApi.League.Models
 {
-    public class LeagueItem : LeagueApiModel, ILeagueItem
+    public class LeagueItem : ApiModel, ILeagueItem
     {
         public bool IsFreshBlood { get; set; }
         public bool IsHotStreak { get; set; }

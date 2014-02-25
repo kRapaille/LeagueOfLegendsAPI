@@ -1,11 +1,11 @@
 ﻿using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Interfaces.Static;
+using PortableLeagueApi.Interfaces.Static.Champion;
 using PortableLeagueApi.Static.Models.DTO.Champion;
 
-namespace PortableLeagueApi.Static.Models
+namespace PortableLeagueApi.Static.Models.Champion
 {
-    public class BlockItem : LeagueApiModel, IBlockItem
+    public class BlockItem : ApiModel, IBlockItem
     {
         public string Id { get; set; }
 
@@ -13,8 +13,7 @@ namespace PortableLeagueApi.Static.Models
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            autoMapperService.CreateApiModelMap<BlockItemDto, IBlockItem>().As<BlockItem>();
-            autoMapperService.CreateApiModelMap<BlockItemDto, BlockItem>();
+            autoMapperService.CreateApiModelMapWithInterface<BlockItemDto, BlockItem, IBlockItem>();
         }
     }
 }

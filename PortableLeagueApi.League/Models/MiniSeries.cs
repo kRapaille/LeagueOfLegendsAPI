@@ -6,7 +6,7 @@ using PortableLeagueApi.League.Models.DTO;
 
 namespace PortableLeagueApi.League.Models
 {
-    public class MiniSeries : LeagueApiModel, IMiniSeries
+    public class MiniSeries : ApiModel, IMiniSeries
     {
         // TODO : Change progress type
         //public IList<int?> Progress { get; set; }

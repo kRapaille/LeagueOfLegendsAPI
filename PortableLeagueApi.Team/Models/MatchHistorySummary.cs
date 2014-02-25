@@ -8,7 +8,7 @@ using PortableLeagueApi.Team.Models.DTO;
 
 namespace PortableLeagueApi.Team.Models
 {
-    public class MatchHistorySummary : LeagueApiModel, IMatchHistorySummary
+    public class MatchHistorySummary : ApiModel, IMatchHistorySummary
     {
         public int Assists { get; set; }
 

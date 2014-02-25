@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Champion
 {
-    public class SkinDto
+    internal class SkinDto
     {
         [JsonProperty("id")]
         public string Id { get; set; }

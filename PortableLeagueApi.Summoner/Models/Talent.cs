@@ -5,7 +5,7 @@ using PortableLeagueApi.Summoner.Models.DTO;
 
 namespace PortableLeagueApi.Summoner.Models
 {
-    public class Talent : LeagueApiModel, ITalent
+    public class Talent : ApiModel, ITalent
     {
         public int Id { get; set; }
 
