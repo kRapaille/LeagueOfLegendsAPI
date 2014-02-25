@@ -8,6 +8,7 @@ using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.Static.Champion;
 using PortableLeagueApi.Static.Constants;
 using PortableLeagueApi.Static.Enums;
+using PortableLeagueApi.Static.Models.Champion;
 using PortableLeagueApi.Static.Models.DTO;
 using PortableLeagueApi.Static.Models.DTO.Champion;
 using PortableLeagueApi.Static.Models.DTO.Item;
@@ -25,6 +26,7 @@ namespace PortableLeagueApi.Static.Services
             ILeagueApiConfiguration config)
             : base(config, VersionEnum.V1, "static-data", false)
         { 
+            ChampionList.CreateMap(AutoMapperService);
 
 #if DEBUG
             AutoMapperService.AssertConfigurationIsValid();
