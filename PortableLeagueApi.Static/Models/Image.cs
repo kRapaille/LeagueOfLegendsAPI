@@ -23,8 +23,7 @@ namespace PortableLeagueApi.Static.Models
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            autoMapperService.CreateMap<ImageDto, Image>();
-            autoMapperService.CreateMap<ImageDto, IImage>().As<Image>();
+            autoMapperService.CreateApiModelMapWithInterface<ImageDto, Image, IImage>();
         }
     }
 }

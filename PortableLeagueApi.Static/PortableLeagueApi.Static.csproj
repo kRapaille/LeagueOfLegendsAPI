@@ -69,6 +69,7 @@
     <Compile Include="Models\DTO\Item\MetaDataDto.cs" />
     <Compile Include="Models\DTO\Mastery\MasteryDto.cs" />
     <Compile Include="Models\DTO\Mastery\MasteryTreeDto.cs" />
+    <Compile Include="Models\Realm.cs" />
     <Compile Include="Models\DTO\RealmDto.cs" />
     <Compile Include="Models\DTO\Rune\RuneDto.cs" />
     <Compile Include="Models\DTO\Rune\RuneTypeDto.cs" />

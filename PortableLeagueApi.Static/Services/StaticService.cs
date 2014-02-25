@@ -5,9 +5,11 @@ using PortableLeagueApi.Core.Helpers;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.Static;
 using PortableLeagueApi.Interfaces.Static.Champion;
 using PortableLeagueApi.Static.Constants;
 using PortableLeagueApi.Static.Enums;
+using PortableLeagueApi.Static.Models;
 using PortableLeagueApi.Static.Models.Champion;
 using PortableLeagueApi.Static.Models.DTO;
 using PortableLeagueApi.Static.Models.DTO.Champion;
@@ -27,6 +29,7 @@ namespace PortableLeagueApi.Static.Services
             : base(config, VersionEnum.V1, "static-data", false)
         { 
             ChampionList.CreateMap(AutoMapperService);
+            Realm.CreateMap(AutoMapperService);
 
 #if DEBUG
             AutoMapperService.AssertConfigurationIsValid();
@@ -213,10 +216,10 @@ namespace PortableLeagueApi.Static.Services
                     masteryId));
         }
 
-        public async Task<RealmDto> GetRealmAsync(
+        public async Task<IRealm> GetRealmAsync(
             RegionEnum? region = null)
         {
-            return await GetResponseAsync<RealmDto>(
+            return await GetResponseAsync<RealmDto, IRealm>(
                 BuildUri(region, "realm"));
         }
 

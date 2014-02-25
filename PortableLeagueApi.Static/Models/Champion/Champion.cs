@@ -45,6 +45,14 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
+            Models.Image.CreateMap(autoMapperService);
+            Models.Champion.Info.CreateMap(autoMapperService);
+            Models.Champion.Passive.CreateMap(autoMapperService);
+            Models.Champion.Recommended.CreateMap(autoMapperService);
+            Skin.CreateMap(autoMapperService);
+            Spell.CreateMap(autoMapperService);
+            Models.Champion.Stats.CreateMap(autoMapperService);
+
             autoMapperService.CreateApiModelMapWithInterface<ChampionDto, Champion, IChampion>();
         }
     }

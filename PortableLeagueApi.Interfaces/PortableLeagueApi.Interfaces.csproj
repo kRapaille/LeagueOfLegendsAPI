@@ -58,6 +58,7 @@
     <Compile Include="Core\IHttpRequestService.cs" />
     <Compile Include="Core\IHttpResponseMessage.cs" />
     <Compile Include="Core\IApiModel.cs" />
+    <Compile Include="Static\IRealm.cs" />
     <Compile Include="Static\Champion\IBlock.cs" />
     <Compile Include="League\ILeague.cs" />
     <Compile Include="League\ILeagueItem.cs" />
