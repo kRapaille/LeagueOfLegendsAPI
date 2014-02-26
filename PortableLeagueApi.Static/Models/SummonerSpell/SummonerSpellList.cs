@@ -8,7 +8,7 @@ namespace PortableLeagueApi.Static.Models.SummonerSpell
 {
     public class SummonerSpellList : ApiModel, ISummonerSpellList
     {
-        public Dictionary<string, ISummonerSpell> Data { get; set; }
+        public IDictionary<string, ISummonerSpell> Data { get; set; }
 
         public string Type { get; set; }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Stats
@@ -12,6 +13,6 @@ namespace PortableLeagueApi.Interfaces.Stats
         /// <summary>
         /// List of aggregated stats summarized by champion.
         /// </summary>
-        IChampionStats[] Champions { get; set; }
+        IList<IChampionStats> Champions { get; set; }
     }
 }

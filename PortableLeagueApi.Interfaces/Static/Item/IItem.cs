@@ -17,7 +17,7 @@ namespace PortableLeagueApi.Interfaces.Static.Item
         IImage Image { get; set; }
         bool InStore { get; set; }
         IList<string> Into { get; set; }
-        Dictionary<string, bool> Maps { get; set; }
+        IDictionary<string, bool> Maps { get; set; }
         string Name { get; set; }
         string Plaintext { get; set; }
         string RequiredChampion { get; set; }

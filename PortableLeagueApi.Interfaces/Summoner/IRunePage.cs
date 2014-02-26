@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Summoner
@@ -11,7 +12,7 @@ namespace PortableLeagueApi.Interfaces.Summoner
         /// <summary>
         /// List of rune slots associated with the rune page.
         /// </summary>
-        IRuneSlot[] Slots { get; set; }
+        IList<IRuneSlot> Slots { get; set; }
         /// <summary>
         /// Rune page name.
         /// </summary>

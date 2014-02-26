@@ -1,4 +1,5 @@
-﻿using PortableLeagueApi.Interfaces.Core;
+﻿using System.Collections.Generic;
+using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
@@ -11,7 +12,7 @@ namespace PortableLeagueApi.Interfaces.Summoner
         /// <summary>
         /// List of mastery page talents associated with the mastery page.
         /// </summary>
-        ITalent[] Talents { get; set; }
+        IList<ITalent> Talents { get; set; }
         /// <summary>
         /// Mastery page name.
         /// </summary>

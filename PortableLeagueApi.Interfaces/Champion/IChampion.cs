@@ -1,9 +1,8 @@
-﻿using PortableLeagueApi.Interfaces.Core;
-using PortableLeagueApi.Interfaces.Extensions;
+﻿using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Champion
 {
-    public interface IChampion: IApiModel, IHasChampionId
+    public interface IChampion: IHasChampionId
     {
         /// <summary>
         /// Champion name.

@@ -19,7 +19,7 @@ namespace PortableLeagueApi.Static.Models
 
         public string LegacyScript { get; set; }
 
-        public Dictionary<string, string> LatestChangedVersionForEachDataType { get; set; }
+        public IDictionary<string, string> LatestChangedVersionForEachDataType { get; set; }
 
         public int ProfileIconMax { get; set; }
 

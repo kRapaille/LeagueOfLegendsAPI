@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Static.Models.Item
     {
         public IBasicData Basic { get; set; }
 
-        public Dictionary<string, IItem> Data { get; set; }
+        public IDictionary<string, IItem> Data { get; set; }
 
         public IList<IGroup> Groups { get; set; }
 

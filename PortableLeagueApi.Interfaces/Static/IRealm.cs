@@ -33,7 +33,7 @@ namespace PortableLeagueApi.Interfaces.Static
         /// <summary>
         /// Latest changed version for each data type listed.
         /// </summary>
-        Dictionary<string, string> LatestChangedVersionForEachDataType { get; set; }
+        IDictionary<string, string> LatestChangedVersionForEachDataType { get; set; }
 
         /// <summary>
         /// Special behavior number identifying the largest profileicon id that can be used under 500. Any profileicon that is requested between this number and 500 should be mapped to 0.

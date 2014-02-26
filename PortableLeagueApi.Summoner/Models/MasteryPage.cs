@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Summoner.Models
     {
         public long Id { get; set; }
 
-        public ITalent[] Talents { get; set; }
+        public IList<ITalent>Talents { get; set; }
 
         public string Name { get; set; }
 

@@ -15,9 +15,9 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         public string Version { get; set; }
 
-        public Dictionary<string, string> Keys { get; set; }
+        public IDictionary<string, string> Keys { get; set; }
 
-        public Dictionary<string, IChampion> Data { get; set; }
+        public IDictionary<string, IChampion> Data { get; set; }
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {

@@ -11,8 +11,8 @@ namespace PortableLeagueApi.Interfaces.Static.Champion
 
         string Version { get; set; }
 
-        Dictionary<string, string> Keys { get; set; }
+        IDictionary<string, string> Keys { get; set; }
 
-        Dictionary<string, IChampion> Data { get; set; }
+        IDictionary<string, IChampion> Data { get; set; }
     }
 }

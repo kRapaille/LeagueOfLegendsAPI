@@ -32,7 +32,7 @@ namespace PortableLeagueApi.Static.Models
 
         public IList<string> Into { get; set; }
 
-        public Dictionary<string, bool> Maps { get; set; }
+        public IDictionary<string, bool> Maps { get; set; }
 
         public string Name { get; set; }
 

@@ -41,7 +41,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Champion")]
-        public async void GetFreeChampionsTest()
+        public async void GetFreeChampionsTestAsync()
         {
             var freeChampions = await _leagueAPI.Champion.GetChampionsAsync(true);
             
@@ -51,7 +51,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Champion")]
-        public async void GetChampionsTest()
+        public async void GetChampionsTestAsync()
         {
             var freeChampions = await _leagueAPI.Champion.GetChampionsAsync(false);
 
@@ -60,7 +60,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Game")]
-        public async void GetRecentGamesBySummonerIdTest()
+        public async void GetRecentGamesBySummonerIdTestAsync()
         {
             var result = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
 
@@ -72,7 +72,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Game")]
-        public async void GetSummonerAndRecentGamesTest()
+        public async void GetSummonerAndRecentGamesTestAsync()
         {
             var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
 
@@ -85,7 +85,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("League")]
-        public async void RetrievesChallengerTierLeaguesTest()
+        public async void RetrievesChallengerTierLeaguesTestAsync()
         {
             var result = await _leagueAPI.League.RetrievesChallengerTierLeaguesAsync(LeagueTypeEnum.RankedSolo5X5);
             
@@ -94,7 +94,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("League")]
-        public async void RetrievesLeaguesEntryDataForSummonerTest()
+        public async void RetrievesLeaguesEntryDataForSummonerTestAsync()
         {
             List<ILeagueItem> result;
 
@@ -118,7 +118,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("League")]
-        public async void RetrievesLeaguesDataForSummonerTest()
+        public async void RetrievesLeaguesDataForSummonerTestAsync()
         {
             List<ILeague> result;
 
@@ -142,7 +142,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Stats")]
-        public async void GetPlayerStatsSummariesBySummonerIdTest()
+        public async void GetPlayerStatsSummariesBySummonerIdTestAsync()
         {
             var result = await _leagueAPI.Stats.GetPlayerStatsSummariesBySummonerIdAsync(19231046);
 
@@ -151,7 +151,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Stats")]
-        public async void GetRankedStatsSummariesBySummonerIdTest()
+        public async void GetRankedStatsSummariesBySummonerIdTestAsync()
         {
             IRankedStats result;
 
@@ -174,7 +174,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Summoner")]
-        public async void GetMasteryPagesBySummonerIdTest()
+        public async void GetMasteryPagesBySummonerIdTestAsync()
         {
             var result = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(19332836);
 
@@ -192,7 +192,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Summoner")]
-        public async void GetRunePagesBySummonerIdTest()
+        public async void GetRunePagesBySummonerIdTestAsync()
         {
             var result = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(19332836);
 
@@ -210,7 +210,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Summoner")]
-        public async void GetSummonerByNameTest()
+        public async void GetSummonerByNameTestAsync()
         {
             var result = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
 
@@ -219,7 +219,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Summoner")]
-        public async void GetSummonerByIdTest()
+        public async void GetSummonerByIdTestAsync()
         {
             var result = await _leagueAPI.Summoner.GetSummonerByIdAsync(19231046);
 
@@ -228,7 +228,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Summoner")]
-        public async void GetSummonerByIdsTest()
+        public async void GetSummonerByIdsTestAsync()
         {
             var result = await _leagueAPI.Summoner.GetSummonerByIdAsync(new List<long> { 19231046, 19231045 });
 
@@ -237,7 +237,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Summoner")]
-        public async void GetSummonerNamesByIdsTest()
+        public async void GetSummonerNamesByIdsTestAsync()
         {
             var result = await _leagueAPI.Summoner.GetSummonerNamesByIdAsync(new List<long> { 19231046, 19231045 });
 
@@ -246,7 +246,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Summoner")]
-        public async void GetSummonerNamesByIdTest()
+        public async void GetSummonerNamesByIdTestAsync()
         {
             var result = await _leagueAPI.Summoner.GetSummonerNamesByIdAsync(19231046);
 
@@ -255,7 +255,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Team")]
-        public async void GetTeamsBySummonerIdTest()
+        public async void GetTeamsBySummonerIdTestAsync()
         {
             var result = await _leagueAPI.Team.GetTeamsBySummonerIdAsync(19231046);
 
@@ -264,7 +264,7 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Team")]
-        public async void GetTeamsByTeamIdsTest()
+        public async void GetTeamsByTeamIdsTestAsync()
         {
             var result = await _leagueAPI.Team.GetTeamsByTeamIdsAsync(new []
             {
