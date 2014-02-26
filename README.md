@@ -16,7 +16,7 @@ PM> Install-Package Remake.PortableLeagueAPI
 var leagueAPI = new LeagueApi("YOUR API KEY HERE", RegionEnum.Euw, true);
 
 var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
-var recentGames = await summoner.GetRecentGames();
+var recentGames = await summoner.GetRecentGamesAsync();
 
 var item = await _leagueAPI.Static.GetItemsAsync(
   1001, 
