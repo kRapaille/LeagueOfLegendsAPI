@@ -6,44 +6,56 @@ using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PortableLeagueApi.Core.Constants;
-using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Helpers;
-using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Core.Services
 {
     public abstract class BaseService
     {
         private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/lol/");
-        private static readonly List<DateTime> LastRequests = new List<DateTime>();
+        private static readonly Dictionary<string, List<DateTime>> LastRequests = new Dictionary<string, List<DateTime>>();
+
+        private readonly ILeagueApiConfiguration _apiConfiguration;
+        
+        private readonly bool _isLimitedByRateLimit;
+        private VersionEnum? _version;
 
         private const int MaxRequestsPer10Sec = 10;
         private const int MaxRequestsPer10Min = 500;
-        
-        public static IHttpRequestService HttpRequestService { private get; set; }
-        public static string Key { private get; set; }
-        public static RegionEnum? DefaultRegion { private get; set; }
-        public static bool WaitToAvoidRateLimit { get; set; }
 
-        protected bool IsLimitedByRateLimit { get; private set; }
-        protected VersionEnum? Version { get; private set; }
+        protected readonly AutoMapperService AutoMapperService;
+
         protected string Prefix { get; private set; }
 
         protected string VersionText
         {
-            get
-            {
-                return Version.HasValue ? VersionConsts.Versions[Version.Value] : string.Empty;
+            get {
+                return _version.HasValue ? VersionConsts.Versions[_version.Value] : string.Empty;
             }
         }
 
-        protected BaseService(VersionEnum? version, string prefix, bool isLimitedByRateLimit = true)
+        protected BaseService(
+            ILeagueApiConfiguration config,
+            VersionEnum? version, 
+            string prefix,
+            bool isLimitedByRateLimit = true)
         {
-            Version = version;
-            IsLimitedByRateLimit = true;
+            _apiConfiguration = config;
+
+            _version = version;
             Prefix = prefix;
-            IsLimitedByRateLimit = isLimitedByRateLimit;
+            _isLimitedByRateLimit = isLimitedByRateLimit;
+
+            if (!LastRequests.ContainsKey(_apiConfiguration.Key))
+                LastRequests[_apiConfiguration.Key] = new List<DateTime>();
+
+            AutoMapperService = new AutoMapperService(config);
+
+            AutoMapperService.CreateMap<long, DateTime>()
+                .ConvertUsing(DateTime.FromBinary);
         }
 
         protected virtual Uri BuildUri(RegionEnum? region, string relativeUrl)
@@ -61,22 +73,38 @@ namespace PortableLeagueApi.Core.Services
         {
             var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
 
-            var keyParameter = string.Format("api_key={0}", Key);
+            var keyParameter = string.Format("api_key={0}", _apiConfiguration.Key);
             uriBuilder.AddQueryParameter(keyParameter);
 
             return uriBuilder.Uri;
         }
 
-        protected async Task<T> GetResponse<T>(RegionEnum? region, string relativeUrl) where T : class
+        protected async Task<TDestination> GetResponseAsync<TSource, TDestination>(RegionEnum? region, string relativeUrl) 
+            where TSource : class
         {
-            return await GetResponse<T>(BuildUri(region, relativeUrl));
+            var result = await GetResponseAsync<TSource>(BuildUri(region, relativeUrl));
+
+            return AutoMapperService.Map<TSource, TDestination>(result);
         }
 
-        protected async Task<T> GetResponse<T>(Uri uri) where T : class
+        protected async Task<TDestination> GetResponseAsync<TSource, TDestination>(Uri uri)
+            where TSource : class
+        {
+            var result = await GetResponseAsync<TSource>(uri);
+
+            return AutoMapperService.Map<TSource, TDestination>(result);
+        }
+
+        protected async Task<T> GetResponseAsync<T>(RegionEnum? region, string relativeUrl) where T : class
+        {
+            return await GetResponseAsync<T>(BuildUri(region, relativeUrl));
+        }
+
+        protected virtual async Task<T> GetResponseAsync<T>(Uri uri) where T : class
         {
             await ManageRateLimit();
 
-            var response = await HttpRequestService.SendRequest<T>(uri);
+            var response = await _apiConfiguration.HttpRequestService.SendRequestAsync(uri);
 
             T result;
 
@@ -125,12 +153,12 @@ namespace PortableLeagueApi.Core.Services
         {
             var delayInMs = 0;
 
-            if (WaitToAvoidRateLimit && IsLimitedByRateLimit)
+            if (_apiConfiguration.WaitToAvoidRateLimit && _isLimitedByRateLimit)
             {
-                LastRequests.Add(DateTime.Now);
+                LastRequests[_apiConfiguration.Key].Add(DateTime.Now);
 
                 var tenMinutesAgo = DateTime.Now.AddMinutes(-10);
-                LastRequests.RemoveAll(x => x < tenMinutesAgo);
+                LastRequests[_apiConfiguration.Key].RemoveAll(x => x < tenMinutesAgo);
                 
                 delayInMs = CalculateDelay(MaxRequestsPer10Min, 600, delayInMs);
                 delayInMs = CalculateDelay(MaxRequestsPer10Sec, 10, delayInMs);
@@ -145,11 +173,11 @@ namespace PortableLeagueApi.Core.Services
             return Task.Delay(delayInMs);
         }
 
-        private static int CalculateDelay(int maxRequestsInGivenTime, int givenTimeInSeconds, int currentDelay)
+        private int CalculateDelay(int maxRequestsInGivenTime, int givenTimeInSeconds, int currentDelay)
         {
             var givenTimeAgo = DateTime.Now.AddSeconds(-(givenTimeInSeconds + 1));
 
-            var requestsInGivenTime = LastRequests
+            var requestsInGivenTime = LastRequests[_apiConfiguration.Key]
                 .Where(x => x >= givenTimeAgo)
                 .OrderBy(x => x)
                 .ToList();
@@ -172,7 +200,7 @@ namespace PortableLeagueApi.Core.Services
 
         protected RegionEnum GetRegion(RegionEnum? region)
         {
-            region = region.HasValue ? region : DefaultRegion;
+            region = region.HasValue ? region : _apiConfiguration.DefaultRegion;
 
             if (region == null)
                 throw new ArgumentException("There's no default region");
@@ -182,7 +210,7 @@ namespace PortableLeagueApi.Core.Services
         
         protected string GetRegionAsString(RegionEnum? region)
         {
-            return GetRegion(region).ToString().ToLower();
+            return RegionConsts.Regions[GetRegion(region)];
         }
     }
 }

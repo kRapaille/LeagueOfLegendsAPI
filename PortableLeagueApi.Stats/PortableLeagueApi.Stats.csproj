@@ -33,16 +33,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Enums\SeasonEnum.cs" />
-    <Compile Include="Models\Stats\AggregatedStatsDto.cs" />
-    <Compile Include="Models\Stats\ChampionStatsDto.cs" />
-    <Compile Include="Models\Stats\PlayerStatsSummaryDto.cs" />
-    <Compile Include="Models\Stats\RankedStatsDto.cs" />
+    <Compile Include="Extensions\PlayerStatsSummariesExtensions.cs" />
+    <Compile Include="Extensions\RankedStatsSummariesExtensions.cs" />
+    <Compile Include="Models\AggregatedStats.cs" />
+    <Compile Include="Models\ChampionStats.cs" />
+    <Compile Include="Models\DTO\AggregatedStatsDto.cs" />
+    <Compile Include="Models\DTO\ChampionStatsDto.cs" />
+    <Compile Include="Models\DTO\PlayerStatsSummaryDto.cs" />
+    <Compile Include="Models\DTO\RankedStatsDto.cs" />
+    <Compile Include="Models\PlayerStatsSummary.cs" />
+    <Compile Include="Models\RankedStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\StatsServiceExtensions.cs" />
     <Compile Include="Services\StatsService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.1.1\lib\portable-windows8+net40+wp8+sl5+MonoAndroid+MonoTouch\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -54,6 +61,10 @@
     <ProjectReference Include="..\PortableLeagueApi.Core\PortableLeagueApi.Core.csproj">
       <Project>{6CC87881-42FB-43D2-8939-F90B4FC7B29B}</Project>
       <Name>PortableLeagueApi.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj">
+      <Project>{DF6B5C82-017D-477D-8780-48E05CFAB0F8}</Project>
+      <Name>PortableLeagueApi.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

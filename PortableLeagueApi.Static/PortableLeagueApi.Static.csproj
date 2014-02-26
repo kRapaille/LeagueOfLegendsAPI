@@ -34,42 +34,71 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Constants\LanguageCodeConsts.cs" />
-    <Compile Include="Enums\ChampDataEnum.cs" />
-    <Compile Include="Enums\ItemDataEnum.cs" />
-    <Compile Include="Enums\LanguageEnum.cs" />
-    <Compile Include="Enums\MasteryDataEnum.cs" />
-    <Compile Include="Enums\RuneDataEnum.cs" />
-    <Compile Include="Enums\SpellDataEnum.cs" />
-    <Compile Include="Models\Static\Champion\BlockDto.cs" />
-    <Compile Include="Models\Static\Champion\BlockItemDto.cs" />
-    <Compile Include="Models\Static\Champion\ChampionDto.cs" />
-    <Compile Include="Models\Static\Champion\InfoDto.cs" />
-    <Compile Include="Models\Static\Champion\PassiveDto.cs" />
-    <Compile Include="Models\Static\Champion\RecommendedDto.cs" />
-    <Compile Include="Models\Static\Champion\SkinDto.cs" />
-    <Compile Include="Models\Static\Champion\SpellDto.cs" />
-    <Compile Include="Models\Static\Champion\StatsDto.cs" />
-    <Compile Include="Models\Static\ImageDto.cs" />
-    <Compile Include="Models\Static\BasicDataDto.cs" />
-    <Compile Include="Models\Static\BasicDataStatsDto.cs" />
-    <Compile Include="Models\Static\GoldDto.cs" />
-    <Compile Include="Models\Static\Item\GroupDto.cs" />
-    <Compile Include="Models\Static\Item\ItemDto.cs" />
-    <Compile Include="Models\Static\Item\ItemRuneDto.cs" />
-    <Compile Include="Models\Static\Item\ItemTreeDto.cs" />
-    <Compile Include="Models\Static\Item\MetaDataDto.cs" />
-    <Compile Include="Models\Static\Mastery\MasteryDto.cs" />
-    <Compile Include="Models\Static\Mastery\MasteryTreeDto.cs" />
-    <Compile Include="Models\Static\RealmDto.cs" />
-    <Compile Include="Models\Static\Rune\RuneDto.cs" />
-    <Compile Include="Models\Static\Rune\RuneTypeDto.cs" />
-    <Compile Include="Models\Static\LevelTipDto.cs" />
-    <Compile Include="Models\Static\SummonerSpell\SummonerSpellDto.cs" />
-    <Compile Include="Models\Static\SummonerSpell\SummonerSpellVarsDto.cs" />
+    <Compile Include="Models\BasicData.cs" />
+    <Compile Include="Models\BasicDataStats.cs" />
+    <Compile Include="Models\Champion\BlockItem.cs" />
+    <Compile Include="Models\Champion\Block.cs" />
+    <Compile Include="Models\Champion\Champion.cs" />
+    <Compile Include="Models\Champion\ChampionList.cs" />
+    <Compile Include="Models\Champion\Info.cs" />
+    <Compile Include="Models\Champion\Passive.cs" />
+    <Compile Include="Models\Champion\Skin.cs" />
+    <Compile Include="Models\Champion\Spell.cs" />
+    <Compile Include="Models\Champion\Stats.cs" />
+    <Compile Include="Models\DTO\Champion\BlockDto.cs" />
+    <Compile Include="Models\DTO\Champion\BlockItemDto.cs" />
+    <Compile Include="Models\DTO\Champion\ChampionDto.cs" />
+    <Compile Include="Models\DTO\Champion\InfoDto.cs" />
+    <Compile Include="Models\DTO\Champion\PassiveDto.cs" />
+    <Compile Include="Models\DTO\Champion\RecommendedDto.cs" />
+    <Compile Include="Models\DTO\Champion\SkinDto.cs" />
+    <Compile Include="Models\DTO\Champion\SpellDto.cs" />
+    <Compile Include="Models\DTO\Champion\StatsDto.cs" />
+    <Compile Include="Models\DTO\ImageDto.cs" />
+    <Compile Include="Models\DTO\BasicDataDto.cs" />
+    <Compile Include="Models\DTO\BasicDataStatsDto.cs" />
+    <Compile Include="Models\DTO\GoldDto.cs" />
+    <Compile Include="Models\Gold.cs" />
+    <Compile Include="Models\ItemRune.cs" />
+    <Compile Include="Models\DTO\Item\GroupDto.cs" />
+    <Compile Include="Models\DTO\Item\ItemDto.cs" />
+    <Compile Include="Models\DTO\ItemRuneDto.cs" />
+    <Compile Include="Models\DTO\Item\ItemTreeDto.cs" />
+    <Compile Include="Models\DTO\Item\MetaDataDto.cs" />
+    <Compile Include="Models\DTO\Mastery\MasteryDto.cs" />
+    <Compile Include="Models\DTO\Mastery\MasteryTreeDto.cs" />
+    <Compile Include="Models\Item\Group.cs" />
+    <Compile Include="Models\Item\Item.cs" />
+    <Compile Include="Models\Item\ItemList.cs" />
+    <Compile Include="Models\Item\ItemTree.cs" />
+    <Compile Include="Models\Item\MetaData.cs" />
+    <Compile Include="Models\Mastery\Mastery.cs" />
+    <Compile Include="Models\Mastery\MasteryList.cs" />
+    <Compile Include="Models\Mastery\MasteryTree.cs" />
+    <Compile Include="Models\Realm.cs" />
+    <Compile Include="Models\DTO\RealmDto.cs" />
+    <Compile Include="Models\DTO\Rune\RuneDto.cs" />
+    <Compile Include="Models\DTO\Rune\RuneTypeDto.cs" />
+    <Compile Include="Models\DTO\LevelTipDto.cs" />
+    <Compile Include="Models\DTO\SummonerSpell\SummonerSpellDto.cs" />
+    <Compile Include="Models\DTO\SummonerSpell\SummonerSpellVarsDto.cs" />
+    <Compile Include="Models\Champion\Recommended.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\LevelTip.cs" />
+    <Compile Include="Models\Rune\Rune.cs" />
+    <Compile Include="Models\Rune\RuneList.cs" />
+    <Compile Include="Models\Rune\RuneType.cs" />
+    <Compile Include="Models\SummonerSpell\SummonerSpell.cs" />
+    <Compile Include="Models\SummonerSpell\SummonerSpellList.cs" />
+    <Compile Include="Models\SummonerSpell\SummonerSpellVars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\StaticService.cs" />
+    <Compile Include="Extensions\StaticServiceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.1.1\lib\portable-windows8+net40+wp8+sl5+MonoAndroid+MonoTouch\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -82,7 +111,12 @@
       <Project>{6CC87881-42FB-43D2-8939-F90B4FC7B29B}</Project>
       <Name>PortableLeagueApi.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj">
+      <Project>{DF6B5C82-017D-477D-8780-48E05CFAB0F8}</Project>
+      <Name>PortableLeagueApi.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

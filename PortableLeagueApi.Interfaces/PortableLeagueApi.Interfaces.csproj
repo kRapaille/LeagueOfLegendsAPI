@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF6B5C82-017D-477D-8780-48E05CFAB0F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PortableLeagueApi.Interfaces</RootNamespace>
+    <AssemblyName>PortableLeagueApi.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Champion\IChampion.cs" />
+    <Compile Include="Champion\IChampionService.cs" />
+    <Compile Include="Core\ILeagueApiConfiguration.cs" />
+    <Compile Include="Enums\ChampDataEnum.cs" />
+    <Compile Include="Enums\GameModeEnum.cs" />
+    <Compile Include="Enums\ItemDataEnum.cs" />
+    <Compile Include="Enums\LanguageEnum.cs" />
+    <Compile Include="Enums\MasteryDataEnum.cs" />
+    <Compile Include="Enums\PlayerStatSummaryTypeEnum.cs" />
+    <Compile Include="Enums\GameSubTypeEnum.cs" />
+    <Compile Include="Enums\GameTypeEnum.cs" />
+    <Compile Include="Enums\LeagueTypeEnum.cs" />
+    <Compile Include="Enums\MapEnum.cs" />
+    <Compile Include="Enums\RegionEnum.cs" />
+    <Compile Include="Enums\RuneDataEnum.cs" />
+    <Compile Include="Enums\SeasonEnum.cs" />
+    <Compile Include="Enums\SpellDataEnum.cs" />
+    <Compile Include="Enums\TierEnum.cs" />
+    <Compile Include="Enums\VersionEnum.cs" />
+    <Compile Include="Extensions\IHasChampionId.cs" />
+    <Compile Include="Extensions\IHasItemIds.cs" />
+    <Compile Include="Extensions\IHasMasteryId.cs" />
+    <Compile Include="Extensions\IHasRuneId.cs" />
+    <Compile Include="Extensions\IHasSummonerId.cs" />
+    <Compile Include="Extensions\IHasSummonerSpells.cs" />
+    <Compile Include="Game\IGame.cs" />
+    <Compile Include="Game\IGameService.cs" />
+    <Compile Include="Game\IPlayer.cs" />
+    <Compile Include="Game\IRawStats.cs" />
+    <Compile Include="Core\IHttpContent.cs" />
+    <Compile Include="Core\IHttpRequestService.cs" />
+    <Compile Include="Core\IHttpResponseMessage.cs" />
+    <Compile Include="Core\IApiModel.cs" />
+    <Compile Include="Static\IBasicData.cs" />
+    <Compile Include="Static\IBasicDataStats.cs" />
+    <Compile Include="Static\IGold.cs" />
+    <Compile Include="Static\IItemRune.cs" />
+    <Compile Include="Static\IRealm.cs" />
+    <Compile Include="Static\Champion\IBlock.cs" />
+    <Compile Include="League\ILeague.cs" />
+    <Compile Include="League\ILeagueItem.cs" />
+    <Compile Include="League\ILeagueService.cs" />
+    <Compile Include="League\IMiniSeries.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static\Champion\IBlockItem.cs" />
+    <Compile Include="Static\Champion\IChampion.cs" />
+    <Compile Include="Static\Champion\IChampionList.cs" />
+    <Compile Include="Static\Champion\IInfo.cs" />
+    <Compile Include="Static\Champion\IPassive.cs" />
+    <Compile Include="Static\Champion\ISpell.cs" />
+    <Compile Include="Static\Champion\IStats.cs" />
+    <Compile Include="Static\IImage.cs" />
+    <Compile Include="Static\Champion\IRecommended.cs" />
+    <Compile Include="Static\Champion\ISkin.cs" />
+    <Compile Include="Static\ILevelTip.cs" />
+    <Compile Include="Static\IStaticService.cs" />
+    <Compile Include="Static\Item\IGroup.cs" />
+    <Compile Include="Static\Item\IItem.cs" />
+    <Compile Include="Static\Item\IItemList.cs" />
+    <Compile Include="Static\Item\IItemTree.cs" />
+    <Compile Include="Static\Item\IMetaData.cs" />
+    <Compile Include="Static\Mastery\IMastery.cs" />
+    <Compile Include="Static\Mastery\IMasteryList.cs" />
+    <Compile Include="Static\Mastery\IMasteryTree.cs" />
+    <Compile Include="Static\Rune\IRune.cs" />
+    <Compile Include="Static\Rune\IRuneList.cs" />
+    <Compile Include="Static\Rune\IRuneType.cs" />
+    <Compile Include="Static\SummonerSpell\ISummonerSpell.cs" />
+    <Compile Include="Static\SummonerSpell\ISummonerSpellList.cs" />
+    <Compile Include="Static\SummonerSpell\ISummonerSpellVars.cs" />
+    <Compile Include="Summoner\IMasteryPage.cs" />
+    <Compile Include="Summoner\IRune.cs" />
+    <Compile Include="Summoner\IRunePage.cs" />
+    <Compile Include="Summoner\IRuneSlot.cs" />
+    <Compile Include="Summoner\ISummoner.cs" />
+    <Compile Include="Summoner\ISummonerService.cs" />
+    <Compile Include="Summoner\ITalent.cs" />
+    <Compile Include="Stats\IAggregatedStats.cs" />
+    <Compile Include="Stats\IChampionStats.cs" />
+    <Compile Include="Stats\IPlayerStatsSummary.cs" />
+    <Compile Include="Stats\IRankedStats.cs" />
+    <Compile Include="Stats\IStatsService.cs" />
+    <Compile Include="Team\IMatchHistorySummary.cs" />
+    <Compile Include="Team\IMessageOfDay.cs" />
+    <Compile Include="Team\IRoster.cs" />
+    <Compile Include="Team\ITeam.cs" />
+    <Compile Include="Team\ITeamMemberInfo.cs" />
+    <Compile Include="Team\ITeamService.cs" />
+    <Compile Include="Team\ITeamStatDetail.cs" />
+    <Compile Include="Team\ITeamStatSummary.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

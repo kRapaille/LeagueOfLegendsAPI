@@ -59,7 +59,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FakeHttpRequestService.cs" />
-    <Compile Include="FakeResolver.cs" />
     <Compile Include="OnlineLeagueAPIServiceTests.cs" />
     <Compile Include="LeagueAPIServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +90,10 @@
     <ProjectReference Include="..\PortableLeagueApi.Game\PortableLeagueApi.Game.csproj">
       <Project>{7AF96041-02C3-4002-A0D3-529AA24FB8BA}</Project>
       <Name>PortableLeagueApi.Game</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj">
+      <Project>{DF6B5C82-017D-477D-8780-48E05CFAB0F8}</Project>
+      <Name>PortableLeagueApi.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\PortableLeagueApi.League\PortableLeagueApi.League.csproj">
       <Project>{71D95DEB-6EAD-4CBD-99E1-A9B8750CFD6B}</Project>

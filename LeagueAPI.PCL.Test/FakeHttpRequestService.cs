@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using PortableLeagueApi.Core.Interfaces;
 using PortableLeagueApi.Core.Models;
+using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueAPI.Test.Responses;
 
 namespace PortableLeagueAPI.Test
 {
     class FakeHttpRequestService : IHttpRequestService
     {
-        public async Task<IHttpResponseMessage> SendRequest<T>(Uri uri) where T : class
+        public async Task<IHttpResponseMessage> SendRequestAsync(Uri uri)
         {
             string response = null;
 

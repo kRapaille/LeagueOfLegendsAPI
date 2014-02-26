@@ -33,34 +33,45 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Constants\PlayerStatsSummaryTypeConsts.cs" />
+    <Compile Include="Constants\TierConsts.cs" />
+    <Compile Include="Constants\LeagueTypeConsts .cs" />
+    <Compile Include="Constants\GameModeConsts.cs" />
+    <Compile Include="Constants\GameSubTypeConsts.cs" />
+    <Compile Include="Constants\GameTypeConsts.cs" />
+    <Compile Include="Constants\RegionConsts.cs" />
     <Compile Include="Constants\VersionConsts.cs" />
-    <Compile Include="Enums\MapEnum.cs" />
     <Compile Include="Enums\QueueEnum.cs" />
     <Compile Include="Helpers\CoeffArrayJsonConverter.cs" />
     <Compile Include="Helpers\RangeJsonConverter.cs" />
-    <Compile Include="Interfaces\IHttpContent.cs" />
-    <Compile Include="Interfaces\IHttpResponseMessage.cs" />
     <Compile Include="Interfaces\IResolver.cs" />
-    <Compile Include="Interfaces\ISummoner.cs" />
     <Compile Include="Models\APIRequestError.cs" />
     <Compile Include="Models\APIRequestException.cs" />
     <Compile Include="Helpers\UriExtensions.cs" />
-    <Compile Include="Interfaces\IHttpRequestService.cs" />
-    <Compile Include="Enums\RegionEnum.cs" />
-    <Compile Include="Enums\VersionEnum.cs" />
     <Compile Include="Models\HttpContentWrapper.cs" />
     <Compile Include="Models\HttpResponseMessageWrapper.cs" />
-    <Compile Include="Models\IoC\IoC.cs" />
+    <Compile Include="Models\LeagueApiConfiguration.cs" />
+    <Compile Include="Models\ApiModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AutoMapperService.cs" />
     <Compile Include="Services\BaseService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.1.1\lib\portable-windows8+net40+wp8+sl5+MonoAndroid+MonoTouch\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj">
+      <Project>{df6b5c82-017d-477d-8780-48e05cfab0f8}</Project>
+      <Name>PortableLeagueApi.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

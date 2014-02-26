@@ -1,11 +1,17 @@
 ﻿using PortableLeagueAPI.Champion.Services;
-using PortableLeagueApi.Core.Enums;
-using PortableLeagueApi.Core.Interfaces;
-using PortableLeagueApi.Core.Models.IoC;
-using PortableLeagueApi.Core.Services;
+using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Game.Services;
+using PortableLeagueApi.Interfaces.Champion;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.Game;
+using PortableLeagueApi.Interfaces.League;
+using PortableLeagueApi.Interfaces.Static;
+using PortableLeagueApi.Interfaces.Stats;
+using PortableLeagueApi.Interfaces.Summoner;
+using PortableLeagueApi.Interfaces.Team;
 using PortableLeagueApi.League.Services;
-using PortableLeagueAPI.Models.IoC;
+using PortableLeagueAPI.Services;
 using PortableLeagueApi.Static.Services;
 using PortableLeagueApi.Stats.Services;
 using PortableLeagueApi.Summoner.Services;
@@ -13,44 +19,33 @@ using PortableLeagueApi.Team.Services;
 
 namespace PortableLeagueAPI
 {
-    public static class LeagueAPI
+    public class LeagueApi
     {
-        public static ChampionService Champion { get; private set; }
-        public static GameService Game { get; private set; }
-        public static LeagueService League { get; private set; }
-        public static StatsService Stats { get; private set; }
-        public static SummonerService Summoner { get; private set; }
-        public static TeamService Team { get; private set; }
-        public static StaticService Static { get; private set; }
+        public IChampionService Champion { get; private set; }
+        public IGameService Game { get; private set; }
+        public ILeagueService League { get; private set; }
+        public IStatsService Stats { get; private set; }
+        public ISummonerService Summoner { get; private set; }
+        public ITeamService Team { get; private set; }
+        public IStaticService Static { get; private set; }
 
-        public static bool WaitToAvoidRateLimit
-        {
-            set { BaseService.WaitToAvoidRateLimit = value; }
-        }
-
-        public static RegionEnum? DefaultRegion
-        {
-            set { BaseService.DefaultRegion = value; }
-        }
-        
-        public static void Init(
+        public LeagueApi(
             string key,
-            IResolver resolver = null)
+            RegionEnum? region = null,
+            bool waitToAvoidRateLimit = false,
+            IHttpRequestService httpRequestService = null)
         {
-            IoC.Initialize(resolver ?? new LeagueResolver());
+            httpRequestService = httpRequestService ?? new HttpRequestService();
 
-            BaseService.HttpRequestService = IoC.Resolve<IHttpRequestService>();
-            BaseService.Key = key;
+            var leagueApiConfiguration = new LeagueApiConfiguration(key, region, waitToAvoidRateLimit, httpRequestService);
 
-            WaitToAvoidRateLimit = false;
-
-            Champion = ChampionService.Instance;
-            Game = GameService.Instance;
-            League = LeagueService.Instance;
-            Stats = StatsService.Instance;
-            Summoner = SummonerService.Instance;
-            Team = TeamService.Instance;
-            Static = StaticService.Instance;
+            Champion = new ChampionService(leagueApiConfiguration);
+            Game = new GameService(leagueApiConfiguration);
+            League = new LeagueService(leagueApiConfiguration);
+            Stats = new StatsService(leagueApiConfiguration);
+            Summoner = new SummonerService(leagueApiConfiguration);
+            Team = new TeamService(leagueApiConfiguration);
+            Static = new StaticService(leagueApiConfiguration);
         }
     }
 }

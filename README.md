@@ -1,36 +1,32 @@
-LeagueOfLegendsAPI
-==================
+Portable C# Library for [League of Legends API](https://developer.riotgames.com)
 
-Portable C# Library for [League of legends API](https://developer.riotgames.com)
+## Install
 
-Do not hesitate to reach me on twitter **[@kRapaille](http://www.twitter.com/kRapaille)**
+- Register [here](https://developer.riotgames.com/)
 
-Install
--------
+- Install the library from NuGet. You can find it [here](https://www.nuget.org/packages/Remake.PortableLeagueAPI/).
 
-The library is on NuGet. You can find it [here](https://www.nuget.org/packages/Remake.PortableLeagueAPI/).
-
-    PM> Install-Package Remake.PortableLeagueAPI
-
-Init
-----
-```c#
-LeagueAPI.Init("YOUR KEY HERE");
-    
-// Facultative parameters :
-LeagueAPI.DefaultRegion = RegionEnum.Euw;
-LeagueAPI.WaitToAvoidRateLimit = true;
+```
+PM> Install-Package Remake.PortableLeagueAPI
 ```
 
-**Note** : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, you can set the **WaitToAvoidRateLimit** property to true.
-
-Usage
-------
+## Example
 ```c#
-var runePages = await LeagueAPI.Summoner.GetRunePagesBySummonerId(19231046);
+var leagueAPI = new LeagueApi("YOUR API KEY HERE", RegionEnum.Euw, true);
+
+var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
+var recentGames = await summoner.GetRecentGames();
+var item = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
+var imageUrl = await item.Image.GetUrlAsync();
 ```
 
-Disclaimer
-----------
+**Note** : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, set the third paramater in the LeagueAPI constructor to true.
+
+## Disclaimer
 
 This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.
+
+
+## Contact
+
+Do not hesitate to reach me on twitter **[@kRapaille](http://www.twitter.com/kRapaille)** or by **[mail](mailto:myself@kevinrapaille.com)**

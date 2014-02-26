@@ -1,36 +1,37 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using PortableLeagueApi.Core.Enums;
 using PortableLeagueApi.Core.Services;
-using PortableLeagueApi.Game.Models.Game;
+using PortableLeagueApi.Game.Models.DTO;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.Game;
 
 namespace PortableLeagueApi.Game.Services
 {
-    public class GameService : BaseService
+    public class GameService : BaseService, IGameService
     {
-        private GameService() : base(VersionEnum.V1Rev3, "game") { }
-
-        private static GameService _instance;
-
-        public static GameService Instance
+        public GameService(
+            ILeagueApiConfiguration config)
+            : base(config, VersionEnum.V1Rev3, "game")
         {
-            get { return _instance ?? (_instance = new GameService()); }
+            Models.Game.CreateMap(AutoMapperService);
+
+#if DEBUG
+            AutoMapperService.AssertConfigurationIsValid();
+#endif
         }
 
         /// <summary>
         /// Get recent games
         /// </summary>
-        public async Task<IEnumerable<GameDto>> GetRecentGamesBySummonerId(
+        public async Task<IEnumerable<IGame>> GetRecentGamesBySummonerIdAsync(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}/recent",
                 summonerId);
 
-            var recentGamesRoot = await GetResponse<RecentGamesDto>(region, url);
-
-            return recentGamesRoot.Games.AsEnumerable();
+            return await GetResponseAsync<RecentGamesDto, IEnumerable<IGame>>(region, url);
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using PortableLeagueApi.Core.Enums;
+using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Core.Constants
 {
-    public class VersionConsts
+    internal class VersionConsts
     {
         public const string V1 = "v1";
         public const string V1Rev1 = "v1.1";
@@ -13,7 +13,7 @@ namespace PortableLeagueApi.Core.Constants
         public const string V2Rev2 = "v2.2";
         public const string V2Rev3 = "v2.3";
 
-        public static readonly Dictionary<VersionEnum, string> Versions = new Dictionary<VersionEnum, string>
+        internal static readonly Dictionary<VersionEnum, string> Versions = new Dictionary<VersionEnum, string>
         {
             { VersionEnum.V1, V1 },
             { VersionEnum.V1Rev1, V1Rev1 },

@@ -1,33 +1,34 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using PortableLeagueAPI.Champion.Models.Champion;
-using PortableLeagueApi.Core.Enums;
+using PortableLeagueAPI.Champion.Models.DTO;
 using PortableLeagueApi.Core.Services;
+using PortableLeagueApi.Interfaces.Champion;
+using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueAPI.Champion.Services
 {
-    public class ChampionService : BaseService
+    public class ChampionService : BaseService, IChampionService
     {
-        private ChampionService(): base(VersionEnum.V1Rev1, "champion") { }
-
-        private static ChampionService _instance;
-        
-        public static ChampionService Instance
+        public ChampionService(
+            ILeagueApiConfiguration config)
+            : base(config, VersionEnum.V1Rev1, "champion")
         {
-            get { return _instance ?? (_instance = new ChampionService()); }
+            Models.Champion.CreateMap(AutoMapperService);
+
+#if DEBUG
+            AutoMapperService.AssertConfigurationIsValid();
+#endif
         }
 
-        public async Task<IEnumerable<ChampionDto>> GetChampions(
+        public async Task<IEnumerable<IChampion>> GetChampionsAsync(
             bool freeToPlay,
             RegionEnum? region = null)
         {
             var url = string.Format("?freeToPlay={0}",
                 freeToPlay);
 
-            var championsRoot = await GetResponse<ChampionListDto>(region, url);
-
-            return championsRoot.Champions.AsEnumerable();
+            return await GetResponseAsync<ChampionListDto, IEnumerable<IChampion>>(region, url);
         }
     }
 }
