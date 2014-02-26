@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Game.Services;
 using PortableLeagueApi.Interfaces.Core;
@@ -11,13 +12,15 @@ namespace PortableLeagueApi.Game.Extensions
 {
     public static class RecentGamesExtensions
     {
-        private static async Task<IEnumerable<IGame>> GetRecentGamesAsync(
+        private static Task<IEnumerable<IGame>> GetRecentGames(
             IApiModel leagueModel,
             long summonerId,
             RegionEnum? region = null)
         {
+            if (leagueModel == null) throw new ArgumentNullException("leagueModel");
+
             var gameService = new GameService(leagueModel.ApiConfiguration);
-            return await gameService.GetRecentGamesBySummonerIdAsync(summonerId, region);
+            return gameService.GetRecentGamesBySummonerIdAsync(summonerId, region);
         }
 
         /// <summary>
@@ -27,7 +30,7 @@ namespace PortableLeagueApi.Game.Extensions
             this IHasSummonerId summoner,
             RegionEnum? region = null)
         {
-            return await GetRecentGamesAsync(summoner, summoner.SummonerId, region);
+            return await GetRecentGames(summoner, summoner.SummonerId, region);
         }
 
         /// <summary>
@@ -37,7 +40,7 @@ namespace PortableLeagueApi.Game.Extensions
             this IRoster roster,
             RegionEnum? region = null)
         {
-            return await GetRecentGamesAsync(roster, roster.OwnerId, region);
+            return await GetRecentGames(roster, roster.OwnerId, region);
         }
     }
 }

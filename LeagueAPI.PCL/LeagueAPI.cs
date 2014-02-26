@@ -1,4 +1,5 @@
-﻿using PortableLeagueAPI.Champion.Services;
+﻿using System;
+using PortableLeagueAPI.Champion.Services;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Game.Services;
 using PortableLeagueApi.Interfaces.Champion;
@@ -30,14 +31,16 @@ namespace PortableLeagueAPI
         public IStaticService Static { get; private set; }
 
         public LeagueApi(
-            string key,
+            string apiKey,
             RegionEnum? region = null,
             bool waitToAvoidRateLimit = false,
             IHttpRequestService httpRequestService = null)
         {
+            if(apiKey == null) throw new ArgumentNullException("apiKey");
+
             httpRequestService = httpRequestService ?? new HttpRequestService();
 
-            var leagueApiConfiguration = new LeagueApiConfiguration(key, region, waitToAvoidRateLimit, httpRequestService);
+            var leagueApiConfiguration = new LeagueApiConfiguration(apiKey, region, waitToAvoidRateLimit, httpRequestService);
 
             Champion = new ChampionService(leagueApiConfiguration);
             Game = new GameService(leagueApiConfiguration);

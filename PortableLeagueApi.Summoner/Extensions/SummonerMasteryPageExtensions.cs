@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces.Core;
@@ -20,6 +21,8 @@ namespace PortableLeagueApi.Summoner.Extensions
             long summonerId,
             RegionEnum? region = null)
         {
+            if (leagueModel == null) throw new ArgumentNullException("leagueModel");
+
             var summonerService = new SummonerService(leagueModel.ApiConfiguration);
             return await summonerService.GetMasteryPagesBySummonerIdAsync(summonerId, region);
         }
@@ -52,6 +55,8 @@ namespace PortableLeagueApi.Summoner.Extensions
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
         {
+            if (leagueModel == null) throw new ArgumentNullException("leagueModel");
+
             var summonerService = new SummonerService(leagueModel.ApiConfiguration);
             return await summonerService.GetMasteryPagesBySummonerIdAsync(summonerIds, region);
         }
@@ -63,6 +68,8 @@ namespace PortableLeagueApi.Summoner.Extensions
             this IEnumerable<IHasSummonerId> summoners,
             RegionEnum? region = null)
         {
+            if (summoners == null) throw new ArgumentNullException("summoners");
+
             var result = new Dictionary<long, IEnumerable<IMasteryPage>>();
 
             var enumerable = summoners as IList<IHasSummonerId> ?? summoners.ToList();
@@ -79,6 +86,8 @@ namespace PortableLeagueApi.Summoner.Extensions
             this IEnumerable<IRoster> rosters,
             RegionEnum? region = null)
         {
+            if (rosters == null) throw new ArgumentNullException("rosters");
+
             var result = new Dictionary<long, IEnumerable<IMasteryPage>>();
 
             var enumerable = rosters as IList<IRoster> ?? rosters.ToList();

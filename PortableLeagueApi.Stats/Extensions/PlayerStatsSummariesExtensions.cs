@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -17,6 +18,8 @@ namespace PortableLeagueApi.Stats.Extensions
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
+            if (leagueModel == null) throw new ArgumentNullException("leagueModel");
+
             var statsService = new StatsService(leagueModel.ApiConfiguration);
             return await statsService.GetPlayerStatsSummariesBySummonerIdAsync(summonerId, season, region);
         }

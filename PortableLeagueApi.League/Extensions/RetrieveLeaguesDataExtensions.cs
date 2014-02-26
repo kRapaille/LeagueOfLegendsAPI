@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -16,6 +17,8 @@ namespace PortableLeagueApi.League.Extensions
             long summonerId,
             RegionEnum? region = null)
         {
+            if (leagueModel == null) throw new ArgumentNullException("leagueModel");
+
             var leagueService = new LeagueService(leagueModel.ApiConfiguration);
             return await leagueService.RetrievesLeaguesDataForSummonerAsync(summonerId, region);
         }

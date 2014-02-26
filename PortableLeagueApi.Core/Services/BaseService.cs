@@ -38,12 +38,15 @@ namespace PortableLeagueApi.Core.Services
         }
 
         protected BaseService(
-            ILeagueApiConfiguration config,
-            VersionEnum? version, 
+            ILeagueApiConfiguration apiConfiguration,
+            VersionEnum version, 
             string prefix,
             bool isLimitedByRateLimit = true)
         {
-            _apiConfiguration = config;
+            if (apiConfiguration == null) throw new ArgumentException("apiConfiguration");
+            if (prefix == null) throw new ArgumentException("prefix");
+
+            _apiConfiguration = apiConfiguration;
 
             _version = version;
             Prefix = prefix;
@@ -52,7 +55,7 @@ namespace PortableLeagueApi.Core.Services
             if (!LastRequests.ContainsKey(_apiConfiguration.Key))
                 LastRequests[_apiConfiguration.Key] = new List<DateTime>();
 
-            AutoMapperService = new AutoMapperService(config);
+            AutoMapperService = new AutoMapperService(apiConfiguration);
 
             AutoMapperService.CreateMap<long, DateTime>()
                 .ConvertUsing(DateTime.FromBinary);
