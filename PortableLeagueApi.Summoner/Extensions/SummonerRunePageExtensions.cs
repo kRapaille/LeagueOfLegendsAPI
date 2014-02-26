@@ -15,7 +15,7 @@ namespace PortableLeagueApi.Summoner.Extensions
         /// <summary>
         /// Get mastery pages
         /// </summary>
-        private static async Task<IEnumerable<IRunePage>> GetRunePages(
+        private static async Task<IEnumerable<IRunePage>> GetRunePagesAsync(
             IApiModel leagueModel,
             long summonerId,
             RegionEnum? region = null)
@@ -27,27 +27,27 @@ namespace PortableLeagueApi.Summoner.Extensions
         /// <summary>
         /// Get mastery pages
         /// </summary>
-        public static async Task<IEnumerable<IRunePage>> GetRunePages(
+        public static async Task<IEnumerable<IRunePage>> GetRunePagesAsync(
             this IHasSummonerId summoner,
             RegionEnum? region = null)
         {
-            return await GetRunePages(summoner, summoner.SummonerId, region);
+            return await GetRunePagesAsync(summoner, summoner.SummonerId, region);
         }
 
         /// <summary>
         /// Get mastery pages
         /// </summary>
-        public static async Task<IEnumerable<IRunePage>> GetRunePages(
+        public static async Task<IEnumerable<IRunePage>> GetRunePagesAsync(
             this IRoster roster,
             RegionEnum? region = null)
         {
-            return await GetRunePages(roster, roster.OwnerId, region);
+            return await GetRunePagesAsync(roster, roster.OwnerId, region);
         }
 
         /// <summary>
         /// Get mastery pages
         /// </summary>
-        private static async Task<Dictionary<long, IEnumerable<IRunePage>>> GetRunePages(
+        private static async Task<Dictionary<long, IEnumerable<IRunePage>>> GetRunePagesAsync(
             IApiModel leagueModel,
             IEnumerable<long> summonerIds,
             RegionEnum? region = null)
@@ -59,7 +59,7 @@ namespace PortableLeagueApi.Summoner.Extensions
         /// <summary>
         /// Get mastery pages
         /// </summary>
-        public static async Task<Dictionary<long, IEnumerable<IRunePage>>> GetRunePages(
+        public static async Task<Dictionary<long, IEnumerable<IRunePage>>> GetRunePagesAsync(
             this IEnumerable<IHasSummonerId> summoners,
             RegionEnum? region = null)
         {
@@ -67,7 +67,7 @@ namespace PortableLeagueApi.Summoner.Extensions
 
             var enumerable = summoners as IList<IHasSummonerId> ?? summoners.ToList();
             if(enumerable.Any())
-                result = await GetRunePages(enumerable.First(), enumerable.Select(x => x.SummonerId), region);
+                result = await GetRunePagesAsync(enumerable.First(), enumerable.Select(x => x.SummonerId), region);
 
             return result;
         }
@@ -75,7 +75,7 @@ namespace PortableLeagueApi.Summoner.Extensions
         /// <summary>
         /// Get mastery pages
         /// </summary>
-        public static async Task<Dictionary<long, IEnumerable<IRunePage>>> GetRunePages(
+        public static async Task<Dictionary<long, IEnumerable<IRunePage>>> GetRunePagesAsync(
             this IEnumerable<IRoster> rosters,
             RegionEnum? region = null)
         {
@@ -83,7 +83,7 @@ namespace PortableLeagueApi.Summoner.Extensions
 
             var enumerable = rosters as IList<IRoster> ?? rosters.ToList();
             if (enumerable.Any())
-                result = await GetRunePages(enumerable.First(), enumerable.Select(x => x.OwnerId), region);
+                result = await GetRunePagesAsync(enumerable.First(), enumerable.Select(x => x.OwnerId), region);
 
             return result;
         }

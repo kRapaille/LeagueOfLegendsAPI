@@ -11,7 +11,7 @@ namespace PortableLeagueApi.League.Extensions
 {
     public static class RetrieveLeaguesDataExtensions
     {
-        private static async Task<IEnumerable<ILeague>> RetrievesLeaguesData(
+        private static async Task<IEnumerable<ILeague>> RetrievesLeaguesDataAsync(
             IApiModel leagueModel,
             long summonerId,
             RegionEnum? region = null)
@@ -23,21 +23,21 @@ namespace PortableLeagueApi.League.Extensions
         /// <summary>
         /// Retrieves leagues data for summoner, including leagues for all of summoner's teams.
         /// </summary>
-        public static async Task<IEnumerable<ILeague>> RetrievesLeaguesData(
+        public static async Task<IEnumerable<ILeague>> RetrievesLeaguesDataAsync(
             this IHasSummonerId summoner,
             RegionEnum? region = null)
         {
-            return await RetrievesLeaguesData(summoner, summoner.SummonerId, region);
+            return await RetrievesLeaguesDataAsync(summoner, summoner.SummonerId, region);
         }
 
         /// <summary>
         /// Retrieves leagues data for summoner, including leagues for all of summoner's teams.
         /// </summary>
-        public static async Task<IEnumerable<ILeague>> RetrievesLeaguesData(
+        public static async Task<IEnumerable<ILeague>> RetrievesLeaguesDataAsync(
             this IRoster roster,
             RegionEnum? region = null)
         {
-            return await RetrievesLeaguesData(roster, roster.OwnerId, region);
+            return await RetrievesLeaguesDataAsync(roster, roster.OwnerId, region);
         }
     }
 }

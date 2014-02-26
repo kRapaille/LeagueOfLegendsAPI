@@ -79,7 +79,7 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(summoner);
 
-            var result = await summoner.GetRecentGames();
+            var result = await summoner.GetRecentGamesAsync();
 
             Assert.NotNull(result);
         }

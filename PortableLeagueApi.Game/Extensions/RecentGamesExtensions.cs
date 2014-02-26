@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Game.Extensions
 {
     public static class RecentGamesExtensions
     {
-        private static async Task<IEnumerable<IGame>> GetRecentGames(
+        private static async Task<IEnumerable<IGame>> GetRecentGamesAsync(
             IApiModel leagueModel,
             long summonerId,
             RegionEnum? region = null)
@@ -23,21 +23,21 @@ namespace PortableLeagueApi.Game.Extensions
         /// <summary>
         /// Get recent games
         /// </summary>
-        public static async Task<IEnumerable<IGame>> GetRecentGames(
+        public static async Task<IEnumerable<IGame>> GetRecentGamesAsync(
             this IHasSummonerId summoner,
             RegionEnum? region = null)
         {
-            return await GetRecentGames(summoner, summoner.SummonerId, region);
+            return await GetRecentGamesAsync(summoner, summoner.SummonerId, region);
         }
 
         /// <summary>
         /// Get recent games
         /// </summary>
-        public static async Task<IEnumerable<IGame>> GetRecentGames(
+        public static async Task<IEnumerable<IGame>> GetRecentGamesAsync(
             this IRoster roster,
             RegionEnum? region = null)
         {
-            return await GetRecentGames(roster, roster.OwnerId, region);
+            return await GetRecentGamesAsync(roster, roster.OwnerId, region);
         }
     }
 }
