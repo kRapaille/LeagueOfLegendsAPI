@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Portable League API : Portable C# Library for League of Legends API" />
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Portable League API by XeeX</title>
+    <title>Portable League API</title>
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/XeeX/LeagueOfLegendsAPI">View on GitHub</a>
-    <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Portable League API</h1>
-            <h2>Portable C# Library for League of Legends API</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/XeeX/LeagueOfLegendsAPI">View on GitHub</a>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/XeeX/LeagueOfLegendsAPI/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/XeeX/LeagueOfLegendsAPI/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+          <h1 id="project_title">Portable League API</h1>
+          <h2 id="project_tagline">Portable C# Library for League of Legends API</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/XeeX/LeagueOfLegendsAPI/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/XeeX/LeagueOfLegendsAPI/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <p>Portable C# Library for <a href="https://developer.riotgames.com">League of Legends API</a></p>
 
 <h2>
@@ -60,12 +45,19 @@
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
 
-<div class="highlight highlight-c#"><pre><span class="kt">var</span> <span class="n">leagueAPI</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LeagueApi</span><span class="p">(</span><span class="s">"YOUR API KEY HERE"</span><span class="p">,</span> <span class="n">RegionEnum</span><span class="p">.</span><span class="n">Euw</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+<div class="highlight highlight-c#"><pre>
+<span class="kt">var</span> <span class="n">leagueAPI</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LeagueApi</span><span class="p">(</span><span class="s">"YOUR API KEY HERE"</span><span class="p">,</span> <span class="n">RegionEnum</span><span class="p">.</span><span class="n">Euw</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
 
 <span class="kt">var</span> <span class="n">summoner</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_leagueAPI</span><span class="p">.</span><span class="n">Summoner</span><span class="p">.</span><span class="n">GetSummonerByNameAsync</span><span class="p">(</span><span class="s">"TuC Ølen"</span><span class="p">);</span>
 <span class="kt">var</span> <span class="n">recentGames</span> <span class="p">=</span> <span class="k">await</span> <span class="n">summoner</span><span class="p">.</span><span class="n">GetRecentGames</span><span class="p">();</span>
-<span class="kt">var</span> <span class="n">item</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_leagueAPI</span><span class="p">.</span><span class="n">Static</span><span class="p">.</span><span class="n">GetItemsAsync</span><span class="p">(</span><span class="m">1001</span><span class="p">,</span> <span class="n">ItemDataEnum</span><span class="p">.</span><span class="n">All</span><span class="p">,</span> <span class="n">languageCode</span><span class="p">:</span> <span class="n">LanguageEnum</span><span class="p">.</span><span class="n">French</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">item</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_leagueAPI</span><span class="p">.</span><span class="n">Static</span><span class="p">.</span><span class="n">GetItemsAsync</span><span class="p">(</span>
+  <span class="m">1001</span><span class="p">,</span> 
+  <span class="n">ItemDataEnum</span><span class="p">.</span><span class="n">All</span><span class="p">,</span> 
+  <span class="n">languageCode</span><span class="p">:</span> <span class="n">LanguageEnum</span><span class="p">.</span><span class="n">French</span><span class="p">);</span>
+
 <span class="kt">var</span> <span class="n">imageUrl</span> <span class="p">=</span> <span class="k">await</span> <span class="n">item</span><span class="p">.</span><span class="n">Image</span><span class="p">.</span><span class="n">GetUrlAsync</span><span class="p">();</span>
+
 </pre></div>
 
 <p><strong>Note</strong> : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, set the third paramater in the LeagueAPI constructor to true.</p>
@@ -80,19 +72,14 @@
 
 <p>Do not hesitate to reach me on twitter <strong><a href="http://www.twitter.com/kRapaille">@kRapaille</a></strong> or by <strong><a href="mailto:myself@kevinrapaille.com">mail</a></strong></p>
       </section>
+    </div>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/XeeX">XeeX</a> can be found on <a href="https://github.com/XeeX/LeagueOfLegendsAPI">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Portable League API maintained by <a href="https://github.com/XeeX">XeeX</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
-
     </div>
 
               <script type="text/javascript">
@@ -105,6 +92,7 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
