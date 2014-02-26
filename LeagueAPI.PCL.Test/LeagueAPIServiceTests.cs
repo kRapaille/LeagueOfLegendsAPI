@@ -7,6 +7,7 @@ using PortableLeagueApi.Game.Extensions;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
+using PortableLeagueApi.Static.Extensions;
 
 namespace PortableLeagueAPI.Test
 {
