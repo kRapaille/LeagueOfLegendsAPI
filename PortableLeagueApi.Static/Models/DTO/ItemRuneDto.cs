@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace PortableLeagueApi.Static.Models.DTO.Item
+namespace PortableLeagueApi.Static.Models.DTO
 {
-    public class ItemRuneDto
+    internal class ItemRuneDto
     {
         [JsonProperty("isRune")]
         public bool IsRune { get; set; }

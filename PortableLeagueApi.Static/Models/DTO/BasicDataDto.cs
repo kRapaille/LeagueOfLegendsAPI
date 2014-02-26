@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using PortableLeagueApi.Static.Models.DTO.Item;
 
 namespace PortableLeagueApi.Static.Models.DTO
 {
-    public class BasicDataDto
+    internal class BasicDataDto
     {
         [JsonProperty("colloq")]
         public string Colloq { get; set; }

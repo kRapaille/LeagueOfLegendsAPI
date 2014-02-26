@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Item
 {
-    public class GroupDto
+    internal class GroupDto
     {
         [JsonProperty("MaxGroupOwnable")]
         public string MaxGroupOwnable { get; set; }

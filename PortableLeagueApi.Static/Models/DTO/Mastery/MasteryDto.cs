@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace PortableLeagueApi.Static.Models.DTO.Mastery
 {
-    public class MasteryListDto
+    internal class MasteryListDto
     {
         [JsonProperty("data")]
         public Dictionary<string, MasteryDto> Data { get; set; }
@@ -18,7 +18,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Mastery
         public string Version { get; set; }
     }
 
-    public class MasteryDto
+    internal class MasteryDto
     {
         [JsonProperty("id")]
         public int Id { get; set; }

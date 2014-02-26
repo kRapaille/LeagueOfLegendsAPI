@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Item
 {
-    public class MetaDataDto
+    internal class MetaDataDto
     {
         [JsonProperty("isRune")]
         public bool IsRune { get; set; }

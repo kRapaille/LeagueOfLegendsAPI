@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Mastery
 {
-    public class MasteryTreeDto
+    internal class MasteryTreeDto
     {
         [JsonProperty("Defense")]
         public object[] Defense { get; set; }

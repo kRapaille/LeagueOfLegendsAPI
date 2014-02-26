@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace PortableLeagueApi.Static.Models.DTO.Item
 {
-    public class ItemListDto
+    internal class ItemListDto
     {
         [JsonProperty("basic")]
         public BasicDataDto Basic { get; set; }
@@ -24,7 +24,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Item
         public string Version { get; set; }
     }
 
-    public class ItemDto
+    internal class ItemDto
     {
         [JsonProperty("colloq")]
         public string Colloq { get; set; }

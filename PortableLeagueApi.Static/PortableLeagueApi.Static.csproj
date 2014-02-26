@@ -34,12 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Constants\LanguageCodeConsts.cs" />
-    <Compile Include="Enums\ChampDataEnum.cs" />
-    <Compile Include="Enums\ItemDataEnum.cs" />
-    <Compile Include="Enums\LanguageEnum.cs" />
-    <Compile Include="Enums\MasteryDataEnum.cs" />
-    <Compile Include="Enums\RuneDataEnum.cs" />
-    <Compile Include="Enums\SpellDataEnum.cs" />
+    <Compile Include="Models\BasicData.cs" />
+    <Compile Include="Models\BasicDataStats.cs" />
     <Compile Include="Models\Champion\BlockItem.cs" />
     <Compile Include="Models\Champion\Block.cs" />
     <Compile Include="Models\Champion\Champion.cs" />
@@ -62,13 +58,23 @@
     <Compile Include="Models\DTO\BasicDataDto.cs" />
     <Compile Include="Models\DTO\BasicDataStatsDto.cs" />
     <Compile Include="Models\DTO\GoldDto.cs" />
+    <Compile Include="Models\Gold.cs" />
+    <Compile Include="Models\ItemRune.cs" />
     <Compile Include="Models\DTO\Item\GroupDto.cs" />
     <Compile Include="Models\DTO\Item\ItemDto.cs" />
-    <Compile Include="Models\DTO\Item\ItemRuneDto.cs" />
+    <Compile Include="Models\DTO\ItemRuneDto.cs" />
     <Compile Include="Models\DTO\Item\ItemTreeDto.cs" />
     <Compile Include="Models\DTO\Item\MetaDataDto.cs" />
     <Compile Include="Models\DTO\Mastery\MasteryDto.cs" />
     <Compile Include="Models\DTO\Mastery\MasteryTreeDto.cs" />
+    <Compile Include="Models\Item\Group.cs" />
+    <Compile Include="Models\Item\Item.cs" />
+    <Compile Include="Models\Item\ItemList.cs" />
+    <Compile Include="Models\Item\ItemTree.cs" />
+    <Compile Include="Models\Item\MetaData.cs" />
+    <Compile Include="Models\Mastery\Mastery.cs" />
+    <Compile Include="Models\Mastery\MasteryList.cs" />
+    <Compile Include="Models\Mastery\MasteryTree.cs" />
     <Compile Include="Models\Realm.cs" />
     <Compile Include="Models\DTO\RealmDto.cs" />
     <Compile Include="Models\DTO\Rune\RuneDto.cs" />
@@ -79,6 +85,12 @@
     <Compile Include="Models\Champion\Recommended.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\LevelTip.cs" />
+    <Compile Include="Models\Rune\Rune.cs" />
+    <Compile Include="Models\Rune\RuneList.cs" />
+    <Compile Include="Models\Rune\RuneType.cs" />
+    <Compile Include="Models\SummonerSpell\SummonerSpell.cs" />
+    <Compile Include="Models\SummonerSpell\SummonerSpellList.cs" />
+    <Compile Include="Models\SummonerSpell\SummonerSpellVars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\StaticService.cs" />
     <Compile Include="Services\StaticServiceExtensions.cs" />
@@ -104,6 +116,7 @@
       <Name>PortableLeagueApi.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

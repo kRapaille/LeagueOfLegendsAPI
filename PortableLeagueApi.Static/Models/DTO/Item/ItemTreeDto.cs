@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Item
 {
-    public class ItemTreeDto
+    internal class ItemTreeDto
     {
         [JsonProperty("header")]
         public string Header { get; set; }

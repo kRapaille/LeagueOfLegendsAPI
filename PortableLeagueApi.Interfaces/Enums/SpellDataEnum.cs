@@ -1,4 +1,4 @@
-﻿namespace PortableLeagueApi.Static.Enums
+﻿namespace PortableLeagueApi.Interfaces.Enums
 {
     public enum SpellDataEnum
     {

@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO
 {
-    public class BasicDataStatsDto
+    internal class BasicDataStatsDto
     {
         public double FlatArmorMod { get; set; }
         public double FlatAttackSpeedMod { get; set; }

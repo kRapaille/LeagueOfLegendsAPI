@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace PortableLeagueApi.Static.Models.DTO
 {
-    public class RealmDto
+    internal class RealmDto
     {
         /// <summary>
         /// The base CDN url.

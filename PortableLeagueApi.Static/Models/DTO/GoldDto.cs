@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO
 {
-    public class GoldDto
+    internal class GoldDto
     {
         [JsonProperty("base")]
         public int Base { get; set; }

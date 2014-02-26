@@ -3,7 +3,7 @@ using PortableLeagueApi.Core.Helpers;
 
 namespace PortableLeagueApi.Static.Models.DTO.SummonerSpell
 {
-    public class SummonerSpellVarsDto
+    internal class SummonerSpellVarsDto
     {
         [JsonProperty("coeff")]
         [JsonConverter(typeof(CoeffArrayJsonConverter))]

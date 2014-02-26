@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Linq;
-using System.Net.Http;
 using NUnit.Framework;
 using PortableLeagueApi.Interfaces.Enums;
-using PortableLeagueApi.Static.Enums;
-using PortableLeagueApi.Static.Services;
 
 namespace PortableLeagueAPI.Test
 {
     [TestFixture]
     public class OnlineLeagueAPIServiceTests
     {
-        private readonly LeagueAPI _leagueAPI;
+        private readonly LeagueApi _leagueAPI;
 
         public OnlineLeagueAPIServiceTests()
         {
             // TODO : Don't forget to pass your api key
-            _leagueAPI = new LeagueAPI(string.Empty, RegionEnum.Euw, true);
+            _leagueAPI = new LeagueApi(string.Empty, RegionEnum.Euw, true);
         }
 
         [Test]
@@ -39,7 +35,7 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(result);
             Assert.NotNull(result2);
-            Assert.Less(secondTime, 10);
+            Assert.Less(secondTime, 20);
         }
 
         [Test]

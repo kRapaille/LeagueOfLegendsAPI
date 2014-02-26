@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace PortableLeagueApi.Static.Models.DTO.Rune
 {
-    public class RuneListDto
+    internal class RuneListDto
     {
         [JsonProperty("basic")]
         public BasicDataDto Basic { get; set; }
@@ -18,7 +18,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Rune
         public string Version { get; set; }
     }
 
-    public class RuneDto
+    internal class RuneDto
     {
         [JsonProperty("colloq")]
         public string Colloq { get; set; }

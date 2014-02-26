@@ -4,7 +4,7 @@ using PortableLeagueApi.Core.Helpers;
 
 namespace PortableLeagueApi.Static.Models.DTO.SummonerSpell
 {
-    public class SummonerSpellListDto
+    internal class SummonerSpellListDto
     {
         [JsonProperty("data")]
         public Dictionary<string, SummonerSpellDto> Data { get; set; }
@@ -15,8 +15,8 @@ namespace PortableLeagueApi.Static.Models.DTO.SummonerSpell
         [JsonProperty("version")]
         public string Version { get; set; }
     }
-    
-    public class SummonerSpellDto
+
+    internal class SummonerSpellDto
     {
         [JsonProperty("cooldown")]
         public int[] Cooldown { get; set; }

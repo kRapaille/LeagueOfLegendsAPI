@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO
 {
-    public class ImageDto
+    internal class ImageDto
     {
         [JsonProperty("full")]
         public string Full { get; set; }

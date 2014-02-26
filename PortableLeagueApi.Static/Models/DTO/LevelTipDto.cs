@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO
 {
-    public class LevelTipDto
+    internal class LevelTipDto
     {
         [JsonProperty("effect")]
         public string[] Effect { get; set; }

@@ -2,7 +2,7 @@
 
 namespace PortableLeagueApi.Static.Models.DTO.Rune
 {
-    public class RuneTypeDto
+    internal class RuneTypeDto
     {
         [JsonProperty("isrune")]
         public bool Isrune { get; set; }
