@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Portable League API : Portable C# Library for League of Legends API" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Portable League API</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/XeeX/LeagueOfLegendsAPI">View on GitHub</a>
+
+          <h1 id="project_title">Portable League API</h1>
+          <h2 id="project_tagline">Portable C# Library for League of Legends API</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/XeeX/LeagueOfLegendsAPI/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/XeeX/LeagueOfLegendsAPI/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Portable C# Library for <a href="https://developer.riotgames.com">League of Legends API</a></p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p>The library is on NuGet. You can find it <a href="https://www.nuget.org/packages/Remake.PortableLeagueAPI/">here</a>.</p>
+
+<pre><code>PM&gt; Install-Package Remake.PortableLeagueAPI
+</code></pre>
+
+<h2>
+<a name="init" class="anchor" href="#init"><span class="octicon octicon-link"></span></a>Init</h2>
+
+<div class="highlight highlight-c#"><pre><span class="n">LeagueAPI</span><span class="p">.</span><span class="n">Init</span><span class="p">(</span><span class="s">"YOUR KEY HERE"</span><span class="p">);</span>
+
+<span class="c1">// Facultative parameters :</span>
+<span class="n">LeagueAPI</span><span class="p">.</span><span class="n">DefaultRegion</span> <span class="p">=</span> <span class="n">RegionEnum</span><span class="p">.</span><span class="n">Euw</span><span class="p">;</span>
+<span class="n">LeagueAPI</span><span class="p">.</span><span class="n">WaitToAvoidRateLimit</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+</pre></div>
+
+<p><strong>Note</strong> : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, you can set the <strong>WaitToAvoidRateLimit</strong> property to true.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-c#"><pre><span class="kt">var</span> <span class="n">runePages</span> <span class="p">=</span> <span class="k">await</span> <span class="n">LeagueAPI</span><span class="p">.</span><span class="n">Summoner</span><span class="p">.</span><span class="n">GetRunePagesBySummonerId</span><span class="p">(</span><span class="m">19231046</span><span class="p">);</span>
+</pre></div>
+
+<h2>
+<a name="disclaimer" class="anchor" href="#disclaimer"><span class="octicon octicon-link"></span></a>Disclaimer</h2>
+
+<p>This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.</p>
+
+<h2>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
+
+<p>Do not hesitate to reach me on twitter <strong><a href="http://www.twitter.com/kRapaille">@kRapaille</a></strong> or by <strong><a href="mailto://myself@kevinrapaille.com">mail</a></strong></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Portable League API maintained by <a href="https://github.com/XeeX">XeeX</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
