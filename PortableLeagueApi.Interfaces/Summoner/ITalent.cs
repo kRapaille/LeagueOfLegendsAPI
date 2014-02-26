@@ -1,13 +1,9 @@
-using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface ITalent : IApiModel
+    public interface ITalent : IHasMasteryId
     {
-        /// <summary>
-        /// Talent id.
-        /// </summary>
-        int Id { get; set; }
         /// <summary>
         /// Talent rank.
         /// </summary>

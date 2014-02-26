@@ -2,11 +2,11 @@
 
 namespace PortableLeagueApi.Interfaces.Extensions
 {
-    public interface IHasSummonerId : IApiModel
+    public interface IHasMasteryId : IApiModel
     {
         /// <summary>
-        /// Summoner Id.
+        /// Talent id.
         /// </summary>
-        long SummonerId { get; set; } 
+         int Id { get; set; }
     }
 }

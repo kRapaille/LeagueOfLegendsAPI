@@ -55,7 +55,12 @@
     <Compile Include="Enums\SpellDataEnum.cs" />
     <Compile Include="Enums\TierEnum.cs" />
     <Compile Include="Enums\VersionEnum.cs" />
+    <Compile Include="Extensions\IHasChampionId.cs" />
+    <Compile Include="Extensions\IHasItemIds.cs" />
+    <Compile Include="Extensions\IHasMasteryId.cs" />
+    <Compile Include="Extensions\IHasRuneId.cs" />
     <Compile Include="Extensions\IHasSummonerId.cs" />
+    <Compile Include="Extensions\IHasSummonerSpells.cs" />
     <Compile Include="Game\IGame.cs" />
     <Compile Include="Game\IGameService.cs" />
     <Compile Include="Game\IPlayer.cs" />

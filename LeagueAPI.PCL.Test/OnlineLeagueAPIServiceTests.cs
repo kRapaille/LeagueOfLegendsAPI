@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net.Http;
 using NUnit.Framework;
 using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Static.Extensions;
 
 namespace PortableLeagueAPI.Test
 {
@@ -56,83 +58,83 @@ namespace PortableLeagueAPI.Test
             Assert.NotNull(result);
         }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void GetStaticImageUrlTestAsync()
-        //{
-        //    var item = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetStaticImageUrlTestAsync()
+        {
+            var item = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
 
-        //    var url = await item.Image.GetUrlAsync(_leagueAPI.Static);
+            var url = await item.Image.GetUrlAsync();
 
-        //    Assert.NotNull(url);
+            Assert.NotNull(url);
 
-        //    using (var httpClient = new HttpClient())
-        //    {
-        //        var response = await httpClient.GetAsync(url);
+            using (var httpClient = new HttpClient())
+            {
+                var response = await httpClient.GetAsync(url);
 
-        //        Assert.IsTrue(response.IsSuccessStatusCode);
-        //    }
-        //}
+                Assert.IsTrue(response.IsSuccessStatusCode);
+            }
+        }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void GetStaticChampionsSpasheImagesUrlTestAsync()
-        //{
-        //    var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetStaticChampionsSpasheImagesUrlTestAsync()
+        {
+            var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
 
-        //    var urls = champion.GetSpasheImmagesUrls(_leagueAPI.Static);
+            var urls = champion.GetSpasheImmagesUrls();
 
-        //    Assert.NotNull(urls);
+            Assert.NotNull(urls);
 
-        //    using (var httpClient = new HttpClient())
-        //    {
-        //        foreach (var url in urls)
-        //        {
-        //            var response = await httpClient.GetAsync(url);
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.GetAsync(url);
 
-        //            Assert.IsTrue(response.IsSuccessStatusCode);
-        //        }
-        //    }
-        //}
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
+        }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void GetProfilIconImagesUrlTestAsync()
-        //{
-        //    var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Kiwii");
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetProfilIconImagesUrlTestAsync()
+        {
+            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Kiwii");
 
-        //    var url = await summoner.GetProfileIconUrlAsync(_leagueAPI.Static);
+            var url = await summoner.GetProfileIconUrlAsync();
 
-        //    Assert.NotNull(url);
+            Assert.NotNull(url);
 
-        //    using (var httpClient = new HttpClient())
-        //    {
-        //        var response = await httpClient.GetAsync(url);
+            using (var httpClient = new HttpClient())
+            {
+                var response = await httpClient.GetAsync(url);
 
-        //        Assert.IsTrue(response.IsSuccessStatusCode);
-        //    }
-        //}
+                Assert.IsTrue(response.IsSuccessStatusCode);
+            }
+        }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void GetStaticChampionsLoadingImagesUrlTestAsync()
-        //{
-        //    var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetStaticChampionsLoadingImagesUrlTestAsync()
+        {
+            var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
 
-        //    var urls = champion.GetLoadingImagesUrls(_leagueAPI.Static);
+            var urls = champion.GetLoadingImagesUrls();
 
-        //    Assert.NotNull(urls);
+            Assert.NotNull(urls);
 
-        //    using (var httpClient = new HttpClient())
-        //    {
-        //        foreach (var url in urls)
-        //        {
-        //            var response = await httpClient.GetAsync(url);
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.GetAsync(url);
 
-        //            Assert.IsTrue(response.IsSuccessStatusCode);
-        //        }
-        //    }
-        //}
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
+        }
 
         [Test]
         [Category("Static")]

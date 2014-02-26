@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Game
 {
-    public interface IGame : IApiModel
+    public interface IGame : IHasChampionId, IHasSummonerSpells
     {
         /// <summary>
         /// Game ID.
@@ -19,10 +19,6 @@ namespace PortableLeagueApi.Interfaces.Game
         /// Game type.
         /// </summary>
         GameTypeEnum GameType { get; set; }
-        /// <summary>
-        /// Summoner spells
-        /// </summary>
-        IList<int> SummonerSpells { get; set; }
         /// <summary>
         /// Team ID associated with game.
         /// </summary>
@@ -51,10 +47,6 @@ namespace PortableLeagueApi.Interfaces.Game
         /// Game sub-type.
         /// </summary>
         GameSubTypeEnum GameSubType { get; set; }
-        /// <summary>
-        /// Champion ID associated with game.
-        /// </summary>
-        int ChampionId { get; set; }
         /// <summary>
         /// Date that end game data was recorded, specified as epoch milliseconds.
         /// </summary>

@@ -1,9 +1,8 @@
-using System.Collections.Generic;
-using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Game
 {
-    public interface IRawStats : IApiModel
+    public interface IRawStats : IHasItemIds, IHasSummonerSpells
     {
         int Assists { get; set; }
         int BarracksKilled { get; set; }
@@ -16,7 +15,6 @@ namespace PortableLeagueApi.Interfaces.Game
         int Gold { get; set; }
         int GoldEarned { get; set; }
         int GoldSpent { get; set; }
-        IList<int> ItemIds { get; set; }
         int ItemsPurchased { get; set; }
         int KillingSprees { get; set; }
         int LargestCriticalStrike { get; set; }
@@ -68,8 +66,6 @@ namespace PortableLeagueApi.Interfaces.Game
         /// Number of times fourth champion spell was cast.
         /// </summary>
         int Spell4Cast { get; set; }
-        int SummonerSpell1 { get; set; }
-        int SummonerSpell2 { get; set; }
         int SuperMonsterKilled { get; set; }
         int Team { get; set; }
         int TeamObjective { get; set; }

@@ -54,8 +54,7 @@ namespace PortableLeagueApi.Game.Models
         public int Spell2Cast { get; set; }
         public int Spell3Cast { get; set; }
         public int Spell4Cast { get; set; }
-        public int SummonerSpell1 { get; set; }
-        public int SummonerSpell2 { get; set; }
+        public IList<int> SummonerSpells { get; set; }
         public int SuperMonsterKilled { get; set; }
         public int Team { get; set; }
         public int TeamObjective { get; set; }
@@ -97,9 +96,18 @@ namespace PortableLeagueApi.Game.Models
                 .ForSourceMember(x => x.Item4, x => x.Ignore())
                 .ForSourceMember(x => x.Item5, x => x.Ignore())
                 .ForSourceMember(x => x.Item6, x => x.Ignore())
+                .ForSourceMember(x => x.SummonerSpell1, x => x.Ignore())
+                .ForSourceMember(x => x.SummonerSpell2, x => x.Ignore())
+                .ForMember(x => x.SummonerSpells, x => x.Ignore())
                 .ForMember(x => x.ItemIds, x=> x.Ignore())
                 .BeforeMap((s, d) =>
                 {
+                    d.SummonerSpells = new List<int>
+                                        {
+                                            s.SummonerSpell1,
+                                            s.SummonerSpell2
+                                        };
+
                     d.ItemIds = new List<int>
                                 {
                                     s.Item0,
@@ -112,5 +120,6 @@ namespace PortableLeagueApi.Game.Models
                                 };
                 });
         }
+
     }
 }

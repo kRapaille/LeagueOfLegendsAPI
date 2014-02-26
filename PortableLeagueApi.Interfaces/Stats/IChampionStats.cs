@@ -1,13 +1,9 @@
-using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Stats
 {
-    public interface IChampionStats : IApiModel
+    public interface IChampionStats : IHasChampionId
     {
-        /// <summary>
-        /// Champion id.
-        /// </summary>
-        int ChampionId { get; set; }
         /// <summary>
         /// Aggregated stats associated with the champion.
         /// </summary>

@@ -1,10 +1,9 @@
-using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface IRune : IApiModel
+    public interface IRune : IHasRuneId
     {
-        int Id { get; set; }
         string Description { get; set; }
         string Name { get; set; }
         int Tier { get; set; }

@@ -2,12 +2,8 @@
 
 namespace PortableLeagueApi.Interfaces.Game
 {
-    public interface IPlayer : IHasSummonerId
+    public interface IPlayer : IHasSummonerId, IHasChampionId
     {
-        /// <summary>
-        /// Champion id associated with player.
-        /// </summary>
-        int ChampionId { get; set; }
         /// <summary>
         /// Team id associated with player.
         /// </summary>
