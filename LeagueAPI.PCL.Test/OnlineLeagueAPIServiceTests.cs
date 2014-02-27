@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Net.Http;
 using NUnit.Framework;
 using PortableLeagueApi.Interfaces.Enums;
@@ -217,88 +218,88 @@ namespace PortableLeagueAPI.Test
             Assert.NotNull(result);
         }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void ChampionExtensionsTestAsync()
-        //{
-        //    var champions = await _leagueAPI.Champion.GetChampionsAsync(true);
-        //    Assert.NotNull(champions);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void ChampionExtensionsTestAsync()
+        {
+            var champions = await _leagueAPI.Champion.GetChampionsAsync(true);
+            Assert.NotNull(champions);
 
-        //    var result = await champions.First().GetChampionStaticInfosAsync(_leagueAPI.Static);
+            var result = await champions.First().GetChampionStaticInfosAsync();
 
-        //    Assert.NotNull(result);
-        //}
+            Assert.NotNull(result);
+        }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void MasteryExtensionsTestAsync()
-        //{
-        //    var masteriesPage = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(19231046);
-        //    Assert.NotNull(masteriesPage);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void MasteryExtensionsTestAsync()
+        {
+            var masteriesPage = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(19231046);
+            Assert.NotNull(masteriesPage);
 
-        //    var result = await masteriesPage.First().Talents.First().GetMasteryStaticInfosAsync(_leagueAPI.Static);
+            var result = await masteriesPage.First().Talents.First().GetMasteryStaticInfosAsync();
 
-        //    Assert.NotNull(result);
-        //}
+            Assert.NotNull(result);
+        }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void RuneExtensionsTestAsync()
-        //{
-        //    var runesPages = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(19231046);
-        //    Assert.NotNull(runesPages);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void RuneExtensionsTestAsync()
+        {
+            var runesPages = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(19231046);
+            Assert.NotNull(runesPages);
 
-        //    var result = await runesPages.First().Slots.First().Rune.GetRuneStaticInfosAsync(_leagueAPI.Static);
+            var result = await runesPages.First().Slots.First().Rune.GetRuneStaticInfosAsync();
 
-        //    Assert.NotNull(result);
-        //}
+            Assert.NotNull(result);
+        }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void ItemsExtensionsTestAsync()
-        //{
-        //    var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
-        //    Assert.NotNull(recentGames);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void ItemsExtensionsTestAsync()
+        {
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
+            Assert.NotNull(recentGames);
 
-        //    var result = await recentGames.First().Stats.GetItemsStaticInfosAsync(_leagueAPI.Static);
+            var result = await recentGames.First().Stats.GetItemsStaticInfosAsync();
 
-        //    Assert.NotNull(result);
-        //}
+            Assert.NotNull(result);
+        }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void ItemsImageExtensionsTestAsync()
-        //{
-        //    var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
-        //    Assert.NotNull(recentGames);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void ItemsImageExtensionsTestAsync()
+        {
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
+            Assert.NotNull(recentGames);
 
-        //    var urls = await recentGames.First().Stats.GetItemsImageUrlsAsync(_leagueAPI.Static);
-        //    Assert.NotNull(urls);
+            var urls = await recentGames.First().Stats.GetItemsImageUrlsAsync();
+            Assert.NotNull(urls);
 
-        //    using (var httpClient = new HttpClient())
-        //    {
-        //        foreach (var url in urls)
-        //        {
-        //            var response = await httpClient.GetAsync(url);
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.GetAsync(url);
 
-        //            Assert.IsTrue(response.IsSuccessStatusCode);
-        //        }
-        //    }
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
 
-        //    Assert.NotNull(urls);
-        //}
+            Assert.NotNull(urls);
+        }
 
-        //[Test]
-        //[Category("StaticExtensions")]
-        //public async void SummonerSpellExtensionsTestAsync()
-        //{
-        //    var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
-        //    Assert.NotNull(recentGames);
+        [Test]
+        [Category("StaticExtensions")]
+        public async void SummonerSpellExtensionsTestAsync()
+        {
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
+            Assert.NotNull(recentGames);
 
-        //    var result = await recentGames.First().GetSummonerSpellsStaticInfosAsync(_leagueAPI.Static);
+            var result = await recentGames.First().GetSummonerSpellsStaticInfosAsync();
 
-        //    Assert.NotNull(result);
-        //}
+            Assert.NotNull(result);
+        }
 
         [Test]
         [Category("Others")]
