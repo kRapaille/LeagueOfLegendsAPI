@@ -17,7 +17,6 @@ namespace PortableLeagueAPI.Test
 
         public LeagueAPIServiceTests()
         {
-
             _leagueAPI = new LeagueApi(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
         }
 

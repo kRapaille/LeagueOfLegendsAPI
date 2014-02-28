@@ -135,4 +135,11 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="_SetFullFrameworkFolderToProfile"
+     AfterTargets="GetReferenceAssemblyPaths">
+
+    <PropertyGroup>
+     <_FullFrameworkReferenceAssemblyPaths>$(TargetFrameworkDirectory)</_FullFrameworkReferenceAssemblyPaths>
+    </PropertyGroup>
+  </Target>
 </Project>
