@@ -1,5 +1,7 @@
 Portable C# Library for [League of Legends API](https://developer.riotgames.com)
 
+[![PortableLeagueAPI Build Status](https://www.myget.org/BuildSource/Badge/remake?identifier=dc59073d-2442-452f-829b-d8746868ea58)](https://www.myget.org/feed/Packages/remake)
+
 ## Install
 
 - Register [here](https://developer.riotgames.com/)
