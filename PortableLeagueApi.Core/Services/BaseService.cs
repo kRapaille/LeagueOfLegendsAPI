@@ -58,7 +58,7 @@ namespace PortableLeagueApi.Core.Services
             AutoMapperService = new AutoMapperService(apiConfiguration);
 
             AutoMapperService.CreateMap<long, DateTime>()
-                .ConvertUsing(DateTime.FromBinary);
+                .ConvertUsing(x => new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddMilliseconds(x));
         }
 
         protected virtual Uri BuildUri(RegionEnum? region, string relativeUrl)
