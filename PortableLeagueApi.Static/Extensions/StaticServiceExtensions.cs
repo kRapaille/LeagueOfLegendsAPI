@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces.Enums;
@@ -23,6 +24,8 @@ namespace PortableLeagueApi.Static.Extensions
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
+            if (hasChampionId == null) throw new ArgumentNullException("hasChampionId");
+
             var staticService = new StaticService(hasChampionId.ApiConfiguration);
 
             return await staticService.GetChampionAsync(
@@ -40,6 +43,8 @@ namespace PortableLeagueApi.Static.Extensions
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
+            if (hasMasteryId == null) throw new ArgumentNullException("hasMasteryId");
+
             var staticService = new StaticService(hasMasteryId.ApiConfiguration);
 
             return await staticService.GetMasteryAsync(
@@ -57,6 +62,8 @@ namespace PortableLeagueApi.Static.Extensions
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
+            if (hasRuneId == null) throw new ArgumentNullException("hasRuneId");
+
             var staticService = new StaticService(hasRuneId.ApiConfiguration);
 
             return await staticService.GetRuneAsync(
@@ -74,6 +81,8 @@ namespace PortableLeagueApi.Static.Extensions
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
+            if (hasItemIds == null) throw new ArgumentNullException("hasItemIds");
+
             var result = new List<IItem>();
 
             var staticService = new StaticService(hasItemIds.ApiConfiguration);
@@ -100,6 +109,8 @@ namespace PortableLeagueApi.Static.Extensions
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null)
         {
+            if (hasSummonerSpells == null) throw new ArgumentNullException("hasSummonerSpells");
+
             var staticService = new StaticService(hasSummonerSpells.ApiConfiguration);
 
             var allSummonerSpells = await staticService.GetSummonerSpellsAsync(
@@ -120,6 +131,10 @@ namespace PortableLeagueApi.Static.Extensions
             RegionEnum? region = null,
             string dataDragonVersion = null)
         {
+            if (group == null) throw new ArgumentNullException("group");
+            if (image == null) throw new ArgumentNullException("image");
+            if (staticService == null) throw new ArgumentNullException("staticService");
+
             if (string.IsNullOrWhiteSpace(dataDragonVersion))
             {
                 var realm = await staticService.GetRealmAsync(region);
@@ -137,6 +152,8 @@ namespace PortableLeagueApi.Static.Extensions
             RegionEnum? region = null,
             string dataDragonVersion = null)
         {
+            if (imageDto == null) throw new ArgumentNullException("imageDto");
+
             var staticService = new StaticService(imageDto.ApiConfiguration);
 
             return await GetImageUrlAsync(
@@ -152,6 +169,8 @@ namespace PortableLeagueApi.Static.Extensions
             RegionEnum? region = null,
             string dataDragonVersion = null)
         {
+            if (summoner == null) throw new ArgumentNullException("summoner");
+
             var staticService = new StaticService(summoner.ApiConfiguration);
 
             return await GetImageUrlAsync(
@@ -167,6 +186,8 @@ namespace PortableLeagueApi.Static.Extensions
             RegionEnum? region = null,
             string dataDragonVersion = null)
         {
+            if (hasItemIds == null) throw new ArgumentNullException("hasItemIds");
+
             var staticService = new StaticService(hasItemIds.ApiConfiguration);
 
             if (string.IsNullOrWhiteSpace(dataDragonVersion))
@@ -188,6 +209,8 @@ namespace PortableLeagueApi.Static.Extensions
             RegionEnum? region = null,
             string dataDragonVersion = null)
         {
+            if (champion == null) throw new ArgumentNullException("champion");
+
             var staticService = new StaticService(champion.ApiConfiguration);
 
             return await GetImageUrlAsync(
@@ -203,8 +226,7 @@ namespace PortableLeagueApi.Static.Extensions
             RegionEnum? region = null,
             string dataDragonVersion = null)
         {
-            if (image == null)
-                return string.Empty;
+            if (image == null) throw new ArgumentNullException("image");
 
             var staticService = new StaticService(image.ApiConfiguration);
 
@@ -220,6 +242,8 @@ namespace PortableLeagueApi.Static.Extensions
             this IChampion champion,
             RegionEnum? region = null)
         {
+            if (champion == null) throw new ArgumentNullException("champion");
+
             return champion.Skins.Select(
                     skin => string.Format("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{0}_{1}.jpg",
                         champion.Name,
@@ -230,6 +254,8 @@ namespace PortableLeagueApi.Static.Extensions
             this IChampion champion,
             RegionEnum? region = null)
         {
+            if (champion == null) throw new ArgumentNullException("champion");
+
             return champion.Skins.Select(
                     skin => string.Format("http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{0}_{1}.jpg",
                         champion.Name,

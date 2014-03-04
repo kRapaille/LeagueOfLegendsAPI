@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -14,11 +15,13 @@ namespace PortableLeagueApi.League.Extensions
         /// <summary>
         /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
         /// </summary>
-        private static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryData(
+        private static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataAsync(
             IApiModel leagueModel,
             long summonerId,
             RegionEnum? region = null)
         {
+            if (leagueModel == null) throw new ArgumentNullException("leagueModel");
+
             var leagueService = new LeagueService(leagueModel.ApiConfiguration);
             return await leagueService.RetrieveLeaguesEntryDataForSummonerAsync(summonerId, region);
         }
@@ -26,21 +29,21 @@ namespace PortableLeagueApi.League.Extensions
         /// <summary>
         /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
         /// </summary>
-        public static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryData(
+        public static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataAsync(
             this IHasSummonerId summoner,
             RegionEnum? region = null)
         {
-            return await RetrieveLeaguesEntryData(summoner, summoner.SummonerId, region);
+            return await RetrieveLeaguesEntryDataAsync(summoner, summoner.SummonerId, region);
         }
 
         /// <summary>
         /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
         /// </summary>
-        public static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryData(
+        public static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataAsync(
             this IRoster roster,
             RegionEnum? region = null)
         {
-            return await RetrieveLeaguesEntryData(roster, roster.OwnerId, region);
+            return await RetrieveLeaguesEntryDataAsync(roster, roster.OwnerId, region);
         }
     }
 }

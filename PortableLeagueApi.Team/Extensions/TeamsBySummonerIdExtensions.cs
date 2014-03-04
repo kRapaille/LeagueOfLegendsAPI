@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -13,11 +14,13 @@ namespace PortableLeagueApi.Team.Extensions
         /// <summary>
         /// Retrieves teams
         /// </summary>
-        private static async Task<IEnumerable<ITeam>> GetTeamsBySummonerId(
+        private static async Task<IEnumerable<ITeam>> GetTeamsBySummonerIdAsync(
             IApiModel leagueModel,
             long summonerId,
             RegionEnum? region = null)
         {
+            if (leagueModel == null) throw new ArgumentNullException("leagueModel");
+
             var teamService = new TeamService(leagueModel.ApiConfiguration);
             return await teamService.GetTeamsBySummonerIdAsync(summonerId, region);
         }
@@ -25,21 +28,21 @@ namespace PortableLeagueApi.Team.Extensions
         /// <summary>
         /// Retrieves teams
         /// </summary>
-        public static async Task<IEnumerable<ITeam>> GetTeamsBySummonerId(
+        public static async Task<IEnumerable<ITeam>> GetTeamsBySummonerIdAsync(
             this IHasSummonerId summoner,
             RegionEnum? region = null)
         {
-            return await GetTeamsBySummonerId(summoner, summoner.SummonerId, region);
+            return await GetTeamsBySummonerIdAsync(summoner, summoner.SummonerId, region);
         }
 
         /// <summary>
         /// Retrieves teams
         /// </summary>
-        public static async Task<IEnumerable<ITeam>> GetTeamsBySummonerId(
+        public static async Task<IEnumerable<ITeam>> GetTeamsBySummonerIdAsync(
             this IRoster roster,
             RegionEnum? region = null)
         {
-            return await GetTeamsBySummonerId(roster, roster.OwnerId, region);
+            return await GetTeamsBySummonerIdAsync(roster, roster.OwnerId, region);
         }
     }
 }

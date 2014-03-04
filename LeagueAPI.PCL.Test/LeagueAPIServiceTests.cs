@@ -7,7 +7,6 @@ using PortableLeagueApi.Game.Extensions;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
-using PortableLeagueApi.Static.Extensions;
 
 namespace PortableLeagueAPI.Test
 {
@@ -18,7 +17,6 @@ namespace PortableLeagueAPI.Test
 
         public LeagueAPIServiceTests()
         {
-
             _leagueAPI = new LeagueApi(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
         }
 
@@ -79,7 +77,7 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(summoner);
 
-            var result = await summoner.GetRecentGames();
+            var result = await summoner.GetRecentGamesAsync();
 
             Assert.NotNull(result);
         }

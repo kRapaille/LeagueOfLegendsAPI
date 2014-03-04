@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -11,12 +12,14 @@ namespace PortableLeagueApi.Stats.Extensions
 {
     public static class PlayerStatsSummariesExtensions
     {
-        private static async Task<IEnumerable<IPlayerStatsSummary>> GetPlayerStatsSummaries(
+        private static async Task<IEnumerable<IPlayerStatsSummary>> GetPlayerStatsSummariesAsync(
             IApiModel leagueModel,
             long summonerId,
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
+            if (leagueModel == null) throw new ArgumentNullException("leagueModel");
+
             var statsService = new StatsService(leagueModel.ApiConfiguration);
             return await statsService.GetPlayerStatsSummariesBySummonerIdAsync(summonerId, season, region);
         }
@@ -24,23 +27,23 @@ namespace PortableLeagueApi.Stats.Extensions
         /// <summary>
         /// Get player stats summaries. One summary is returned per queue type.
         /// </summary>
-        public static async Task<IEnumerable<IPlayerStatsSummary>> GetPlayerStatsSummaries(
+        public static async Task<IEnumerable<IPlayerStatsSummary>> GetPlayerStatsSummariesAsync(
             this IHasSummonerId summoner,
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            return await GetPlayerStatsSummaries(summoner, summoner.SummonerId, season, region);
+            return await GetPlayerStatsSummariesAsync(summoner, summoner.SummonerId, season, region);
         }
 
         /// <summary>
         /// Get player stats summaries. One summary is returned per queue type.
         /// </summary>
-        public static async Task<IEnumerable<IPlayerStatsSummary>> GetPlayerStatsSummaries(
+        public static async Task<IEnumerable<IPlayerStatsSummary>> GetPlayerStatsSummariesAsync(
             this IRoster roster,
             SeasonEnum? season = null,
             RegionEnum? region = null)
         {
-            return await GetPlayerStatsSummaries(roster, roster.OwnerId, season, region);
+            return await GetPlayerStatsSummariesAsync(roster, roster.OwnerId, season, region);
         }
     }
 }
