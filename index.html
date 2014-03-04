@@ -33,6 +33,8 @@
       <section id="main_content" class="inner">
         <p>Portable C# Library for <a href="https://developer.riotgames.com">League of Legends API</a></p>
 
+<p><a href="https://www.myget.org/feed/Packages/remake"><img src="https://www.myget.org/BuildSource/Badge/remake?identifier=dc59073d-2442-452f-829b-d8746868ea58" alt="PortableLeagueAPI Build Status"></a></p>
+
 <h2>
 <a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
 
@@ -49,7 +51,7 @@
 <span class="kt">var</span> <span class="n">leagueAPI</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LeagueApi</span><span class="p">(</span><span class="s">"YOUR API KEY HERE"</span><span class="p">,</span> <span class="n">RegionEnum</span><span class="p">.</span><span class="n">Euw</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
 
 <span class="kt">var</span> <span class="n">summoner</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_leagueAPI</span><span class="p">.</span><span class="n">Summoner</span><span class="p">.</span><span class="n">GetSummonerByNameAsync</span><span class="p">(</span><span class="s">"TuC Ølen"</span><span class="p">);</span>
-<span class="kt">var</span> <span class="n">recentGames</span> <span class="p">=</span> <span class="k">await</span> <span class="n">summoner</span><span class="p">.</span><span class="n">GetRecentGames</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">recentGames</span> <span class="p">=</span> <span class="k">await</span> <span class="n">summoner</span><span class="p">.</span><span class="n">GetRecentGamesAsync</span><span class="p">();</span>
 
 <span class="kt">var</span> <span class="n">item</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_leagueAPI</span><span class="p">.</span><span class="n">Static</span><span class="p">.</span><span class="n">GetItemsAsync</span><span class="p">(</span>
   <span class="m">1001</span><span class="p">,</span> 
@@ -63,6 +65,12 @@
 <p><strong>Note</strong> : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, set the third paramater in the LeagueAPI constructor to true.</p>
 
 <h2>
+<a name="last-changes" class="anchor" href="#last-changes"><span class="octicon octicon-link"></span></a>Last changes</h2>
+
+<ul>
+<li>Async naming convention</li>
+<li>Datetime converter fix</li>
+</ul><h2>
 <a name="disclaimer" class="anchor" href="#disclaimer"><span class="octicon octicon-link"></span></a>Disclaimer</h2>
 
 <p>This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.</p>
