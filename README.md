@@ -1,7 +1,5 @@
 Portable C# Library for [League of Legends API](https://developer.riotgames.com)
 
-[![PortableLeagueAPI Build Status](https://www.myget.org/BuildSource/Badge/remake?identifier=dc59073d-2442-452f-829b-d8746868ea58)](https://www.myget.org/feed/Packages/remake)
-
 ## Install
 
 - Register [here](https://developer.riotgames.com/)
@@ -30,6 +28,14 @@ var imageUrl = await item.Image.GetUrlAsync();
 ```
 
 **Note** : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, set the third paramater in the LeagueAPI constructor to true.
+
+## Status
+
+#### Dev
+[![PortableLeagueAPI Build Status](https://www.myget.org/BuildSource/Badge/remake?identifier=dc59073d-2442-452f-829b-d8746868ea58)](https://www.myget.org/feed/Packages/remake)
+
+#### NuGet
+[![NuGet version](https://badge.fury.io/nu/Remake.PortableLeagueApi.png)](http://badge.fury.io/nu/Remake.PortableLeagueApi)
 
 ## Last changes
 

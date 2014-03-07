@@ -2,7 +2,7 @@
 {
     public enum PlayerStatSummaryTypeEnum
     {
-        Unranked,		
+        Unranked,	
         Unranked3X3,
         OdinUnranked,
         AramUnranked5X5,
@@ -14,6 +14,7 @@
         OneForAll5X5,
         FirstBlood1X1,
         FirstBlood2X2,
-        SummonersRift6X6
+        SummonersRift6X6,
+        CAP5X5
     }
 }
