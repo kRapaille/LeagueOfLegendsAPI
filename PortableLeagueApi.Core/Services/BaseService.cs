@@ -43,8 +43,8 @@ namespace PortableLeagueApi.Core.Services
             string prefix,
             bool isLimitedByRateLimit = true)
         {
-            if (apiConfiguration == null) throw new ArgumentException("apiConfiguration");
-            if (prefix == null) throw new ArgumentException("prefix");
+            if (apiConfiguration == null) throw new ArgumentNullException("apiConfiguration");
+            if (prefix == null) throw new ArgumentNullException("prefix");
 
             _apiConfiguration = apiConfiguration;
 

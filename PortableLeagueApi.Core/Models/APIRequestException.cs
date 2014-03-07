@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Core.Models
             : base(apiRequestError.Status.Message)
         {
             if (apiRequestError == null || apiRequestError.Status == null)
-                throw new ArgumentException();
+                throw new ArgumentNullException();
 
             APIRequestError = apiRequestError.Status;
             Url = url;

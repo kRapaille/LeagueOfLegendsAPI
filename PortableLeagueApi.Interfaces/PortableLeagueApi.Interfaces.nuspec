@@ -1,13 +1,21 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
+    <id>Remake.PortableLeagueAPI.Interfaces</id>
     <version>$version$</version>
+    <title>Portable League API Interfaces</title>
     <authors>Kévin Rapaille</authors>
-    <owners>krapaille</owners>
-    <id>$id$</id>
-    <title>$id</title>
+    <owners>Kévin Rapaille</owners>
+    <projectUrl>http://xeex.github.io/LeagueOfLegendsAPI/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Portable C# Library for League of Legends API</description>
+    <description>
+      Open source Portable C# Library for League of legends API provided by Riot Games
+
+      “This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.”
+    </description>
+    <summary>Portable League API Interfaces</summary>
+    <releaseNotes />
+    <language>en-US</language>
+    <tags>"Portable League API Interfaces"</tags>
   </metadata>
-  <files />
 </package>
