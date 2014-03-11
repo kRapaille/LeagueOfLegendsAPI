@@ -1,8 +1,6 @@
 param(
-	#[string]$apikey = "1d731ba5-5e85-4289-8250-33c686b497ef",
-	#[string]$source = "https://www.nuget.org"
-	[string]$apikey = "b2274d59-b337-4f72-aee2-7ead96d2d208",
-	[string]$source = "https://staging.nuget.org"
+	[string]$apikey,
+	[string]$source
 )
 
 # Initialization
