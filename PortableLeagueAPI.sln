@@ -32,9 +32,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CBC158
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D6EFD353-D3F9-4098-9C08-41D80E1BA896}"
 	ProjectSection(SolutionItems) = preProject
+		build.include.ps1 = build.include.ps1
 		deploy.ps1 = deploy.ps1
-		leagueapi.include.ps1 = leagueapi.include.ps1
-		myget.include.ps1 = myget.include.ps1
+		nuget.include.ps1 = nuget.include.ps1
+		tests.include.ps1 = tests.include.ps1
+		tools.include.ps1 = tools.include.ps1
 	EndProjectSection
 EndProject
 Global
