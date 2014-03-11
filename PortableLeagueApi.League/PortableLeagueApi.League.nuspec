@@ -1,13 +1,6 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
-  <metadata>
-    <version>$version$</version>
-    <authors>Kévin Rapaille</authors>
-    <owners>krapaille</owners>
-    <id>$id$</id>
-    <title>$id</title>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Portable C# Library for League of Legends API</description>
-  </metadata>
-  <files />
-</package>
+﻿
+xml                                     package                                
+---                                     -------                                
+version="1.0" encoding="utf-8"          package                                
+
+
