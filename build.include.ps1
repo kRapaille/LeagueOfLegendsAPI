@@ -1,3 +1,7 @@
+#  Based on :
+# https://github.com/DefinitelyTyped/NugetAutomation/blob/master/CreatePackages.ps1
+# https://github.com/peters/myget/blob/master/myget.include.ps1
+
 . $rootFolder\tools.include.ps1
 
 function Get-Project-Folder {
@@ -79,10 +83,17 @@ function Build-Clean {
 
     Write-Diagnostic "Build: Clean"
 
-    Get-ChildItem $rootFolder -Include "bin,obj" -Recurse | ForEach-Object {
-       Remove-Item $_.fullname -Force -Recurse 
-    }
+	$binFolder = Join-Path $rootFolder "bin"
 
+	Get-ChildItem $binFolder |
+			select -expand FullName |
+			sort Length -Descending | 
+			ForEach-Object {
+				try{
+					Remove-Item $_ -Force -Recurse
+				}
+				catch{}
+			}
 }
 
 function Build-Bootstrap {

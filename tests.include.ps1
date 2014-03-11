@@ -1,3 +1,7 @@
+#  Based on :
+# https://github.com/DefinitelyTyped/NugetAutomation/blob/master/CreatePackages.ps1
+# https://github.com/peters/myget/blob/master/myget.include.ps1
+
 . $rootFolder\tools.include.ps1
 
 function NunitExe-Path {

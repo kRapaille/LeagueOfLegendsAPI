@@ -1,3 +1,7 @@
+#  Based on :
+# https://github.com/DefinitelyTyped/NugetAutomation/blob/master/CreatePackages.ps1
+# https://github.com/peters/myget/blob/master/myget.include.ps1
+
 . $rootFolder\tools.include.ps1
 
 function Get-MostRecentNugetSpec {
@@ -85,7 +89,10 @@ function Build-Nupkg {
         [string]$rootFolder,
 
         [parameter(Position = 3, Mandatory = $true, ValueFromPipeline = $true)]
-        [string]$outputFolder
+        [string]$outputFolder,
+
+        [parameter(Position = 4, Mandatory = $true, ValueFromPipeline = $true)]
+        [string]$config 
 
     )
 		
@@ -96,13 +103,29 @@ function Build-Nupkg {
 	$rootFolder = Normalize-Path $rootFolder
 	$nugetExe = NugetExe-Path
 
+	$buildFolder = Join-Path (Join-Path $rootFolder "bin") $config
+	
 	$projectName = [System.IO.Path]::GetFileName($project) -ireplace ".(sln|csproj)$", ""
-	Write-Diagnostic "Nupkg: $projectName ($platform / $config)"
+	Write-Diagnostic "Nupkg: $projectName ($config)"
 
-	. $nugetExe pack $project -OutputDirectory $outputFolder -Symbols  -NonInteractive `
-            -Version $version
+	. $nugetExe pack $project -Build -OutputDirectory $outputFolder -NonInteractive `
+            -Version $version -Properties Configuration=$config
     
     if($LASTEXITCODE -ne 0) {
         Die "Build failed: $projectName" -exitCode $LASTEXITCODE
     }
+}
+
+function Push-Nupkg {
+	param(
+        [parameter(Position = 0, Mandatory = $true, ValueFromPipeline = $true)]
+        [string]$nupkg,
+		[parameter(Position = 1, Mandatory = $true, ValueFromPipeline = $true)]
+        [string]$nugetApiKey,
+		[parameter(Position = 2, Mandatory = $true, ValueFromPipeline = $true)]
+        [string]$source
+    )
+
+	$nugetExe = NugetExe-Path
+	.  $nugetExe push $nupkg -ApiKey $nugetApiKey -Source $source -NonInteractive
 }
