@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
-    <metadata>
-        <id>Remake.PortableLeagueAPI.Stats</id>
-        <version>$version$</version>
-        <title>Portable League API Stats</title>
-        <authors>Kévin Rapaille</authors>
-        <owners>Kévin Rapaille</owners>
-        <projectUrl>http://xeex.github.io/LeagueOfLegendsAPI/</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Open source Portable C# Library for League of legends API provided by Riot Games
+  <metadata>
+    <id>Remake.PortableLeagueAPI.Stats</id>
+    <version>$version$</version>
+    <title>Portable League API Stats</title>
+    <authors>Kévin Rapaille</authors>
+    <owners>Kévin Rapaille</owners>
+    <projectUrl>http://xeex.github.io/LeagueOfLegendsAPI/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Open source Portable C# Library for League of legends API provided by Riot Games
 
 “This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.”</description>
-        <summary>Portable League API Stats</summary>
-        <releaseNotes>1.2.2 - Extensions added</releaseNotes>
-        <language>en-US</language>
-        <tags>"Portable League API Stats"</tags>
-        <dependencies>
-            <group targetFramework=".NETPortable0.0-net45+wp8+win8">
-                <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.0.0" />
-                <dependency id="Newtonsoft.Json" version="6.0.1" />
-                <dependency id="AutoMapper" version="3.1.1" />
-                <dependency id="Remake.PortableLeagueAPI.Core" version="2.0.2" />
-            </group>
-        </dependencies>
-    </metadata>
+    <summary>Portable League API Stats</summary>
+    <releaseNotes>1.2.2 - Extensions added</releaseNotes>
+    <language>en-US</language>
+    <tags>"Portable League API Stats"</tags>
+    <dependencies>
+      <group targetFramework=".NETPortable0.0-net45+wp8+win8">
+        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.0.2" />
+        <dependency id="Newtonsoft.Json" version="6.0.1" />
+        <dependency id="AutoMapper" version="3.1.1" />
+        <dependency id="Remake.PortableLeagueAPI.Core" version="2.0.4" />
+      </group>
+    </dependencies>
+  </metadata>
 </package>
