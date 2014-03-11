@@ -39,6 +39,7 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 ## Last changes
 
+- GZIP support
 - Async naming convention
 - Datetime converter fix
 
