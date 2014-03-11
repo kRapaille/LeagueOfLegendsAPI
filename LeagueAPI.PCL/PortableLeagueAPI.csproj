@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="LeagueApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,7 +70,7 @@
       <Name>PortableLeagueApi.Game</Name>
     </ProjectReference>
     <ProjectReference Include="..\PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj">
-      <Project>{DF6B5C82-017D-477D-8780-48E05CFAB0F8}</Project>
+      <Project>{df6b5c82-017d-477d-8780-48e05cfab0f8}</Project>
       <Name>PortableLeagueApi.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\PortableLeagueApi.League\PortableLeagueApi.League.csproj">
@@ -103,11 +106,19 @@
       <_FullFrameworkReferenceAssemblyPaths>$(TargetFrameworkDirectory)</_FullFrameworkReferenceAssemblyPaths>
     </PropertyGroup>
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
+  <PropertyGroup>
+	  <NugetExecutable>C:\Nuget\nuget.exe</NugetExecutable>
+  </PropertyGroup>
+  <Exec Command="&quot;$(NugetExecutable)&quot; pack" />
   </Target>
   -->
 </Project>

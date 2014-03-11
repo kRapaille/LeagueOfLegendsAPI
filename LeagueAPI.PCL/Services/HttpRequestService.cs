@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Models;
@@ -12,9 +13,21 @@ namespace PortableLeagueAPI.Services
 
         public HttpRequestService(HttpMessageHandler messageHandler = null)
         {
-            _messageHandler = messageHandler ?? new HttpClientHandler();
-        }
+            if (messageHandler == null)
+            {
+                var httpClientHandler = new HttpClientHandler();
 
+                if (httpClientHandler.SupportsAutomaticDecompression)
+                {
+                    httpClientHandler.AutomaticDecompression =
+                        DecompressionMethods.GZip | DecompressionMethods.Deflate;
+                }
+
+                messageHandler = httpClientHandler;
+            }
+
+            _messageHandler = messageHandler;
+        }
         public async Task<IHttpResponseMessage> SendRequestAsync(Uri uri)
         {
             using (var httpClient = new HttpClient(_messageHandler, false))
