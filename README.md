@@ -39,6 +39,9 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 ## Last changes
 
+- Accept-Encoding now supports gzip and deflate
+- Updated Game Constants to include Team Builder constants.
+- Added endpoints to leagues to get a league and a league entry by team ID.
 - Async naming convention
 - Datetime converter fix
 

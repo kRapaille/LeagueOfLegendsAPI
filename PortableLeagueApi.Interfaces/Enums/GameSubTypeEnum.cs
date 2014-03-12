@@ -17,6 +17,7 @@
         OneForAll5X5, 
         FirstBlood1X1, 
         FirstBlood2X2,
-        SR6X6
+        SR6X6,
+        CAP5X5
     }
 }

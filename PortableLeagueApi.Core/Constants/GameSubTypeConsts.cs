@@ -21,6 +21,7 @@ namespace PortableLeagueApi.Core.Constants
         public const string FirstBlood1X1 = "FIRSTBLOOD_1x1";
         public const string FirstBlood2X2 = "FIRSTBLOOD_2x2";
         public const string SR6X6 = "SR_6x6";
+        public const string CAP5X5 = "CAP_5x5";
 
         public static readonly Dictionary<GameSubTypeEnum, string> GameSubTypes = new Dictionary<GameSubTypeEnum, string>
         {
@@ -39,7 +40,8 @@ namespace PortableLeagueApi.Core.Constants
             { GameSubTypeEnum.OneForAll5X5, OneForAll5X5 },
             { GameSubTypeEnum.FirstBlood1X1, FirstBlood1X1 },
             { GameSubTypeEnum.FirstBlood2X2, FirstBlood2X2 },
-            { GameSubTypeEnum.SR6X6, SR6X6 }
+            { GameSubTypeEnum.SR6X6, SR6X6 },
+            { GameSubTypeEnum.CAP5X5, CAP5X5 }
         };
     }
 }
