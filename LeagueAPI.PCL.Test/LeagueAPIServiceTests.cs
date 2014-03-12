@@ -99,7 +99,7 @@ namespace PortableLeagueAPI.Test
 
             try
             {
-                var enumerable = await _leagueAPI.League.RetrieveLeaguesEntryDataForSummonerAsync(19332836);
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesEntryDataForSummonerAsync(19332836);
                 result = enumerable.ToList();
             }
             catch (APIRequestException are)
@@ -132,6 +132,54 @@ namespace PortableLeagueAPI.Test
                     throw;
 
                 Debug.WriteLine("Unranked player");
+
+                return;
+            }
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("League")]
+        public async void RetrievesLeaguesEntryDataForTeamTestAsync()
+        {
+            List<ILeagueItem> result;
+
+            try
+            {
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesEntryDataForTeamAsync("TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f");
+                result = enumerable.ToList();
+            }
+            catch (APIRequestException are)
+            {
+                if (are.APIRequestError.StatusCode != 404)
+                    throw;
+
+                Debug.WriteLine("Unranked team");
+
+                return;
+            }
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("League")]
+        public async void RetrievesLeaguesDataForTeamTestAsync()
+        {
+            List<ILeague> result;
+
+            try
+            {
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesDataForTeamAsync("TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f");
+                result = enumerable.ToList();
+            }
+            catch (APIRequestException are)
+            {
+                if (are.APIRequestError.StatusCode != 404)
+                    throw;
+
+                Debug.WriteLine("Unranked team");
 
                 return;
             }

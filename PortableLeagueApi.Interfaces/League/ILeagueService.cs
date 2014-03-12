@@ -16,7 +16,7 @@ namespace PortableLeagueApi.Interfaces.League
         /// <summary>
         /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
         /// </summary>
-        Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataForSummonerAsync(
+        Task<IEnumerable<ILeagueItem>> RetrievesLeaguesEntryDataForSummonerAsync(
             long summonerId,
             RegionEnum? region = null);
 
@@ -25,6 +25,20 @@ namespace PortableLeagueApi.Interfaces.League
         /// </summary>
         Task<IEnumerable<ILeague>> RetrievesLeaguesDataForSummonerAsync(
             long summonerId,
+            RegionEnum? region = null);
+
+        /// <summary>
+        /// Retrieves leagues data for team
+        /// </summary>
+        Task<IEnumerable<ILeagueItem>> RetrievesLeaguesEntryDataForTeamAsync(
+            string teamId,
+            RegionEnum? region = null);
+
+        /// <summary>
+        /// Retrieves leagues data for team
+        /// </summary>
+        Task<IEnumerable<ILeague>> RetrievesLeaguesDataForTeamAsync(
+            string teamId,
             RegionEnum? region = null);
     }
 }

@@ -23,7 +23,7 @@ namespace PortableLeagueApi.League.Extensions
             if (leagueModel == null) throw new ArgumentNullException("leagueModel");
 
             var leagueService = new LeagueService(leagueModel.ApiConfiguration);
-            return await leagueService.RetrieveLeaguesEntryDataForSummonerAsync(summonerId, region);
+            return await leagueService.RetrievesLeaguesEntryDataForSummonerAsync(summonerId, region);
         }
 
         /// <summary>

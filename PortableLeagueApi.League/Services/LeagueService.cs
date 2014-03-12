@@ -21,9 +21,6 @@ namespace PortableLeagueApi.League.Services
 #endif
         }
 
-        /// <summary>
-        /// Retrieves challenger tier leagues.
-        /// </summary>
         public async Task<ILeague> RetrievesChallengerTierLeaguesAsync(
             LeagueTypeEnum leagueType,
             RegionEnum? region = null)
@@ -33,10 +30,7 @@ namespace PortableLeagueApi.League.Services
             return await GetResponseAsync<LeagueDto, ILeague>(region, url);
         }
 
-        /// <summary>
-        /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
-        /// </summary>
-        public async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataForSummonerAsync(
+        public async Task<IEnumerable<ILeagueItem>> RetrievesLeaguesEntryDataForSummonerAsync(
             long summonerId,
             RegionEnum? region = null)
         {
@@ -46,15 +40,32 @@ namespace PortableLeagueApi.League.Services
             return await GetResponseAsync<IEnumerable<LeagueItemDto>, IEnumerable<ILeagueItem>>(region, url);
         }
 
-        /// <summary>
-        /// Retrieves leagues data for summoner, including leagues for all of summoner's teams.
-        /// </summary>
         public async Task<IEnumerable<ILeague>> RetrievesLeaguesDataForSummonerAsync(
             long summonerId,
             RegionEnum? region = null)
         {
             var url = string.Format("by-summoner/{0}",
                 summonerId);
+
+            return await GetResponseAsync<IEnumerable<LeagueDto>, IEnumerable<ILeague>>(region, url);
+        }
+
+        public async Task<IEnumerable<ILeagueItem>> RetrievesLeaguesEntryDataForTeamAsync(
+            string teamId,
+            RegionEnum? region = null)
+        {
+            var url = string.Format("by-team/{0}/entry",
+                teamId);
+
+            return await GetResponseAsync<IEnumerable<LeagueItemDto>, IEnumerable<ILeagueItem>>(region, url);
+        }
+
+        public async Task<IEnumerable<ILeague>> RetrievesLeaguesDataForTeamAsync(
+            string teamId,
+            RegionEnum? region = null)
+        {
+            var url = string.Format("by-team/{0}",
+                teamId);
 
             return await GetResponseAsync<IEnumerable<LeagueDto>, IEnumerable<ILeague>>(region, url);
         }
