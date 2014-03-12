@@ -75,27 +75,6 @@ function Build-Project {
     }
 }
 
-function Build-Clean {
-	param(
-        [parameter(Position = 0, Mandatory = $true, ValueFromPipeline = $true)]
-	    [string]$rootFolder
-    )
-
-    Write-Diagnostic "Build: Clean"
-
-	$binFolder = Join-Path $rootFolder "bin"
-
-	Get-ChildItem $binFolder |
-			select -expand FullName |
-			sort Length -Descending | 
-			ForEach-Object {
-				try{
-					Remove-Item $_ -Force -Recurse
-				}
-				catch{}
-			}
-}
-
 function Build-Bootstrap {
     param(
         [parameter(Position = 0, Mandatory = $true, ValueFromPipeline = $true)]

@@ -129,3 +129,25 @@ function Push-Nupkg {
 	$nugetExe = NugetExe-Path
 	.  $nugetExe push $nupkg -ApiKey $nugetApiKey -Source $source -NonInteractive
 }
+
+function Packages-Clean {
+	param(
+        [parameter(Position = 0, Mandatory = $true, ValueFromPipeline = $true)]
+	    [string]$rootFolder
+    )
+
+    Write-Diagnostic "Packages: Clean"
+
+	$binFolder = Join-Path $rootFolder "bin"
+
+	Get-ChildItem $binFolder | 
+		Where-Object { $_.FullName -match ".nupkg$" } |
+		select -expand FullName |
+		sort Length -Descending | 
+		ForEach-Object {
+			try{
+				Remove-Item $_ -Force -Recurse
+			}
+			catch{}
+		}
+}

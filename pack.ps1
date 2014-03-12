@@ -34,7 +34,7 @@ $excludeNupkgProjects = @(
 )
 
 # Clean
-if($clean) { Build-Clean $rootFolder }
+if($clean) { Packages-Clean $rootFolder }
 
 $newPackagesVersions = @{}
 $config = "Release"

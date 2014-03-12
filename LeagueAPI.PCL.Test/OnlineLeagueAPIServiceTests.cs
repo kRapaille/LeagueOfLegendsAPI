@@ -14,7 +14,7 @@ namespace PortableLeagueAPI.Test
         public OnlineLeagueAPIServiceTests()
         {
             // TODO : Don't forget to pass your api key
-            _leagueAPI = new LeagueApi(string.Empty, RegionEnum.Euw, true);
+            _leagueAPI = new LeagueApi("9398a3a0-35e3-43f2-877c-1502c8b080c2", RegionEnum.Euw, true);
         }
 
         //[Test]
