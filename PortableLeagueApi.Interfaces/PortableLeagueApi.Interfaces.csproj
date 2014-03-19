@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -142,11 +143,9 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Target Name="_SetFullFrameworkFolderToProfile"
-     AfterTargets="GetReferenceAssemblyPaths">
-
+  <Target Name="_SetFullFrameworkFolderToProfile" AfterTargets="GetReferenceAssemblyPaths">
     <PropertyGroup>
-     <_FullFrameworkReferenceAssemblyPaths>$(TargetFrameworkDirectory)</_FullFrameworkReferenceAssemblyPaths>
+      <_FullFrameworkReferenceAssemblyPaths>$(TargetFrameworkDirectory)</_FullFrameworkReferenceAssemblyPaths>
     </PropertyGroup>
   </Target>
 </Project>

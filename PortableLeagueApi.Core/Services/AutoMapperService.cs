@@ -1,14 +1,15 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using AutoMapper.Mappers;
 using PortableLeagueApi.Interfaces.Core;
 
 namespace PortableLeagueApi.Core.Services
 {
-    public class AutoMapperService
+    public class AutoMapperService : IDisposable
     {
         private readonly ConfigurationStore _configurationStore;
-        private readonly MappingEngine _mappingEngine;
         private readonly ILeagueApiConfiguration _apiConfiguration;
+        private MappingEngine _mappingEngine;
 
         internal AutoMapperService(ILeagueApiConfiguration apiConfiguration)
         {
@@ -52,6 +53,24 @@ namespace PortableLeagueApi.Core.Services
             return item == null 
                 ? default(TDestination)
                 : _mappingEngine.Map<TSource, TDestination>(item);
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool canCleanUpManagedandNativeRessources)
+        {
+            if (canCleanUpManagedandNativeRessources)
+            {
+                if (_mappingEngine != null)
+                {
+                    _mappingEngine.Dispose();
+                    _mappingEngine = null;
+                }
+            }
         }
     }
 }

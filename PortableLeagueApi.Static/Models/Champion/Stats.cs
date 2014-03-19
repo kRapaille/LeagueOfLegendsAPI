@@ -20,7 +20,7 @@ namespace PortableLeagueApi.Static.Models.Champion
         public double Attackspeedoffset { get; set; }
 
         public double Attackspeedperlevel { get; set; }
-
+        
         public double Crit { get; set; }
 
         public double Critperlevel { get; set; }
@@ -46,6 +46,16 @@ namespace PortableLeagueApi.Static.Models.Champion
         public double Spellblock { get; set; }
 
         public double Spellblockperlevel { get; set; }
+
+        public double AttackspeedBase
+        {
+            get { return 1 / (1.6 * (1 + Attackspeedoffset)); }
+        }
+
+        public double GetAttackSpeed(double attackSpeedBonus, int championLevel)
+        {
+            return AttackspeedBase*(1 + attackSpeedBonus + Attackspeedperlevel*(championLevel - 1)/100);
+        }
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
