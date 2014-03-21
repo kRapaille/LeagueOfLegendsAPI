@@ -1,7 +1,10 @@
-﻿namespace PortableLeagueAPI.Test.Responses
+﻿using System.Threading.Tasks;
+
+namespace PortableLeagueAPI.Test.Responses
 {
     public interface IResponses
     {
-         string GetResponse(string pathAndQuery);
+        Task<string> GetResponse(string pathAndQuery);
+        string GetFile(string pathAndQuery);
     }
 }

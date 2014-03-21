@@ -1,0 +1,36 @@
+﻿{
+   "tags": [
+      "Movement",
+      "Boots"
+   ],
+   "plaintext": "Slightly increases Movement Speed",
+   "stats": {"FlatMovementSpeedMod": 25},
+   "description": "<groupLimit>Limited to 1.<\/groupLimit><br><br><unique>UNIQUE Passive - Enhanced Movement:<\/unique> +25 Movement Speed<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
+   "name": "Boots of Speed",
+   "into": [
+      "3006",
+      "3047",
+      "3020",
+      "3158",
+      "3111",
+      "3117",
+      "3009"
+   ],
+   "image": {
+      "w": 48,
+      "full": "1001.png",
+      "sprite": "item0.png",
+      "group": "item",
+      "h": 48,
+      "y": 0,
+      "x": 0
+   },
+   "colloq": ";",
+   "gold": {
+      "total": 325,
+      "purchasable": true,
+      "sell": 227,
+      "base": 325
+   },
+   "group": "BootsNormal"
+}

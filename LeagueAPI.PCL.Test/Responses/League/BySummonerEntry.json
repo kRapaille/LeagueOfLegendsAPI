@@ -1,0 +1,69 @@
+﻿[
+   {
+      "isHotStreak": false,
+      "isFreshBlood": false,
+      "leagueName": "Jayce's Crusaders",
+      "miniSeries": {
+         "progress": "WNN",
+         "target": 2,
+         "losses": 0,
+         "timeLeftToPlayMillis": -1,
+         "wins": 1
+      },
+      "isVeteran": true,
+      "tier": "DIAMOND",
+      "lastPlayed": -1,
+      "playerOrTeamId": "19332836",
+      "leaguePoints": 100,
+      "rank": "II",
+      "isInactive": false,
+      "queueType": "RANKED_SOLO_5x5",
+      "playerOrTeamName": "TuC Ølen",
+      "wins": 123
+   },
+   {
+      "isHotStreak": false,
+      "isFreshBlood": false,
+      "leagueName": "Taric's Avengers",
+      "isVeteran": false,
+      "tier": "DIAMOND",
+      "lastPlayed": -1,
+      "playerOrTeamId": "TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f",
+      "leaguePoints": 27,
+      "rank": "III",
+      "isInactive": false,
+      "queueType": "RANKED_TEAM_5x5",
+      "playerOrTeamName": "holyshiitcarry",
+      "wins": 38
+   },
+   {
+      "isHotStreak": false,
+      "isFreshBlood": false,
+      "leagueName": "Fiora's Infiltrators",
+      "isVeteran": false,
+      "tier": "PLATINUM",
+      "lastPlayed": -1,
+      "playerOrTeamId": "TEAM-51da0800-7d3c-11e3-bc48-782bcb4ce61a",
+      "leaguePoints": 5,
+      "rank": "V",
+      "isInactive": true,
+      "queueType": "RANKED_TEAM_5x5",
+      "playerOrTeamName": "Aquilon Frost Gaming",
+      "wins": 9
+   },
+   {
+      "isHotStreak": false,
+      "isFreshBlood": false,
+      "leagueName": "Rengar's Swashbucklers",
+      "isVeteran": false,
+      "tier": "PLATINUM",
+      "lastPlayed": -1,
+      "playerOrTeamId": "TEAM-a1b0e620-90cc-11e3-9ae1-782bcb4ce61a",
+      "leaguePoints": 40,
+      "rank": "V",
+      "isInactive": true,
+      "queueType": "RANKED_TEAM_5x5",
+      "playerOrTeamName": "Bourkh",
+      "wins": 4
+   }
+]

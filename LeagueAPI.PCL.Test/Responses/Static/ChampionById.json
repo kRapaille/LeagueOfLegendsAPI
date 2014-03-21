@@ -1,0 +1,1120 @@
+﻿{
+   "tags": [
+      "Mage",
+      "Fighter"
+   ],
+   "stats": {
+      "attackrange": 550,
+      "mpperlevel": 55,
+      "mp": 250,
+      "attackdamage": 52,
+      "hp": 414,
+      "hpperlevel": 86,
+      "attackdamageperlevel": 3,
+      "armor": 11,
+      "mpregenperlevel": 0.6,
+      "hpregen": 4.35,
+      "critperlevel": 0,
+      "spellblockperlevel": 0,
+      "mpregen": 7,
+      "attackspeedperlevel": 2.112,
+      "spellblock": 30,
+      "movespeed": 340,
+      "attackspeedoffset": 0,
+      "crit": 0,
+      "hpregenperlevel": 0.55,
+      "armorperlevel": 3.9
+   },
+   "enemytips": [
+      "Be cautious about engaging Ryze alone with less than full health.",
+      "Cleanse and Banshee's Veil are especially effective defenses against Ryze.",
+      "Ryze can only lock down one player with Rune Prison. Attacking with friends is the most effective approach, but remember to avoid Spell Flux bouncing between you and your allies."
+   ],
+   "recommended": [
+      {
+         "champion": "Ryze",
+         "title": "Beginner",
+         "priority": false,
+         "map": "1",
+         "blocks": [
+            {
+               "items": [
+                  {
+                     "id": "1056",
+                     "count": 1
+                  },
+                  {
+                     "id": "2003",
+                     "count": 1
+                  }
+               ],
+               "type": "beginner_Starter"
+            },
+            {
+               "items": [
+                  {
+                     "id": "1028",
+                     "count": 1
+                  },
+                  {
+                     "id": "1027",
+                     "count": 1
+                  },
+                  {
+                     "id": "3010",
+                     "count": 1
+                  }
+               ],
+               "type": "beginner_Advanced"
+            },
+            {
+               "items": [
+                  {
+                     "id": "1001",
+                     "count": 1
+                  },
+                  {
+                     "id": "3020",
+                     "count": 1
+                  }
+               ],
+               "type": "beginner_MovementSpeed"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3010",
+                     "count": 1
+                  },
+                  {
+                     "id": "1026",
+                     "count": 1
+                  },
+                  {
+                     "id": "3027",
+                     "count": 1
+                  }
+               ],
+               "type": "beginner_LegendaryItem"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3003",
+                     "count": 1
+                  },
+                  {
+                     "id": "3110",
+                     "count": 1
+                  },
+                  {
+                     "id": "3152",
+                     "count": 1
+                  },
+                  {
+                     "id": "3116",
+                     "count": 1
+                  }
+               ],
+               "type": "beginner_MoreLegendaryItems"
+            }
+         ],
+         "type": "riot-beginner",
+         "mode": "CLASSIC"
+      },
+      {
+         "champion": "Ryze",
+         "title": "RyzeHA",
+         "priority": false,
+         "map": "12",
+         "blocks": [
+            {
+               "items": [
+                  {
+                     "id": "1001",
+                     "count": 1
+                  },
+                  {
+                     "id": "3070",
+                     "count": 1
+                  },
+                  {
+                     "id": "2003",
+                     "count": 4
+                  },
+                  {
+                     "id": "2004",
+                     "count": 4
+                  }
+               ],
+               "type": "starting"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3020",
+                     "count": 1
+                  },
+                  {
+                     "id": "3010",
+                     "count": 1
+                  },
+                  {
+                     "id": "3024",
+                     "count": 1
+                  }
+               ],
+               "type": "essential"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3027",
+                     "count": 1
+                  },
+                  {
+                     "id": "3003",
+                     "count": 1
+                  },
+                  {
+                     "id": "3135",
+                     "count": 1
+                  }
+               ],
+               "type": "offensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3110",
+                     "count": 1
+                  },
+                  {
+                     "id": "3102",
+                     "count": 1
+                  },
+                  {
+                     "id": "3152",
+                     "count": 1
+                  }
+               ],
+               "type": "defensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "2003",
+                     "count": 1
+                  },
+                  {
+                     "id": "2004",
+                     "count": 1
+                  }
+               ],
+               "type": "Consumables"
+            }
+         ],
+         "type": "riot",
+         "mode": "ARAM"
+      },
+      {
+         "champion": "Ryze",
+         "title": "RyzeSR",
+         "priority": false,
+         "map": "1",
+         "blocks": [
+            {
+               "items": [
+                  {
+                     "id": "1027",
+                     "count": 1
+                  },
+                  {
+                     "id": "2003",
+                     "count": 2
+                  }
+               ],
+               "type": "starting"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3020",
+                     "count": 1
+                  },
+                  {
+                     "id": "3010",
+                     "count": 1
+                  },
+                  {
+                     "id": "3070",
+                     "count": 1
+                  }
+               ],
+               "type": "essential"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3027",
+                     "count": 1
+                  },
+                  {
+                     "id": "3003",
+                     "count": 1
+                  },
+                  {
+                     "id": "3135",
+                     "count": 1
+                  }
+               ],
+               "type": "offensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3065",
+                     "count": 1
+                  },
+                  {
+                     "id": "3152",
+                     "count": 1
+                  },
+                  {
+                     "id": "3110",
+                     "count": 1
+                  }
+               ],
+               "type": "defensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "2003",
+                     "count": 1
+                  },
+                  {
+                     "id": "2004",
+                     "count": 1
+                  },
+                  {
+                     "id": "2044",
+                     "count": 1
+                  }
+               ],
+               "type": "Consumables"
+            }
+         ],
+         "type": "riot",
+         "mode": "TUTORIAL"
+      },
+      {
+         "champion": "Ryze",
+         "title": "RyzeDM",
+         "priority": false,
+         "map": "8",
+         "blocks": [
+            {
+               "items": [
+                  {
+                     "id": "1027",
+                     "count": 1
+                  },
+                  {
+                     "id": "2003",
+                     "count": 3
+                  },
+                  {
+                     "id": "1001",
+                     "count": 1
+                  },
+                  {
+                     "id": "1028",
+                     "count": 1
+                  }
+               ],
+               "type": "starting"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3020",
+                     "count": 1
+                  },
+                  {
+                     "id": "3073",
+                     "count": 1
+                  },
+                  {
+                     "id": "3176",
+                     "count": 1
+                  }
+               ],
+               "type": "essential"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3029",
+                     "count": 1
+                  },
+                  {
+                     "id": "3007",
+                     "count": 1
+                  }
+               ],
+               "type": "offensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3110",
+                     "count": 1
+                  },
+                  {
+                     "id": "3152",
+                     "count": 1
+                  },
+                  {
+                     "id": "3180",
+                     "count": 1
+                  }
+               ],
+               "type": "defensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "2003",
+                     "count": 1
+                  },
+                  {
+                     "id": "2004",
+                     "count": 1
+                  }
+               ],
+               "type": "Consumables"
+            }
+         ],
+         "type": "riot",
+         "mode": "ODIN"
+      },
+      {
+         "champion": "Ryze",
+         "title": "RyzeFB",
+         "priority": false,
+         "map": "12",
+         "blocks": [
+            {
+               "items": [
+                  {
+                     "id": "1027",
+                     "count": 1
+                  },
+                  {
+                     "id": "2003",
+                     "count": 2
+                  },
+                  {
+                     "id": "3342",
+                     "count": 1
+                  }
+               ],
+               "type": "starting"
+            },
+            {
+               "items": [
+                  {
+                     "id": "1001",
+                     "count": 1
+                  },
+                  {
+                     "id": "3070",
+                     "count": 1
+                  },
+                  {
+                     "id": "3010",
+                     "count": 1
+                  }
+               ],
+               "type": "essential"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3027",
+                     "count": 1
+                  },
+                  {
+                     "id": "3003",
+                     "count": 1
+                  },
+                  {
+                     "id": "3135",
+                     "count": 1
+                  }
+               ],
+               "type": "offensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3065",
+                     "count": 1
+                  },
+                  {
+                     "id": "3152",
+                     "count": 1
+                  },
+                  {
+                     "id": "3110",
+                     "count": 1
+                  }
+               ],
+               "type": "defensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "2003",
+                     "count": 1
+                  },
+                  {
+                     "id": "2004",
+                     "count": 1
+                  },
+                  {
+                     "id": "2044",
+                     "count": 1
+                  }
+               ],
+               "type": "Consumables"
+            }
+         ],
+         "type": "riot",
+         "mode": "FIRSTBLOOD"
+      },
+      {
+         "champion": "Ryze",
+         "title": "RyzeSR",
+         "priority": false,
+         "map": "1",
+         "blocks": [
+            {
+               "items": [
+                  {
+                     "id": "1027",
+                     "count": 1
+                  },
+                  {
+                     "id": "2003",
+                     "count": 2
+                  },
+                  {
+                     "id": "3340",
+                     "count": 1
+                  }
+               ],
+               "type": "starting"
+            },
+            {
+               "items": [
+                  {
+                     "id": "1001",
+                     "count": 1
+                  },
+                  {
+                     "id": "3070",
+                     "count": 1
+                  },
+                  {
+                     "id": "3010",
+                     "count": 1
+                  }
+               ],
+               "type": "essential"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3027",
+                     "count": 1
+                  },
+                  {
+                     "id": "3003",
+                     "count": 1
+                  },
+                  {
+                     "id": "3135",
+                     "count": 1
+                  }
+               ],
+               "type": "offensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3065",
+                     "count": 1
+                  },
+                  {
+                     "id": "3152",
+                     "count": 1
+                  },
+                  {
+                     "id": "3110",
+                     "count": 1
+                  }
+               ],
+               "type": "defensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "2003",
+                     "count": 1
+                  },
+                  {
+                     "id": "2004",
+                     "count": 1
+                  },
+                  {
+                     "id": "2044",
+                     "count": 1
+                  }
+               ],
+               "type": "Consumables"
+            }
+         ],
+         "type": "riot",
+         "mode": "CLASSIC"
+      },
+      {
+         "champion": "Ryze",
+         "title": "RyzeTT",
+         "priority": false,
+         "map": "10",
+         "blocks": [
+            {
+               "items": [
+                  {
+                     "id": "1027",
+                     "count": 1
+                  },
+                  {
+                     "id": "2003",
+                     "count": 2
+                  },
+                  {
+                     "id": "1001",
+                     "count": 1
+                  }
+               ],
+               "type": "starting"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3020",
+                     "count": 1
+                  },
+                  {
+                     "id": "3010",
+                     "count": 1
+                  },
+                  {
+                     "id": "3070",
+                     "count": 1
+                  }
+               ],
+               "type": "essential"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3027",
+                     "count": 1
+                  },
+                  {
+                     "id": "3003",
+                     "count": 1
+                  }
+               ],
+               "type": "offensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "3110",
+                     "count": 1
+                  },
+                  {
+                     "id": "3102",
+                     "count": 1
+                  },
+                  {
+                     "id": "3152",
+                     "count": 1
+                  }
+               ],
+               "type": "defensive"
+            },
+            {
+               "items": [
+                  {
+                     "id": "2003",
+                     "count": 1
+                  },
+                  {
+                     "id": "2004",
+                     "count": 1
+                  }
+               ],
+               "type": "Consumables"
+            }
+         ],
+         "type": "riot",
+         "mode": "CLASSIC"
+      }
+   ],
+   "image": {
+      "w": 48,
+      "full": "Ryze.png",
+      "sprite": "champion2.png",
+      "group": "champion",
+      "h": 48,
+      "y": 48,
+      "x": 240
+   },
+   "spells": [
+      {
+         "range": [
+            625,
+            625,
+            625,
+            625,
+            625
+         ],
+         "leveltip": {
+            "effect": [
+               "{{ e2 }}% -> {{ e2NL }}%",
+               "{{ e1 }} -> {{ e1NL }}"
+            ],
+            "label": [
+               "Passive Cooldown Reduction",
+               "Damage"
+            ]
+         },
+         "resource": "{{ cost }} Mana",
+         "maxrank": 5,
+         "effectBurn": [
+            "60/85/110/135/160",
+            "2/4/6/8/10",
+            "6.5"
+         ],
+         "image": {
+            "w": 48,
+            "full": "Overload.png",
+            "sprite": "spell7.png",
+            "group": "spell",
+            "h": 48,
+            "y": 144,
+            "x": 336
+         },
+         "cost": [
+            60,
+            60,
+            60,
+            60,
+            60
+         ],
+         "cooldown": [
+            3,
+            3,
+            3,
+            3,
+            3
+         ],
+         "id": "Overload",
+         "vars": [
+            {
+               "link": "spelldamage",
+               "coeff": 0.4,
+               "key": "a1"
+            },
+            {
+               "link": "mana",
+               "coeff": 0.065,
+               "key": "f1"
+            }
+         ],
+         "rangeBurn": "625",
+         "costType": "Mana",
+         "effect": [
+            [
+               60,
+               85,
+               110,
+               135,
+               160
+            ],
+            [
+               2,
+               4,
+               6,
+               8,
+               10
+            ],
+            [
+               6,
+               6,
+               6,
+               6,
+               6
+            ]
+         ],
+         "cooldownBurn": "3.5",
+         "description": "Ryze throws a charge of pure energy at an enemy for heavy damage and additional damage based upon Ryze's maximum mana. Ryze also gains passive cooldown reduction.",
+         "name": "Overload",
+         "costBurn": "60",
+         "tooltip": "<span class=\"colorFF9900\">Active: <\/span>Deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})<\/span> plus {{ e3 }}% of Ryze's maximum Mana <span class=\"color44DDFF\">(+{{ f1 }})<\/span> in magic damage.<br><br><span class=\"colorFF9900\">Passive: <\/span>Gains {{ e2 }}% Cooldown Reduction."
+      },
+      {
+         "range": [
+            600,
+            600,
+            600,
+            600,
+            600
+         ],
+         "leveltip": {
+            "effect": [
+               "{{ e1 }} -> {{ e1NL }}",
+               "{{ e2 }} -> {{ e2NL }}",
+               "{{ cost }} -> {{ costnNL }}"
+            ],
+            "label": [
+               "Duration",
+               "Damage",
+               "Mana cost"
+            ]
+         },
+         "resource": "{{ cost }} Mana",
+         "maxrank": 5,
+         "effectBurn": [
+            "0.75/1/1.25/1.5/1.75",
+            "60/95/130/165/200",
+            "4.5"
+         ],
+         "image": {
+            "w": 48,
+            "full": "RunePrison.png",
+            "sprite": "spell7.png",
+            "group": "spell",
+            "h": 48,
+            "y": 144,
+            "x": 384
+         },
+         "cost": [
+            60,
+            70,
+            80,
+            90,
+            100
+         ],
+         "cooldown": [
+            0,
+            0,
+            0,
+            0,
+            0
+         ],
+         "id": "RunePrison",
+         "vars": [
+            {
+               "link": "spelldamage",
+               "coeff": 0.6,
+               "key": "a1"
+            },
+            {
+               "link": "mana",
+               "coeff": 0.045,
+               "key": "f1"
+            }
+         ],
+         "rangeBurn": "600",
+         "costType": "Mana",
+         "effect": [
+            [
+               0,
+               1,
+               1,
+               1,
+               1
+            ],
+            [
+               60,
+               95,
+               130,
+               165,
+               200
+            ],
+            [
+               4,
+               4,
+               4,
+               4,
+               4
+            ]
+         ],
+         "cooldownBurn": "0",
+         "description": "Ryze traps target enemy unit in a cage of runes, damaging them and preventing them from moving. Also gains bonus damage based on Ryze's maximum mana.",
+         "name": "Rune Prison",
+         "costBurn": "60/70/80/90/100",
+         "tooltip": "Roots the enemy for {{ e1 }} second(s), dealing {{ e2 }}<span class=\"color99FF99\"> (+{{ a1 }})<\/span> plus {{ e3 }}% of Ryze's maximum Mana <span class=\"color44DDFF\">(+{{ f1 }})<\/span> in magic damage. "
+      },
+      {
+         "range": [
+            600,
+            600,
+            600,
+            600,
+            600
+         ],
+         "leveltip": {
+            "effect": [
+               "{{ e1 }} -> {{ e1NL }}",
+               "{{ e2 }} -> {{ e2NL }}",
+               " {{ cost }} -> {{ costnNL }}"
+            ],
+            "label": [
+               "Damage",
+               "Magic Resist Reduction",
+               "Mana cost"
+            ]
+         },
+         "resource": "{{ cost }} Mana",
+         "maxrank": 5,
+         "effectBurn": [
+            "50/70/90/110/130",
+            "12/15/18/21/24",
+            "1"
+         ],
+         "image": {
+            "w": 48,
+            "full": "SpellFlux.png",
+            "sprite": "spell7.png",
+            "group": "spell",
+            "h": 48,
+            "y": 144,
+            "x": 432
+         },
+         "cost": [
+            60,
+            70,
+            80,
+            90,
+            100
+         ],
+         "cooldown": [
+            14,
+            14,
+            14,
+            14,
+            14
+         ],
+         "id": "SpellFlux",
+         "vars": [
+            {
+               "link": "spelldamage",
+               "coeff": 0.35,
+               "key": "a1"
+            },
+            {
+               "link": "mana",
+               "coeff": 0.01,
+               "key": "f1"
+            }
+         ],
+         "rangeBurn": "600",
+         "costType": "Mana",
+         "effect": [
+            [
+               50,
+               70,
+               90,
+               110,
+               130
+            ],
+            [
+               12,
+               15,
+               18,
+               21,
+               24
+            ],
+            [
+               1,
+               1,
+               1,
+               1,
+               1
+            ]
+         ],
+         "cooldownBurn": "14",
+         "description": "Ryze releases an orb of pure magical power that deals damage and bounces from the initial target up to 5 times. Also gains bonus damage based on Ryze's maximum mana. Targets hit have their magic resistance reduced.",
+         "name": "Spell Flux",
+         "costBurn": "60/70/80/90/100",
+         "tooltip": "Unleashes an orb that bounces to enemies or Ryze up to 5 times.<br><br>Each bounce deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})<\/span> plus {{ e3 }}% of Ryze's maximum Mana <span class=\"color44DDFF\">(+{{ f1 }})<\/span> magic damage and reduces Magic Resist by {{ e2 }} for 5 seconds."
+      },
+      {
+         "range": "self",
+         "leveltip": {
+            "effect": [
+               "{{ cooldown }} -> {{ cooldownnNL }}",
+               "{{ e3 }} -> {{ e3NL }}",
+               "{{ e2 }}% -> {{ e2NL }}%"
+            ],
+            "label": [
+               "Cooldown",
+               "Duration",
+               "Spell Vamp"
+            ]
+         },
+         "resource": "No Cost ",
+         "maxrank": 3,
+         "effectBurn": [
+            "75/150/225",
+            "15/20/25",
+            "5/6/7",
+            "80"
+         ],
+         "image": {
+            "w": 48,
+            "full": "DesperatePower.png",
+            "sprite": "spell8.png",
+            "group": "spell",
+            "h": 48,
+            "y": 0,
+            "x": 0
+         },
+         "cost": [
+            0,
+            0,
+            0
+         ],
+         "cooldown": [
+            70,
+            60,
+            50
+         ],
+         "id": "DesperatePower",
+         "rangeBurn": "self",
+         "costType": "NoCost",
+         "effect": [
+            [
+               75,
+               150,
+               225
+            ],
+            [
+               15,
+               20,
+               25
+            ],
+            [
+               5,
+               6,
+               7
+            ],
+            [
+               80,
+               80,
+               80
+            ]
+         ],
+         "cooldownBurn": "70/60/50",
+         "description": "Ryze channels immense arcane power, he gains spell vamp and all of his spells deal area of effect damage.",
+         "name": "Desperate Power",
+         "costBurn": "0",
+         "tooltip": "Channels immense arcane power gaining {{ e2 }}% Spell Vamp, and {{ e4 }} Movement Speed. Spells deal 50% area of effect damage for {{ e3 }} seconds."
+      }
+   ],
+   "blurb": "There are many on Runeterra who are attracted to the study of magic or, in recent times, the emerging field of techmaturgy. For most, pursuit of such knowledge is formalized in a college or university. The halls of traditional study were never for ...",
+   "allytips": [
+      "Ryze can use himself as a conduit for his Spell Flux ability if there are no additional enemies to bounce the spell off of.",
+      "Using Ryze's ultimate to farm creeps can lead to a large gold advantage."
+   ],
+   "lore": "There are many on Runeterra who are attracted to the study of magic or, in recent times, the emerging field of techmaturgy. For most, pursuit of such knowledge is formalized in a college or university. The halls of traditional study were never for Ryze, however, who felt a more raw and primal connection to the magic of Runeterra than those who tried to teach him. He struck out on his own as a young man to discover what already called to him. Ryze traveled the world, seeking the wisdom of powerful hermits, witches, and shamans - anyone who had something to share beyond what was taught in the city-states of Valoran. When he had learned all he could from these fonts of wisdom, Ryze turned to seek the lost, forgotten, and forbidden knowledge in the world, delving into mystical worlds where others feared to tread.<br><br>Ryze's tireless searching for magical knowledge led him to an ancient form of spellcraft known as thorn magic. This art required Ryze to tattoo spells on his body, permanently infusing his being with vast arcane power and finally fulfilling his need to bond with the mystical energies of Runeterra. His travels also led him to uncover the giant indestructible scroll he now carries on his back - the purpose of the inscribed spell remains a secret only Ryze knows. He claims it is an abomination - something that he must safeguard from the world. This has piqued the curiosity of many, though no one is sure how to separate the scroll from Ryze, or if it is possible to overcome the rogue mage to do so. Since then, Ryze has joined the League of Legends to study the magical creatures and powerful will-workers that fight there, in order to complete his exploration of mystical Runeterra.<br><br>''Ryze is no longer just a mage - he has become a creature of magic itself.''<br>-- High Councilor Heywan Relivash",
+   "info": {
+      "defense": 2,
+      "magic": 10,
+      "difficulty": 3,
+      "attack": 2
+   },
+   "id": "Ryze",
+   "title": "the Rogue Mage",
+   "name": "Ryze",
+   "passive": {
+      "description": "When Ryze casts a spell, all other spells have their cooldown reduced by 1 second.",
+      "name": "Arcane Mastery",
+      "image": {
+         "w": 48,
+         "full": "Ryze_SpellStrike.png",
+         "sprite": "passive2.png",
+         "group": "passive",
+         "h": 48,
+         "y": 48,
+         "x": 240
+      }
+   },
+   "partype": "Mana",
+   "key": "13",
+   "skins": [
+      {
+         "id": "13000",
+         "num": 0,
+         "name": "default"
+      },
+      {
+         "id": "13001",
+         "num": 1,
+         "name": "Human Ryze"
+      },
+      {
+         "id": "13002",
+         "num": 2,
+         "name": "Tribal Ryze"
+      },
+      {
+         "id": "13003",
+         "num": 3,
+         "name": "Uncle Ryze"
+      },
+      {
+         "id": "13004",
+         "num": 4,
+         "name": "Triumphant Ryze"
+      },
+      {
+         "id": "13005",
+         "num": 5,
+         "name": "Professor Ryze"
+      },
+      {
+         "id": "13006",
+         "num": 6,
+         "name": "Zombie Ryze"
+      },
+      {
+         "id": "13007",
+         "num": 7,
+         "name": "Dark Crystal Ryze"
+      },
+      {
+         "id": "13008",
+         "num": 8,
+         "name": "Pirate Ryze"
+      }
+   ]
+}

@@ -1,0 +1,20 @@
+﻿{
+   "tags": ["glyph"],
+   "stats": {"rPercentCooldownModPerLevel": -6.173E-4},
+   "description": "-0.06% cooldowns per level (-1.11% at champion level 18)",
+   "name": "Greater Glyph of Scaling Cooldown Reduction",
+   "image": {
+      "w": 48,
+      "full": "b_2_3.png",
+      "sprite": "rune0.png",
+      "group": "rune",
+      "h": 48,
+      "y": 144,
+      "x": 432
+   },
+   "rune": {
+      "isRune": true,
+      "tier": "3",
+      "type": "blue"
+   }
+}

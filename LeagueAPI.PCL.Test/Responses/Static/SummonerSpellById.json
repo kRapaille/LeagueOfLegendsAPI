@@ -1,0 +1,37 @@
+﻿{
+   "range": "self",
+   "resource": "No Cost",
+   "maxrank": 1,
+   "image": {
+      "w": 48,
+      "full": "SummonerBarrier.png",
+      "sprite": "spell0.png",
+      "group": "spell",
+      "h": 48,
+      "y": 0,
+      "x": 0
+   },
+   "cost": [0],
+   "cooldown": [0],
+   "summonerLevel": 6,
+   "id": "SummonerBarrier",
+   "vars": [{
+      "link": "@cooldownsummoner",
+      "coeff": 125,
+      "key": "f1"
+   }],
+   "rangeBurn": "self",
+   "costType": "NoCost",
+   "cooldownBurn": "0",
+   "description": "Shields your champion for 115-455 (depending on champion level) for 2 seconds.",
+   "name": "Barrier",
+   "modes": [
+      "ARAM",
+      "CLASSIC",
+      "TUTORIAL",
+      "ODIN"
+   ],
+   "key": "21",
+   "costBurn": "0",
+   "tooltip": "Temporarily shields {{ f1 }} damage from your champion for 2 seconds."
+}

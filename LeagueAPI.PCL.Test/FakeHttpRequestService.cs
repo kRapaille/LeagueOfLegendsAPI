@@ -5,6 +5,13 @@ using System.Threading.Tasks;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueAPI.Test.Responses;
+using PortableLeagueAPI.Test.Responses.Champion;
+using PortableLeagueAPI.Test.Responses.Game;
+using PortableLeagueAPI.Test.Responses.League;
+using PortableLeagueAPI.Test.Responses.Static;
+using PortableLeagueAPI.Test.Responses.Stats;
+using PortableLeagueAPI.Test.Responses.Summoner;
+using PortableLeagueAPI.Test.Responses.Team;
 
 namespace PortableLeagueAPI.Test
 {
@@ -23,19 +30,18 @@ namespace PortableLeagueAPI.Test
                 LeagueResponses.Instance,
                 StatsResponses.Instance,
                 SummonerResponses.Instance,
-                TeamResponses.Instance
+                TeamResponses.Instance,
+                StaticResponses.Instance
             };
 
             foreach (var responsesInstance in responsesInstances)
             {
-                response = responsesInstance.GetResponse(pathAndQuery);
+                response = await responsesInstance.GetResponse(pathAndQuery);
 
                 if (response != null)
                     break;
             }
-
-            await Task.Delay(0);
-
+            
             return new HttpResponseMessageWrapper
             {
                 Content = new HttpContentWrapper
