@@ -30,6 +30,17 @@ namespace PortableLeagueAPI
         public ITeamService Team { get; private set; }
         public IStaticService Static { get; private set; }
 
+        public ILeagueApiConfiguration LeagueApiConfiguration { get; private set; }
+
+        public LeagueApi(ILeagueApiConfiguration leagueApiConfiguration)
+        {
+            if (leagueApiConfiguration == null) throw new ArgumentNullException("leagueApiConfiguration");
+
+            LeagueApiConfiguration = leagueApiConfiguration;
+
+            Init();
+        }
+
         public LeagueApi(
             string apiKey,
             RegionEnum? region = null,
@@ -40,15 +51,20 @@ namespace PortableLeagueAPI
 
             httpRequestService = httpRequestService ?? new HttpRequestService();
 
-            var leagueApiConfiguration = new LeagueApiConfiguration(apiKey, region, waitToAvoidRateLimit, httpRequestService);
+            LeagueApiConfiguration = new LeagueApiConfiguration(apiKey, region, waitToAvoidRateLimit, httpRequestService);
 
-            Champion = new ChampionService(leagueApiConfiguration);
-            Game = new GameService(leagueApiConfiguration);
-            League = new LeagueService(leagueApiConfiguration);
-            Stats = new StatsService(leagueApiConfiguration);
-            Summoner = new SummonerService(leagueApiConfiguration);
-            Team = new TeamService(leagueApiConfiguration);
-            Static = new StaticService(leagueApiConfiguration);
+            Init();
+        }
+
+        private void Init()
+        {
+            Champion = new ChampionService(LeagueApiConfiguration);
+            Game = new GameService(LeagueApiConfiguration);
+            League = new LeagueService(LeagueApiConfiguration);
+            Stats = new StatsService(LeagueApiConfiguration);
+            Summoner = new SummonerService(LeagueApiConfiguration);
+            Team = new TeamService(LeagueApiConfiguration);
+            Static = new StaticService(LeagueApiConfiguration);
         }
     }
 }

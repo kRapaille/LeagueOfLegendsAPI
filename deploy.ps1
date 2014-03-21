@@ -7,7 +7,7 @@ param(
 $rootFolder = Split-Path -parent $script:MyInvocation.MyCommand.Path
 $buildFolder = Join-Path $rootFolder "bin"
 
-. $rootFolder\pack.ps1 -unittests 0
+. $rootFolder\nuget.include.ps1
 
 Get-ChildItem $buildFolder | Where-Object { $_.FullName -match ".nupkg$" } | ForEach-Object {
     $fullPath = $_.FullName

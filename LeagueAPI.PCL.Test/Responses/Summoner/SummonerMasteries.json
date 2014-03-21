@@ -1,0 +1,1618 @@
+﻿{"19332836": {
+   "pages": [
+      {
+         "id": 34661164,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4214,
+               "rank": 2,
+               "name": "Tough Skin"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4112,
+               "rank": 4,
+               "name": "Fury"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4141,
+               "rank": 1,
+               "name": "Blade Weaving"
+            },
+            {
+               "id": 4224,
+               "rank": 1,
+               "name": "Bladed Armor"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4142,
+               "rank": 3,
+               "name": "Warlord"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "Shyv",
+         "current": false
+      },
+      {
+         "id": 34661165,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4151,
+               "rank": 1,
+               "name": "Frenzy"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4112,
+               "rank": 4,
+               "name": "Fury"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4142,
+               "rank": 3,
+               "name": "Warlord"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "adc auto",
+         "current": false
+      },
+      {
+         "id": 34661166,
+         "talents": [
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4154,
+               "rank": 1,
+               "name": "Arcane Blade"
+            },
+            {
+               "id": 4112,
+               "rank": 4,
+               "name": "Fury"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4144,
+               "rank": 1,
+               "name": "Dangerous Game"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4123,
+               "rank": 3,
+               "name": "Mental Force"
+            },
+            {
+               "id": 4141,
+               "rank": 1,
+               "name": "Blade Weaving"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4133,
+               "rank": 1,
+               "name": "Arcane Mastery"
+            },
+            {
+               "id": 4142,
+               "rank": 3,
+               "name": "Warlord"
+            },
+            {
+               "id": 4143,
+               "rank": 3,
+               "name": "Archmage"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "Elise jung",
+         "current": false
+      },
+      {
+         "id": 34661168,
+         "talents": [
+            {
+               "id": 4233,
+               "rank": 3,
+               "name": "Hardiness"
+            },
+            {
+               "id": 4242,
+               "rank": 1,
+               "name": "Swiftness"
+            },
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4234,
+               "rank": 3,
+               "name": "Resistance"
+            },
+            {
+               "id": 4251,
+               "rank": 1,
+               "name": "Second Wind"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4262,
+               "rank": 1,
+               "name": "Tenacious"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4241,
+               "rank": 3,
+               "name": "Perseverance"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            }
+         ],
+         "name": "Ad? :o",
+         "current": false
+      },
+      {
+         "id": 34661169,
+         "talents": [
+            {
+               "id": 4233,
+               "rank": 3,
+               "name": "Hardiness"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4243,
+               "rank": 1,
+               "name": "Reinforced Armor"
+            },
+            {
+               "id": 4121,
+               "rank": 1,
+               "name": "Expose Weakness"
+            },
+            {
+               "id": 4213,
+               "rank": 2,
+               "name": "Enchanted Armor"
+            },
+            {
+               "id": 4244,
+               "rank": 1,
+               "name": "Evasive"
+            },
+            {
+               "id": 4234,
+               "rank": 3,
+               "name": "Resistance"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4123,
+               "rank": 3,
+               "name": "Mental Force"
+            },
+            {
+               "id": 4262,
+               "rank": 1,
+               "name": "Tenacious"
+            },
+            {
+               "id": 4133,
+               "rank": 1,
+               "name": "Arcane Mastery"
+            },
+            {
+               "id": 4241,
+               "rank": 3,
+               "name": "Perseverance"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            }
+         ],
+         "name": "ap ? :o",
+         "current": false
+      },
+      {
+         "id": 34661170,
+         "talents": [
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4353,
+               "rank": 3,
+               "name": "Intelligence"
+            },
+            {
+               "id": 4362,
+               "rank": 1,
+               "name": "Wanderer"
+            },
+            {
+               "id": 4213,
+               "rank": 2,
+               "name": "Enchanted Armor"
+            },
+            {
+               "id": 4322,
+               "rank": 3,
+               "name": "Summoner's Insight"
+            },
+            {
+               "id": 4334,
+               "rank": 1,
+               "name": "Culinary Master"
+            },
+            {
+               "id": 4352,
+               "rank": 1,
+               "name": "Bandit"
+            },
+            {
+               "id": 4323,
+               "rank": 1,
+               "name": "Strength of Spirit"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4314,
+               "rank": 1,
+               "name": "Scout"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4331,
+               "rank": 3,
+               "name": "Greed"
+            },
+            {
+               "id": 4324,
+               "rank": 1,
+               "name": "Alchemist"
+            },
+            {
+               "id": 4344,
+               "rank": 1,
+               "name": "Inspiration"
+            },
+            {
+               "id": 4313,
+               "rank": 3,
+               "name": "Meditation"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4342,
+               "rank": 1,
+               "name": "Wealth"
+            },
+            {
+               "id": 4341,
+               "rank": 1,
+               "name": "Scavenger"
+            }
+         ],
+         "name": "wooooot",
+         "current": false
+      },
+      {
+         "id": 34661171,
+         "talents": [
+            {
+               "id": 4311,
+               "rank": 1,
+               "name": "Phasewalker"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4322,
+               "rank": 3,
+               "name": "Summoner's Insight"
+            },
+            {
+               "id": 4332,
+               "rank": 1,
+               "name": "Runic Affinity"
+            },
+            {
+               "id": 4154,
+               "rank": 1,
+               "name": "Arcane Blade"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4312,
+               "rank": 1,
+               "name": "Fleet of Foot"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4123,
+               "rank": 3,
+               "name": "Mental Force"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4313,
+               "rank": 3,
+               "name": "Meditation"
+            },
+            {
+               "id": 4133,
+               "rank": 1,
+               "name": "Arcane Mastery"
+            },
+            {
+               "id": 4143,
+               "rank": 3,
+               "name": "Archmage"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "ap",
+         "current": false
+      },
+      {
+         "id": 34661174,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4214,
+               "rank": 2,
+               "name": "Tough Skin"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4112,
+               "rank": 2,
+               "name": "Fury"
+            },
+            {
+               "id": 4141,
+               "rank": 1,
+               "name": "Blade Weaving"
+            },
+            {
+               "id": 4113,
+               "rank": 2,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4224,
+               "rank": 1,
+               "name": "Bladed Armor"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4142,
+               "rank": 3,
+               "name": "Warlord"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "Leeeeeee",
+         "current": false
+      },
+      {
+         "id": 34661175,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4141,
+               "rank": 1,
+               "name": "Blade Weaving"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4142,
+               "rank": 3,
+               "name": "Warlord"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "Top op !",
+         "current": false
+      },
+      {
+         "id": 34661176,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4233,
+               "rank": 3,
+               "name": "Hardiness"
+            },
+            {
+               "id": 4242,
+               "rank": 1,
+               "name": "Swiftness"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4311,
+               "rank": 1,
+               "name": "Phasewalker"
+            },
+            {
+               "id": 4334,
+               "rank": 1,
+               "name": "Culinary Master"
+            },
+            {
+               "id": 4322,
+               "rank": 3,
+               "name": "Summoner's Insight"
+            },
+            {
+               "id": 4234,
+               "rank": 3,
+               "name": "Resistance"
+            },
+            {
+               "id": 4251,
+               "rank": 1,
+               "name": "Second Wind"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4324,
+               "rank": 1,
+               "name": "Alchemist"
+            },
+            {
+               "id": 4262,
+               "rank": 1,
+               "name": "Tenacious"
+            },
+            {
+               "id": 4312,
+               "rank": 3,
+               "name": "Fleet of Foot"
+            },
+            {
+               "id": 4241,
+               "rank": 3,
+               "name": "Perseverance"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            }
+         ],
+         "name": "supp",
+         "current": false
+      },
+      {
+         "id": 34661177,
+         "talents": [
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4213,
+               "rank": 2,
+               "name": "Enchanted Armor"
+            },
+            {
+               "id": 4124,
+               "rank": 1,
+               "name": "Feast"
+            },
+            {
+               "id": 4114,
+               "rank": 1,
+               "name": "Butcher"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4112,
+               "rank": 2,
+               "name": "Fury"
+            },
+            {
+               "id": 4141,
+               "rank": 1,
+               "name": "Blade Weaving"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4142,
+               "rank": 3,
+               "name": "Warlord"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "Ad carry sorts :D",
+         "current": false
+      },
+      {
+         "id": 34661178,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4214,
+               "rank": 2,
+               "name": "Tough Skin"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4123,
+               "rank": 3,
+               "name": "Mental Force"
+            },
+            {
+               "id": 4143,
+               "rank": 1,
+               "name": "Archmage"
+            },
+            {
+               "id": 4224,
+               "rank": 1,
+               "name": "Bladed Armor"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4133,
+               "rank": 1,
+               "name": "Arcane Mastery"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            }
+         ],
+         "name": "Eliiise",
+         "current": false
+      },
+      {
+         "id": 34661179,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4143,
+               "rank": 2,
+               "name": "Archmage"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4123,
+               "rank": 3,
+               "name": "Mental Force"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4133,
+               "rank": 1,
+               "name": "Arcane Mastery"
+            },
+            {
+               "id": 4134,
+               "rank": 1,
+               "name": "Executioner"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4112,
+               "rank": 3,
+               "name": "Fury"
+            },
+            {
+               "id": 4142,
+               "rank": 2,
+               "name": "Warlord"
+            }
+         ],
+         "name": "jax",
+         "current": false
+      },
+      {
+         "id": 34661180,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4154,
+               "rank": 1,
+               "name": "Arcane Blade"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4123,
+               "rank": 3,
+               "name": "Mental Force"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4133,
+               "rank": 1,
+               "name": "Arcane Mastery"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4143,
+               "rank": 3,
+               "name": "Archmage"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "AP top",
+         "current": false
+      },
+      {
+         "id": 34661181,
+         "talents": [
+            {
+               "id": 4311,
+               "rank": 1,
+               "name": "Phasewalker"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4322,
+               "rank": 3,
+               "name": "Summoner's Insight"
+            },
+            {
+               "id": 4332,
+               "rank": 1,
+               "name": "Runic Affinity"
+            },
+            {
+               "id": 4154,
+               "rank": 1,
+               "name": "Arcane Blade"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4313,
+               "rank": 1,
+               "name": "Meditation"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4123,
+               "rank": 3,
+               "name": "Mental Force"
+            },
+            {
+               "id": 4312,
+               "rank": 3,
+               "name": "Fleet of Foot"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4133,
+               "rank": 1,
+               "name": "Arcane Mastery"
+            },
+            {
+               "id": 4143,
+               "rank": 3,
+               "name": "Archmage"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            },
+            {
+               "id": 4131,
+               "rank": 1,
+               "name": "Spell Weaving"
+            }
+         ],
+         "name": "tf",
+         "current": false
+      },
+      {
+         "id": 34661182,
+         "name": "supp ap",
+         "current": false
+      },
+      {
+         "id": 34661183,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4353,
+               "rank": 3,
+               "name": "Intelligence"
+            },
+            {
+               "id": 4362,
+               "rank": 1,
+               "name": "Wanderer"
+            },
+            {
+               "id": 4322,
+               "rank": 3,
+               "name": "Summoner's Insight"
+            },
+            {
+               "id": 4334,
+               "rank": 1,
+               "name": "Culinary Master"
+            },
+            {
+               "id": 4352,
+               "rank": 1,
+               "name": "Bandit"
+            },
+            {
+               "id": 4323,
+               "rank": 1,
+               "name": "Strength of Spirit"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4314,
+               "rank": 1,
+               "name": "Scout"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4331,
+               "rank": 3,
+               "name": "Greed"
+            },
+            {
+               "id": 4324,
+               "rank": 1,
+               "name": "Alchemist"
+            },
+            {
+               "id": 4344,
+               "rank": 1,
+               "name": "Inspiration"
+            },
+            {
+               "id": 4313,
+               "rank": 3,
+               "name": "Meditation"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4342,
+               "rank": 1,
+               "name": "Wealth"
+            },
+            {
+               "id": 4341,
+               "rank": 1,
+               "name": "Scavenger"
+            }
+         ],
+         "name": "Mastery Page 17",
+         "current": false
+      },
+      {
+         "id": 34661184,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4311,
+               "rank": 1,
+               "name": "Phasewalker"
+            },
+            {
+               "id": 4214,
+               "rank": 2,
+               "name": "Tough Skin"
+            },
+            {
+               "id": 4334,
+               "rank": 1,
+               "name": "Culinary Master"
+            },
+            {
+               "id": 4322,
+               "rank": 3,
+               "name": "Summoner's Insight"
+            },
+            {
+               "id": 4332,
+               "rank": 1,
+               "name": "Runic Affinity"
+            },
+            {
+               "id": 4251,
+               "rank": 1,
+               "name": "Second Wind"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4324,
+               "rank": 1,
+               "name": "Alchemist"
+            },
+            {
+               "id": 4333,
+               "rank": 3,
+               "name": "Vampirism"
+            },
+            {
+               "id": 4224,
+               "rank": 1,
+               "name": "Bladed Armor"
+            },
+            {
+               "id": 4312,
+               "rank": 3,
+               "name": "Fleet of Foot"
+            },
+            {
+               "id": 4241,
+               "rank": 3,
+               "name": "Perseverance"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4233,
+               "rank": 2,
+               "name": "Hardiness"
+            },
+            {
+               "id": 4234,
+               "rank": 2,
+               "name": "Resistance"
+            }
+         ],
+         "name": "mundo",
+         "current": false
+      },
+      {
+         "id": 34661185,
+         "talents": [
+            {
+               "id": 4212,
+               "rank": 2,
+               "name": "Recovery"
+            },
+            {
+               "id": 4211,
+               "rank": 2,
+               "name": "Block"
+            },
+            {
+               "id": 4112,
+               "rank": 4,
+               "name": "Fury"
+            },
+            {
+               "id": 4222,
+               "rank": 3,
+               "name": "Veteran's Scars"
+            },
+            {
+               "id": 4221,
+               "rank": 1,
+               "name": "Unyielding"
+            },
+            {
+               "id": 4252,
+               "rank": 4,
+               "name": "Legendary Guardian"
+            },
+            {
+               "id": 4122,
+               "rank": 3,
+               "name": "Brute Force"
+            },
+            {
+               "id": 4262,
+               "rank": 1,
+               "name": "Tenacious"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4132,
+               "rank": 1,
+               "name": "Martial Mastery"
+            },
+            {
+               "id": 4241,
+               "rank": 3,
+               "name": "Perseverance"
+            },
+            {
+               "id": 4232,
+               "rank": 1,
+               "name": "Juggernaut"
+            },
+            {
+               "id": 4233,
+               "rank": 2,
+               "name": "Hardiness"
+            },
+            {
+               "id": 4234,
+               "rank": 2,
+               "name": "Resistance"
+            }
+         ],
+         "name": "top 2",
+         "current": false
+      },
+      {
+         "id": 34661186,
+         "talents": [
+            {
+               "id": 4311,
+               "rank": 1,
+               "name": "Phasewalker"
+            },
+            {
+               "id": 4121,
+               "rank": 1,
+               "name": "Expose Weakness"
+            },
+            {
+               "id": 4134,
+               "rank": 3,
+               "name": "Executioner"
+            },
+            {
+               "id": 4322,
+               "rank": 3,
+               "name": "Summoner's Insight"
+            },
+            {
+               "id": 4332,
+               "rank": 1,
+               "name": "Runic Affinity"
+            },
+            {
+               "id": 4154,
+               "rank": 1,
+               "name": "Arcane Blade"
+            },
+            {
+               "id": 4113,
+               "rank": 4,
+               "name": "Sorcery"
+            },
+            {
+               "id": 4324,
+               "rank": 1,
+               "name": "Alchemist"
+            },
+            {
+               "id": 4152,
+               "rank": 3,
+               "name": "Devastating Strikes"
+            },
+            {
+               "id": 4123,
+               "rank": 3,
+               "name": "Mental Force"
+            },
+            {
+               "id": 4312,
+               "rank": 3,
+               "name": "Fleet of Foot"
+            },
+            {
+               "id": 4111,
+               "rank": 1,
+               "name": "Double-Edged Sword"
+            },
+            {
+               "id": 4133,
+               "rank": 1,
+               "name": "Arcane Mastery"
+            },
+            {
+               "id": 4143,
+               "rank": 3,
+               "name": "Archmage"
+            },
+            {
+               "id": 4162,
+               "rank": 1,
+               "name": "Havoc"
+            }
+         ],
+         "name": "ap mid",
+         "current": true
+      }
+   ],
+   "summonerId": 19332836
+}}

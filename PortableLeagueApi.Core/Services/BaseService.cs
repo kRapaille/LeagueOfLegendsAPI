@@ -13,33 +13,36 @@ using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Core.Services
 {
-    public abstract class BaseService
+    public abstract class BaseService : IDisposable
     {
         private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/lol/");
-        private static readonly Dictionary<string, List<DateTime>> LastRequests = new Dictionary<string, List<DateTime>>();
+
+        private static readonly Dictionary<string, List<DateTime>> LastRequests =
+            new Dictionary<string, List<DateTime>>();
 
         private readonly ILeagueApiConfiguration _apiConfiguration;
-        
+
         private readonly bool _isLimitedByRateLimit;
         private VersionEnum? _version;
 
         private const int MaxRequestsPer10Sec = 10;
         private const int MaxRequestsPer10Min = 500;
 
-        protected readonly AutoMapperService AutoMapperService;
+        protected AutoMapperService AutoMapperService { get; private set; }
 
         protected string Prefix { get; private set; }
 
         protected string VersionText
         {
-            get {
+            get
+            {
                 return _version.HasValue ? VersionConsts.Versions[_version.Value] : string.Empty;
             }
         }
 
         protected BaseService(
             ILeagueApiConfiguration apiConfiguration,
-            VersionEnum version, 
+            VersionEnum version,
             string prefix,
             bool isLimitedByRateLimit = true)
         {
@@ -64,10 +67,10 @@ namespace PortableLeagueApi.Core.Services
         protected virtual Uri BuildUri(RegionEnum? region, string relativeUrl)
         {
             relativeUrl = string.Format("{0}/{1}/{2}/{3}",
-                   GetRegionAsString(region),
-                   VersionText,
-                   Prefix,
-                   relativeUrl);
+                GetRegionAsString(region),
+                VersionText,
+                Prefix,
+                relativeUrl);
 
             return BuildUri(new Uri(relativeUrl, UriKind.Relative));
         }
@@ -82,7 +85,8 @@ namespace PortableLeagueApi.Core.Services
             return uriBuilder.Uri;
         }
 
-        protected async Task<TDestination> GetResponseAsync<TSource, TDestination>(RegionEnum? region, string relativeUrl) 
+        protected async Task<TDestination> GetResponseAsync<TSource, TDestination>(RegionEnum? region,
+            string relativeUrl)
             where TSource : class
         {
             var result = await GetResponseAsync<TSource>(BuildUri(region, relativeUrl));
@@ -116,11 +120,12 @@ namespace PortableLeagueApi.Core.Services
             if (response.IsSuccessStatusCode)
             {
                 result = JsonConvert.DeserializeObject<T>(content, new JsonSerializerSettings
-                {
+                                                                   {
 #if DEBUG
-                    MissingMemberHandling = MissingMemberHandling.Error
+                                                                       MissingMemberHandling =
+                                                                           MissingMemberHandling.Error
 #endif
-                });
+                                                                   });
             }
             else
             {
@@ -133,13 +138,13 @@ namespace PortableLeagueApi.Core.Services
                 if (response.StatusCode == HttpStatusCode.NotFound)
                 {
                     apiRequestError = new APIRequestError
-                    {
-                        Status = new APIRequestErrorStatus
-                        {
-                            Message = "Not found",
-                            StatusCode = 404
-                        }
-                    };
+                                      {
+                                          Status = new APIRequestErrorStatus
+                                                   {
+                                                       Message = "Not found",
+                                                       StatusCode = 404
+                                                   }
+                                      };
                 }
                 else
                 {
@@ -162,17 +167,17 @@ namespace PortableLeagueApi.Core.Services
 
                 var tenMinutesAgo = DateTime.Now.AddMinutes(-10);
                 LastRequests[_apiConfiguration.Key].RemoveAll(x => x < tenMinutesAgo);
-                
+
                 delayInMs = CalculateDelay(MaxRequestsPer10Min, 600, delayInMs);
                 delayInMs = CalculateDelay(MaxRequestsPer10Sec, 10, delayInMs);
 
                 // Add 1s to be sure
                 if (delayInMs > 0)
                     delayInMs += 1000;
-                
+
                 Debug.WriteLine(delayInMs);
             }
-            
+
             return Task.Delay(delayInMs);
         }
 
@@ -192,7 +197,7 @@ namespace PortableLeagueApi.Core.Services
                 var first = requestsInGivenTime.FirstOrDefault();
                 var limitReleaseDateTime = first.AddSeconds(givenTimeInSeconds);
 
-                delay = (int)limitReleaseDateTime.Subtract(DateTime.Now).TotalMilliseconds;
+                delay = (int) limitReleaseDateTime.Subtract(DateTime.Now).TotalMilliseconds;
 
                 if (delay < 0)
                     delay = 0;
@@ -210,10 +215,27 @@ namespace PortableLeagueApi.Core.Services
 
             return region.Value;
         }
-        
+
         protected string GetRegionAsString(RegionEnum? region)
         {
             return RegionConsts.Regions[GetRegion(region)];
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        protected virtual void Dispose(bool canCleanUpManagedandNativeRessources)
+        {
+            if (canCleanUpManagedandNativeRessources)
+            {
+                if (AutoMapperService != null)
+                {
+                    AutoMapperService.Dispose();
+                    AutoMapperService = null;
+                }
+            }
         }
     }
 }

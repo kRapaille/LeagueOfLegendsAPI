@@ -1,0 +1,16 @@
+﻿{
+   "ranks": 1,
+   "id": 4244,
+   "description": ["Reduces damage taken by 4% from Area of Effect magic damage"],
+   "name": "Evasive",
+   "image": {
+      "w": 48,
+      "full": "4244.png",
+      "sprite": "mastery0.png",
+      "group": "gray_mastery",
+      "h": 48,
+      "y": 144,
+      "x": 192
+   },
+   "prereq": "4234"
+}

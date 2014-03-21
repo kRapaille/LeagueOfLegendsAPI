@@ -10,8 +10,7 @@ namespace PortableLeagueApi.Static.Models.Mastery
     {
         public IDictionary<string, IMastery> Data { get; set; }
 
-        public IDictionary<string, IList<List<IMasteryTree>>> Tree { get; set; }
-
+        public IMasteryTree Tree { get; set; }
         public string Type { get; set; }
 
         public string Version { get; set; }

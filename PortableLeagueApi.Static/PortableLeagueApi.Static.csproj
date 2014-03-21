@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -59,6 +60,8 @@
     <Compile Include="Models\DTO\BasicDataDto.cs" />
     <Compile Include="Models\DTO\BasicDataStatsDto.cs" />
     <Compile Include="Models\DTO\GoldDto.cs" />
+    <Compile Include="Models\DTO\Mastery\MasteryTreeItemDto.cs" />
+    <Compile Include="Models\DTO\Mastery\MasteryTreeListDto.cs" />
     <Compile Include="Models\Gold.cs" />
     <Compile Include="Models\ItemRune.cs" />
     <Compile Include="Models\DTO\Item\GroupDto.cs" />
@@ -75,6 +78,8 @@
     <Compile Include="Models\Item\MetaData.cs" />
     <Compile Include="Models\Mastery\Mastery.cs" />
     <Compile Include="Models\Mastery\MasteryList.cs" />
+    <Compile Include="Models\Mastery\MasteryTreeItem.cs" />
+    <Compile Include="Models\Mastery\MasteryTreeList.cs" />
     <Compile Include="Models\Mastery\MasteryTree.cs" />
     <Compile Include="Models\Realm.cs" />
     <Compile Include="Models\DTO\RealmDto.cs" />

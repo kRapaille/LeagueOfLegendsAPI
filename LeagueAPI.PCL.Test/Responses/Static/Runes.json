@@ -1,0 +1,7098 @@
+﻿{
+   "basic": {
+      "inStore": true,
+      "specialRecipe": 0,
+      "consumed": false,
+      "maps": {
+         "1": true,
+         "10": true,
+         "8": true,
+         "12": true
+      },
+      "stats": {
+         "FlatSpellBlockMod": 0,
+         "PercentMPRegenMod": 0,
+         "rFlatSpellBlockModPerLevel": 0,
+         "rFlatArmorModPerLevel": 0,
+         "PercentPhysicalDamageMod": 0,
+         "FlatCritChanceMod": 0,
+         "PercentSpellBlockMod": 0,
+         "rFlatTimeDeadModPerLevel": 0,
+         "rFlatMagicDamageModPerLevel": 0,
+         "rFlatHPModPerLevel": 0,
+         "rPercentMovementSpeedModPerLevel": 0,
+         "FlatEXPBonus": 0,
+         "FlatMPRegenMod": 0,
+         "rFlatHPRegenModPerLevel": 0,
+         "FlatBlockMod": 0,
+         "PercentEXPBonus": 0,
+         "FlatEnergyPoolMod": 0,
+         "rFlatEnergyRegenModPerLevel": 0,
+         "rFlatGoldPer10Mod": 0,
+         "FlatAttackSpeedMod": 0,
+         "FlatHPPoolMod": 0,
+         "PercentAttackSpeedMod": 0,
+         "rFlatDodgeMod": 0,
+         "rFlatMPRegenModPerLevel": 0,
+         "rPercentTimeDeadMod": 0,
+         "FlatEnergyRegenMod": 0,
+         "PercentSpellVampMod": 0,
+         "FlatCritDamageMod": 0,
+         "rFlatMovementSpeedModPerLevel": 0,
+         "PercentHPRegenMod": 0,
+         "rPercentArmorPenetrationModPerLevel": 0,
+         "rFlatMPModPerLevel": 0,
+         "PercentArmorMod": 0,
+         "rFlatArmorPenetrationMod": 0,
+         "PercentBlockMod": 0,
+         "PercentMagicDamageMod": 0,
+         "FlatMPPoolMod": 0,
+         "FlatPhysicalDamageMod": 0,
+         "rFlatPhysicalDamageModPerLevel": 0,
+         "rFlatTimeDeadMod": 0,
+         "FlatHPRegenMod": 0,
+         "rFlatCritDamageModPerLevel": 0,
+         "rFlatCritChanceModPerLevel": 0,
+         "rFlatDodgeModPerLevel": 0,
+         "rPercentMagicPenetrationModPerLevel": 0,
+         "PercentLifeStealMod": 0,
+         "PercentMovementSpeedMod": 0,
+         "FlatArmorMod": 0,
+         "rFlatEnergyModPerLevel": 0,
+         "rPercentMagicPenetrationMod": 0,
+         "rPercentTimeDeadModPerLevel": 0,
+         "PercentMPPoolMod": 0,
+         "PercentDodgeMod": 0,
+         "PercentCritChanceMod": 0,
+         "PercentCritDamageMod": 0,
+         "rPercentAttackSpeedModPerLevel": 0,
+         "rFlatMagicPenetrationMod": 0,
+         "PercentHPPoolMod": 0,
+         "rPercentArmorPenetrationMod": 0,
+         "rFlatMagicPenetrationModPerLevel": 0,
+         "rFlatArmorPenetrationModPerLevel": 0,
+         "rPercentCooldownModPerLevel": 0,
+         "FlatMagicDamageMod": 0,
+         "FlatMovementSpeedMod": 0,
+         "rPercentCooldownMod": 0
+      },
+      "hideFromAll": false,
+      "consumeOnFull": false,
+      "colloq": ";",
+      "stacks": 1,
+      "gold": {
+         "total": 0,
+         "purchasable": false,
+         "sell": 0,
+         "base": 0
+      },
+      "rune": {
+         "isRune": true,
+         "tier": "1",
+         "type": "red"
+      },
+      "depth": 1
+   },
+   "data": {
+      "5235": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMagicDamageMod": 3.85},
+         "description": "+3.85 ability power",
+         "name": "Quintessence of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "bl_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5234": {
+         "tags": ["quintessence"],
+         "stats": {"rPercentCooldownModPerLevel": -0.001112},
+         "description": "-0.11% cooldowns per level (-2% at champion level 18)",
+         "name": "Quintessence of Scaling Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "bl_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5233": {
+         "tags": ["quintessence"],
+         "stats": {"rPercentCooldownMod": -0.013334},
+         "description": "-1.33% cooldowns",
+         "name": "Quintessence of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5370": {
+         "tags": ["seal"],
+         "stats": {"rFlatEnergyRegenModPerLevel": 0.01283},
+         "description": "+0.064 Energy regen/5 sec per level (+1.15 at champion level 18)",
+         "name": "Greater Seal of Scaling Energy Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5230": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatHPRegenModPerLevel": 0.04376},
+         "description": "+0.22 health regen / 5 sec. per level (+3.96 at champion level 18)",
+         "name": "Quintessence of Scaling Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "8016": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentMovementSpeedMod": 0.0139},
+         "description": "+1.39% movement speed",
+         "name": "Quintessence of the Speedy Specter",
+         "image": {
+            "w": 48,
+            "full": "8016.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5374": {
+         "tags": ["quintessence"],
+         "stats": {"FlatEnergyPoolMod": 5.4},
+         "description": "+5.4 Energy",
+         "name": "Greater Quintessence of Energy",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "8015": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatHPPoolMod": 24},
+         "description": "+24 health",
+         "name": "Quintessence of Bountiful Treats",
+         "image": {
+            "w": 48,
+            "full": "8015.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5373": {
+         "tags": ["quintessence"],
+         "stats": {"FlatEnergyRegenMod": 0.315},
+         "description": "+1.575 Energy regen/5 sec",
+         "name": "Greater Quintessence of Energy Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5372": {
+         "tags": ["glyph"],
+         "stats": {"rFlatEnergyModPerLevel": 0.161},
+         "description": "+0.161 Energy/level (+2.89 at level 18)",
+         "name": "Greater Glyph of Scaling Energy",
+         "image": {
+            "w": 48,
+            "full": "b_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "8017": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMagicDamageMod": 4.56},
+         "description": "+4.56 ability power",
+         "name": "Quintessence of the Witches Brew",
+         "image": {
+            "w": 48,
+            "full": "8017.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5371": {
+         "tags": ["glyph"],
+         "stats": {"FlatEnergyPoolMod": 2.2},
+         "description": "+2.2 Energy",
+         "name": "Greater Glyph of Energy",
+         "image": {
+            "w": 48,
+            "full": "b_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "8012": {
+         "tags": ["glyph"],
+         "stats": {"rPercentCooldownMod": -0.0075},
+         "description": "-0.75% cooldowns",
+         "name": "Glyph of the Soaring Slalom",
+         "image": {
+            "w": 48,
+            "full": "8012.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "8011": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.66},
+         "description": "+0.66 ability power",
+         "name": "Lesser Glyph of the Challenger",
+         "image": {
+            "w": 48,
+            "full": "8011.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "8014": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 1.85},
+         "description": "+1.85 magic penetration",
+         "name": "Quintessence of the Piercing Screech",
+         "image": {
+            "w": 48,
+            "full": "8014.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "8013": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatArmorPenetrationMod": 2.37},
+         "description": "+2.37 armor penetration",
+         "name": "Quintessence of the Headless Horseman",
+         "image": {
+            "w": 48,
+            "full": "8013.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5368": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentEXPBonus": 0.02},
+         "description": "+2% experience gained",
+         "name": "Greater Quintessence of Experience",
+         "image": {
+            "w": 48,
+            "full": "bl_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5369": {
+         "tags": ["seal"],
+         "stats": {"FlatEnergyRegenMod": 0.126},
+         "description": "+0.63 Energy regen/5 sec",
+         "name": "Greater Seal of Energy Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "8008": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritDamageMod": 0.019835},
+         "description": "+2% critical damage",
+         "name": "Mark of the Combatant",
+         "image": {
+            "w": 48,
+            "full": "8008.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "8009": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatHPPoolMod": 3.564},
+         "description": "+3.56 health",
+         "name": "Lesser Seal of the Medalist",
+         "image": {
+            "w": 48,
+            "full": "8009.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5229": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatHPRegenMod": 0.42},
+         "description": "+2.1 health regen / 5 sec.",
+         "name": "Quintessence of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5227": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatSpellBlockMod": 3.11},
+         "description": "+3.11 magic resist",
+         "name": "Quintessence of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "bl_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5228": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.2886},
+         "description": "+0.29 magic resist per level (+5.22 at champion level 18)",
+         "name": "Quintessence of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "bl_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5225": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatArmorMod": 3.3158},
+         "description": "+3.32 armor",
+         "name": "Quintessence of Armor",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5226": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatArmorModPerLevel": 0.2917},
+         "description": "+0.29 armor per level (+5.22 at champion level 18)",
+         "name": "Quintessence of Scaling Armor",
+         "image": {
+            "w": 48,
+            "full": "bl_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "8021": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatHPPoolMod": 26},
+         "description": "+26 health",
+         "name": "Greater Quintessence of Frosty Health",
+         "image": {
+            "w": 48,
+            "full": "8021.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "8020": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatArmorPenetrationMod": 2.56},
+         "description": "+2.56 armor penetration",
+         "name": "Greater Quintessence of the Deadly Wreath",
+         "image": {
+            "w": 48,
+            "full": "8020.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5221": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatArmorPenetrationMod": 1.99},
+         "description": "+1.99 armor penetration",
+         "name": "Quintessence of Armor Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5224": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatHPModPerLevel": 2.1034},
+         "description": "+2.1 health per level (+37.8 at champion level 18)",
+         "name": "Quintessence of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "bl_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5223": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatHPPoolMod": 20},
+         "description": "+20 health",
+         "name": "Quintessence of Health",
+         "image": {
+            "w": 48,
+            "full": "bl_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5361": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMPRegenMod": 0.25},
+         "description": "+1.25 mana regen / 5 sec.",
+         "name": "Greater Quintessence of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5360": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMPModPerLevel": 4.1667},
+         "description": "+4.17 mana per level (+75.06 at champion level 18)",
+         "name": "Greater Quintessence of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "bl_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5363": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 2.01},
+         "description": "+2.01 magic penetration",
+         "name": "Greater Quintessence of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5362": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.04882},
+         "description": "+0.24 mana regen / 5 sec. per level (+4.32 at champion level 18)",
+         "name": "Greater Quintessence of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5365": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentMovementSpeedMod": 0.015},
+         "description": "+1.5% movement speed",
+         "name": "Greater Quintessence of Movement Speed",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5367": {
+         "tags": [
+            "utility",
+            "quintessence"
+         ],
+         "stats": {"rFlatGoldPer10Mod": 1},
+         "description": "+1 gold / 10 sec.",
+         "name": "Greater Quintessence of Gold",
+         "image": {
+            "w": 48,
+            "full": "bl_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "8022": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentMovementSpeedMod": 0.015},
+         "description": "+1.5% movement speed",
+         "name": "Greater Quintessence of Sugar Rush",
+         "image": {
+            "w": 48,
+            "full": "8022.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5366": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"rPercentTimeDeadMod": 0.05},
+         "description": "-5% time dead",
+         "name": "Greater Quintessence of Revival",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5357": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMagicDamageMod": 4.95},
+         "description": "+4.95 ability power",
+         "name": "Greater Quintessence of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5358": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.4327},
+         "description": "+0.43 ability power per level (+7.74 at champion level 18)",
+         "name": "Greater Quintessence of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "bl_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5359": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMPPoolMod": 37.5},
+         "description": "+37.5 mana",
+         "name": "Greater Quintessence of Mana",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "8019": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 2.01},
+         "description": "+2.01 magic penetration",
+         "name": "Greater Quintessence of the Piercing Present",
+         "image": {
+            "w": 48,
+            "full": "8019.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 288,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5219": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatCritChanceMod": 0.014433},
+         "description": "+1.44% critical chance",
+         "name": "Quintessence of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "bl_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5214": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.1944},
+         "description": "+0.19 attack damage per level (+3.42 at champion level 18)",
+         "name": "Quintessence of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5215": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.026415},
+         "description": "+2.64% attack speed",
+         "name": "Quintessence of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "bl_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5217": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatCritDamageMod": 0.034711},
+         "description": "+3.47% critical damage",
+         "name": "Quintessence of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5253": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"rFlatArmorPenetrationMod": 1.28},
+         "description": "+1.28 armor penetration",
+         "name": "Greater Mark of Armor Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5251": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritChanceMod": 0.009278},
+         "description": "+0.93% critical chance",
+         "name": "Greater Mark of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "r_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5257": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatArmorMod": 0.9144},
+         "description": "+0.91 armor",
+         "name": "Greater Mark of Armor",
+         "image": {
+            "w": 48,
+            "full": "r_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5256": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.5409},
+         "description": "+0.54 health per level (+9.72 at champion level 18)",
+         "name": "Greater Mark of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "r_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5255": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatHPPoolMod": 3.4749},
+         "description": "+3.47 health",
+         "name": "Greater Mark of Health",
+         "image": {
+            "w": 48,
+            "full": "r_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5356": {
+         "tags": ["quintessence"],
+         "stats": {"rPercentCooldownModPerLevel": -0.001389},
+         "description": "-0.14% cooldowns per level (-2.5% at champion level 18)",
+         "name": "Greater Quintessence of Scaling Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "bl_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5355": {
+         "tags": ["quintessence"],
+         "stats": {"rPercentCooldownMod": -0.016667},
+         "description": "-1.67% cooldowns",
+         "name": "Greater Quintessence of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "8035": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentMovementSpeedMod": 0.015},
+         "description": "+1.5% movement speed",
+         "name": "Greater Quintessence of Studio Rumble",
+         "image": {
+            "w": 48,
+            "full": "8035.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 384,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5352": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatHPRegenModPerLevel": 0.05626},
+         "description": "+0.28 health regen / 5 sec. per level (+5.04 at champion level 18)",
+         "name": "Greater Quintessence of Scaling Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5351": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatHPRegenMod": 0.54},
+         "description": "+2.7 health regen / 5 sec.",
+         "name": "Greater Quintessence of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5350": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.3711},
+         "description": "+0.37 magic resist per level (+6.66 at champion level 18)",
+         "name": "Greater Quintessence of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "bl_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5348": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatArmorModPerLevel": 0.375},
+         "description": "+0.38 armor per level (+6.84 at champion level 18)",
+         "name": "Greater Quintessence of Scaling Armor",
+         "image": {
+            "w": 48,
+            "full": "bl_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5349": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatSpellBlockMod": 4},
+         "description": "+4 magic resist",
+         "name": "Greater Quintessence of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5346": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatHPModPerLevel": 2.7043},
+         "description": "+2.7 health per level (+48.6 at champion level 18)",
+         "name": "Greater Quintessence of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "bl_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5347": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatArmorMod": 4.2632},
+         "description": "+4.26 armor",
+         "name": "Greater Quintessence of Armor",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5249": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritDamageMod": 0.022314},
+         "description": "+2.23% critical damage",
+         "name": "Greater Mark of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "r_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5247": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "mark"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.016981},
+         "description": "+1.7% attack speed",
+         "name": "Greater Mark of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "r_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5240": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.03798},
+         "description": "+0.19 mana regen / 5 sec. per level (+3.42 at champion level 18)",
+         "name": "Quintessence of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5241": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 1.56},
+         "description": "+1.56 magic penetration",
+         "name": "Quintessence of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5243": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentMovementSpeedMod": 0.011667},
+         "description": "+1.17% movement speed",
+         "name": "Quintessence of Movement Speed",
+         "image": {
+            "w": 48,
+            "full": "bl_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5246": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.135},
+         "description": "+0.13 attack damage per level (+2.43 at champion level 18)",
+         "name": "Greater Mark of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "r_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5245": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.945},
+         "description": "+0.95 attack damage",
+         "name": "Greater Mark of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "r_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5343": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatArmorPenetrationMod": 2.56},
+         "description": "+2.56 armor penetration",
+         "name": "Greater Quintessence of Armor Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5345": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatHPPoolMod": 26},
+         "description": "+26 health",
+         "name": "Greater Quintessence of Health",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5341": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatCritChanceMod": 0.018557},
+         "description": "+1.86% critical chance",
+         "name": "Greater Quintessence of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5339": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatCritDamageMod": 0.044628},
+         "description": "+4.46% critical damage",
+         "name": "Greater Quintessence of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5335": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 2.25},
+         "description": "+2.25 attack damage",
+         "name": "Greater Quintessence of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5336": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.25},
+         "description": "+0.25 attack damage per level (+4.5 at champion level 18)",
+         "name": "Greater Quintessence of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5337": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.033962},
+         "description": "+3.4% attack speed",
+         "name": "Greater Quintessence of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5236": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.3365},
+         "description": "+0.34 ability power per level (+6.12 at champion level 18)",
+         "name": "Quintessence of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "bl_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5237": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMPPoolMod": 29.1667},
+         "description": "+29.17 mana",
+         "name": "Quintessence of Mana",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5238": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMPModPerLevel": 3.2407},
+         "description": "+3.24 mana per level (+58.32 at champion level 18)",
+         "name": "Quintessence of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "bl_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5239": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMPRegenMod": 0.19444},
+         "description": "+0.97 mana regen / 5 sec.",
+         "name": "Quintessence of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5129": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritChanceMod": 0.007216},
+         "description": "+0.72% critical chance",
+         "name": "Mark of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "r_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5330": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMPModPerLevel": 1.1667},
+         "description": "+1.17 mana per level (+21.06 at champion level 18)",
+         "name": "Greater Seal of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "y_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5127": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritDamageMod": 0.017355},
+         "description": "+1.74% critical damage",
+         "name": "Mark of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "r_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5331": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMPRegenMod": 0.08126},
+         "description": "+0.41 mana regen / 5 sec.",
+         "name": "Greater Seal of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5332": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.013},
+         "description": "+0.065 mana regen / 5 sec. per level (+1.17 at champion level 18)",
+         "name": "Greater Seal of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5400": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "magic",
+            "mark"
+         ],
+         "stats": {
+            "rFlatMagicPenetrationMod": 0.34,
+            "rFlatArmorPenetrationMod": 0.5
+         },
+         "description": "+0.5 Armor Penetration / +0.34 Magic Penetration",
+         "name": "Lesser Mark of Hybrid Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5327": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.594},
+         "description": "+0.59 ability power",
+         "name": "Greater Seal of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5131": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"rFlatArmorPenetrationMod": 1},
+         "description": "+1 armor penetration",
+         "name": "Mark of Armor Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5325": {
+         "tags": ["seal"],
+         "stats": {"rPercentCooldownMod": -0.003556},
+         "description": "-0.36% cooldowns",
+         "name": "Greater Seal of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "y_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5135": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatArmorMod": 0.7112},
+         "description": "+0.71 armor",
+         "name": "Mark of Armor",
+         "image": {
+            "w": 48,
+            "full": "r_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5134": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.4207},
+         "description": "+0.42 health per level (+7.56 at champion level 18)",
+         "name": "Mark of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "r_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5329": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMPPoolMod": 6.8906},
+         "description": "+6.89 mana",
+         "name": "Greater Seal of Mana",
+         "image": {
+            "w": 48,
+            "full": "y_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5133": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatHPPoolMod": 2.7027},
+         "description": "+2.7 health",
+         "name": "Mark of Health",
+         "image": {
+            "w": 48,
+            "full": "r_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5328": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.1038},
+         "description": "+0.1 ability power per level (+1.8 at champion level 18)",
+         "name": "Greater Seal of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "y_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5115": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMPPoolMod": 20.8333},
+         "description": "+20.83 mana",
+         "name": "Lesser Quintessence of Mana",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5116": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMPModPerLevel": 2.3148},
+         "description": "+2.31 mana per level (+41.58 at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "bl_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5117": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMPRegenMod": 0.13888},
+         "description": "+0.69 mana regen / 5 sec.",
+         "name": "Lesser Quintessence of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5118": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.02712},
+         "description": "+0.14 mana regen / 5 sec. per level (+2.52 at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5410": {
+         "tags": ["quintessence"],
+         "stats": {"PercentLifeStealMod": 0.0112},
+         "description": "+1.12% Lifesteal",
+         "name": "Lesser Quintessence of Life Steal",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5320": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.0965},
+         "description": "+0.1 magic resist per level (+1.8 at champion level 18)",
+         "name": "Greater Seal of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "y_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5119": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 1.11},
+         "description": "+1.11 magic penetration",
+         "name": "Lesser Quintessence of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5411": {
+         "tags": ["quintessence"],
+         "stats": {"PercentLifeStealMod": 0.0156},
+         "description": "+1.56% Lifesteal",
+         "name": "Quintessence of Life Steal",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5321": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatHPRegenMod": 0.0864},
+         "description": "+0.43 health regen / 5 sec.",
+         "name": "Greater Seal of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5322": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatHPRegenModPerLevel": 0.0225},
+         "description": "+0.11 health regen / 5 sec. per level (+1.98 at champion level 18)",
+         "name": "Greater Seal of Scaling Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5409": {
+         "tags": ["quintessence"],
+         "stats": {"PercentSpellVampMod": 0.02},
+         "description": "+2% Spellvamp.",
+         "name": "Greater Quintessence of Spell Vamp",
+         "image": {
+            "w": 48,
+            "full": "bl_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5404": {
+         "tags": [
+            "defense",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentHPPoolMod": 0.0084},
+         "description": "+0.84% increased health.",
+         "name": "Lesser Quintessence of Percent Health",
+         "image": {
+            "w": 48,
+            "full": "bl_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5403": {
+         "tags": [
+            "utility",
+            "seal"
+         ],
+         "stats": {"rFlatGoldPer10Mod": 0.25},
+         "description": "+0.25 gold / 10 sec.",
+         "name": "Greater Seal of Gold",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5402": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "magic",
+            "mark"
+         ],
+         "stats": {
+            "rFlatMagicPenetrationMod": 0.61,
+            "rFlatArmorPenetrationMod": 0.9
+         },
+         "description": "+0.9 Armor Penetration / +0.62 Magic Penetration",
+         "name": "Greater Mark of Hybrid Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5316": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatHPModPerLevel": 1.0817},
+         "description": "+1.08 health per level (+19.44 at champion level 18)",
+         "name": "Greater Seal of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "y_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5121": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentMovementSpeedMod": 0.008333},
+         "description": "+0.83% movement speed",
+         "name": "Lesser Quintessence of Movement Speed",
+         "image": {
+            "w": 48,
+            "full": "bl_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5401": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "magic",
+            "mark"
+         ],
+         "stats": {
+            "rFlatMagicPenetrationMod": 0.48,
+            "rFlatArmorPenetrationMod": 0.7
+         },
+         "description": "+0.7 Armor Penetration / +0.48 Magic Penetration",
+         "name": "Mark of Hybrid Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5315": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatHPPoolMod": 5.346},
+         "description": "+5.35 health",
+         "name": "Greater Seal of Health",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5408": {
+         "tags": ["quintessence"],
+         "stats": {"PercentSpellVampMod": 0.0156},
+         "description": "+1.56% Spellvamp.",
+         "name": "Quintessence of Spell Vamp",
+         "image": {
+            "w": 48,
+            "full": "bl_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5318": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatArmorModPerLevel": 0.15},
+         "description": "+0.15 armor per level (+2.7 at champion level 18)",
+         "name": "Greater Seal of Scaling Armor",
+         "image": {
+            "w": 48,
+            "full": "y_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5123": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.735},
+         "description": "+0.74 attack damage",
+         "name": "Mark of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "r_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5407": {
+         "tags": ["quintessence"],
+         "stats": {"PercentSpellVampMod": 0.0112},
+         "description": "+1.12% Spellvamp.",
+         "name": "Lesser Quintessence of Spell Vamp",
+         "image": {
+            "w": 48,
+            "full": "bl_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5317": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatArmorMod": 1.4068},
+         "description": "+1.41 armor",
+         "name": "Greater Seal of Armor",
+         "image": {
+            "w": 48,
+            "full": "y_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5406": {
+         "tags": [
+            "defense",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentHPPoolMod": 0.015},
+         "description": "+1.5% increased health.",
+         "name": "Greater Quintessence of Percent Health",
+         "image": {
+            "w": 48,
+            "full": "bl_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5125": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "mark"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.013208},
+         "description": "+1.32% attack speed",
+         "name": "Mark of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "r_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5405": {
+         "tags": [
+            "defense",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentHPPoolMod": 0.0117},
+         "description": "+1.17% increased health.",
+         "name": "Quintessence of Percent Health",
+         "image": {
+            "w": 48,
+            "full": "bl_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5319": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatSpellBlockMod": 0.7425},
+         "description": "+0.74 magic resist",
+         "name": "Greater Seal of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5124": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.105},
+         "description": "+0.1 attack damage per level (+1.89 at champion level 18)",
+         "name": "Mark of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "r_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5311": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatCritChanceMod": 0.004175},
+         "description": "+0.42% critical chance",
+         "name": "Greater Seal of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5108": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatHPRegenModPerLevel": 0.03126},
+         "description": "+0.16 health regen / 5 sec. per level (+2.88 at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5106": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.2062},
+         "description": "+0.21 magic resist per level (+3.78 at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "bl_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5107": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatHPRegenMod": 0.3},
+         "description": "+1.5 health regen / 5 sec.",
+         "name": "Lesser Quintessence of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5104": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatArmorModPerLevel": 0.2083},
+         "description": "+0.21 armor per level (+3.78 at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Armor",
+         "image": {
+            "w": 48,
+            "full": "bl_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5105": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatSpellBlockMod": 2.22},
+         "description": "+2.22 magic resist",
+         "name": "Lesser Quintessence of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "bl_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5007": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritChanceMod": 0.005155},
+         "description": "+0.52% critical chance",
+         "name": "Lesser Mark of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "r_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5005": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritDamageMod": 0.012397},
+         "description": "+1.24% critical damage",
+         "name": "Lesser Mark of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "r_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5213": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 1.75},
+         "description": "+1.75 attack damage",
+         "name": "Quintessence of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5210": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.01},
+         "description": "+0.05 mana regen / 5 sec. per level (+0.9 at champion level 18)",
+         "name": "Seal of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5009": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"rFlatArmorPenetrationMod": 0.72},
+         "description": "+0.72 armor penetration",
+         "name": "Lesser Mark of Armor Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5206": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.0808},
+         "description": "+0.08 ability power per level (+1.44 at champion level 18)",
+         "name": "Seal of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "y_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5011": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatHPPoolMod": 1.9305},
+         "description": "+1.93 health",
+         "name": "Lesser Mark of Health",
+         "image": {
+            "w": 48,
+            "full": "r_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5205": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.462},
+         "description": "+0.46 ability power",
+         "name": "Seal of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "y_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5203": {
+         "tags": ["seal"],
+         "stats": {"rPercentCooldownMod": -0.002889},
+         "description": "-0.29% cooldowns",
+         "name": "Seal of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "y_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5015": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatSpellBlockMod": 0.43},
+         "description": "+0.43 magic resist",
+         "name": "Lesser Mark of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "r_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5209": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMPRegenMod": 0.0632},
+         "description": "+0.32 mana regen / 5 sec.",
+         "name": "Seal of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5208": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMPModPerLevel": 0.9074},
+         "description": "+0.91 mana per level (+16.38 at champion level 18)",
+         "name": "Seal of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "y_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5013": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatArmorMod": 0.508},
+         "description": "+0.51 armor",
+         "name": "Lesser Mark of Armor",
+         "image": {
+            "w": 48,
+            "full": "r_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5207": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMPPoolMod": 5.3594},
+         "description": "+5.36 mana",
+         "name": "Seal of Mana",
+         "image": {
+            "w": 48,
+            "full": "y_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5012": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.3005},
+         "description": "+0.3 health per level (+5.4 at champion level 18)",
+         "name": "Lesser Mark of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "r_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5309": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatCritDamageMod": 0.00781},
+         "description": "+0.78% critical damage",
+         "name": "Greater Seal of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "y_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5114": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.2404},
+         "description": "+0.24 ability power per level (+4.32 at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "bl_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5113": {
+         "tags": [
+            "magic",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatMagicDamageMod": 2.75},
+         "description": "+2.75 ability power",
+         "name": "Lesser Quintessence of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "bl_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5307": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "seal"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.007642},
+         "description": "+0.76% attack speed",
+         "name": "Greater Seal of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5112": {
+         "tags": ["quintessence"],
+         "stats": {"rPercentCooldownModPerLevel": -8.0E-4},
+         "description": "-0.08% cooldowns per level (-1.44% at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "bl_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5306": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.0608},
+         "description": "+0.06 attack damage per level (+1.09 at champion level 18)",
+         "name": "Greater Seal of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "y_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5111": {
+         "tags": ["quintessence"],
+         "stats": {"rPercentCooldownMod": -0.0093},
+         "description": "-0.93% cooldowns",
+         "name": "Lesser Quintessence of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5305": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.4254},
+         "description": "+0.43 attack damage",
+         "name": "Greater Seal of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "y_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5303": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 0.63},
+         "description": "+0.63 magic penetration",
+         "name": "Greater Glyph of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "b_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5302": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.011},
+         "description": "+0.055 mana regen / 5 sec. per level (+0.99 at champion level 18)",
+         "name": "Greater Glyph of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5300": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMPModPerLevel": 1.4167},
+         "description": "+1.42 mana per level (+25.56 at champion level 18)",
+         "name": "Greater Glyph of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "b_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5301": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMPRegenMod": 0.0625},
+         "description": "+0.31 mana regen / 5 sec.",
+         "name": "Greater Glyph of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5200": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatHPRegenModPerLevel": 0.0175},
+         "description": "+0.09 health regen / 5 sec. per level (+1.62 at champion level 18)",
+         "name": "Seal of Scaling Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5002": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.075},
+         "description": "+0.08 attack damage per level (+1.35 at champion level 18)",
+         "name": "Lesser Mark of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "r_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5001": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.525},
+         "description": "+0.53 attack damage",
+         "name": "Lesser Mark of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "r_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5003": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "mark"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.009434},
+         "description": "+0.94% attack speed",
+         "name": "Lesser Mark of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "r_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5101": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatHPPoolMod": 14.5},
+         "description": "+14.5 health",
+         "name": "Lesser Quintessence of Health",
+         "image": {
+            "w": 48,
+            "full": "bl_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5103": {
+         "tags": [
+            "defense",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatArmorMod": 2.3684},
+         "description": "+2.37 armor",
+         "name": "Lesser Quintessence of Armor",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5102": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatHPModPerLevel": 1.5024},
+         "description": "+1.5 health per level (+27 at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "bl_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5168": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.1155},
+         "description": "+0.12 magic resist per level (+2.16 at champion level 18)",
+         "name": "Glyph of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "b_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5169": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatHPRegenMod": 0.042},
+         "description": "+0.21 health regen / 5 sec.",
+         "name": "Glyph of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5167": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatSpellBlockMod": 1.04},
+         "description": "+1.04 magic resist",
+         "name": "Glyph of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "b_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5164": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.4207},
+         "description": "+0.42 health per level (+7.56 at champion level 18)",
+         "name": "Glyph of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "b_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5165": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatArmorMod": 0.5471},
+         "description": "+0.55 armor",
+         "name": "Glyph of Armor",
+         "image": {
+            "w": 48,
+            "full": "b_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5163": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatHPPoolMod": 2.079},
+         "description": "+2.08 health",
+         "name": "Glyph of Health",
+         "image": {
+            "w": 48,
+            "full": "b_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5021": {
+         "tags": ["mark"],
+         "stats": {"rPercentCooldownMod": -0.001112},
+         "description": "-0.11% cooldowns",
+         "name": "Lesser Mark of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "r_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5025": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMPPoolMod": 3.2813},
+         "description": "+3.28 mana",
+         "name": "Lesser Mark of Mana",
+         "image": {
+            "w": 48,
+            "full": "r_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5026": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatMPModPerLevel": 0.6481},
+         "description": "+0.65 mana per level (+11.7 at champion level 18)",
+         "name": "Lesser Mark of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "r_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5023": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.33},
+         "description": "+0.33 ability power",
+         "name": "Lesser Mark of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "r_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5024": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.0577},
+         "description": "+0.06 ability power per level (+1.08 at champion level 18)",
+         "name": "Lesser Mark of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "r_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5016": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.0412},
+         "description": "+0.04 magic resist per level (+0.72 at champion level 18)",
+         "name": "Lesser Mark of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "r_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5159": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatCritChanceMod": 0.002165},
+         "description": "+0.22% critical chance",
+         "name": "Glyph of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "b_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5177": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMPPoolMod": 8.75},
+         "description": "+8.75 mana",
+         "name": "Glyph of Mana",
+         "image": {
+            "w": 48,
+            "full": "b_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5178": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMPModPerLevel": 1.1019},
+         "description": "+1.1 mana per level (+19.8 at champion level 18)",
+         "name": "Glyph of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "b_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5179": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMPRegenMod": 0.04862},
+         "description": "+0.24 mana regen / 5 sec.",
+         "name": "Glyph of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5173": {
+         "tags": ["glyph"],
+         "stats": {"rPercentCooldownMod": -0.00667},
+         "description": "-0.67% cooldowns",
+         "name": "Glyph of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "b_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5174": {
+         "tags": ["glyph"],
+         "stats": {"rPercentCooldownModPerLevel": -5.0E-4},
+         "description": "-0.05% cooldowns per level (-0.9% at champion level 18)",
+         "name": "Glyph of Scaling Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "b_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5175": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.92},
+         "description": "+0.92 ability power",
+         "name": "Glyph of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "b_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5176": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.1346},
+         "description": "+0.13 ability power per level (+2.34 at champion level 18)",
+         "name": "Glyph of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "b_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5031": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.1575},
+         "description": "+0.16 attack damage",
+         "name": "Lesser Glyph of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "b_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5032": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.0225},
+         "description": "+0.02 attack damage per level (+0.36 at champion level 18)",
+         "name": "Lesser Glyph of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "b_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5033": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "glyph"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.003538},
+         "description": "+0.35% attack speed",
+         "name": "Lesser Glyph of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "b_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5035": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatCritDamageMod": 0.003099},
+         "description": "+0.31% critical damage",
+         "name": "Lesser Glyph of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "b_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5037": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatCritChanceMod": 0.001546},
+         "description": "+0.15% critical chance",
+         "name": "Lesser Glyph of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "b_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "10001": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritDamageMod": 0.022314},
+         "description": "+2.23% critical damage",
+         "name": "Razer Mark of Precision",
+         "image": {
+            "w": 48,
+            "full": "10001.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5027": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMPRegenMod": 0.02916},
+         "description": "+0.15 mana regen / 5 sec.",
+         "name": "Lesser Mark of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "r_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "10002": {
+         "tags": [
+            "utility",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentMovementSpeedMod": 0.015},
+         "description": "+1.5% movement speed",
+         "name": "Razer Quintessence of Speed",
+         "image": {
+            "w": 48,
+            "full": "10002.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5029": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 0.49},
+         "description": "+0.49 magic penetration",
+         "name": "Lesser Mark of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5418": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "magic",
+            "quintessence"
+         ],
+         "stats": {
+            "rFlatMagicPenetrationMod": 1.4,
+            "rFlatArmorPenetrationMod": 1.79
+         },
+         "description": "+1.79 Armor Penetration / +1.4 Magic Penetration",
+         "name": "Greater Quintessence of Hybrid Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5143": {
+         "tags": ["mark"],
+         "stats": {"rPercentCooldownMod": -0.001556},
+         "description": "-0.16% cooldowns",
+         "name": "Mark of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "r_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5416": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "magic",
+            "quintessence"
+         ],
+         "stats": {
+            "rFlatMagicPenetrationMod": 0.78,
+            "rFlatArmorPenetrationMod": 0.99
+         },
+         "description": "+0.99 Armor Penetration / +0.78 Magic Penetration",
+         "name": "Lesser Quintessence of Hybrid Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5417": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "magic",
+            "quintessence"
+         ],
+         "stats": {
+            "rFlatMagicPenetrationMod": 1.09,
+            "rFlatArmorPenetrationMod": 1.39
+         },
+         "description": "+1.39 Armor Penetration / +1.09 Magic Penetration",
+         "name": "Quintessence of Hybrid Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "black"
+         }
+      },
+      "5146": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.0808},
+         "description": "+0.08 ability power per level (+1.44 at champion level 18)",
+         "name": "Mark of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "r_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5414": {
+         "tags": [
+            "defense",
+            "percent",
+            "seal"
+         ],
+         "stats": {"PercentHPPoolMod": 0.0039},
+         "description": "+0.39% Health.",
+         "name": "Seal of Percent Health",
+         "image": {
+            "w": 48,
+            "full": "y_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5147": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMPPoolMod": 4.5938},
+         "description": "+4.59 mana",
+         "name": "Mark of Mana",
+         "image": {
+            "w": 48,
+            "full": "r_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5415": {
+         "tags": [
+            "defense",
+            "percent",
+            "seal"
+         ],
+         "stats": {"PercentHPPoolMod": 0.005},
+         "description": "+0.5% Health.",
+         "name": "Greater Seal of Percent Health",
+         "image": {
+            "w": 48,
+            "full": "y_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "yellow"
+         }
+      },
+      "5412": {
+         "tags": ["quintessence"],
+         "stats": {"PercentLifeStealMod": 0.02},
+         "description": "+2% Lifesteal.",
+         "name": "Greater Quintessence of Life Steal",
+         "image": {
+            "w": 48,
+            "full": "bl_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "black"
+         }
+      },
+      "5145": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.462},
+         "description": "+0.46 ability power",
+         "name": "Mark of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "r_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5413": {
+         "tags": [
+            "defense",
+            "percent",
+            "seal"
+         ],
+         "stats": {"PercentHPPoolMod": 0.0028},
+         "description": "+0.28% Health.",
+         "name": "Lesser Seal of Percent Health",
+         "image": {
+            "w": 48,
+            "full": "y_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5047": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatHPRegenMod": 0.03},
+         "description": "+0.15 health regen / 5 sec.",
+         "name": "Lesser Glyph of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5045": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatSpellBlockMod": 0.74},
+         "description": "+0.74 magic resist",
+         "name": "Lesser Glyph of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "b_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5046": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.0825},
+         "description": "+0.08 magic resist per level (+1.44 at champion level 18)",
+         "name": "Lesser Glyph of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "b_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5043": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatArmorMod": 0.3908},
+         "description": "+0.39 armor",
+         "name": "Lesser Glyph of Armor",
+         "image": {
+            "w": 48,
+            "full": "b_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5041": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatHPPoolMod": 1.485},
+         "description": "+1.49 health",
+         "name": "Lesser Glyph of Health",
+         "image": {
+            "w": 48,
+            "full": "b_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5042": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.3005},
+         "description": "+0.3 health per level (+5.4 at champion level 18)",
+         "name": "Lesser Glyph of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "b_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5138": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.0577},
+         "description": "+0.06 magic resist per level (+1.08 at champion level 18)",
+         "name": "Mark of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "r_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5137": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatSpellBlockMod": 0.6},
+         "description": "+0.6 magic resist",
+         "name": "Mark of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "r_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5151": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 0.68},
+         "description": "+0.68 magic penetration",
+         "name": "Mark of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5153": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.2205},
+         "description": "+0.22 attack damage",
+         "name": "Glyph of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "b_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5051": {
+         "tags": ["glyph"],
+         "stats": {"rPercentCooldownMod": -0.0047},
+         "description": "-0.47% cooldowns",
+         "name": "Lesser Glyph of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "b_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5154": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.0315},
+         "description": "+0.03 attack damage per level (+0.57 at champion level 18)",
+         "name": "Glyph of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "b_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5155": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "glyph"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.004953},
+         "description": "+0.5% attack speed",
+         "name": "Glyph of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "b_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5157": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatCritDamageMod": 0.004339},
+         "description": "+0.43% critical damage",
+         "name": "Glyph of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "b_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5056": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMPModPerLevel": 0.787},
+         "description": "+0.79 mana per level (+14.22 at champion level 18)",
+         "name": "Lesser Glyph of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "b_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5057": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMPRegenMod": 0.03472},
+         "description": "+0.17 mana regen / 5 sec.",
+         "name": "Lesser Glyph of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5058": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.006},
+         "description": "+0.03 mana regen / 5 sec. per level (+0.54 at champion level 18)",
+         "name": "Lesser Glyph of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5059": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 0.35},
+         "description": "+0.35 magic penetration",
+         "name": "Lesser Glyph of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "b_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5052": {
+         "tags": ["glyph"],
+         "stats": {"rPercentCooldownModPerLevel": -4.0E-4},
+         "description": "-0.04% cooldowns per level (-0.72% at champion level 18)",
+         "name": "Lesser Glyph of Scaling Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "b_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5053": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.66},
+         "description": "+0.66 ability power",
+         "name": "Lesser Glyph of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "b_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5054": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.0962},
+         "description": "+0.1 ability power per level (+1.8 at champion level 18)",
+         "name": "Lesser Glyph of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "b_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5055": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMPPoolMod": 6.25},
+         "description": "+6.25 mana",
+         "name": "Lesser Glyph of Mana",
+         "image": {
+            "w": 48,
+            "full": "b_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 0,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "5149": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMPRegenMod": 0.04084},
+         "description": "+0.2 mana regen / 5 sec.",
+         "name": "Mark of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "r_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5148": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatMPModPerLevel": 0.9074},
+         "description": "+0.91 mana per level (+16.38 at champion level 18)",
+         "name": "Mark of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "r_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "5065": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatCritDamageMod": 0.004339},
+         "description": "+0.43% critical damage",
+         "name": "Lesser Seal of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "y_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5259": {
+         "tags": [
+            "defense",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatSpellBlockMod": 0.77},
+         "description": "+0.77 magic resist",
+         "name": "Greater Mark of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "r_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5063": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "seal"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.004245},
+         "description": "+0.42% attack speed",
+         "name": "Lesser Seal of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "y_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5067": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatCritChanceMod": 0.00232},
+         "description": "+0.23% critical chance",
+         "name": "Lesser Seal of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "y_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5062": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.0338},
+         "description": "+0.03 attack damage per level (+0.61 at champion level 18)",
+         "name": "Lesser Seal of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "y_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5061": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.2364},
+         "description": "+0.24 attack damage",
+         "name": "Lesser Seal of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "y_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5260": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.0742},
+         "description": "+0.07 magic resist per level (+1.26 at champion level 18)",
+         "name": "Greater Mark of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "r_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5267": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.594},
+         "description": "+0.59 ability power",
+         "name": "Greater Mark of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "r_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5268": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.1038},
+         "description": "+0.1 ability power per level (+1.8 at champion level 18)",
+         "name": "Greater Mark of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "r_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5265": {
+         "tags": ["mark"],
+         "stats": {"rPercentCooldownMod": -0.002},
+         "description": "-0.2% cooldowns",
+         "name": "Greater Mark of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "r_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5075": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatSpellBlockMod": 0.4125},
+         "description": "+0.41 magic resist",
+         "name": "Lesser Seal of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "y_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5074": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatArmorModPerLevel": 0.0833},
+         "description": "+0.08 armor per level (+1.44 at champion level 18)",
+         "name": "Lesser Seal of Scaling Armor",
+         "image": {
+            "w": 48,
+            "full": "y_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5269": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMPPoolMod": 5.9063},
+         "description": "+5.91 mana",
+         "name": "Greater Mark of Mana",
+         "image": {
+            "w": 48,
+            "full": "r_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5077": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatHPRegenMod": 0.048},
+         "description": "+0.24 health regen / 5 sec.",
+         "name": "Lesser Seal of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5076": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.0536},
+         "description": "+0.05 magic resist per level (+0.9 at champion level 18)",
+         "name": "Lesser Seal of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "y_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5078": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatHPRegenModPerLevel": 0.0125},
+         "description": "+0.06 health regen / 5 sec. per level (+1.08 at champion level 18)",
+         "name": "Lesser Seal of Scaling Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5071": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatHPPoolMod": 2.97},
+         "description": "+2.97 health",
+         "name": "Lesser Seal of Health",
+         "image": {
+            "w": 48,
+            "full": "y_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5073": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatArmorMod": 0.7816},
+         "description": "+0.78 armor",
+         "name": "Lesser Seal of Armor",
+         "image": {
+            "w": 48,
+            "full": "y_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5072": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.601},
+         "description": "+0.6 health per level (+10.8 at champion level 18)",
+         "name": "Lesser Seal of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "y_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5270": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "mark"
+         ],
+         "stats": {"rFlatMPModPerLevel": 1.1667},
+         "description": "+1.17 mana per level (+21.06 at champion level 18)",
+         "name": "Greater Mark of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "r_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5271": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatMPRegenMod": 0.0525},
+         "description": "+0.26 mana regen / 5 sec.",
+         "name": "Greater Mark of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "r_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5273": {
+         "tags": [
+            "magic",
+            "flat",
+            "mark"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 0.87},
+         "description": "+0.87 magic penetration",
+         "name": "Greater Mark of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "r_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "red"
+         }
+      },
+      "5275": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.2835},
+         "description": "+0.28 attack damage",
+         "name": "Greater Glyph of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "b_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5276": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.0405},
+         "description": "+0.04 attack damage per level (+0.73 at champion level 18)",
+         "name": "Greater Glyph of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "b_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5277": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "glyph"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.006368},
+         "description": "+0.64% attack speed",
+         "name": "Greater Glyph of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "b_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5279": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatCritDamageMod": 0.005579},
+         "description": "+0.56% critical damage",
+         "name": "Greater Glyph of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "b_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5088": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.0072},
+         "description": "+0.036 mana regen / 5 sec. per level (+0.65 at champion level 18)",
+         "name": "Lesser Seal of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5183": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 0.3309},
+         "description": "+0.33 attack damage",
+         "name": "Seal of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "y_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5087": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMPRegenMod": 0.04514},
+         "description": "+0.23 mana regen / 5 sec.",
+         "name": "Lesser Seal of Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5086": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMPModPerLevel": 0.6481},
+         "description": "+0.65 mana per level (+11.7 at champion level 18)",
+         "name": "Lesser Seal of Scaling Mana",
+         "image": {
+            "w": 48,
+            "full": "y_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5181": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"rFlatMagicPenetrationMod": 0.49},
+         "description": "+0.49 magic penetration",
+         "name": "Glyph of Magic Penetration",
+         "image": {
+            "w": 48,
+            "full": "b_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5085": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMPPoolMod": 3.8281},
+         "description": "+3.83 mana",
+         "name": "Lesser Seal of Mana",
+         "image": {
+            "w": 48,
+            "full": "y_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5180": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMPRegenModPerLevel": 0.008},
+         "description": "+0.04 mana regen / 5 sec. per level (+0.72 at champion level 18)",
+         "name": "Glyph of Scaling Mana Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "5084": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.0577},
+         "description": "+0.06 ability power per level (+1.08 at champion level 18)",
+         "name": "Lesser Seal of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "y_4_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5187": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatCritDamageMod": 0.006074},
+         "description": "+0.61% critical damage",
+         "name": "Seal of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "y_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5083": {
+         "tags": [
+            "magic",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatMagicDamageMod": 0.33},
+         "description": "+0.33 ability power",
+         "name": "Lesser Seal of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "y_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5185": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "seal"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.005943},
+         "description": "+0.59% attack speed",
+         "name": "Seal of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "y_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5081": {
+         "tags": ["seal"],
+         "stats": {"rPercentCooldownMod": -0.002},
+         "description": "-0.2% cooldowns",
+         "name": "Lesser Seal of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "y_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "5184": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.0473},
+         "description": "+0.05 attack damage per level (+0.85 at champion level 18)",
+         "name": "Seal of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "y_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5189": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatCritChanceMod": 0.003247},
+         "description": "+0.32% critical chance",
+         "name": "Seal of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "y_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5281": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatCritChanceMod": 0.002784},
+         "description": "+0.28% critical chance",
+         "name": "Greater Glyph of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "b_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5289": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatSpellBlockMod": 1.34},
+         "description": "+1.34 magic resist",
+         "name": "Greater Glyph of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "b_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5287": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatArmorMod": 0.7034},
+         "description": "+0.7 armor",
+         "name": "Greater Glyph of Armor",
+         "image": {
+            "w": 48,
+            "full": "b_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5285": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatHPPoolMod": 2.673},
+         "description": "+2.67 health",
+         "name": "Greater Glyph of Health",
+         "image": {
+            "w": 48,
+            "full": "b_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5286": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.5409},
+         "description": "+0.54 health per level (+9.72 at champion level 18)",
+         "name": "Greater Glyph of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "b_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5097": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatCritChanceMod": 0.010309},
+         "description": "+1.03% critical chance",
+         "name": "Lesser Quintessence of Critical Chance",
+         "image": {
+            "w": 48,
+            "full": "bl_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5099": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"rFlatArmorPenetrationMod": 1.42},
+         "description": "+1.42 armor penetration",
+         "name": "Lesser Quintessence of Armor Penetration",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5194": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.8413},
+         "description": "+0.84 health per level (+15.12 at champion level 18)",
+         "name": "Seal of Scaling Health",
+         "image": {
+            "w": 48,
+            "full": "y_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5193": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatHPPoolMod": 4.158},
+         "description": "+4.16 health",
+         "name": "Seal of Health",
+         "image": {
+            "w": 48,
+            "full": "y_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5093": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "quintessence"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.018868},
+         "description": "+1.89% attack speed",
+         "name": "Lesser Quintessence of Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "bl_3_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5196": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatArmorModPerLevel": 0.1167},
+         "description": "+0.12 armor per level (+2.16 at champion level 18)",
+         "name": "Seal of Scaling Armor",
+         "image": {
+            "w": 48,
+            "full": "y_2_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 336
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5092": {
+         "tags": [
+            "physicalAttack",
+            "perLevel",
+            "quintessence"
+         ],
+         "stats": {"rFlatPhysicalDamageModPerLevel": 0.1389},
+         "description": "+0.14 attack damage per level (+2.52 at champion level 18)",
+         "name": "Lesser Quintessence of Scaling Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_2_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5195": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatArmorMod": 1.0942},
+         "description": "+1.09 armor",
+         "name": "Seal of Armor",
+         "image": {
+            "w": 48,
+            "full": "y_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5095": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatCritDamageMod": 0.024793},
+         "description": "+2.48% critical damage",
+         "name": "Lesser Quintessence of Critical Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5198": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.075},
+         "description": "+0.08 magic resist per level (+1.44 at champion level 18)",
+         "name": "Seal of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "y_4_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5197": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatSpellBlockMod": 0.5775},
+         "description": "+0.58 magic resist",
+         "name": "Seal of Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "y_3_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5199": {
+         "tags": [
+            "defense",
+            "flat",
+            "seal"
+         ],
+         "stats": {"FlatHPRegenMod": 0.0672},
+         "description": "+0.34 health regen / 5 sec.",
+         "name": "Seal of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "y_1_2.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 96,
+            "x": 288
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "yellow"
+         }
+      },
+      "5091": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "quintessence"
+         ],
+         "stats": {"FlatPhysicalDamageMod": 1.25},
+         "description": "+1.25 attack damage",
+         "name": "Lesser Quintessence of Attack Damage",
+         "image": {
+            "w": 48,
+            "full": "bl_1_1.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 48,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "black"
+         }
+      },
+      "5290": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatSpellBlockModPerLevel": 0.1484},
+         "description": "+0.15 magic resist per level (+2.7 at champion level 18)",
+         "name": "Greater Glyph of Scaling Magic Resist",
+         "image": {
+            "w": 48,
+            "full": "b_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5291": {
+         "tags": [
+            "defense",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatHPRegenMod": 0.054},
+         "description": "+0.27 health regen / 5 sec.",
+         "name": "Greater Glyph of Health Regeneration",
+         "image": {
+            "w": 48,
+            "full": "b_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "8001": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritDamageMod": 0.019835},
+         "description": "+2% critical damage",
+         "name": "Mark of the Crippling Candy Cane",
+         "image": {
+            "w": 48,
+            "full": "8001.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "red"
+         }
+      },
+      "8002": {
+         "tags": [
+            "physicalAttack",
+            "flat",
+            "mark"
+         ],
+         "stats": {"FlatCritChanceMod": 0.0061855},
+         "description": "+0.62% critical chance",
+         "name": "Lesser Mark of the Yuletide Tannenbaum ",
+         "image": {
+            "w": 48,
+            "full": "8002.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "8003": {
+         "tags": ["glyph"],
+         "stats": {"rPercentCooldownMod": -0.0075},
+         "description": "-0.75% cooldowns",
+         "name": "Glyph of the Special Stocking",
+         "image": {
+            "w": 48,
+            "full": "8003.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 96
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "2",
+            "type": "blue"
+         }
+      },
+      "8005": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.1154},
+         "description": "+0.12 ability power per level (+2.16 at champion level 18)",
+         "name": "Lesser Glyph of the Gracious Gift",
+         "image": {
+            "w": 48,
+            "full": "8005.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 144
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "blue"
+         }
+      },
+      "8006": {
+         "tags": [
+            "defense",
+            "perLevel",
+            "seal"
+         ],
+         "stats": {"rFlatHPModPerLevel": 0.72115},
+         "description": "+0.72 health per level (+12.96 at champion level 18)",
+         "name": "Lesser Seal of the Stout Snowman",
+         "image": {
+            "w": 48,
+            "full": "8006.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 192
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "yellow"
+         }
+      },
+      "8007": {
+         "tags": [
+            "physicalAttack",
+            "percent",
+            "mark"
+         ],
+         "stats": {"PercentAttackSpeedMod": 0.011321},
+         "description": "+1.13% attack speed",
+         "name": "Lesser Mark of Alpine Attack Speed",
+         "image": {
+            "w": 48,
+            "full": "8007.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 240,
+            "x": 240
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "1",
+            "type": "red"
+         }
+      },
+      "5298": {
+         "tags": [
+            "magic",
+            "perLevel",
+            "glyph"
+         ],
+         "stats": {"rFlatMagicDamageModPerLevel": 0.1731},
+         "description": "+0.17 ability power per level (+3.06 at champion level 18)",
+         "name": "Greater Glyph of Scaling Ability Power",
+         "image": {
+            "w": 48,
+            "full": "b_4_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 48
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5299": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMPPoolMod": 11.25},
+         "description": "+11.25 mana",
+         "name": "Greater Glyph of Mana",
+         "image": {
+            "w": 48,
+            "full": "b_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5295": {
+         "tags": ["glyph"],
+         "stats": {"rPercentCooldownMod": -0.008334},
+         "description": "-0.83% cooldowns",
+         "name": "Greater Glyph of Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "b_1_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 384
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5296": {
+         "tags": ["glyph"],
+         "stats": {"rPercentCooldownModPerLevel": -6.173E-4},
+         "description": "-0.06% cooldowns per level (-1.11% at champion level 18)",
+         "name": "Greater Glyph of Scaling Cooldown Reduction",
+         "image": {
+            "w": 48,
+            "full": "b_2_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 144,
+            "x": 432
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      },
+      "5297": {
+         "tags": [
+            "magic",
+            "flat",
+            "glyph"
+         ],
+         "stats": {"FlatMagicDamageMod": 1.19},
+         "description": "+1.19 ability power",
+         "name": "Greater Glyph of Ability Power",
+         "image": {
+            "w": 48,
+            "full": "b_3_3.png",
+            "sprite": "rune0.png",
+            "group": "rune",
+            "h": 48,
+            "y": 192,
+            "x": 0
+         },
+         "rune": {
+            "isRune": true,
+            "tier": "3",
+            "type": "blue"
+         }
+      }
+   },
+   "type": "rune",
+   "version": "4.2.6"
+}

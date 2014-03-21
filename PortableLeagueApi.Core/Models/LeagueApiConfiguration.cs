@@ -9,7 +9,7 @@ namespace PortableLeagueApi.Core.Models
             string key, 
             RegionEnum? defaultRegion, 
             bool waitToAvoidRateLimit, 
-            IHttpRequestService httpRequestService)
+            IHttpRequestService httpRequestService = null)
         {
             Key = key;
             DefaultRegion = defaultRegion;

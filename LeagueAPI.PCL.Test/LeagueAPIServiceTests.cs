@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using NUnit.Framework;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Game.Extensions;
+using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
+using PortableLeagueApi.Static.Extensions;
 
 namespace PortableLeagueAPI.Test
 {
@@ -15,21 +17,32 @@ namespace PortableLeagueAPI.Test
     {
         private readonly LeagueApi _leagueAPI;
 
-        public LeagueAPIServiceTests()
+        private const long SummonerId = 19332836;
+        private const string SummonerName = "TuC Ølen";
+        private const string TeamId = "TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f";
+
+        public LeagueAPIServiceTests() : this(null)
         {
-            _leagueAPI = new LeagueApi(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
+        }
+
+        public LeagueAPIServiceTests(ILeagueApiConfiguration configuration)
+        {
+            configuration = configuration ??
+                            new LeagueApiConfiguration(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
+
+            _leagueAPI = new LeagueApi(configuration);
         }
 
         [Test]
         [Category("Others")]
         public async void SourceMappingTestAsync()
         {
-            var fromSource1 = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
+            var fromSource1 = await _leagueAPI.Summoner.GetSummonerByNameAsync(SummonerName);
             var otherFromSource1 = await _leagueAPI.Summoner.GetSummonerByIdAsync(19231046);
 
-            var source2 = new LeagueApi(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
+            var source2 = new LeagueApi(string.Empty, RegionEnum.Na, true, new FakeHttpRequestService());
 
-            var fromSource2 = await source2.Summoner.GetSummonerByNameAsync("TuC Ølen");
+            var fromSource2 = await source2.Summoner.GetSummonerByNameAsync(SummonerName);
 
             Assert.IsNotNull(fromSource1.ApiConfiguration);
             Assert.IsNotNull(otherFromSource1.ApiConfiguration);
@@ -61,7 +74,7 @@ namespace PortableLeagueAPI.Test
         [Category("Game")]
         public async void GetRecentGamesBySummonerIdTestAsync()
         {
-            var result = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(19231046);
+            var result = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(SummonerId);
 
             var list = result.ToList();
 
@@ -73,7 +86,7 @@ namespace PortableLeagueAPI.Test
         [Category("Game")]
         public async void GetSummonerAndRecentGamesTestAsync()
         {
-            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
+            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync(SummonerName);
 
             Assert.NotNull(summoner);
 
@@ -95,11 +108,11 @@ namespace PortableLeagueAPI.Test
         [Category("League")]
         public async void RetrievesLeaguesEntryDataForSummonerTestAsync()
         {
-            List<ILeagueItem> result;
+            List<ILeagueItem> result = null;
 
             try
             {
-                var enumerable = await _leagueAPI.League.RetrievesLeaguesEntryDataForSummonerAsync(19332836);
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesEntryDataForSummonerAsync(SummonerId);
                 result = enumerable.ToList();
             }
             catch (APIRequestException are)
@@ -107,9 +120,7 @@ namespace PortableLeagueAPI.Test
                 if (are.APIRequestError.StatusCode != 404)
                     throw;
 
-                Debug.WriteLine("Unranked player");
-
-                return;
+                Assert.Fail("Unranked player. Please update test"); 
             }
 
             Assert.NotNull(result);
@@ -119,11 +130,11 @@ namespace PortableLeagueAPI.Test
         [Category("League")]
         public async void RetrievesLeaguesDataForSummonerTestAsync()
         {
-            List<ILeague> result;
+            List<ILeague> result = null;
 
             try
             {
-                var enumerable = await _leagueAPI.League.RetrievesLeaguesDataForSummonerAsync(19332836);
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesDataForSummonerAsync(SummonerId);
                 result = enumerable.ToList();
             }
             catch (APIRequestException are)
@@ -131,9 +142,7 @@ namespace PortableLeagueAPI.Test
                 if (are.APIRequestError.StatusCode != 404)
                     throw;
 
-                Debug.WriteLine("Unranked player");
-
-                return;
+                Assert.Fail("Unranked player. Please update test"); 
             }
 
             Assert.NotNull(result);
@@ -143,11 +152,11 @@ namespace PortableLeagueAPI.Test
         [Category("League")]
         public async void RetrievesLeaguesEntryDataForTeamTestAsync()
         {
-            List<ILeagueItem> result;
+            List<ILeagueItem> result = null;
 
             try
             {
-                var enumerable = await _leagueAPI.League.RetrievesLeaguesEntryDataForTeamAsync("TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f");
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesEntryDataForTeamAsync(TeamId);
                 result = enumerable.ToList();
             }
             catch (APIRequestException are)
@@ -155,9 +164,7 @@ namespace PortableLeagueAPI.Test
                 if (are.APIRequestError.StatusCode != 404)
                     throw;
 
-                Debug.WriteLine("Unranked team");
-
-                return;
+                Assert.Fail("Unranked team. Please update test"); 
             }
 
             Assert.NotNull(result);
@@ -167,11 +174,11 @@ namespace PortableLeagueAPI.Test
         [Category("League")]
         public async void RetrievesLeaguesDataForTeamTestAsync()
         {
-            List<ILeague> result;
+            List<ILeague> result = null;
 
             try
             {
-                var enumerable = await _leagueAPI.League.RetrievesLeaguesDataForTeamAsync("TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f");
+                var enumerable = await _leagueAPI.League.RetrievesLeaguesDataForTeamAsync(TeamId);
                 result = enumerable.ToList();
             }
             catch (APIRequestException are)
@@ -179,9 +186,7 @@ namespace PortableLeagueAPI.Test
                 if (are.APIRequestError.StatusCode != 404)
                     throw;
 
-                Debug.WriteLine("Unranked team");
-
-                return;
+                Assert.Fail("Unranked team. Please update test"); 
             }
 
             Assert.NotNull(result);
@@ -191,7 +196,7 @@ namespace PortableLeagueAPI.Test
         [Category("Stats")]
         public async void GetPlayerStatsSummariesBySummonerIdTestAsync()
         {
-            var result = await _leagueAPI.Stats.GetPlayerStatsSummariesBySummonerIdAsync(19231046);
+            var result = await _leagueAPI.Stats.GetPlayerStatsSummariesBySummonerIdAsync(SummonerId);
 
             Assert.NotNull(result);
         }
@@ -200,20 +205,18 @@ namespace PortableLeagueAPI.Test
         [Category("Stats")]
         public async void GetRankedStatsSummariesBySummonerIdTestAsync()
         {
-            IRankedStats result;
+            IRankedStats result = null;
 
             try
             {
-                result = await _leagueAPI.Stats.GetRankedStatsSummariesBySummonerIdAsync(19332836);
+                result = await _leagueAPI.Stats.GetRankedStatsSummariesBySummonerIdAsync(SummonerId);
             }
             catch (APIRequestException are)
             {
                 if (are.APIRequestError.StatusCode != 404)
                     throw;
 
-                Debug.WriteLine("Player unranked");
-
-                return;
+                Assert.Fail("Unranked player. Please update test"); 
             }
 
             Assert.NotNull(result);
@@ -223,7 +226,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetMasteryPagesBySummonerIdTestAsync()
         {
-            var result = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(19332836);
+            var result = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(SummonerId);
 
             Assert.NotNull(result);
         }
@@ -241,7 +244,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetRunePagesBySummonerIdTestAsync()
         {
-            var result = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(19332836);
+            var result = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(SummonerId);
 
             Assert.NotNull(result);
         }
@@ -259,7 +262,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetSummonerByNameTestAsync()
         {
-            var result = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Ølen");
+            var result = await _leagueAPI.Summoner.GetSummonerByNameAsync(SummonerName);
 
             Assert.NotNull(result);
         }
@@ -268,7 +271,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetSummonerByIdTestAsync()
         {
-            var result = await _leagueAPI.Summoner.GetSummonerByIdAsync(19231046);
+            var result = await _leagueAPI.Summoner.GetSummonerByIdAsync(SummonerId);
 
             Assert.NotNull(result);
         }
@@ -277,7 +280,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetSummonerByIdsTestAsync()
         {
-            var result = await _leagueAPI.Summoner.GetSummonerByIdAsync(new List<long> { 19231046, 19231045 });
+            var result = await _leagueAPI.Summoner.GetSummonerByIdAsync(new List<long> { SummonerId, 19231045 });
 
             Assert.NotNull(result);
         }
@@ -286,7 +289,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetSummonerNamesByIdsTestAsync()
         {
-            var result = await _leagueAPI.Summoner.GetSummonerNamesByIdAsync(new List<long> { 19231046, 19231045 });
+            var result = await _leagueAPI.Summoner.GetSummonerNamesByIdAsync(new List<long> { SummonerId, 19231045 });
 
             Assert.NotNull(result);
         }
@@ -295,7 +298,7 @@ namespace PortableLeagueAPI.Test
         [Category("Summoner")]
         public async void GetSummonerNamesByIdTestAsync()
         {
-            var result = await _leagueAPI.Summoner.GetSummonerNamesByIdAsync(19231046);
+            var result = await _leagueAPI.Summoner.GetSummonerNamesByIdAsync(SummonerId);
 
             Assert.NotNull(result);
         }
@@ -304,7 +307,7 @@ namespace PortableLeagueAPI.Test
         [Category("Team")]
         public async void GetTeamsBySummonerIdTestAsync()
         {
-            var result = await _leagueAPI.Team.GetTeamsBySummonerIdAsync(19231046);
+            var result = await _leagueAPI.Team.GetTeamsBySummonerIdAsync(SummonerId);
 
             Assert.NotNull(result);
         }
@@ -321,5 +324,266 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(result);
         }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticChampionsTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetChampionsAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticChampionsWithParametersTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticItemsTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetItemsAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticItemsWithParametersTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticMasteriesTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetMasteriesAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticMasteriesWithParametersTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetMasteryAsync(4353, MasteryDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetRealmAsync()
+        {
+            var result = await _leagueAPI.Static.GetRealmAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticRunesTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetRunesAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticRunesWithParametersTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetRuneAsync(5235, RuneDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticSummonerSpellsTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetSummonerSpellsAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticSummonerSpellsWithParametersTestAsync()
+        {
+            var result = await _leagueAPI.Static.GetSummonerSpellsAsync("SummonerTeleport", SpellDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+        
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetStaticImageUrlTestAsync()
+        {
+            var item = await _leagueAPI.Static.GetItemsAsync(1001, ItemDataEnum.All, languageCode: LanguageEnum.French);
+
+            var url = await item.Image.GetUrlAsync();
+
+            Assert.NotNull(url);
+
+            using (var httpClient = new HttpClient())
+            {
+                var response = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
+
+                Assert.IsTrue(response.IsSuccessStatusCode);
+            }
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetStaticChampionsSpasheImagesUrlTestAsync()
+        {
+            var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+
+            var urls = champion.GetSpasheImmagesUrls();
+
+            Assert.NotNull(urls);
+
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
+
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetProfilIconImagesUrlTestAsync()
+        {
+            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync("TuC Kiwii");
+
+            var url = await summoner.GetProfileIconUrlAsync();
+
+            Assert.NotNull(url);
+
+            using (var httpClient = new HttpClient())
+            {
+                var response = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
+
+                Assert.IsTrue(response.IsSuccessStatusCode);
+            }
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetStaticChampionsLoadingImagesUrlTestAsync()
+        {
+            var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+
+            var urls = champion.GetLoadingImagesUrls();
+
+            Assert.NotNull(urls);
+
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
+
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void ChampionExtensionsTestAsync()
+        {
+            var champions = await _leagueAPI.Champion.GetChampionsAsync(true);
+            Assert.NotNull(champions);
+
+            var result = await champions.First().GetChampionStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void MasteryExtensionsTestAsync()
+        {
+            var masteriesPage = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(SummonerId);
+            Assert.NotNull(masteriesPage);
+
+            var result = await masteriesPage.First().Talents.First().GetMasteryStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void RuneExtensionsTestAsync()
+        {
+            var runesPages = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(SummonerId);
+            Assert.NotNull(runesPages);
+
+            var result = await runesPages.First().Slots.First().Rune.GetRuneStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void ItemsExtensionsTestAsync()
+        {
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(SummonerId);
+            Assert.NotNull(recentGames);
+
+            var result = await recentGames.First().Stats.GetItemsStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void ItemsImageExtensionsTestAsync()
+        {
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(SummonerId);
+            Assert.NotNull(recentGames);
+
+            var urls = await recentGames.First().Stats.GetItemsImageUrlsAsync();
+            Assert.NotNull(urls);
+
+            using (var httpClient = new HttpClient())
+            {
+                foreach (var url in urls)
+                {
+                    var response = await httpClient.GetAsync(url);
+
+                    Assert.IsTrue(response.IsSuccessStatusCode);
+                }
+            }
+
+            Assert.NotNull(urls);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void SummonerSpellExtensionsTestAsync()
+        {
+            var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(SummonerId);
+            Assert.NotNull(recentGames);
+
+            var result = await recentGames.First().GetSummonerSpellsStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
     }
 }
