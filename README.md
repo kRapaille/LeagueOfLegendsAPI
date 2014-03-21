@@ -29,6 +29,12 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 **Note** : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, set the third paramater in the LeagueAPI constructor to true.
 
+## Notes
+
+- If your visual studio puts in red some methods from the API. Please, unload and reload your project from the solution.
+- If something doesn't work or isn't up to date. Please, check if there is any available updates on NuGet. If it still doesn't work, [create an issue](https://github.com/XeeX/LeagueOfLegendsAPI/issues/new).
+
+
 ## Status
 
 #### Dev
@@ -39,6 +45,8 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 ## Last changes
 
+- Static masteries DTOs fix
+- All unit tests are now offline
 - Accept-Encoding now supports gzip and deflate
 - Updated Game Constants to include Team Builder constants.
 - Added endpoints to leagues to get a league and a league entry by team ID.
