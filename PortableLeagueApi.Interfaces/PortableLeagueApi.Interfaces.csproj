@@ -72,6 +72,8 @@
     <Compile Include="Core\IHttpRequestService.cs" />
     <Compile Include="Core\IHttpResponseMessage.cs" />
     <Compile Include="Core\IApiModel.cs" />
+    <Compile Include="Static\Mastery\IMasteryTreeItem.cs" />
+    <Compile Include="Static\Mastery\IMasteryTreeList.cs" />
     <Compile Include="Static\IBasicData.cs" />
     <Compile Include="Static\IBasicDataStats.cs" />
     <Compile Include="Static\IGold.cs" />

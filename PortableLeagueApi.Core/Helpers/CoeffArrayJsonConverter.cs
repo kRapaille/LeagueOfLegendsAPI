@@ -14,14 +14,22 @@ namespace PortableLeagueApi.Core.Helpers
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             float[] result = null;
-            
+
             if (reader.ValueType == typeof(float))
             {
-                result = new[] { (float)reader.Value };   
+                result = new[] { (float)reader.Value };
             }
             else if (reader.ValueType == typeof(double))
             {
                 result = new[] { (float)((double)reader.Value) };
+            }
+            else if (reader.ValueType == typeof(int))
+            {
+                result = new[] { (float)((int)reader.Value) };
+            }
+            else if (reader.ValueType == typeof(long))
+            {
+                result = new[] { (float)((long)reader.Value) };
             }
             else if (reader.ValueType == null)
             {
@@ -39,16 +47,24 @@ namespace PortableLeagueApi.Core.Helpers
                     {
                         value = (float)((double)reader.Value);
                     }
+                    else if (reader.ValueType == typeof(int))
+                    {
+                        value = (int)reader.Value;
+                    }
+                    else if (reader.ValueType == typeof(long))
+                    {
+                        value = (long)reader.Value;
+                    }
 
                     values.Add(value);
 
-                    if(reader.TokenType == JsonToken.EndArray)
+                    if (reader.TokenType == JsonToken.EndArray)
                         break;
                 }
 
                 result = values.ToArray();
             }
-            
+
             return result ?? reader.Value;
         }
 

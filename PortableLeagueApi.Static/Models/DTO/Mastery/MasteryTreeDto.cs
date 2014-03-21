@@ -1,16 +1,17 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace PortableLeagueApi.Static.Models.DTO.Mastery
 {
     internal class MasteryTreeDto
     {
         [JsonProperty("Defense")]
-        public object[] Defense { get; set; }
+        public IList<MasteryTreeListDto> Defense { get; set; }
 
         [JsonProperty("Offense")]
-        public object[] Offense { get; set; }
+        public IList<MasteryTreeListDto> Offense { get; set; }
 
         [JsonProperty("Utility")]
-        public object[] Utility { get; set; }
+        public IList<MasteryTreeListDto> Utility { get; set; }
     }
 }

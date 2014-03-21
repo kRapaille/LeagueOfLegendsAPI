@@ -5,8 +5,8 @@ namespace PortableLeagueApi.Interfaces.Static.Mastery
 {
     public interface IMasteryTree : IApiModel
     {
-        IList<object> Defense { get; set; }
-        IList<object> Offense { get; set; }
-        IList<object> Utility { get; set; }
+        IList<IMasteryTreeList> Defense { get; set; }
+        IList<IMasteryTreeList> Offense { get; set; }
+        IList<IMasteryTreeList> Utility { get; set; }
     }
 }

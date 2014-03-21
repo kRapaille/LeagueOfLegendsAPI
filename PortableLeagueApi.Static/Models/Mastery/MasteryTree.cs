@@ -8,14 +8,16 @@ namespace PortableLeagueApi.Static.Models.Mastery
 {
     public class MasteryTree : ApiModel, IMasteryTree
     {
-        public IList<object> Defense { get; set; }
+        public IList<IMasteryTreeList> Defense { get; set; }
 
-        public IList<object> Offense { get; set; }
+        public IList<IMasteryTreeList> Offense { get; set; }
 
-        public IList<object> Utility { get; set; }
+        public IList<IMasteryTreeList> Utility { get; set; }
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
+            MasteryTreeList.CreateMap(autoMapperService);
+
             autoMapperService.CreateApiModelMapWithInterface<MasteryTreeDto, MasteryTree, IMasteryTree>();
         }
     }

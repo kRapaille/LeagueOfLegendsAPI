@@ -9,7 +9,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Mastery
         public Dictionary<string, MasteryDto> Data { get; set; }
 
         [JsonProperty("tree")]
-        public Dictionary<string, List<List<MasteryTreeDto>>> Tree { get; set; }
+        public MasteryTreeDto Tree { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
