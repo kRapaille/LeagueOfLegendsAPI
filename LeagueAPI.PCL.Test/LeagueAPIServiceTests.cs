@@ -8,6 +8,7 @@ using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
+using PortableLeagueApi.League.Extensions;
 using PortableLeagueApi.Static.Extensions;
 
 namespace PortableLeagueAPI.Test
@@ -188,6 +189,19 @@ namespace PortableLeagueAPI.Test
 
                 Assert.Fail("Unranked team. Please update test"); 
             }
+
+            Assert.NotNull(result);
+        }
+        
+        [Test]
+        [Category("League")]
+        public async void RetrieveLeaguesEntryDataTestAsync()
+        {
+            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync(SummonerName);
+
+            Assert.NotNull(summoner);
+
+            var result = await summoner.RetrieveLeaguesEntryDataAsync();
 
             Assert.NotNull(result);
         }
@@ -510,6 +524,30 @@ namespace PortableLeagueAPI.Test
             Assert.NotNull(champions);
 
             var result = await champions.First().GetChampionStaticInfosAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetChampionImageUrlTestAsync()
+        {
+            var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+            Assert.NotNull(champion);
+
+            var result = await champion.GetChampionImageUrlAsync();
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("StaticExtensions")]
+        public async void GetSpriteUrlTestAsync()
+        {
+            var champion = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+            Assert.NotNull(champion);
+
+            var result = await champion.Image.GetSpriteUrlAsync();
 
             Assert.NotNull(result);
         }
