@@ -17,10 +17,10 @@
     <tags>"Portable League API League"</tags>
     <dependencies>
       <group targetFramework=".NETPortable0.0-net45+wp8+win8">
-        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.0.3" />
+        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.0.4" />
         <dependency id="AutoMapper" version="3.1.1" />
         <dependency id="Newtonsoft.Json" version="6.0.1" />
-        <dependency id="Remake.PortableLeagueAPI.Core" version="2.0.5" />
+        <dependency id="Remake.PortableLeagueAPI.Core" version="2.0.6" />
       </group>
     </dependencies>
   </metadata>
