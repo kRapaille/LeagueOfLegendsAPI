@@ -21,7 +21,7 @@ namespace PortableLeagueApi.Static.Models.SummonerSpell
 
         public string Description { get; set; }
 
-        public IList<object> Effect { get; set; }
+        public IList<IList<float>> Effect { get; set; }
 
         public IList<string> EffectBurn { get; set; }
 

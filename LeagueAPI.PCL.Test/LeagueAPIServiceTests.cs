@@ -10,6 +10,7 @@ using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
 using PortableLeagueApi.League.Extensions;
 using PortableLeagueApi.Static.Extensions;
+using PortableLeagueApi.Team.Extensions;
 
 namespace PortableLeagueAPI.Test
 {
@@ -324,6 +325,19 @@ namespace PortableLeagueAPI.Test
             var result = await _leagueAPI.Team.GetTeamsBySummonerIdAsync(SummonerId);
 
             Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Team")]
+        public async void GetTeamsBySummonerIdExtensionTestAsync()
+        {
+            var summoner = await _leagueAPI.Summoner.GetSummonerByNameAsync(SummonerName);
+
+            Assert.NotNull(summoner);
+
+            var teams = summoner.GetTeamsBySummonerIdAsync();
+
+            Assert.NotNull(teams);
         }
 
         [Test]

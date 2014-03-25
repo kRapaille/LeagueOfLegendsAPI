@@ -63,7 +63,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Rune
         public string Name { get; set; }
 
         [JsonProperty("plaintext")]
-        public object Plaintext { get; set; }
+        public string Plaintext { get; set; }
 
         [JsonProperty("requiredChampion")]
         public string RequiredChampion { get; set; }

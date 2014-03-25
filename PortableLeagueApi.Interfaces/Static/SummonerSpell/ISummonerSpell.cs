@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Interfaces.Static.SummonerSpell
         string CostBurn { get; set; }
         string CostType { get; set; }
         string Description { get; set; }
-        IList<object> Effect { get; set; }
+        IList<IList<float>> Effect { get; set; }
         IList<string> EffectBurn { get; set; }
         string Id { get; set; }
         IImage Image { get; set; }

@@ -38,7 +38,7 @@ namespace PortableLeagueApi.Static.Models.Rune
 
         public string Name { get; set; }
 
-        public object Plaintext { get; set; }
+        public string Plaintext { get; set; }
 
         public string RequiredChampion { get; set; }
 

@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using PortableLeagueApi.Core.Helpers;
 
 namespace PortableLeagueApi.Static.Models.DTO.Champion
 {
@@ -23,7 +26,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
         public string Description { get; set; }
 
         [JsonProperty("effect")]
-        public object[] Effect { get; set; }
+        public IList<IList<float>> Effect { get; set; }
 
         [JsonProperty("effectBurn")]
         public string[] EffectBurn { get; set; }
@@ -56,6 +59,6 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
         public string Tooltip { get; set; }
 
         [JsonProperty("vars")]
-        public object[] Vars { get; set; }
+        public IList<SpellVarsDto> Vars { get; set; }
     }
 }

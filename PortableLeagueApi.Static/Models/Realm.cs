@@ -23,7 +23,7 @@ namespace PortableLeagueApi.Static.Models
 
         public int ProfileIconMax { get; set; }
 
-        public object Store { get; set; }
+        public string Store { get; set; }
         
         public string CurrentVersion { get; set; }
 
