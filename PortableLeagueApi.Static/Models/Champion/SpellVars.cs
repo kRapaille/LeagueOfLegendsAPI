@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Static.Champion;

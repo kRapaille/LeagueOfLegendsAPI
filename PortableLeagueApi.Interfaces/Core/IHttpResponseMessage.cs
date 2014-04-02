@@ -6,7 +6,6 @@ namespace PortableLeagueApi.Interfaces.Core
     {
         bool IsSuccessStatusCode { get; }
         IHttpContent Content { get; }
-
         HttpStatusCode StatusCode { get; }
     }
 }

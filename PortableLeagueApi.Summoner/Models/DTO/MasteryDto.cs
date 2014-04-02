@@ -2,15 +2,12 @@
 
 namespace PortableLeagueApi.Summoner.Models.DTO
 {
-    internal class TalentDto
+    internal class MasteryDto
     {
         [JsonProperty("id")]
         public int Id { get; set; }
 
         [JsonProperty("rank")]
         public int Rank { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
     }
 }

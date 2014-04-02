@@ -9,8 +9,5 @@ namespace PortableLeagueApi.Stats.Models.DTO
 
         [JsonProperty("stats")]
         public AggregatedStatsDto Stats { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
     }
 }

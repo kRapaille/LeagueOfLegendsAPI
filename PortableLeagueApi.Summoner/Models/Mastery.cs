@@ -5,20 +5,16 @@ using PortableLeagueApi.Summoner.Models.DTO;
 
 namespace PortableLeagueApi.Summoner.Models
 {
-    public class Rune : ApiModel, IRune
+    public class Mastery : ApiModel, IMastery
     {
         public int Id { get; set; }
 
-        public string Description { get; set; }
-
-        public string Name { get; set; }
-
-        public int Tier { get; set; }
+        public int Rank { get; set; }
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            autoMapperService.CreateApiModelMap<RuneDto, IRune>().As<Rune>();
-            autoMapperService.CreateApiModelMap<RuneDto, Rune>();
+            autoMapperService.CreateApiModelMap<MasteryDto, IMastery>().As<Mastery>();
+            autoMapperService.CreateApiModelMap<MasteryDto, Mastery>();
         }
     }
 }

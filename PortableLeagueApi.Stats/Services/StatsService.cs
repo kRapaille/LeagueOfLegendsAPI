@@ -13,7 +13,7 @@ namespace PortableLeagueApi.Stats.Services
     {
         public StatsService(
             ILeagueApiConfiguration config)
-            : base(config, VersionEnum.V1Rev2, "stats")
+            : base(config, VersionEnum.V1Rev3, "stats")
         {
             RankedStats.CreateMap(AutoMapperService);
             PlayerStatsSummary.CreateMap(AutoMapperService);

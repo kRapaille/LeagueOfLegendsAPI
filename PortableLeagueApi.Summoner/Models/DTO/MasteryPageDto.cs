@@ -16,8 +16,8 @@ namespace PortableLeagueApi.Summoner.Models.DTO
         [JsonProperty("id")]
         public long Id { get; set; }
 
-        [JsonProperty("talents")]
-        public TalentDto[] Talents { get; set; }
+        [JsonProperty("masteries")]
+        public MasteryDto[] Masteries { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }

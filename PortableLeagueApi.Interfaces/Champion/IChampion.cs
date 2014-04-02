@@ -5,10 +5,6 @@ namespace PortableLeagueApi.Interfaces.Champion
     public interface IChampion: IHasChampionId
     {
         /// <summary>
-        /// Champion name.
-        /// </summary>
-        string Name { get; set; }
-        /// <summary>
         /// Bot Match Made enabled flag (for Co-op vs. AI games).
         /// </summary>
         bool IsBotMatchMadeEnabled { get; set; }
@@ -28,21 +24,5 @@ namespace PortableLeagueApi.Interfaces.Champion
         /// Indicates if the champion is free to play. Free to play champions are rotated periodically.
         /// </summary>
         bool IsFreeToPlay { get; set; }
-        /// <summary>
-        /// Champion magic rank.
-        /// </summary>
-        int MagicRank { get; set; }
-        /// <summary>
-        /// Champion defense rank.
-        /// </summary>
-        int DefenseRank { get; set; }
-        /// <summary>
-        /// Champion attack rank.
-        /// </summary>
-        int AttackRank { get; set; }
-        /// <summary>
-        /// Champion difficulty rank.
-        /// </summary>
-        int DifficultyRank { get; set; }
     }
 }

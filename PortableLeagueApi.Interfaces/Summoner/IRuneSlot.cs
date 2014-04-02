@@ -1,16 +1,12 @@
-using PortableLeagueApi.Interfaces.Core;
+using PortableLeagueApi.Interfaces.Extensions;
 
 namespace PortableLeagueApi.Interfaces.Summoner
 {
-    public interface IRuneSlot : IApiModel
+    public interface IRuneSlot : IHasRuneId
     {
         /// <summary>
         /// Rune slot Id.
         /// </summary>
         int RuneSlotId { get; set; }
-        /// <summary>
-        /// Rune associated with the rune slot.
-        /// </summary>
-        IRune Rune { get; set; }
     }
 }

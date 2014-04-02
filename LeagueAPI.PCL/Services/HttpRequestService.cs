@@ -28,6 +28,7 @@ namespace PortableLeagueAPI.Services
 
             _messageHandler = messageHandler;
         }
+
         public async Task<IHttpResponseMessage> SendRequestAsync(Uri uri)
         {
             using (var httpClient = new HttpClient(_messageHandler, false))

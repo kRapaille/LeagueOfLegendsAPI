@@ -1,4 +1,5 @@
-﻿using PortableLeagueApi.Interfaces.Core;
+﻿using System;
+using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
 
 namespace PortableLeagueApi.Core.Models
@@ -11,6 +12,9 @@ namespace PortableLeagueApi.Core.Models
             bool waitToAvoidRateLimit, 
             IHttpRequestService httpRequestService = null)
         {
+            if (key == null) throw new ArgumentNullException("key");
+            if (httpRequestService == null) throw new ArgumentNullException("httpRequestService");
+
             Key = key;
             DefaultRegion = defaultRegion;
             WaitToAvoidRateLimit = waitToAvoidRateLimit;

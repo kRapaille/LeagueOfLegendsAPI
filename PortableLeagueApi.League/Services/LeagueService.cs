@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using PortableLeagueApi.Core.Constants;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
@@ -25,7 +26,7 @@ namespace PortableLeagueApi.League.Services
             LeagueTypeEnum leagueType,
             RegionEnum? region = null)
         {
-            var url = string.Format("challenger?type={0}", leagueType);
+            var url = string.Format("challenger?type={0}", LeagueTypeConsts.LeagueTypes[leagueType]);
 
             return await GetResponseAsync<LeagueDto, ILeague>(region, url);
         }

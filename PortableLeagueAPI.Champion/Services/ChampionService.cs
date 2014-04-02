@@ -12,7 +12,7 @@ namespace PortableLeagueAPI.Champion.Services
     {
         public ChampionService(
             ILeagueApiConfiguration config)
-            : base(config, VersionEnum.V1Rev1, "champion")
+            : base(config, VersionEnum.V1Rev2, "champion")
         {
             Models.Champion.CreateMap(AutoMapperService);
 

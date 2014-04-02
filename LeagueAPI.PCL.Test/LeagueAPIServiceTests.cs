@@ -573,7 +573,7 @@ namespace PortableLeagueAPI.Test
             var masteriesPage = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(SummonerId);
             Assert.NotNull(masteriesPage);
 
-            var result = await masteriesPage.First().Talents.First().GetMasteryStaticInfosAsync();
+            var result = await masteriesPage.First().Masteries.First().GetMasteryStaticInfosAsync();
 
             Assert.NotNull(result);
         }
@@ -585,7 +585,7 @@ namespace PortableLeagueAPI.Test
             var runesPages = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(SummonerId);
             Assert.NotNull(runesPages);
 
-            var result = await runesPages.First().Slots.First().Rune.GetRuneStaticInfosAsync();
+            var result = await runesPages.First().Slots.First().GetRuneStaticInfosAsync();
 
             Assert.NotNull(result);
         }

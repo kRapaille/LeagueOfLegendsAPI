@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using PortableLeagueApi.Core.Helpers;
 
 namespace PortableLeagueApi.Static.Models.DTO.Champion
 {

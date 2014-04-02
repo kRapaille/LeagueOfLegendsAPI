@@ -40,6 +40,9 @@ namespace PortableLeagueApi.Game.Models.DTO
         [JsonProperty("mapId")]
         public int MapId { get; set; }
 
+        [JsonProperty("ipEarned")]
+        public int IpEarned { get; set; }
+
         [JsonProperty("level")]
         public int Level { get; set; }
 

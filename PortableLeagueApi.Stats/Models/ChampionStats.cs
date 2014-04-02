@@ -9,7 +9,6 @@ namespace PortableLeagueApi.Stats.Models
     {
         public int ChampionId { get; set; }
         public IAggregatedStats Stats { get; set; }
-        public string Name { get; set; }
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
