@@ -1,132 +1,82 @@
 ﻿{"champions": [
    {
-      "botMmEnabled": true,
-      "defenseRank": 3,
-      "attackRank": 7,
-      "id": 22,
+      "botMmEnabled": false,
+      "id": 103,
       "rankedPlayEnabled": true,
-      "name": "Ashe",
-      "botEnabled": true,
-      "difficultyRank": 4,
+      "botEnabled": false,
       "active": true,
-      "freeToPlay": true,
-      "magicRank": 2
+      "freeToPlay": true
    },
    {
       "botMmEnabled": false,
-      "defenseRank": 6,
-      "attackRank": 7,
-      "id": 41,
+      "id": 119,
       "rankedPlayEnabled": true,
-      "name": "Gangplank",
       "botEnabled": false,
-      "difficultyRank": 5,
       "active": true,
-      "freeToPlay": true,
-      "magicRank": 4
+      "freeToPlay": true
    },
    {
       "botMmEnabled": false,
-      "defenseRank": 6,
-      "attackRank": 2,
-      "id": 74,
+      "id": 40,
       "rankedPlayEnabled": true,
-      "name": "Heimerdinger",
       "botEnabled": false,
-      "difficultyRank": 4,
       "active": true,
-      "freeToPlay": true,
-      "magicRank": 8
-   },
-   {
-      "botMmEnabled": false,
-      "defenseRank": 2,
-      "attackRank": 9,
-      "id": 222,
-      "rankedPlayEnabled": true,
-      "name": "Jinx",
-      "botEnabled": false,
-      "difficultyRank": 9,
-      "active": true,
-      "freeToPlay": true,
-      "magicRank": 4
-   },
-   {
-      "botMmEnabled": false,
-      "defenseRank": 7,
-      "attackRank": 1,
-      "id": 43,
-      "rankedPlayEnabled": true,
-      "name": "Karma",
-      "botEnabled": false,
-      "difficultyRank": 8,
-      "active": true,
-      "freeToPlay": true,
-      "magicRank": 8
-   },
-   {
-      "botMmEnabled": false,
-      "defenseRank": 5,
-      "attackRank": 8,
-      "id": 64,
-      "rankedPlayEnabled": true,
-      "name": "LeeSin",
-      "botEnabled": false,
-      "difficultyRank": 9,
-      "active": true,
-      "freeToPlay": true,
-      "magicRank": 3
-   },
-   {
-      "botMmEnabled": false,
-      "defenseRank": 5,
-      "attackRank": 4,
-      "id": 117,
-      "rankedPlayEnabled": true,
-      "name": "Lulu",
-      "botEnabled": false,
-      "difficultyRank": 7,
-      "active": true,
-      "freeToPlay": true,
-      "magicRank": 7
+      "freeToPlay": true
    },
    {
       "botMmEnabled": true,
-      "defenseRank": 6,
-      "attackRank": 8,
-      "id": 102,
+      "id": 24,
       "rankedPlayEnabled": true,
-      "name": "Shyvana",
+      "botEnabled": false,
+      "active": true,
+      "freeToPlay": true
+   },
+   {
+      "botMmEnabled": false,
+      "id": 56,
+      "rankedPlayEnabled": true,
+      "botEnabled": false,
+      "active": true,
+      "freeToPlay": true
+   },
+   {
+      "botMmEnabled": true,
+      "id": 13,
+      "rankedPlayEnabled": true,
       "botEnabled": true,
-      "difficultyRank": 4,
       "active": true,
-      "freeToPlay": true,
-      "magicRank": 3
+      "freeToPlay": true
    },
    {
       "botMmEnabled": false,
-      "defenseRank": 3,
-      "attackRank": 2,
-      "id": 134,
+      "id": 72,
       "rankedPlayEnabled": true,
-      "name": "Syndra",
       "botEnabled": false,
-      "difficultyRank": 10,
       "active": true,
-      "freeToPlay": true,
-      "magicRank": 9
+      "freeToPlay": true
    },
    {
       "botMmEnabled": false,
-      "defenseRank": 2,
-      "attackRank": 2,
-      "id": 161,
+      "id": 23,
       "rankedPlayEnabled": true,
-      "name": "Velkoz",
       "botEnabled": false,
-      "difficultyRank": 8,
       "active": true,
-      "freeToPlay": true,
-      "magicRank": 10
+      "freeToPlay": true
+   },
+   {
+      "botMmEnabled": false,
+      "id": 110,
+      "rankedPlayEnabled": true,
+      "botEnabled": false,
+      "active": true,
+      "freeToPlay": true
+   },
+   {
+      "botMmEnabled": true,
+      "id": 143,
+      "rankedPlayEnabled": true,
+      "botEnabled": false,
+      "active": true,
+      "freeToPlay": true
    }
 ]}

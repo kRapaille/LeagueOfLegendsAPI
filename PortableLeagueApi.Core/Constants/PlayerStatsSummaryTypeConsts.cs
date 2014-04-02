@@ -19,6 +19,8 @@ namespace PortableLeagueApi.Core.Constants
         public const string FirstBlood2X2 = "FirstBlood2x2";
         public const string SummonersRift6X6 = "SummonersRift6x6";
         public const string CAP5X5 = "CAP5x5";
+        public const string Urf = "URF";
+        public const string UrfBot = "URF_BOT";
 
         public static readonly Dictionary<PlayerStatSummaryTypeEnum, string> PlayerStatsSummaryTypes = new Dictionary<PlayerStatSummaryTypeEnum, string>
         {
@@ -35,7 +37,9 @@ namespace PortableLeagueApi.Core.Constants
             { PlayerStatSummaryTypeEnum.FirstBlood1X1, FirstBlood1X1 },
             { PlayerStatSummaryTypeEnum.FirstBlood2X2, FirstBlood2X2 },
             { PlayerStatSummaryTypeEnum.SummonersRift6X6, SummonersRift6X6 },
-            { PlayerStatSummaryTypeEnum.CAP5X5, CAP5X5 }
+            { PlayerStatSummaryTypeEnum.CAP5X5, CAP5X5 },
+            { PlayerStatSummaryTypeEnum.Urf, Urf },
+            { PlayerStatSummaryTypeEnum.UrfBot, UrfBot }
         };
     }
 }

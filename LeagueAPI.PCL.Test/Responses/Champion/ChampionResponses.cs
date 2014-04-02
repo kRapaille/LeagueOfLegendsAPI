@@ -15,8 +15,11 @@
 
             if (pathAndQuery.Contains("champion/?freetoplay=true"))
                 response = "FreeChampions";
-            else if (pathAndQuery.Contains("champion/?freetoplay=false"))
+            else if (pathAndQuery.Contains("champion/?"))
                 response = "Champions";
+            else if (pathAndQuery.Contains("champion/")
+                && !pathAndQuery.Contains("/static-data/"))
+                response = "ChampionById";
 
             return response;
         }

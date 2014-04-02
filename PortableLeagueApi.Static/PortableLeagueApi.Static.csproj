@@ -46,6 +46,7 @@
     <Compile Include="Models\Champion\Passive.cs" />
     <Compile Include="Models\Champion\Skin.cs" />
     <Compile Include="Models\Champion\Spell.cs" />
+    <Compile Include="Models\Champion\SpellVars.cs" />
     <Compile Include="Models\Champion\Stats.cs" />
     <Compile Include="Models\DTO\Champion\BlockDto.cs" />
     <Compile Include="Models\DTO\Champion\BlockItemDto.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Models\DTO\Champion\RecommendedDto.cs" />
     <Compile Include="Models\DTO\Champion\SkinDto.cs" />
     <Compile Include="Models\DTO\Champion\SpellDto.cs" />
+    <Compile Include="Models\DTO\Champion\SpellVarsDto.cs" />
     <Compile Include="Models\DTO\Champion\StatsDto.cs" />
     <Compile Include="Models\DTO\ImageDto.cs" />
     <Compile Include="Models\DTO\BasicDataDto.cs" />

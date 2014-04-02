@@ -18,6 +18,8 @@
         FirstBlood1X1, 
         FirstBlood2X2,
         SR6X6,
-        CAP5X5
+        CAP5X5,
+        Urf,
+        UrfBot
     }
 }

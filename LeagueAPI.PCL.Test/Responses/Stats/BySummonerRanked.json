@@ -1,5 +1,5 @@
 ﻿{
-   "modifyDate": 1395029244000,
+   "modifyDate": 1396364206000,
    "champions": [
       {
          "id": 110,
@@ -27,8 +27,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 3,
             "totalUnrealKills": 0
-         },
-         "name": "Varus"
+         }
       },
       {
          "id": 36,
@@ -56,37 +55,35 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 4,
             "totalUnrealKills": 0
-         },
-         "name": "DrMundo"
+         }
       },
       {
          "id": 115,
          "stats": {
-            "totalDeathsPerSession": 176,
-            "totalSessionsPlayed": 56,
-            "totalDamageTaken": 637521,
-            "totalQuadraKills": 1,
-            "totalTripleKills": 5,
-            "totalMinionKills": 12559,
+            "totalDeathsPerSession": 212,
+            "totalSessionsPlayed": 64,
+            "totalDamageTaken": 752907,
+            "totalQuadraKills": 2,
+            "totalTripleKills": 6,
+            "totalMinionKills": 14221,
             "maxChampionsKilled": 17,
-            "totalDoubleKills": 29,
-            "totalPhysicalDamageDealt": 933124,
-            "totalChampionKills": 329,
-            "totalAssists": 434,
+            "totalDoubleKills": 31,
+            "totalPhysicalDamageDealt": 1041966,
+            "totalChampionKills": 374,
+            "totalAssists": 483,
             "mostChampionKillsPerSession": 17,
-            "totalDamageDealt": 8973823,
+            "totalDamageDealt": 10184075,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 18,
-            "totalSessionsWon": 38,
-            "totalMagicDamageDealt": 8023738,
-            "totalGoldEarned": 697518,
+            "totalSessionsLost": 24,
+            "totalSessionsWon": 40,
+            "totalMagicDamageDealt": 9123714,
+            "totalGoldEarned": 790771,
             "totalPentaKills": 0,
-            "totalTurretsKilled": 62,
+            "totalTurretsKilled": 67,
             "mostSpellsCast": 0,
             "maxNumDeaths": 8,
             "totalUnrealKills": 0
-         },
-         "name": "Ziggs"
+         }
       },
       {
          "id": 38,
@@ -114,95 +111,91 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 3,
             "totalUnrealKills": 0
-         },
-         "name": "Kassadin"
+         }
       },
       {
          "id": 117,
          "stats": {
-            "totalDeathsPerSession": 14,
-            "totalSessionsPlayed": 4,
-            "totalDamageTaken": 44383,
+            "totalDeathsPerSession": 33,
+            "totalSessionsPlayed": 8,
+            "totalDamageTaken": 117893,
             "totalQuadraKills": 0,
             "totalTripleKills": 0,
-            "totalMinionKills": 564,
+            "totalMinionKills": 1152,
             "maxChampionsKilled": 3,
             "totalDoubleKills": 1,
-            "totalPhysicalDamageDealt": 58637,
-            "totalChampionKills": 8,
-            "totalAssists": 24,
+            "totalPhysicalDamageDealt": 115879,
+            "totalChampionKills": 14,
+            "totalAssists": 45,
             "mostChampionKillsPerSession": 3,
-            "totalDamageDealt": 293575,
+            "totalDamageDealt": 604765,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 2,
+            "totalSessionsLost": 6,
             "totalSessionsWon": 2,
-            "totalMagicDamageDealt": 232219,
-            "totalGoldEarned": 30271,
+            "totalMagicDamageDealt": 482250,
+            "totalGoldEarned": 60805,
             "totalPentaKills": 0,
             "totalTurretsKilled": 0,
             "mostSpellsCast": 0,
-            "maxNumDeaths": 5,
+            "maxNumDeaths": 8,
             "totalUnrealKills": 0
-         },
-         "name": "Lulu"
+         }
       },
       {
          "id": 254,
          "stats": {
-            "totalDeathsPerSession": 26,
-            "totalSessionsPlayed": 6,
-            "totalDamageTaken": 153072,
+            "totalDeathsPerSession": 32,
+            "totalSessionsPlayed": 7,
+            "totalDamageTaken": 183062,
             "totalQuadraKills": 0,
             "totalTripleKills": 0,
-            "totalMinionKills": 236,
+            "totalMinionKills": 268,
             "maxChampionsKilled": 13,
             "totalDoubleKills": 3,
-            "totalPhysicalDamageDealt": 839608,
-            "totalChampionKills": 37,
-            "totalAssists": 57,
+            "totalPhysicalDamageDealt": 959933,
+            "totalChampionKills": 42,
+            "totalAssists": 66,
             "mostChampionKillsPerSession": 13,
-            "totalDamageDealt": 949232,
+            "totalDamageDealt": 1086005,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 3,
+            "totalSessionsLost": 4,
             "totalSessionsWon": 3,
-            "totalMagicDamageDealt": 26971,
-            "totalGoldEarned": 71946,
+            "totalMagicDamageDealt": 27475,
+            "totalGoldEarned": 82945,
             "totalPentaKills": 0,
-            "totalTurretsKilled": 3,
+            "totalTurretsKilled": 4,
             "mostSpellsCast": 0,
             "maxNumDeaths": 8,
             "totalUnrealKills": 0
-         },
-         "name": "Vi"
+         }
       },
       {
          "id": 103,
          "stats": {
-            "totalDeathsPerSession": 87,
-            "totalSessionsPlayed": 22,
-            "totalDamageTaken": 393368,
+            "totalDeathsPerSession": 92,
+            "totalSessionsPlayed": 26,
+            "totalDamageTaken": 436754,
             "totalQuadraKills": 0,
             "totalTripleKills": 1,
-            "totalMinionKills": 5044,
+            "totalMinionKills": 5962,
             "maxChampionsKilled": 12,
-            "totalDoubleKills": 10,
-            "totalPhysicalDamageDealt": 502732,
-            "totalChampionKills": 133,
-            "totalAssists": 182,
+            "totalDoubleKills": 13,
+            "totalPhysicalDamageDealt": 609183,
+            "totalChampionKills": 160,
+            "totalAssists": 203,
             "mostChampionKillsPerSession": 12,
-            "totalDamageDealt": 3306344,
+            "totalDamageDealt": 3842844,
             "totalFirstBlood": 0,
             "totalSessionsLost": 10,
-            "totalSessionsWon": 12,
-            "totalMagicDamageDealt": 1906715,
-            "totalGoldEarned": 286541,
+            "totalSessionsWon": 16,
+            "totalMagicDamageDealt": 2199359,
+            "totalGoldEarned": 337250,
             "totalPentaKills": 0,
-            "totalTurretsKilled": 24,
+            "totalTurretsKilled": 27,
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Ahri"
+         }
       },
       {
          "id": 102,
@@ -230,8 +223,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Shyvana"
+         }
       },
       {
          "id": 105,
@@ -259,37 +251,35 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Fizz"
+         }
       },
       {
          "id": 58,
          "stats": {
-            "totalDeathsPerSession": 74,
-            "totalSessionsPlayed": 15,
-            "totalDamageTaken": 606053,
+            "totalDeathsPerSession": 99,
+            "totalSessionsPlayed": 24,
+            "totalDamageTaken": 884712,
             "totalQuadraKills": 0,
             "totalTripleKills": 1,
-            "totalMinionKills": 3826,
+            "totalMinionKills": 5963,
             "maxChampionsKilled": 14,
-            "totalDoubleKills": 13,
-            "totalPhysicalDamageDealt": 2233878,
-            "totalChampionKills": 101,
-            "totalAssists": 102,
+            "totalDoubleKills": 18,
+            "totalPhysicalDamageDealt": 3446866,
+            "totalChampionKills": 143,
+            "totalAssists": 162,
             "mostChampionKillsPerSession": 14,
-            "totalDamageDealt": 2565786,
+            "totalDamageDealt": 3916058,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 9,
-            "totalSessionsWon": 6,
-            "totalMagicDamageDealt": 305311,
-            "totalGoldEarned": 211439,
+            "totalSessionsLost": 12,
+            "totalSessionsWon": 12,
+            "totalMagicDamageDealt": 430313,
+            "totalGoldEarned": 324319,
             "totalPentaKills": 0,
-            "totalTurretsKilled": 15,
+            "totalTurretsKilled": 24,
             "mostSpellsCast": 0,
             "maxNumDeaths": 11,
             "totalUnrealKills": 0
-         },
-         "name": "Renekton"
+         }
       },
       {
          "id": 55,
@@ -317,37 +307,35 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Katarina"
+         }
       },
       {
          "id": 238,
          "stats": {
-            "totalDeathsPerSession": 9,
-            "totalSessionsPlayed": 2,
-            "totalDamageTaken": 27503,
+            "totalDeathsPerSession": 29,
+            "totalSessionsPlayed": 5,
+            "totalDamageTaken": 113381,
             "totalQuadraKills": 0,
             "totalTripleKills": 1,
-            "totalMinionKills": 306,
-            "maxChampionsKilled": 7,
-            "totalDoubleKills": 1,
-            "totalPhysicalDamageDealt": 139725,
-            "totalChampionKills": 7,
-            "totalAssists": 10,
-            "mostChampionKillsPerSession": 7,
-            "totalDamageDealt": 147742,
+            "totalMinionKills": 984,
+            "maxChampionsKilled": 8,
+            "totalDoubleKills": 2,
+            "totalPhysicalDamageDealt": 619484,
+            "totalChampionKills": 30,
+            "totalAssists": 31,
+            "mostChampionKillsPerSession": 8,
+            "totalDamageDealt": 655900,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 1,
-            "totalSessionsWon": 1,
-            "totalMagicDamageDealt": 7010,
-            "totalGoldEarned": 16618,
+            "totalSessionsLost": 2,
+            "totalSessionsWon": 3,
+            "totalMagicDamageDealt": 32254,
+            "totalGoldEarned": 58238,
             "totalPentaKills": 0,
-            "totalTurretsKilled": 0,
+            "totalTurretsKilled": 4,
             "mostSpellsCast": 0,
-            "maxNumDeaths": 5,
+            "maxNumDeaths": 8,
             "totalUnrealKills": 0
-         },
-         "name": "Zed"
+         }
       },
       {
          "id": 64,
@@ -375,8 +363,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "LeeSin"
+         }
       },
       {
          "id": 121,
@@ -404,8 +391,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 6,
             "totalUnrealKills": 0
-         },
-         "name": "Khazix"
+         }
       },
       {
          "id": 61,
@@ -433,8 +419,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 2,
             "totalUnrealKills": 0
-         },
-         "name": "Orianna"
+         }
       },
       {
          "id": 60,
@@ -462,8 +447,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 6,
             "totalUnrealKills": 0
-         },
-         "name": "Elise"
+         }
       },
       {
          "id": 2,
@@ -491,37 +475,35 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 4,
             "totalUnrealKills": 0
-         },
-         "name": "Olaf"
+         }
       },
       {
          "id": 1,
          "stats": {
-            "totalDeathsPerSession": 11,
-            "totalSessionsPlayed": 2,
-            "totalDamageTaken": 34216,
+            "totalDeathsPerSession": 23,
+            "totalSessionsPlayed": 4,
+            "totalDamageTaken": 63982,
             "totalQuadraKills": 0,
             "totalTripleKills": 1,
-            "totalMinionKills": 72,
+            "totalMinionKills": 133,
             "maxChampionsKilled": 6,
             "totalDoubleKills": 1,
-            "totalPhysicalDamageDealt": 13854,
-            "totalChampionKills": 8,
-            "totalAssists": 24,
+            "totalPhysicalDamageDealt": 27426,
+            "totalChampionKills": 14,
+            "totalAssists": 41,
             "mostChampionKillsPerSession": 6,
-            "totalDamageDealt": 98472,
+            "totalDamageDealt": 155069,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 1,
-            "totalSessionsWon": 1,
-            "totalMagicDamageDealt": 82621,
-            "totalGoldEarned": 20641,
+            "totalSessionsLost": 2,
+            "totalSessionsWon": 2,
+            "totalMagicDamageDealt": 123977,
+            "totalGoldEarned": 39029,
             "totalPentaKills": 0,
-            "totalTurretsKilled": 0,
+            "totalTurretsKilled": 1,
             "mostSpellsCast": 0,
-            "maxNumDeaths": 7,
+            "maxNumDeaths": 8,
             "totalUnrealKills": 0
-         },
-         "name": "Annie"
+         }
       },
       {
          "id": 62,
@@ -549,48 +531,46 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "MonkeyKing"
+         }
       },
       {
          "id": 0,
          "stats": {
-            "totalDamageTaken": 6487964,
-            "totalTripleKills": 25,
-            "totalMinionKills": 54527,
+            "totalDamageTaken": 7537984,
+            "totalTripleKills": 28,
+            "totalMinionKills": 65423,
             "maxChampionsKilled": 17,
             "maxLargestCriticalStrike": 1410,
-            "totalChampionKills": 1890,
-            "totalPhysicalDamageDealt": 20926379,
+            "totalChampionKills": 2198,
+            "totalPhysicalDamageDealt": 23659879,
             "rankedPremadeGamesPlayed": 0,
-            "totalSessionsLost": 129,
-            "totalNeutralMinionsKilled": 8639,
-            "totalSessionsWon": 176,
-            "totalMagicDamageDealt": 22405159,
+            "totalSessionsLost": 155,
+            "totalNeutralMinionsKilled": 9232,
+            "totalSessionsWon": 208,
+            "totalMagicDamageDealt": 26295217,
             "maxLargestKillingSpree": 14,
             "totalPentaKills": 1,
             "maxTimeSpentLiving": 2390,
-            "totalDeathsPerSession": 1125,
-            "totalQuadraKills": 6,
-            "totalSessionsPlayed": 305,
-            "totalDoubleKills": 190,
-            "totalAssists": 2297,
+            "totalDeathsPerSession": 1330,
+            "totalQuadraKills": 7,
+            "totalSessionsPlayed": 363,
+            "totalDoubleKills": 212,
+            "totalAssists": 2659,
             "maxTimePlayed": 3934,
             "mostChampionKillsPerSession": 17,
-            "totalDamageDealt": 45275712,
+            "totalDamageDealt": 52105831,
             "botGamesPlayed": 0,
-            "killingSpree": 1055,
+            "killingSpree": 1239,
             "totalFirstBlood": 0,
             "rankedSoloGamesPlayed": 0,
-            "totalHeal": 903373,
-            "totalGoldEarned": 3761903,
+            "totalHeal": 1048701,
+            "totalGoldEarned": 4423816,
             "mostSpellsCast": 0,
-            "totalTurretsKilled": 264,
+            "totalTurretsKilled": 305,
             "maxNumDeaths": 11,
             "totalUnrealKills": 0,
             "normalGamesPlayed": 0
-         },
-         "name": "Combined"
+         }
       },
       {
          "id": 75,
@@ -618,8 +598,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 3,
             "totalUnrealKills": 0
-         },
-         "name": "Nasus"
+         }
       },
       {
          "id": 76,
@@ -647,8 +626,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 4,
             "totalUnrealKills": 0
-         },
-         "name": "Nidalee"
+         }
       },
       {
          "id": 4,
@@ -676,8 +654,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 9,
             "totalUnrealKills": 0
-         },
-         "name": "TwistedFate"
+         }
       },
       {
          "id": 10,
@@ -705,37 +682,35 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Kayle"
+         }
       },
       {
          "id": 7,
          "stats": {
-            "totalDeathsPerSession": 46,
-            "totalSessionsPlayed": 13,
-            "totalDamageTaken": 196817,
+            "totalDeathsPerSession": 105,
+            "totalSessionsPlayed": 34,
+            "totalDamageTaken": 491168,
             "totalQuadraKills": 0,
-            "totalTripleKills": 0,
-            "totalMinionKills": 2218,
+            "totalTripleKills": 2,
+            "totalMinionKills": 6083,
             "maxChampionsKilled": 16,
-            "totalDoubleKills": 7,
-            "totalPhysicalDamageDealt": 275602,
-            "totalChampionKills": 80,
-            "totalAssists": 66,
+            "totalDoubleKills": 17,
+            "totalPhysicalDamageDealt": 764967,
+            "totalChampionKills": 219,
+            "totalAssists": 203,
             "mostChampionKillsPerSession": 16,
-            "totalDamageDealt": 1162254,
+            "totalDamageDealt": 3277185,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 7,
-            "totalSessionsWon": 6,
-            "totalMagicDamageDealt": 878158,
-            "totalGoldEarned": 143076,
+            "totalSessionsLost": 14,
+            "totalSessionsWon": 20,
+            "totalMagicDamageDealt": 2485479,
+            "totalGoldEarned": 392434,
             "totalPentaKills": 0,
-            "totalTurretsKilled": 10,
+            "totalTurretsKilled": 27,
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Leblanc"
+         }
       },
       {
          "id": 81,
@@ -763,66 +738,63 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Ezreal"
+         }
       },
       {
          "id": 79,
          "stats": {
-            "totalDeathsPerSession": 98,
-            "totalSessionsPlayed": 33,
-            "totalDamageTaken": 654683,
+            "totalDeathsPerSession": 114,
+            "totalSessionsPlayed": 38,
+            "totalDamageTaken": 735148,
             "totalQuadraKills": 1,
             "totalTripleKills": 3,
-            "totalMinionKills": 7456,
+            "totalMinionKills": 8373,
             "maxChampionsKilled": 14,
-            "totalDoubleKills": 14,
-            "totalPhysicalDamageDealt": 722991,
-            "totalChampionKills": 208,
-            "totalAssists": 240,
+            "totalDoubleKills": 15,
+            "totalPhysicalDamageDealt": 804554,
+            "totalChampionKills": 220,
+            "totalAssists": 265,
             "mostChampionKillsPerSession": 14,
-            "totalDamageDealt": 6123903,
+            "totalDamageDealt": 6652933,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 16,
-            "totalSessionsWon": 17,
-            "totalMagicDamageDealt": 5339306,
-            "totalGoldEarned": 435814,
+            "totalSessionsLost": 18,
+            "totalSessionsWon": 20,
+            "totalMagicDamageDealt": 5783224,
+            "totalGoldEarned": 483493,
             "totalPentaKills": 0,
-            "totalTurretsKilled": 15,
+            "totalTurretsKilled": 16,
             "mostSpellsCast": 0,
             "maxNumDeaths": 9,
             "totalUnrealKills": 0
-         },
-         "name": "Gragas"
+         }
       },
       {
          "id": 80,
          "stats": {
-            "totalDeathsPerSession": 27,
-            "totalSessionsPlayed": 9,
-            "totalDamageTaken": 208504,
+            "totalDeathsPerSession": 34,
+            "totalSessionsPlayed": 10,
+            "totalDamageTaken": 227133,
             "totalQuadraKills": 0,
             "totalTripleKills": 1,
-            "totalMinionKills": 360,
+            "totalMinionKills": 398,
             "maxChampionsKilled": 15,
             "totalDoubleKills": 7,
-            "totalPhysicalDamageDealt": 1214281,
-            "totalChampionKills": 82,
-            "totalAssists": 85,
+            "totalPhysicalDamageDealt": 1277674,
+            "totalChampionKills": 85,
+            "totalAssists": 87,
             "mostChampionKillsPerSession": 15,
-            "totalDamageDealt": 1437804,
+            "totalDamageDealt": 1514220,
             "totalFirstBlood": 0,
-            "totalSessionsLost": 1,
+            "totalSessionsLost": 2,
             "totalSessionsWon": 8,
-            "totalMagicDamageDealt": 74789,
-            "totalGoldEarned": 115775,
+            "totalMagicDamageDealt": 78851,
+            "totalGoldEarned": 122268,
             "totalPentaKills": 0,
             "totalTurretsKilled": 6,
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Pantheon"
+         }
       },
       {
          "id": 92,
@@ -850,8 +822,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 9,
             "totalUnrealKills": 0
-         },
-         "name": "Riven"
+         }
       },
       {
          "id": 19,
@@ -879,8 +850,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 5,
             "totalUnrealKills": 0
-         },
-         "name": "Warwick"
+         }
       },
       {
          "id": 412,
@@ -908,8 +878,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 9,
             "totalUnrealKills": 0
-         },
-         "name": "Thresh"
+         }
       },
       {
          "id": 85,
@@ -937,8 +906,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 1,
             "totalUnrealKills": 0
-         },
-         "name": "Kennen"
+         }
       },
       {
          "id": 222,
@@ -966,8 +934,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 7,
             "totalUnrealKills": 0
-         },
-         "name": "Jinx"
+         }
       },
       {
          "id": 34,
@@ -995,8 +962,7 @@
             "mostSpellsCast": 0,
             "maxNumDeaths": 3,
             "totalUnrealKills": 0
-         },
-         "name": "Anivia"
+         }
       }
    ],
    "summonerId": 19332836

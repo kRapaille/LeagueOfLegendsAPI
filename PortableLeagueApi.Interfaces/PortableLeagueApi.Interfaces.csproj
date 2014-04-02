@@ -72,6 +72,7 @@
     <Compile Include="Core\IHttpRequestService.cs" />
     <Compile Include="Core\IHttpResponseMessage.cs" />
     <Compile Include="Core\IApiModel.cs" />
+    <Compile Include="Static\Champion\ISpellVars.cs" />
     <Compile Include="Static\Mastery\IMasteryTreeItem.cs" />
     <Compile Include="Static\Mastery\IMasteryTreeList.cs" />
     <Compile Include="Static\IBasicData.cs" />
@@ -112,12 +113,11 @@
     <Compile Include="Static\SummonerSpell\ISummonerSpellList.cs" />
     <Compile Include="Static\SummonerSpell\ISummonerSpellVars.cs" />
     <Compile Include="Summoner\IMasteryPage.cs" />
-    <Compile Include="Summoner\IRune.cs" />
     <Compile Include="Summoner\IRunePage.cs" />
     <Compile Include="Summoner\IRuneSlot.cs" />
     <Compile Include="Summoner\ISummoner.cs" />
     <Compile Include="Summoner\ISummonerService.cs" />
-    <Compile Include="Summoner\ITalent.cs" />
+    <Compile Include="Summoner\IMastery.cs" />
     <Compile Include="Stats\IAggregatedStats.cs" />
     <Compile Include="Stats\IChampionStats.cs" />
     <Compile Include="Stats\IPlayerStatsSummary.cs" />

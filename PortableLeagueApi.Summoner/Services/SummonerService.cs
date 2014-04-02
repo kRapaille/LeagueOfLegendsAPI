@@ -14,7 +14,7 @@ namespace PortableLeagueApi.Summoner.Services
     {
         public SummonerService(
             ILeagueApiConfiguration config)
-            : base(config, VersionEnum.V1Rev3, "summoner")
+            : base(config, VersionEnum.V1Rev4, "summoner")
         {
             MasteryPage.CreateMap(AutoMapperService);
             RunePage.CreateMap(AutoMapperService);

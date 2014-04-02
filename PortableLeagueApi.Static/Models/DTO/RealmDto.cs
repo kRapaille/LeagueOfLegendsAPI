@@ -51,7 +51,7 @@ namespace PortableLeagueApi.Static.Models.DTO
         /// Additional api data drawn from other sources that may be related to data dragon functionality.
         /// </summary>
         [JsonProperty("store")]
-        public object Store { get; set; }
+        public string Store { get; set; }
         
         /// <summary>
         /// Current version of this file for this realm.

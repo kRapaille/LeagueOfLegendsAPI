@@ -58,8 +58,9 @@ namespace PortableLeagueApi.Static.Services
         {
             T response;
 
-            if (Cache.ContainsKey(uri))
-                response = (T)Cache[uri];
+            object value;
+            if (Cache.TryGetValue(uri, out value))
+                response = (T)value;
             else
                 response = await base.GetResponseAsync<T>(uri);
 

@@ -9,12 +9,10 @@ namespace PortableLeagueApi.Summoner.Models
     {
         public int RuneSlotId { get; set; }
 
-        public IRune Rune { get; set; }
+        public int RuneId { get; set; }
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            Models.Rune.CreateMap(autoMapperService);
-
             autoMapperService.CreateApiModelMap<RuneSlotDto, IRuneSlot>().As<RuneSlot>();
             autoMapperService.CreateApiModelMap<RuneSlotDto, RuneSlot>();
         }

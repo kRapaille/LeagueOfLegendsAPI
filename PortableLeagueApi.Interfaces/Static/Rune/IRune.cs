@@ -19,7 +19,7 @@ namespace PortableLeagueApi.Interfaces.Static.Rune
         IList<string> Into { get; set; }
         IDictionary<string, bool> Maps { get; set; }
         string Name { get; set; }
-        object Plaintext { get; set; }
+        string Plaintext { get; set; }
         string RequiredChampion { get; set; }
         IRuneType RuneType { get; set; }
         int SpecialRecipe { get; set; }

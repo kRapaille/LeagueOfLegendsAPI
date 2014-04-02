@@ -10,9 +10,9 @@ namespace PortableLeagueApi.Interfaces.Summoner
         /// </summary>
         long Id { get; set; }
         /// <summary>
-        /// List of mastery page talents associated with the mastery page.
+        /// Collection of masteries associated with the mastery page. For static information correlating to masteries, please refer to the LoL Static Data API.
         /// </summary>
-        IList<ITalent> Talents { get; set; }
+        IList<IMastery> Masteries { get; set; }
         /// <summary>
         /// Mastery page name.
         /// </summary>

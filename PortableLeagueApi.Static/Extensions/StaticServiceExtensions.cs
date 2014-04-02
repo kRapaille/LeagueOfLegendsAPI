@@ -7,10 +7,10 @@ using PortableLeagueApi.Interfaces.Extensions;
 using PortableLeagueApi.Interfaces.Static;
 using PortableLeagueApi.Interfaces.Static.Champion;
 using PortableLeagueApi.Interfaces.Static.Item;
-using PortableLeagueApi.Interfaces.Static.Mastery;
 using PortableLeagueApi.Interfaces.Static.SummonerSpell;
 using PortableLeagueApi.Interfaces.Summoner;
 using PortableLeagueApi.Static.Services;
+using IMastery = PortableLeagueApi.Interfaces.Static.Mastery.IMastery;
 using IRune = PortableLeagueApi.Interfaces.Static.Rune.IRune;
 
 namespace PortableLeagueApi.Static.Extensions
@@ -67,7 +67,7 @@ namespace PortableLeagueApi.Static.Extensions
             var staticService = new StaticService(hasRuneId.ApiConfiguration);
 
             return await staticService.GetRuneAsync(
-                hasRuneId.Id,
+                hasRuneId.RuneId,
                 runeData,
                 region,
                 languageCode,

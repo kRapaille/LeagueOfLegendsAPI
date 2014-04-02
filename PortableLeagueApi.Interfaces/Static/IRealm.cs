@@ -43,7 +43,7 @@ namespace PortableLeagueApi.Interfaces.Static
         /// <summary>
         /// Additional api data drawn from other sources that may be related to data dragon functionality.
         /// </summary>
-        object Store { get; set; }
+        string Store { get; set; }
 
         /// <summary>
         /// Current version of this file for this realm.

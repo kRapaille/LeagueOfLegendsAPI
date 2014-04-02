@@ -21,7 +21,7 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         public string Description { get; set; }
 
-        public IList<object> Effect { get; set; }
+        public IList<IList<float>> Effect { get; set; }
 
         public IList<string> EffectBurn { get; set; }
 
@@ -43,12 +43,13 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         public string Tooltip { get; set; }
 
-        public IList<object> Vars { get; set; }
-
+        public IList<ISpellVars> Vars { get; set; }
+        
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
             Models.Image.CreateMap(autoMapperService);
             LevelTip.CreateMap(autoMapperService);
+            SpellVars.CreateMap(autoMapperService);
 
             autoMapperService.CreateApiModelMapWithInterface<SpellDto, Spell, ISpell>();
         }

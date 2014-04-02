@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Summoner.Models
     {
         public long Id { get; set; }
 
-        public IList<ITalent>Talents { get; set; }
+        public IList<IMastery> Masteries { get; set; }
 
         public string Name { get; set; }
 
@@ -19,7 +19,7 @@ namespace PortableLeagueApi.Summoner.Models
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            Talent.CreateMap(autoMapperService);
+            Mastery.CreateMap(autoMapperService);
 
             autoMapperService.CreateApiModelMap<MasteryPageDto, IMasteryPage>().As<MasteryPage>();
             autoMapperService.CreateApiModelMap<MasteryPageDto, MasteryPage>();

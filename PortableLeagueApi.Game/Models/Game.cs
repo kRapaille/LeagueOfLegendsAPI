@@ -21,6 +21,7 @@ namespace PortableLeagueApi.Game.Models
         public IRawStats Stats { get; set; }
         public GameModeEnum GameMode { get; set; }
         public MapEnum Map { get; set; }
+        public int IpEarned { get; set; }
         public int Level { get; set; }
         public bool Invalid { get; set; }
         public GameSubTypeEnum GameSubType { get; set; }

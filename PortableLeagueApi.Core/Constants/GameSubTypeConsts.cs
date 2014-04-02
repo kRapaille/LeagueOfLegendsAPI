@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Core.Constants
         public const string RankedSolo5X5 = "RANKED_SOLO_5x5";
         public const string RankedPremade3X3 = "RANKED_PREMADE_3x3";
         public const string RankedPremade5X5 = "RANKED_PREMADE_5x5";
-        public const string ODINUnranked = "ODIN_UNRANKED";
+        public const string OdinUnranked = "ODIN_UNRANKED";
         public const string RankedTeam3X3 = "RANKED_TEAM_3x3";
         public const string RankedTeam5X5 = "RANKED_TEAM_5x5";
         public const string Normal3X3 = "NORMAL_3x3";
@@ -20,8 +20,10 @@ namespace PortableLeagueApi.Core.Constants
         public const string OneForAll5X5 = "ONEFORALL_5x5";
         public const string FirstBlood1X1 = "FIRSTBLOOD_1x1";
         public const string FirstBlood2X2 = "FIRSTBLOOD_2x2";
-        public const string SR6X6 = "SR_6x6";
-        public const string CAP5X5 = "CAP_5x5";
+        public const string Sr6X6 = "SR_6x6";
+        public const string Cap5X5 = "CAP_5x5";
+        public const string Urf = "URF";
+        public const string UrfBot = "URF_BOT";
 
         public static readonly Dictionary<GameSubTypeEnum, string> GameSubTypes = new Dictionary<GameSubTypeEnum, string>
         {
@@ -31,7 +33,7 @@ namespace PortableLeagueApi.Core.Constants
             { GameSubTypeEnum.RankedSolo5X5, RankedSolo5X5 },
             { GameSubTypeEnum.RankedPremade3X3, RankedPremade3X3 },
             { GameSubTypeEnum.RankedPremade5X5, RankedPremade5X5 },
-            { GameSubTypeEnum.ODINUnranked, ODINUnranked },
+            { GameSubTypeEnum.ODINUnranked, OdinUnranked },
             { GameSubTypeEnum.RankedTeam3X3, RankedTeam3X3 },
             { GameSubTypeEnum.RankedTeam5X5, RankedTeam5X5 },
             { GameSubTypeEnum.Normal3X3, Normal3X3 },
@@ -40,8 +42,10 @@ namespace PortableLeagueApi.Core.Constants
             { GameSubTypeEnum.OneForAll5X5, OneForAll5X5 },
             { GameSubTypeEnum.FirstBlood1X1, FirstBlood1X1 },
             { GameSubTypeEnum.FirstBlood2X2, FirstBlood2X2 },
-            { GameSubTypeEnum.SR6X6, SR6X6 },
-            { GameSubTypeEnum.CAP5X5, CAP5X5 }
+            { GameSubTypeEnum.SR6X6, Sr6X6 },
+            { GameSubTypeEnum.CAP5X5, Cap5X5 },
+            { GameSubTypeEnum.Urf, Urf },
+            { GameSubTypeEnum.UrfBot, UrfBot }
         };
     }
 }

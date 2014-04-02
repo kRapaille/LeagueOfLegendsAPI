@@ -36,6 +36,10 @@ namespace PortableLeagueApi.Interfaces.Game
         /// </summary>
         MapEnum Map { get; set; }
         /// <summary>
+        /// IP Earned.
+        /// </summary>
+        int IpEarned { get; set; }
+        /// <summary>
         /// Level.
         /// </summary>
         int Level { get; set; }

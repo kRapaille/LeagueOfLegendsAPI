@@ -37,7 +37,7 @@ namespace PortableLeagueApi.Static.Models.DTO.SummonerSpell
         public string Description { get; set; }
 
         [JsonProperty("effect")]
-        public object[] Effect { get; set; }
+        public IList<IList<float>> Effect { get; set; }
 
         [JsonProperty("effectBurn")]
         public string[] EffectBurn { get; set; }
