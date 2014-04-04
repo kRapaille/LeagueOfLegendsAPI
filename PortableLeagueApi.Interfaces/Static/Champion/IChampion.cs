@@ -8,7 +8,7 @@ namespace PortableLeagueApi.Interfaces.Static.Champion
         IList<string> AllyTips { get; set; }
         string Blurb { get; set; }
         IList<string> Enemytips { get; set; }
-        string Id { get; set; }
+        int Id { get; set; }
         IImage Image { get; set; }
         IInfo Info { get; set; }
         string Key { get; set; }

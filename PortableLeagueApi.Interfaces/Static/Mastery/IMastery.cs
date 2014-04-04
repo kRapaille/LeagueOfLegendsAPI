@@ -11,5 +11,6 @@ namespace PortableLeagueApi.Interfaces.Static.Mastery
         string Name { get; set; }
         string Prereq { get; set; }
         int Ranks { get; set; }
+        IList<string> SanitizedDescription { get; set; }
     }
 }

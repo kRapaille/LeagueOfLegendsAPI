@@ -9,7 +9,7 @@ namespace PortableLeagueApi.Static.Models.Item
     {
         public string MaxGroupOwnable { get; set; }
 
-        public string Id { get; set; }
+        public string Key { get; set; }
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {

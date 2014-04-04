@@ -7,7 +7,7 @@ namespace PortableLeagueApi.Static.Models.Champion
 {
     public class Skin : ApiModel, ISkin
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
 

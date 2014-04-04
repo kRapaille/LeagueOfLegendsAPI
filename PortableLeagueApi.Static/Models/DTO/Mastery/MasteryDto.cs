@@ -37,5 +37,8 @@ namespace PortableLeagueApi.Static.Models.DTO.Mastery
 
         [JsonProperty("ranks")]
         public int Ranks { get; set; }
+
+        [JsonProperty("sanitizedDescription")]
+        public string[] SanitizedDescription { get; set; }
     }
 }

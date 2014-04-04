@@ -21,11 +21,11 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         public string Description { get; set; }
 
-        public IList<IList<float>> Effect { get; set; }
+        public IList<IList<int>> Effect { get; set; }
 
         public IList<string> EffectBurn { get; set; }
 
-        public string Id { get; set; }
+        public string Key { get; set; }
 
         public IImage Image { get; set; }
 
@@ -40,6 +40,10 @@ namespace PortableLeagueApi.Static.Models.Champion
         public string RangeBurn { get; set; }
 
         public string Resource { get; set; }
+
+        public string SanitizedDescription { get; set; }
+
+        public string SanitizedTooltip { get; set; }
 
         public string Tooltip { get; set; }
 

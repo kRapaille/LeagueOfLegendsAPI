@@ -33,7 +33,7 @@ namespace PortableLeagueApi.Static.Services
 
         public StaticService(
             ILeagueApiConfiguration config)
-            : base(config, VersionEnum.V1, "static-data", false)
+            : base(config, VersionEnum.V1Rev1, "static-data", false)
         { 
             ChampionList.CreateMap(AutoMapperService);
             ItemList.CreateMap(AutoMapperService);

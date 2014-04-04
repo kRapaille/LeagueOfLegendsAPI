@@ -11,9 +11,9 @@ namespace PortableLeagueApi.Interfaces.Static.Champion
         string CostBurn { get; set; }
         string CostType { get; set; }
         string Description { get; set; }
-        IList<IList<float>> Effect { get; set; }
+        IList<IList<int>> Effect { get; set; }
         IList<string> EffectBurn { get; set; }
-        string Id { get; set; }
+        string Key { get; set; }
         IImage Image { get; set; }
         ILevelTip Leveltip { get; set; }
         int Maxrank { get; set; }
@@ -21,6 +21,8 @@ namespace PortableLeagueApi.Interfaces.Static.Champion
         object Range { get; set; }
         string RangeBurn { get; set; }
         string Resource { get; set; }
+        string SanitizedDescription { get; set; }
+        string SanitizedTooltip { get; set; }
         string Tooltip { get; set; }
         IList<ISpellVars> Vars { get; set; }
     }

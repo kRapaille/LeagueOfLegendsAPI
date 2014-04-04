@@ -11,7 +11,7 @@
       "hp": 414,
       "hpperlevel": 86,
       "attackdamageperlevel": 3,
-      "armor": 11,
+      "armor": 15,
       "mpregenperlevel": 0.6,
       "hpregen": 4.35,
       "critperlevel": 0,
@@ -40,11 +40,11 @@
             {
                "items": [
                   {
-                     "id": "1056",
+                     "id": 1056,
                      "count": 1
                   },
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 1
                   }
                ],
@@ -53,15 +53,15 @@
             {
                "items": [
                   {
-                     "id": "1028",
+                     "id": 1028,
                      "count": 1
                   },
                   {
-                     "id": "1027",
+                     "id": 1027,
                      "count": 1
                   },
                   {
-                     "id": "3010",
+                     "id": 3010,
                      "count": 1
                   }
                ],
@@ -70,11 +70,11 @@
             {
                "items": [
                   {
-                     "id": "1001",
+                     "id": 1001,
                      "count": 1
                   },
                   {
-                     "id": "3020",
+                     "id": 3020,
                      "count": 1
                   }
                ],
@@ -83,15 +83,15 @@
             {
                "items": [
                   {
-                     "id": "3010",
+                     "id": 3010,
                      "count": 1
                   },
                   {
-                     "id": "1026",
+                     "id": 1026,
                      "count": 1
                   },
                   {
-                     "id": "3027",
+                     "id": 3027,
                      "count": 1
                   }
                ],
@@ -100,19 +100,19 @@
             {
                "items": [
                   {
-                     "id": "3003",
+                     "id": 3003,
                      "count": 1
                   },
                   {
-                     "id": "3110",
+                     "id": 3110,
                      "count": 1
                   },
                   {
-                     "id": "3152",
+                     "id": 3152,
                      "count": 1
                   },
                   {
-                     "id": "3116",
+                     "id": 3116,
                      "count": 1
                   }
                ],
@@ -131,19 +131,19 @@
             {
                "items": [
                   {
-                     "id": "1001",
+                     "id": 1001,
                      "count": 1
                   },
                   {
-                     "id": "3070",
+                     "id": 3070,
                      "count": 1
                   },
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 4
                   },
                   {
-                     "id": "2004",
+                     "id": 2004,
                      "count": 4
                   }
                ],
@@ -152,15 +152,15 @@
             {
                "items": [
                   {
-                     "id": "3020",
+                     "id": 3020,
                      "count": 1
                   },
                   {
-                     "id": "3010",
+                     "id": 3010,
                      "count": 1
                   },
                   {
-                     "id": "3024",
+                     "id": 3024,
                      "count": 1
                   }
                ],
@@ -169,15 +169,15 @@
             {
                "items": [
                   {
-                     "id": "3027",
+                     "id": 3027,
                      "count": 1
                   },
                   {
-                     "id": "3003",
+                     "id": 3003,
                      "count": 1
                   },
                   {
-                     "id": "3135",
+                     "id": 3135,
                      "count": 1
                   }
                ],
@@ -186,15 +186,15 @@
             {
                "items": [
                   {
-                     "id": "3110",
+                     "id": 3110,
                      "count": 1
                   },
                   {
-                     "id": "3102",
+                     "id": 3102,
                      "count": 1
                   },
                   {
-                     "id": "3152",
+                     "id": 3152,
                      "count": 1
                   }
                ],
@@ -203,11 +203,11 @@
             {
                "items": [
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 1
                   },
                   {
-                     "id": "2004",
+                     "id": 2004,
                      "count": 1
                   }
                ],
@@ -226,11 +226,11 @@
             {
                "items": [
                   {
-                     "id": "1027",
+                     "id": 1027,
                      "count": 1
                   },
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 2
                   }
                ],
@@ -239,15 +239,15 @@
             {
                "items": [
                   {
-                     "id": "3020",
+                     "id": 3020,
                      "count": 1
                   },
                   {
-                     "id": "3010",
+                     "id": 3010,
                      "count": 1
                   },
                   {
-                     "id": "3070",
+                     "id": 3070,
                      "count": 1
                   }
                ],
@@ -256,15 +256,15 @@
             {
                "items": [
                   {
-                     "id": "3027",
+                     "id": 3027,
                      "count": 1
                   },
                   {
-                     "id": "3003",
+                     "id": 3003,
                      "count": 1
                   },
                   {
-                     "id": "3135",
+                     "id": 3135,
                      "count": 1
                   }
                ],
@@ -273,15 +273,15 @@
             {
                "items": [
                   {
-                     "id": "3065",
+                     "id": 3065,
                      "count": 1
                   },
                   {
-                     "id": "3152",
+                     "id": 3152,
                      "count": 1
                   },
                   {
-                     "id": "3110",
+                     "id": 3110,
                      "count": 1
                   }
                ],
@@ -290,15 +290,15 @@
             {
                "items": [
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 1
                   },
                   {
-                     "id": "2004",
+                     "id": 2004,
                      "count": 1
                   },
                   {
-                     "id": "2044",
+                     "id": 2044,
                      "count": 1
                   }
                ],
@@ -317,19 +317,19 @@
             {
                "items": [
                   {
-                     "id": "1027",
+                     "id": 1027,
                      "count": 1
                   },
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 3
                   },
                   {
-                     "id": "1001",
+                     "id": 1001,
                      "count": 1
                   },
                   {
-                     "id": "1028",
+                     "id": 1028,
                      "count": 1
                   }
                ],
@@ -338,15 +338,15 @@
             {
                "items": [
                   {
-                     "id": "3020",
+                     "id": 3020,
                      "count": 1
                   },
                   {
-                     "id": "3073",
+                     "id": 3073,
                      "count": 1
                   },
                   {
-                     "id": "3176",
+                     "id": 3176,
                      "count": 1
                   }
                ],
@@ -355,11 +355,11 @@
             {
                "items": [
                   {
-                     "id": "3029",
+                     "id": 3029,
                      "count": 1
                   },
                   {
-                     "id": "3007",
+                     "id": 3007,
                      "count": 1
                   }
                ],
@@ -368,15 +368,15 @@
             {
                "items": [
                   {
-                     "id": "3110",
+                     "id": 3110,
                      "count": 1
                   },
                   {
-                     "id": "3152",
+                     "id": 3152,
                      "count": 1
                   },
                   {
-                     "id": "3180",
+                     "id": 3180,
                      "count": 1
                   }
                ],
@@ -385,11 +385,11 @@
             {
                "items": [
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 1
                   },
                   {
-                     "id": "2004",
+                     "id": 2004,
                      "count": 1
                   }
                ],
@@ -408,15 +408,15 @@
             {
                "items": [
                   {
-                     "id": "1027",
+                     "id": 1027,
                      "count": 1
                   },
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 2
                   },
                   {
-                     "id": "3342",
+                     "id": 3342,
                      "count": 1
                   }
                ],
@@ -425,15 +425,15 @@
             {
                "items": [
                   {
-                     "id": "1001",
+                     "id": 1001,
                      "count": 1
                   },
                   {
-                     "id": "3070",
+                     "id": 3070,
                      "count": 1
                   },
                   {
-                     "id": "3010",
+                     "id": 3010,
                      "count": 1
                   }
                ],
@@ -442,15 +442,15 @@
             {
                "items": [
                   {
-                     "id": "3027",
+                     "id": 3027,
                      "count": 1
                   },
                   {
-                     "id": "3003",
+                     "id": 3003,
                      "count": 1
                   },
                   {
-                     "id": "3135",
+                     "id": 3135,
                      "count": 1
                   }
                ],
@@ -459,15 +459,15 @@
             {
                "items": [
                   {
-                     "id": "3065",
+                     "id": 3065,
                      "count": 1
                   },
                   {
-                     "id": "3152",
+                     "id": 3152,
                      "count": 1
                   },
                   {
-                     "id": "3110",
+                     "id": 3110,
                      "count": 1
                   }
                ],
@@ -476,15 +476,15 @@
             {
                "items": [
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 1
                   },
                   {
-                     "id": "2004",
+                     "id": 2004,
                      "count": 1
                   },
                   {
-                     "id": "2044",
+                     "id": 2044,
                      "count": 1
                   }
                ],
@@ -503,15 +503,15 @@
             {
                "items": [
                   {
-                     "id": "1027",
+                     "id": 1027,
                      "count": 1
                   },
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 2
                   },
                   {
-                     "id": "3340",
+                     "id": 3340,
                      "count": 1
                   }
                ],
@@ -520,15 +520,15 @@
             {
                "items": [
                   {
-                     "id": "1001",
+                     "id": 1001,
                      "count": 1
                   },
                   {
-                     "id": "3070",
+                     "id": 3070,
                      "count": 1
                   },
                   {
-                     "id": "3010",
+                     "id": 3010,
                      "count": 1
                   }
                ],
@@ -537,15 +537,15 @@
             {
                "items": [
                   {
-                     "id": "3027",
+                     "id": 3027,
                      "count": 1
                   },
                   {
-                     "id": "3003",
+                     "id": 3003,
                      "count": 1
                   },
                   {
-                     "id": "3135",
+                     "id": 3135,
                      "count": 1
                   }
                ],
@@ -554,15 +554,15 @@
             {
                "items": [
                   {
-                     "id": "3065",
+                     "id": 3065,
                      "count": 1
                   },
                   {
-                     "id": "3152",
+                     "id": 3152,
                      "count": 1
                   },
                   {
-                     "id": "3110",
+                     "id": 3110,
                      "count": 1
                   }
                ],
@@ -571,15 +571,15 @@
             {
                "items": [
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 1
                   },
                   {
-                     "id": "2004",
+                     "id": 2004,
                      "count": 1
                   },
                   {
-                     "id": "2044",
+                     "id": 2044,
                      "count": 1
                   }
                ],
@@ -598,15 +598,15 @@
             {
                "items": [
                   {
-                     "id": "1027",
+                     "id": 1027,
                      "count": 1
                   },
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 2
                   },
                   {
-                     "id": "1001",
+                     "id": 1001,
                      "count": 1
                   }
                ],
@@ -615,15 +615,15 @@
             {
                "items": [
                   {
-                     "id": "3020",
+                     "id": 3020,
                      "count": 1
                   },
                   {
-                     "id": "3010",
+                     "id": 3010,
                      "count": 1
                   },
                   {
-                     "id": "3070",
+                     "id": 3070,
                      "count": 1
                   }
                ],
@@ -632,11 +632,11 @@
             {
                "items": [
                   {
-                     "id": "3027",
+                     "id": 3027,
                      "count": 1
                   },
                   {
-                     "id": "3003",
+                     "id": 3003,
                      "count": 1
                   }
                ],
@@ -645,15 +645,15 @@
             {
                "items": [
                   {
-                     "id": "3110",
+                     "id": 3110,
                      "count": 1
                   },
                   {
-                     "id": "3102",
+                     "id": 3102,
                      "count": 1
                   },
                   {
-                     "id": "3152",
+                     "id": 3152,
                      "count": 1
                   }
                ],
@@ -662,11 +662,11 @@
             {
                "items": [
                   {
-                     "id": "2003",
+                     "id": 2003,
                      "count": 1
                   },
                   {
-                     "id": "2004",
+                     "id": 2004,
                      "count": 1
                   }
                ],
@@ -735,19 +735,19 @@
             3,
             3
          ],
-         "id": "Overload",
          "vars": [
             {
                "link": "spelldamage",
-               "coeff": 0.4,
+               "coeff": [0.4],
                "key": "a1"
             },
             {
                "link": "mana",
-               "coeff": 0.065,
+               "coeff": [0.065],
                "key": "f1"
             }
          ],
+         "sanitizedDescription": "Ryze throws a charge of pure energy at an enemy for heavy damage and additional damage based upon Ryze's maximum mana. Ryze also gains passive cooldown reduction.",
          "rangeBurn": "625",
          "costType": "Mana",
          "effect": [
@@ -776,6 +776,8 @@
          "cooldownBurn": "3.5",
          "description": "Ryze throws a charge of pure energy at an enemy for heavy damage and additional damage based upon Ryze's maximum mana. Ryze also gains passive cooldown reduction.",
          "name": "Overload",
+         "sanitizedTooltip": "Active: Deals {{ e1 }} (+{{ a1 }}) plus {{ e3 }}% of Ryze's maximum Mana (+{{ f1 }}) in magic damage. Passive: Gains {{ e2 }}% Cooldown Reduction.",
+         "key": "Overload",
          "costBurn": "60",
          "tooltip": "<span class=\"colorFF9900\">Active: <\/span>Deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})<\/span> plus {{ e3 }}% of Ryze's maximum Mana <span class=\"color44DDFF\">(+{{ f1 }})<\/span> in magic damage.<br><br><span class=\"colorFF9900\">Passive: <\/span>Gains {{ e2 }}% Cooldown Reduction."
       },
@@ -829,19 +831,19 @@
             0,
             0
          ],
-         "id": "RunePrison",
          "vars": [
             {
                "link": "spelldamage",
-               "coeff": 0.6,
+               "coeff": [0.6],
                "key": "a1"
             },
             {
                "link": "mana",
-               "coeff": 0.045,
+               "coeff": [0.045],
                "key": "f1"
             }
          ],
+         "sanitizedDescription": "Ryze traps target enemy unit in a cage of runes, damaging them and preventing them from moving. Also gains bonus damage based on Ryze's maximum mana.",
          "rangeBurn": "600",
          "costType": "Mana",
          "effect": [
@@ -870,6 +872,8 @@
          "cooldownBurn": "0",
          "description": "Ryze traps target enemy unit in a cage of runes, damaging them and preventing them from moving. Also gains bonus damage based on Ryze's maximum mana.",
          "name": "Rune Prison",
+         "sanitizedTooltip": "Roots the enemy for {{ e1 }} second(s), dealing {{ e2 }} (+{{ a1 }}) plus {{ e3 }}% of Ryze's maximum Mana (+{{ f1 }}) in magic damage.",
+         "key": "RunePrison",
          "costBurn": "60/70/80/90/100",
          "tooltip": "Roots the enemy for {{ e1 }} second(s), dealing {{ e2 }}<span class=\"color99FF99\"> (+{{ a1 }})<\/span> plus {{ e3 }}% of Ryze's maximum Mana <span class=\"color44DDFF\">(+{{ f1 }})<\/span> in magic damage. "
       },
@@ -923,19 +927,19 @@
             14,
             14
          ],
-         "id": "SpellFlux",
          "vars": [
             {
                "link": "spelldamage",
-               "coeff": 0.35,
+               "coeff": [0.35],
                "key": "a1"
             },
             {
                "link": "mana",
-               "coeff": 0.01,
+               "coeff": [0.01],
                "key": "f1"
             }
          ],
+         "sanitizedDescription": "Ryze releases an orb of pure magical power that deals damage and bounces from the initial target up to 5 times. Also gains bonus damage based on Ryze's maximum mana. Targets hit have their magic resistance reduced.",
          "rangeBurn": "600",
          "costType": "Mana",
          "effect": [
@@ -964,6 +968,8 @@
          "cooldownBurn": "14",
          "description": "Ryze releases an orb of pure magical power that deals damage and bounces from the initial target up to 5 times. Also gains bonus damage based on Ryze's maximum mana. Targets hit have their magic resistance reduced.",
          "name": "Spell Flux",
+         "sanitizedTooltip": "Unleashes an orb that bounces to enemies or Ryze up to 5 times. Each bounce deals {{ e1 }} (+{{ a1 }}) plus {{ e3 }}% of Ryze's maximum Mana (+{{ f1 }}) magic damage and reduces Magic Resist by {{ e2 }} for 5 seconds.",
+         "key": "SpellFlux",
          "costBurn": "60/70/80/90/100",
          "tooltip": "Unleashes an orb that bounces to enemies or Ryze up to 5 times.<br><br>Each bounce deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})<\/span> plus {{ e3 }}% of Ryze's maximum Mana <span class=\"color44DDFF\">(+{{ f1 }})<\/span> magic damage and reduces Magic Resist by {{ e2 }} for 5 seconds."
       },
@@ -1008,7 +1014,7 @@
             60,
             50
          ],
-         "id": "DesperatePower",
+         "sanitizedDescription": "Ryze channels immense arcane power, he gains spell vamp and all of his spells deal area of effect damage.",
          "rangeBurn": "self",
          "costType": "NoCost",
          "effect": [
@@ -1036,6 +1042,8 @@
          "cooldownBurn": "70/60/50",
          "description": "Ryze channels immense arcane power, he gains spell vamp and all of his spells deal area of effect damage.",
          "name": "Desperate Power",
+         "sanitizedTooltip": "Channels immense arcane power gaining {{ e2 }}% Spell Vamp, and {{ e4 }} Movement Speed. Spells deal 50% area of effect damage for {{ e3 }} seconds.",
+         "key": "DesperatePower",
          "costBurn": "0",
          "tooltip": "Channels immense arcane power gaining {{ e2 }}% Spell Vamp, and {{ e4 }} Movement Speed. Spells deal 50% area of effect damage for {{ e3 }} seconds."
       }
@@ -1052,10 +1060,11 @@
       "difficulty": 3,
       "attack": 2
    },
-   "id": "Ryze",
+   "id": 13,
    "title": "the Rogue Mage",
    "name": "Ryze",
    "passive": {
+      "sanitizedDescription": "When Ryze casts a spell, all other spells have their cooldown reduced by 1 second.",
       "description": "When Ryze casts a spell, all other spells have their cooldown reduced by 1 second.",
       "name": "Arcane Mastery",
       "image": {
@@ -1069,50 +1078,50 @@
       }
    },
    "partype": "Mana",
-   "key": "13",
+   "key": "Ryze",
    "skins": [
       {
-         "id": "13000",
+         "id": 13000,
          "num": 0,
          "name": "default"
       },
       {
-         "id": "13001",
+         "id": 13001,
          "num": 1,
          "name": "Human Ryze"
       },
       {
-         "id": "13002",
+         "id": 13002,
          "num": 2,
          "name": "Tribal Ryze"
       },
       {
-         "id": "13003",
+         "id": 13003,
          "num": 3,
          "name": "Uncle Ryze"
       },
       {
-         "id": "13004",
+         "id": 13004,
          "num": 4,
          "name": "Triumphant Ryze"
       },
       {
-         "id": "13005",
+         "id": 13005,
          "num": 5,
          "name": "Professor Ryze"
       },
       {
-         "id": "13006",
+         "id": 13006,
          "num": 6,
          "name": "Zombie Ryze"
       },
       {
-         "id": "13007",
+         "id": 13007,
          "num": 7,
          "name": "Dark Crystal Ryze"
       },
       {
-         "id": "13008",
+         "id": 13008,
          "num": 8,
          "name": "Pirate Ryze"
       }

@@ -21,6 +21,8 @@ namespace PortableLeagueApi.Static.Models.Mastery
 
         public int Ranks { get; set; }
 
+        public IList<string> SanitizedDescription { get; set; }
+
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
             Models.Image.CreateMap(autoMapperService);

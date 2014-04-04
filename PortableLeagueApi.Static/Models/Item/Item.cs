@@ -27,6 +27,8 @@ namespace PortableLeagueApi.Static.Models.Item
 
         public bool HideFromAll { get; set; }
 
+        public int Id { get; set; }
+
         public IImage Image { get; set; }
 
         public bool InStore { get; set; }
@@ -42,6 +44,8 @@ namespace PortableLeagueApi.Static.Models.Item
         public string RequiredChampion { get; set; }
 
         public IMetaData Rune { get; set; }
+
+        public string SanitizedDescription { get; set; }
 
         public int SpecialRecipe { get; set; }
 

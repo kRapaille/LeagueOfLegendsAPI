@@ -14,6 +14,7 @@ namespace PortableLeagueApi.Interfaces.Static
         IGold Gold { get; set; }
         string Group { get; set; }
         bool HideFromAll { get; set; }
+        int Id { get; set; }
         IImage Image { get; set; }
         bool InStore { get; set; }
         IList<string> Into { get; set; }
@@ -22,6 +23,7 @@ namespace PortableLeagueApi.Interfaces.Static
         string Plaintext { get; set; }
         string RequiredChampion { get; set; }
         IItemRune Rune { get; set; }
+        string SanitizedDescription { get; set; }
         int SpecialRecipe { get; set; }
         int Stacks { get; set; }
         IBasicDataStats Stats { get; set; }

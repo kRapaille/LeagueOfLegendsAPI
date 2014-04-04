@@ -24,13 +24,13 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
         public string Description { get; set; }
 
         [JsonProperty("effect")]
-        public IList<IList<float>> Effect { get; set; }
+        public IList<IList<int>> Effect { get; set; }
 
         [JsonProperty("effectBurn")]
         public string[] EffectBurn { get; set; }
 
-        [JsonProperty("id")]
-        public string Id { get; set; }
+        [JsonProperty("key")]
+        public string Key { get; set; }
 
         [JsonProperty("image")]
         public ImageDto Image { get; set; }
@@ -52,6 +52,12 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
 
         [JsonProperty("resource")]
         public string Resource { get; set; }
+
+        [JsonProperty("sanitizedDescription")]
+        public string SanitizedDescription { get; set; }
+
+        [JsonProperty("sanitizedTooltip")]
+        public string SanitizedTooltip { get; set; }
 
         [JsonProperty("tooltip")]
         public string Tooltip { get; set; }

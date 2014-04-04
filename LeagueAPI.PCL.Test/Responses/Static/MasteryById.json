@@ -1,16 +1,25 @@
 ﻿{
-   "ranks": 1,
-   "id": 4244,
-   "description": ["Reduces damage taken by 4% from Area of Effect magic damage"],
-   "name": "Evasive",
+   "ranks": 3,
+   "id": 4142,
+   "sanitizedDescription": [
+      "Increases bonus Attack Damage by 2%",
+      "Increases Bonus Attack Damage by 3.5%",
+      "Increases Bonus Attack Damage by 5%"
+   ],
+   "description": [
+      "Increases bonus Attack Damage by 2%",
+      "Increases Bonus Attack Damage by 3.5%",
+      "Increases Bonus Attack Damage by 5%"
+   ],
+   "name": "Warlord",
    "image": {
       "w": 48,
-      "full": "4244.png",
+      "full": "4142.png",
       "sprite": "mastery0.png",
       "group": "gray_mastery",
       "h": 48,
-      "y": 144,
-      "x": 192
+      "y": 48,
+      "x": 144
    },
-   "prereq": "4234"
+   "prereq": "0"
 }

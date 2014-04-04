@@ -3,6 +3,8 @@
       "Movement",
       "Boots"
    ],
+   "id": 1001,
+   "sanitizedDescription": "Limited to 1. UNIQUE Passive - Enhanced Movement: +25 Movement Speed (Unique Passives with the same name don't stack.)",
    "plaintext": "Slightly increases Movement Speed",
    "stats": {"FlatMovementSpeedMod": 25},
    "description": "<groupLimit>Limited to 1.<\/groupLimit><br><br><unique>UNIQUE Passive - Enhanced Movement:<\/unique> +25 Movement Speed<br><br><i>(Unique Passives with the same name don't stack.)<\/i>",
@@ -25,7 +27,6 @@
       "y": 0,
       "x": 0
    },
-   "colloq": ";",
    "gold": {
       "total": 325,
       "purchasable": true,

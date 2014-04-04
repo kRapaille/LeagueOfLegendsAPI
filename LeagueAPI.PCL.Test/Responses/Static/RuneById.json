@@ -1,16 +1,22 @@
 ﻿{
-   "tags": ["glyph"],
-   "stats": {"rPercentCooldownModPerLevel": -6.173E-4},
-   "description": "-0.06% cooldowns per level (-1.11% at champion level 18)",
-   "name": "Greater Glyph of Scaling Cooldown Reduction",
+   "tags": [
+      "magic",
+      "flat",
+      "glyph"
+   ],
+   "id": 5297,
+   "sanitizedDescription": "+1.19 ability power",
+   "stats": {"FlatMagicDamageMod": 1.19},
+   "description": "+1.19 ability power",
+   "name": "Greater Glyph of Ability Power",
    "image": {
       "w": 48,
-      "full": "b_2_3.png",
+      "full": "b_3_3.png",
       "sprite": "rune0.png",
       "group": "rune",
       "h": 48,
-      "y": 144,
-      "x": 432
+      "y": 192,
+      "x": 0
    },
    "rune": {
       "isRune": true,

@@ -7,7 +7,7 @@ namespace PortableLeagueApi.Static.Models.Champion
 {
     public class BlockItem : ApiModel, IBlockItem
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public int Count { get; set; }
 
