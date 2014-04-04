@@ -16,12 +16,13 @@
          "cost": [0],
          "cooldown": [0],
          "summonerLevel": 2,
-         "id": "SummonerBoost",
+         "id": 1,
          "vars": [{
             "link": "@text",
-            "coeff": 3,
+            "coeff": [3],
             "key": "f1"
          }],
+         "sanitizedDescription": "Removes all disables and summoner spell debuffs affecting your champion and lowers the duration of incoming disables by 65% for 3 seconds.",
          "rangeBurn": "self",
          "costType": "NoCost",
          "cooldownBurn": "0",
@@ -33,7 +34,8 @@
             "TUTORIAL",
             "ARAM"
          ],
-         "key": "1",
+         "sanitizedTooltip": "Removes all disables and summoner spell debuffs affecting your champion and reduces the duration of disables by 65% for the next {{ f1 }} seconds.",
+         "key": "SummonerBoost",
          "costBurn": "0",
          "tooltip": "Removes all disables and summoner spell debuffs affecting your champion and reduces the duration of disables by 65% for the next {{ f1 }} seconds."
       },
@@ -57,12 +59,13 @@
          "cost": [0],
          "cooldown": [300],
          "summonerLevel": 6,
-         "id": "SummonerTeleport",
+         "id": 12,
          "vars": [{
             "link": "@text",
-            "coeff": 4,
+            "coeff": [4],
             "key": "f1"
          }],
+         "sanitizedDescription": "After channeling for 3.5 seconds, teleports your champion to target allied minion, turret, or ward.",
          "rangeBurn": "25000",
          "costType": "NoCost",
          "cooldownBurn": "300",
@@ -72,7 +75,8 @@
             "CLASSIC",
             "TUTORIAL"
          ],
-         "key": "12",
+         "sanitizedTooltip": "After channeling for {{ f1 }} seconds, your champion teleports to target turret, minion or ward. Teleporting to an allied turret puts Teleport on a {{ f3 }} second cooldown instead. You may reactivate Teleport to cancel it, placing it on a {{ f3 }} second cooldown.",
+         "key": "SummonerTeleport",
          "costBurn": "0",
          "tooltip": "After channeling for {{ f1 }} seconds, your champion teleports to target turret, minion or ward. Teleporting to an allied turret puts Teleport on a {{ f3 }} second cooldown instead.<br><br>You may reactivate Teleport to cancel it, placing it on a {{ f3 }} second cooldown."
       },
@@ -100,7 +104,7 @@
          "cost": [0],
          "cooldown": [180],
          "summonerLevel": 8,
-         "id": "SummonerDot",
+         "id": 14,
          "vars": [{
             "link": "@player.level",
             "coeff": [
@@ -125,6 +129,7 @@
             ],
             "key": "f1"
          }],
+         "sanitizedDescription": "Ignites target enemy champion, dealing 70-410 true damage (depending on champion level) over 5 seconds, grants you vision of the target, and reduces healing effects on them for the duration.",
          "rangeBurn": "600",
          "costType": "NoCost",
          "effect": [
@@ -132,7 +137,7 @@
             [150]
          ],
          "cooldownBurn": "180",
-         "description": "Ignites target enemy champion, dealing 70-410 true damage (depending on champion level) over 5 seconds and reduces healing effects on the target for the duration.",
+         "description": "Ignites target enemy champion, dealing 70-410 true damage (depending on champion level) over 5 seconds, grants you vision of the target, and reduces healing effects on them for the duration.",
          "name": "Ignite",
          "modes": [
             "CLASSIC",
@@ -140,9 +145,10 @@
             "TUTORIAL",
             "ARAM"
          ],
-         "key": "14",
+         "sanitizedTooltip": "Ignite deals {{ f1 }} true damage to target enemy champion over 5 seconds, grants you vision of the target and applies Grievous Wounds for the duration. (Grievous Wounds reducing incoming healing effects by 50%. This vision does not reveal stealthed enemies.)",
+         "key": "SummonerDot",
          "costBurn": "0",
-         "tooltip": "Ignite deals <span class=\"colorFEFCFF\">{{ f1 }}<\/span> true damage to target enemy champion over 5 seconds and reduces healing effects by 50% for the duration."
+         "tooltip": "Ignite deals <span class=\"colorFEFCFF\">{{ f1 }}<\/span> true damage to target enemy champion over 5 seconds, grants you vision of the target and applies Grievous Wounds for the duration.<br><br><i>(Grievous Wounds reducing incoming healing effects by 50%. This vision does not reveal stealthed enemies.)<\/i>"
       },
       "SummonerHaste": {
          "range": "self",
@@ -160,12 +166,13 @@
          "cost": [0],
          "cooldown": [0],
          "summonerLevel": 1,
-         "id": "SummonerHaste",
+         "id": 6,
          "vars": [{
             "link": "@text",
-            "coeff": 27,
+            "coeff": [27],
             "key": "f1"
          }],
+         "sanitizedDescription": "Your champion can move through units and has 27% increased Movement Speed for 10 seconds",
          "rangeBurn": "self",
          "costType": "NoCost",
          "cooldownBurn": "0",
@@ -177,12 +184,17 @@
             "TUTORIAL",
             "ARAM"
          ],
-         "key": "6",
+         "sanitizedTooltip": "Your champion can move through units and has {{ f1 }}% increased Movement Speed for 10 seconds.",
+         "key": "SummonerHaste",
          "costBurn": "0",
          "tooltip": "Your champion can move through units and has {{ f1 }}% increased Movement Speed for 10 seconds."
       },
       "SummonerHeal": {
-         "range": [600],
+         "range": [850],
+         "leveltip": {
+            "effect": [""],
+            "label": [""]
+         },
          "resource": "No Cost",
          "maxrank": 1,
          "image": {
@@ -196,8 +208,8 @@
          },
          "cost": [0],
          "cooldown": [300],
-         "summonerLevel": 1,
-         "id": "SummonerHeal",
+         "summonerLevel": 2,
+         "id": 7,
          "vars": [{
             "link": "@player.level",
             "coeff": [
@@ -222,10 +234,11 @@
             ],
             "key": "f1"
          }],
-         "rangeBurn": "600",
+         "sanitizedDescription": "Restores 90-495 Health (depending on champion level) and Grants 30% Movement Speed for 2 seconds to you and target allied champion. Additionally removes any healing reduction effects that afflict either champion.",
+         "rangeBurn": "850",
          "costType": "NoCost",
          "cooldownBurn": "300",
-         "description": "Restores 90-345 Health (depending on champion level) to your champion and to nearby allies.",
+         "description": "Restores 90-495 Health (depending on champion level) and Grants 30% Movement Speed for 2 seconds to you and target allied champion. Additionally removes any healing reduction effects that afflict either champion.",
          "name": "Heal",
          "modes": [
             "CLASSIC",
@@ -233,9 +246,10 @@
             "TUTORIAL",
             "ARAM"
          ],
-         "key": "7",
+         "sanitizedTooltip": "Restores {{ f1 }} Health and grants 30% Movement Speed for 2 seconds to you and targeted champion, then removes any healing reduction effects that afflict either champion. If this spell cannot find a target, it will cast on the most wounded allied champion in range.",
+         "key": "SummonerHeal",
          "costBurn": "0",
-         "tooltip": "Restores {{ f1 }} Health to your champion and nearby allies."
+         "tooltip": "Restores {{ f1 }} Health and grants 30% Movement Speed for 2 seconds to you and targeted champion, then removes any healing reduction effects that afflict either champion.<br><br><span class=\"colorFFFF00\">If this spell cannot find a target, it will cast on the most wounded allied champion in range.<\/span>"
       },
       "SummonerRevive": {
          "range": "self",
@@ -253,7 +267,8 @@
          "cost": [0],
          "cooldown": [0],
          "summonerLevel": 1,
-         "id": "SummonerRevive",
+         "id": 10,
+         "sanitizedDescription": "Instantly revives your champion at your team's Summoner Platform and increases their Movement Speed for a short duration.",
          "rangeBurn": "self",
          "costType": "NoCost",
          "cooldownBurn": "0",
@@ -264,12 +279,13 @@
             "TUTORIAL",
             "ODIN"
          ],
-         "key": "10",
+         "sanitizedTooltip": "Instantly revives your champion at your team's Summoner Platform and grants +{{ f3 }}% Movement Speed that decays over 12 seconds.",
+         "key": "SummonerRevive",
          "costBurn": "0",
          "tooltip": "Instantly revives your champion at your team's Summoner Platform and grants +{{ f3 }}% Movement Speed that decays over 12 seconds."
       },
       "SummonerExhaust": {
-         "range": [550],
+         "range": [650],
          "leveltip": {
             "effect": [""],
             "label": [""]
@@ -288,11 +304,12 @@
          "cost": [0],
          "cooldown": [210],
          "summonerLevel": 8,
-         "id": "SummonerExhaust",
-         "rangeBurn": "550",
+         "id": 3,
+         "sanitizedDescription": "Exhausts target enemy champion, reducing their Movement Speed and Attack Speed by 30% for 2.5 seconds and reduces their damage dealt by 50% for the duration.",
+         "rangeBurn": "650",
          "costType": "NoCost",
          "cooldownBurn": "210",
-         "description": "Exhausts target enemy champion, reducing their Movement Speed and damage dealt by 30% for 2.5 seconds and reduces their Attack Speed by 50% for the duration.",
+         "description": "Exhausts target enemy champion, reducing their Movement Speed and Attack Speed by 30% for 2.5 seconds and reduces their damage dealt by 50% for the duration.",
          "name": "Exhaust",
          "modes": [
             "CLASSIC",
@@ -300,9 +317,10 @@
             "TUTORIAL",
             "ARAM"
          ],
-         "key": "3",
+         "sanitizedTooltip": "Exhausts target enemy champion, reducing their Movement Speed and Attack Speed by 30% for 2.5 seconds and reduces their damage dealt by 50% for the duration.",
+         "key": "SummonerExhaust",
          "costBurn": "0",
-         "tooltip": "Exhausts target enemy champion, reducing their Movement Speed and Damage dealt by {{ f2 }}% for 2.5 seconds and reducing their Attack Speed by {{ f3 }}% for the duration."
+         "tooltip": "Exhausts target enemy champion, reducing their Movement Speed and Attack Speed by 30% for 2.5 seconds and reduces their damage dealt by 50% for the duration."
       },
       "SummonerSmite": {
          "range": [760],
@@ -320,7 +338,7 @@
          "cost": [0],
          "cooldown": [0],
          "summonerLevel": 3,
-         "id": "SummonerSmite",
+         "id": 11,
          "vars": [{
             "link": "@player.level",
             "coeff": [
@@ -345,6 +363,7 @@
             ],
             "key": "f1"
          }],
+         "sanitizedDescription": "Deals 390-1000 true damage (depending on champion level) to target monster or enemy minion.",
          "rangeBurn": "760",
          "costType": "NoCost",
          "cooldownBurn": "0",
@@ -355,9 +374,10 @@
             "TUTORIAL",
             "ODIN"
          ],
-         "key": "11",
+         "sanitizedTooltip": "Deals {{ f1 }} true damage to target monster or enemy minion.",
+         "key": "SummonerSmite",
          "costBurn": "0",
-         "tooltip": "Deals <span class=\"colorFEFCFF\">{{ f1 }}<\/span> true damage to target enemy minion or pet."
+         "tooltip": "Deals <span class=\"colorFEFCFF\">{{ f1 }}<\/span> true damage to target monster or enemy minion."
       },
       "SummonerMana": {
          "range": [600],
@@ -379,7 +399,7 @@
          "cost": [0],
          "cooldown": [180],
          "summonerLevel": 1,
-         "id": "SummonerMana",
+         "id": 13,
          "vars": [{
             "link": "@player.level",
             "coeff": [
@@ -404,6 +424,7 @@
             ],
             "key": "f1"
          }],
+         "sanitizedDescription": "Restores 40% of your champion's maximum Mana. Also restores allies for 40% of their maximum Mana",
          "rangeBurn": "600",
          "costType": "NoCost",
          "cooldownBurn": "180",
@@ -415,7 +436,8 @@
             "TUTORIAL",
             "ARAM"
          ],
-         "key": "13",
+         "sanitizedTooltip": "Restores {{ f1 }}% maximum Mana to your Champion and nearby allies.",
+         "key": "SummonerMana",
          "costBurn": "0",
          "tooltip": "Restores {{ f1 }}% maximum Mana to your Champion and nearby allies."
       },
@@ -435,12 +457,13 @@
          "cost": [0],
          "cooldown": [0],
          "summonerLevel": 6,
-         "id": "SummonerBarrier",
+         "id": 21,
          "vars": [{
             "link": "@cooldownsummoner",
-            "coeff": 125,
+            "coeff": [125],
             "key": "f1"
          }],
+         "sanitizedDescription": "Shields your champion for 115-455 (depending on champion level) for 2 seconds.",
          "rangeBurn": "self",
          "costType": "NoCost",
          "cooldownBurn": "0",
@@ -452,7 +475,8 @@
             "TUTORIAL",
             "ODIN"
          ],
-         "key": "21",
+         "sanitizedTooltip": "Temporarily shields {{ f1 }} damage from your champion for 2 seconds.",
+         "key": "SummonerBarrier",
          "costBurn": "0",
          "tooltip": "Temporarily shields {{ f1 }} damage from your champion for 2 seconds."
       },
@@ -472,12 +496,13 @@
          "cost": [0],
          "cooldown": [0],
          "summonerLevel": 10,
-         "id": "SummonerClairvoyance",
+         "id": 2,
          "vars": [{
             "link": "@text",
-            "coeff": 4,
+            "coeff": [4],
             "key": "f1"
          }],
+         "sanitizedDescription": "Reveals a small area of the map for your team for 5 seconds.",
          "rangeBurn": "25000",
          "costType": "NoCost",
          "cooldownBurn": "0",
@@ -488,7 +513,8 @@
             "ODIN",
             "TUTORIAL"
          ],
-         "key": "2",
+         "sanitizedTooltip": "Reveals a small area of the map for your team for {{ f1 }} seconds.",
+         "key": "SummonerClairvoyance",
          "costBurn": "0",
          "tooltip": "Reveals a small area of the map for your team for {{ f1 }} seconds."
       },
@@ -512,7 +538,8 @@
          "cost": [0],
          "cooldown": [0],
          "summonerLevel": 12,
-         "id": "SummonerFlash",
+         "id": 4,
+         "sanitizedDescription": "Teleports your champion a short distance toward your cursor's location.",
          "rangeBurn": "425",
          "costType": "NoCost",
          "cooldownBurn": "0",
@@ -524,7 +551,8 @@
             "TUTORIAL",
             "ARAM"
          ],
-         "key": "4",
+         "sanitizedTooltip": "Teleports your champion a short distance toward your cursor's location.",
+         "key": "SummonerFlash",
          "costBurn": "0",
          "tooltip": "Teleports your champion a short distance toward your cursor's location."
       },
@@ -548,18 +576,20 @@
          "cost": [0],
          "cooldown": [210],
          "summonerLevel": 1,
-         "id": "SummonerOdinGarrison",
+         "id": 17,
+         "sanitizedDescription": "Allied Turret: Grants massive regeneration for 8 seconds. Enemy Turret: Reduces damage dealt by 80% for 8 seconds.",
          "rangeBurn": "1250",
          "costType": "NoCost",
          "cooldownBurn": "210",
          "description": "Allied Turret: Grants massive regeneration for 8 seconds. Enemy Turret: Reduces damage dealt by 80% for 8 seconds.",
          "name": "Garrison",
          "modes": ["ODIN"],
-         "key": "17",
+         "sanitizedTooltip": "Allied Turret: Grants massive regeneration for 8 seconds. Enemy Turret: Reduces damage dealt by 80% for 8 seconds.",
+         "key": "SummonerOdinGarrison",
          "costBurn": "0",
          "tooltip": "<span class=\"size16 colorFF9900\">Allied Turret:<\/span> Grants massive regeneration for 8 seconds.<br><br><span class=\"size16 colorFF9900\">Enemy Turret:<\/span> Reduces damage dealt by 80% for 8 seconds."
       }
    },
    "type": "summoner",
-   "version": "4.4.3"
+   "version": "4.5.4"
 }

@@ -13,7 +13,7 @@ namespace PortableLeagueApi.Interfaces.Static.SummonerSpell
         string Description { get; set; }
         IList<IList<float>> Effect { get; set; }
         IList<string> EffectBurn { get; set; }
-        string Id { get; set; }
+        int Id { get; set; }
         IImage Image { get; set; }
         string Key { get; set; }
         ILevelTip Leveltip { get; set; }
@@ -23,6 +23,8 @@ namespace PortableLeagueApi.Interfaces.Static.SummonerSpell
         int Range { get; set; }
         string RangeBurn { get; set; }
         string Resource { get; set; }
+        string SanitizedDescription { get; set; }
+        string SanitizedTooltip { get; set; }
         int SummonerLevel { get; set; }
         string Tooltip { get; set; }
         IList<ISummonerSpellVars> Vars { get; set; }
