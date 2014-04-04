@@ -43,7 +43,7 @@ namespace PortableLeagueApi.Static.Models.DTO.SummonerSpell
         public string[] EffectBurn { get; set; }
 
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("image")]
         public ImageDto Image { get; set; }
@@ -72,6 +72,12 @@ namespace PortableLeagueApi.Static.Models.DTO.SummonerSpell
 
         [JsonProperty("resource")]
         public string Resource { get; set; }
+
+        [JsonProperty("sanitizedDescription")]
+        public string SanitizedDescription { get; set; }
+
+        [JsonProperty("sanitizedTooltip")]
+        public string SanitizedTooltip { get; set; }
 
         [JsonProperty("summonerLevel")]
         public int SummonerLevel { get; set; }

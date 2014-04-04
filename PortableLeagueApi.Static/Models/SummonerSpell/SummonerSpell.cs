@@ -25,7 +25,7 @@ namespace PortableLeagueApi.Static.Models.SummonerSpell
 
         public IList<string> EffectBurn { get; set; }
 
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public IImage Image { get; set; }
 
@@ -44,6 +44,10 @@ namespace PortableLeagueApi.Static.Models.SummonerSpell
         public string RangeBurn { get; set; }
 
         public string Resource { get; set; }
+
+        public string SanitizedDescription { get; set; }
+
+        public string SanitizedTooltip { get; set; }
 
         public int SummonerLevel { get; set; }
 

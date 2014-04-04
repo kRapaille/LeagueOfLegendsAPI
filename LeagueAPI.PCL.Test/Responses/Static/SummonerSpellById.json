@@ -1,37 +1,41 @@
 ﻿{
-   "range": "self",
+   "range": [25000],
+   "leveltip": {
+      "effect": [""],
+      "label": [""]
+   },
    "resource": "No Cost",
    "maxrank": 1,
    "image": {
       "w": 48,
-      "full": "SummonerBarrier.png",
+      "full": "SummonerTeleport.png",
       "sprite": "spell0.png",
       "group": "spell",
       "h": 48,
-      "y": 0,
-      "x": 0
+      "y": 48,
+      "x": 288
    },
    "cost": [0],
-   "cooldown": [0],
+   "cooldown": [300],
    "summonerLevel": 6,
-   "id": "SummonerBarrier",
+   "id": 12,
    "vars": [{
-      "link": "@cooldownsummoner",
-      "coeff": 125,
+      "link": "@text",
+      "coeff": [4],
       "key": "f1"
    }],
-   "rangeBurn": "self",
+   "sanitizedDescription": "After channeling for 3.5 seconds, teleports your champion to target allied minion, turret, or ward.",
+   "rangeBurn": "25000",
    "costType": "NoCost",
-   "cooldownBurn": "0",
-   "description": "Shields your champion for 115-455 (depending on champion level) for 2 seconds.",
-   "name": "Barrier",
+   "cooldownBurn": "300",
+   "description": "After channeling for 3.5 seconds, teleports your champion to target allied minion, turret, or ward.",
+   "name": "Teleport",
    "modes": [
-      "ARAM",
       "CLASSIC",
-      "TUTORIAL",
-      "ODIN"
+      "TUTORIAL"
    ],
-   "key": "21",
+   "sanitizedTooltip": "After channeling for {{ f1 }} seconds, your champion teleports to target turret, minion or ward. Teleporting to an allied turret puts Teleport on a {{ f3 }} second cooldown instead. You may reactivate Teleport to cancel it, placing it on a {{ f3 }} second cooldown.",
+   "key": "SummonerTeleport",
    "costBurn": "0",
-   "tooltip": "Temporarily shields {{ f1 }} damage from your champion for 2 seconds."
+   "tooltip": "After channeling for {{ f1 }} seconds, your champion teleports to target turret, minion or ward. Teleporting to an allied turret puts Teleport on a {{ f3 }} second cooldown instead.<br><br>You may reactivate Teleport to cancel it, placing it on a {{ f3 }} second cooldown."
 }
