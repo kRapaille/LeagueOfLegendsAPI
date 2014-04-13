@@ -1,6 +1,7 @@
 ﻿{
    "basic": {
       "inStore": true,
+      "id": 0,
       "specialRecipe": 0,
       "consumed": false,
       "maps": {
@@ -78,7 +79,6 @@
       },
       "hideFromAll": false,
       "consumeOnFull": false,
-      "colloq": ";",
       "stacks": 1,
       "gold": {
          "total": 0,
@@ -100,6 +100,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5235,
+         "sanitizedDescription": "+3.85 ability power",
          "stats": {"FlatMagicDamageMod": 3.85},
          "description": "+3.85 ability power",
          "name": "Quintessence of Ability Power",
@@ -120,8 +122,10 @@
       },
       "5234": {
          "tags": ["quintessence"],
-         "stats": {"rPercentCooldownModPerLevel": -0.001112},
-         "description": "-0.11% cooldowns per level (-2% at champion level 18)",
+         "id": 5234,
+         "sanitizedDescription": "-0.21% cooldowns per level (-3.9% at champion level 18)",
+         "stats": {"rPercentCooldownModPerLevel": -0.002167},
+         "description": "-0.21% cooldowns per level (-3.9% at champion level 18)",
          "name": "Quintessence of Scaling Cooldown Reduction",
          "image": {
             "w": 48,
@@ -140,8 +144,10 @@
       },
       "5233": {
          "tags": ["quintessence"],
-         "stats": {"rPercentCooldownMod": -0.013334},
-         "description": "-1.33% cooldowns",
+         "id": 5233,
+         "sanitizedDescription": "-1.95% cooldowns",
+         "stats": {"rPercentCooldownMod": -0.0195},
+         "description": "-1.95% cooldowns",
          "name": "Quintessence of Cooldown Reduction",
          "image": {
             "w": 48,
@@ -160,6 +166,8 @@
       },
       "5370": {
          "tags": ["seal"],
+         "id": 5370,
+         "sanitizedDescription": "+0.064 Energy regen/5 sec per level (+1.15 at champion level 18)",
          "stats": {"rFlatEnergyRegenModPerLevel": 0.01283},
          "description": "+0.064 Energy regen/5 sec per level (+1.15 at champion level 18)",
          "name": "Greater Seal of Scaling Energy Regeneration",
@@ -184,6 +192,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5230,
+         "sanitizedDescription": "+0.22 health regen / 5 sec. per level (+3.96 at champion level 18)",
          "stats": {"rFlatHPRegenModPerLevel": 0.04376},
          "description": "+0.22 health regen / 5 sec. per level (+3.96 at champion level 18)",
          "name": "Quintessence of Scaling Health Regeneration",
@@ -208,6 +218,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 8016,
+         "sanitizedDescription": "+1.39% movement speed",
          "stats": {"PercentMovementSpeedMod": 0.0139},
          "description": "+1.39% movement speed",
          "name": "Quintessence of the Speedy Specter",
@@ -228,6 +240,8 @@
       },
       "5374": {
          "tags": ["quintessence"],
+         "id": 5374,
+         "sanitizedDescription": "+5.4 Energy",
          "stats": {"FlatEnergyPoolMod": 5.4},
          "description": "+5.4 Energy",
          "name": "Greater Quintessence of Energy",
@@ -252,6 +266,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 8015,
+         "sanitizedDescription": "+24 health",
          "stats": {"FlatHPPoolMod": 24},
          "description": "+24 health",
          "name": "Quintessence of Bountiful Treats",
@@ -272,6 +288,8 @@
       },
       "5373": {
          "tags": ["quintessence"],
+         "id": 5373,
+         "sanitizedDescription": "+1.575 Energy regen/5 sec",
          "stats": {"FlatEnergyRegenMod": 0.315},
          "description": "+1.575 Energy regen/5 sec",
          "name": "Greater Quintessence of Energy Regeneration",
@@ -292,6 +310,8 @@
       },
       "5372": {
          "tags": ["glyph"],
+         "id": 5372,
+         "sanitizedDescription": "+0.161 Energy/level (+2.89 at level 18)",
          "stats": {"rFlatEnergyModPerLevel": 0.161},
          "description": "+0.161 Energy/level (+2.89 at level 18)",
          "name": "Greater Glyph of Scaling Energy",
@@ -316,6 +336,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 8017,
+         "sanitizedDescription": "+4.56 ability power",
          "stats": {"FlatMagicDamageMod": 4.56},
          "description": "+4.56 ability power",
          "name": "Quintessence of the Witches Brew",
@@ -336,6 +358,8 @@
       },
       "5371": {
          "tags": ["glyph"],
+         "id": 5371,
+         "sanitizedDescription": "+2.2 Energy",
          "stats": {"FlatEnergyPoolMod": 2.2},
          "description": "+2.2 Energy",
          "name": "Greater Glyph of Energy",
@@ -356,6 +380,8 @@
       },
       "8012": {
          "tags": ["glyph"],
+         "id": 8012,
+         "sanitizedDescription": "-0.75% cooldowns",
          "stats": {"rPercentCooldownMod": -0.0075},
          "description": "-0.75% cooldowns",
          "name": "Glyph of the Soaring Slalom",
@@ -380,6 +406,8 @@
             "flat",
             "glyph"
          ],
+         "id": 8011,
+         "sanitizedDescription": "+0.66 ability power",
          "stats": {"FlatMagicDamageMod": 0.66},
          "description": "+0.66 ability power",
          "name": "Lesser Glyph of the Challenger",
@@ -404,6 +432,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 8014,
+         "sanitizedDescription": "+1.85 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 1.85},
          "description": "+1.85 magic penetration",
          "name": "Quintessence of the Piercing Screech",
@@ -428,6 +458,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 8013,
+         "sanitizedDescription": "+2.37 armor penetration",
          "stats": {"rFlatArmorPenetrationMod": 2.37},
          "description": "+2.37 armor penetration",
          "name": "Quintessence of the Headless Horseman",
@@ -452,6 +484,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 5368,
+         "sanitizedDescription": "+2% experience gained",
          "stats": {"PercentEXPBonus": 0.02},
          "description": "+2% experience gained",
          "name": "Greater Quintessence of Experience",
@@ -472,6 +506,8 @@
       },
       "5369": {
          "tags": ["seal"],
+         "id": 5369,
+         "sanitizedDescription": "+0.63 Energy regen/5 sec",
          "stats": {"FlatEnergyRegenMod": 0.126},
          "description": "+0.63 Energy regen/5 sec",
          "name": "Greater Seal of Energy Regeneration",
@@ -496,6 +532,8 @@
             "flat",
             "mark"
          ],
+         "id": 8008,
+         "sanitizedDescription": "+2% critical damage",
          "stats": {"FlatCritDamageMod": 0.019835},
          "description": "+2% critical damage",
          "name": "Mark of the Combatant",
@@ -520,6 +558,8 @@
             "flat",
             "seal"
          ],
+         "id": 8009,
+         "sanitizedDescription": "+3.56 health",
          "stats": {"FlatHPPoolMod": 3.564},
          "description": "+3.56 health",
          "name": "Lesser Seal of the Medalist",
@@ -544,6 +584,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5229,
+         "sanitizedDescription": "+2.1 health regen / 5 sec.",
          "stats": {"FlatHPRegenMod": 0.42},
          "description": "+2.1 health regen / 5 sec.",
          "name": "Quintessence of Health Regeneration",
@@ -568,6 +610,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5227,
+         "sanitizedDescription": "+3.11 magic resist",
          "stats": {"FlatSpellBlockMod": 3.11},
          "description": "+3.11 magic resist",
          "name": "Quintessence of Magic Resist",
@@ -592,6 +636,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5228,
+         "sanitizedDescription": "+0.29 magic resist per level (+5.22 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.2886},
          "description": "+0.29 magic resist per level (+5.22 at champion level 18)",
          "name": "Quintessence of Scaling Magic Resist",
@@ -616,6 +662,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5225,
+         "sanitizedDescription": "+3.32 armor",
          "stats": {"FlatArmorMod": 3.3158},
          "description": "+3.32 armor",
          "name": "Quintessence of Armor",
@@ -640,6 +688,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5226,
+         "sanitizedDescription": "+0.29 armor per level (+5.22 at champion level 18)",
          "stats": {"rFlatArmorModPerLevel": 0.2917},
          "description": "+0.29 armor per level (+5.22 at champion level 18)",
          "name": "Quintessence of Scaling Armor",
@@ -664,6 +714,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 8021,
+         "sanitizedDescription": "+26 health",
          "stats": {"FlatHPPoolMod": 26},
          "description": "+26 health",
          "name": "Greater Quintessence of Frosty Health",
@@ -688,6 +740,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 8020,
+         "sanitizedDescription": "+2.56 armor penetration",
          "stats": {"rFlatArmorPenetrationMod": 2.56},
          "description": "+2.56 armor penetration",
          "name": "Greater Quintessence of the Deadly Wreath",
@@ -712,6 +766,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5221,
+         "sanitizedDescription": "+1.99 armor penetration",
          "stats": {"rFlatArmorPenetrationMod": 1.99},
          "description": "+1.99 armor penetration",
          "name": "Quintessence of Armor Penetration",
@@ -736,6 +792,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5224,
+         "sanitizedDescription": "+2.1 health per level (+37.8 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 2.1034},
          "description": "+2.1 health per level (+37.8 at champion level 18)",
          "name": "Quintessence of Scaling Health",
@@ -760,6 +818,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5223,
+         "sanitizedDescription": "+20 health",
          "stats": {"FlatHPPoolMod": 20},
          "description": "+20 health",
          "name": "Quintessence of Health",
@@ -784,6 +844,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5361,
+         "sanitizedDescription": "+1.25 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.25},
          "description": "+1.25 mana regen / 5 sec.",
          "name": "Greater Quintessence of Mana Regeneration",
@@ -808,6 +870,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5360,
+         "sanitizedDescription": "+4.17 mana per level (+75.06 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 4.1667},
          "description": "+4.17 mana per level (+75.06 at champion level 18)",
          "name": "Greater Quintessence of Scaling Mana",
@@ -832,6 +896,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5363,
+         "sanitizedDescription": "+2.01 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 2.01},
          "description": "+2.01 magic penetration",
          "name": "Greater Quintessence of Magic Penetration",
@@ -856,6 +922,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5362,
+         "sanitizedDescription": "+0.24 mana regen / 5 sec. per level (+4.32 at champion level 18)",
          "stats": {"rFlatMPRegenModPerLevel": 0.04882},
          "description": "+0.24 mana regen / 5 sec. per level (+4.32 at champion level 18)",
          "name": "Greater Quintessence of Scaling Mana Regeneration",
@@ -880,6 +948,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 5365,
+         "sanitizedDescription": "+1.5% movement speed",
          "stats": {"PercentMovementSpeedMod": 0.015},
          "description": "+1.5% movement speed",
          "name": "Greater Quintessence of Movement Speed",
@@ -903,6 +973,8 @@
             "utility",
             "quintessence"
          ],
+         "id": 5367,
+         "sanitizedDescription": "+1 gold / 10 sec.",
          "stats": {"rFlatGoldPer10Mod": 1},
          "description": "+1 gold / 10 sec.",
          "name": "Greater Quintessence of Gold",
@@ -927,6 +999,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 8022,
+         "sanitizedDescription": "+1.5% movement speed",
          "stats": {"PercentMovementSpeedMod": 0.015},
          "description": "+1.5% movement speed",
          "name": "Greater Quintessence of Sugar Rush",
@@ -951,6 +1025,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 5366,
+         "sanitizedDescription": "-5% time dead",
          "stats": {"rPercentTimeDeadMod": 0.05},
          "description": "-5% time dead",
          "name": "Greater Quintessence of Revival",
@@ -975,6 +1051,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5357,
+         "sanitizedDescription": "+4.95 ability power",
          "stats": {"FlatMagicDamageMod": 4.95},
          "description": "+4.95 ability power",
          "name": "Greater Quintessence of Ability Power",
@@ -999,6 +1077,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5358,
+         "sanitizedDescription": "+0.43 ability power per level (+7.74 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.4327},
          "description": "+0.43 ability power per level (+7.74 at champion level 18)",
          "name": "Greater Quintessence of Scaling Ability Power",
@@ -1023,6 +1103,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5359,
+         "sanitizedDescription": "+37.5 mana",
          "stats": {"FlatMPPoolMod": 37.5},
          "description": "+37.5 mana",
          "name": "Greater Quintessence of Mana",
@@ -1047,6 +1129,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 8019,
+         "sanitizedDescription": "+2.01 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 2.01},
          "description": "+2.01 magic penetration",
          "name": "Greater Quintessence of the Piercing Present",
@@ -1071,6 +1155,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5219,
+         "sanitizedDescription": "+1.44% critical chance",
          "stats": {"FlatCritChanceMod": 0.014433},
          "description": "+1.44% critical chance",
          "name": "Quintessence of Critical Chance",
@@ -1095,6 +1181,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5214,
+         "sanitizedDescription": "+0.19 attack damage per level (+3.42 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.1944},
          "description": "+0.19 attack damage per level (+3.42 at champion level 18)",
          "name": "Quintessence of Scaling Attack Damage",
@@ -1119,8 +1207,10 @@
             "percent",
             "quintessence"
          ],
-         "stats": {"PercentAttackSpeedMod": 0.026415},
-         "description": "+2.64% attack speed",
+         "id": 5215,
+         "sanitizedDescription": "+3.51% attack speed",
+         "stats": {"PercentAttackSpeedMod": 0.0351},
+         "description": "+3.51% attack speed",
          "name": "Quintessence of Attack Speed",
          "image": {
             "w": 48,
@@ -1143,6 +1233,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5217,
+         "sanitizedDescription": "+3.47% critical damage",
          "stats": {"FlatCritDamageMod": 0.034711},
          "description": "+3.47% critical damage",
          "name": "Quintessence of Critical Damage",
@@ -1167,6 +1259,8 @@
             "flat",
             "mark"
          ],
+         "id": 5253,
+         "sanitizedDescription": "+1.28 armor penetration",
          "stats": {"rFlatArmorPenetrationMod": 1.28},
          "description": "+1.28 armor penetration",
          "name": "Greater Mark of Armor Penetration",
@@ -1191,6 +1285,8 @@
             "flat",
             "mark"
          ],
+         "id": 5251,
+         "sanitizedDescription": "+0.93% critical chance",
          "stats": {"FlatCritChanceMod": 0.009278},
          "description": "+0.93% critical chance",
          "name": "Greater Mark of Critical Chance",
@@ -1215,6 +1311,8 @@
             "flat",
             "mark"
          ],
+         "id": 5257,
+         "sanitizedDescription": "+0.91 armor",
          "stats": {"FlatArmorMod": 0.9144},
          "description": "+0.91 armor",
          "name": "Greater Mark of Armor",
@@ -1239,6 +1337,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5256,
+         "sanitizedDescription": "+0.54 health per level (+9.72 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 0.5409},
          "description": "+0.54 health per level (+9.72 at champion level 18)",
          "name": "Greater Mark of Scaling Health",
@@ -1263,6 +1363,8 @@
             "flat",
             "mark"
          ],
+         "id": 5255,
+         "sanitizedDescription": "+3.47 health",
          "stats": {"FlatHPPoolMod": 3.4749},
          "description": "+3.47 health",
          "name": "Greater Mark of Health",
@@ -1283,8 +1385,10 @@
       },
       "5356": {
          "tags": ["quintessence"],
-         "stats": {"rPercentCooldownModPerLevel": -0.001389},
-         "description": "-0.14% cooldowns per level (-2.5% at champion level 18)",
+         "id": 5356,
+         "sanitizedDescription": "-0.28% cooldowns per level (-5% at champion level 18)",
+         "stats": {"rPercentCooldownModPerLevel": -0.002778},
+         "description": "-0.28% cooldowns per level (-5% at champion level 18)",
          "name": "Greater Quintessence of Scaling Cooldown Reduction",
          "image": {
             "w": 48,
@@ -1303,8 +1407,10 @@
       },
       "5355": {
          "tags": ["quintessence"],
-         "stats": {"rPercentCooldownMod": -0.016667},
-         "description": "-1.67% cooldowns",
+         "id": 5355,
+         "sanitizedDescription": "-2.5% cooldowns",
+         "stats": {"rPercentCooldownMod": -0.025},
+         "description": "-2.5% cooldowns",
          "name": "Greater Quintessence of Cooldown Reduction",
          "image": {
             "w": 48,
@@ -1327,6 +1433,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 8035,
+         "sanitizedDescription": "+1.5% movement speed",
          "stats": {"PercentMovementSpeedMod": 0.015},
          "description": "+1.5% movement speed",
          "name": "Greater Quintessence of Studio Rumble",
@@ -1351,6 +1459,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5352,
+         "sanitizedDescription": "+0.28 health regen / 5 sec. per level (+5.04 at champion level 18)",
          "stats": {"rFlatHPRegenModPerLevel": 0.05626},
          "description": "+0.28 health regen / 5 sec. per level (+5.04 at champion level 18)",
          "name": "Greater Quintessence of Scaling Health Regeneration",
@@ -1375,6 +1485,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5351,
+         "sanitizedDescription": "+2.7 health regen / 5 sec.",
          "stats": {"FlatHPRegenMod": 0.54},
          "description": "+2.7 health regen / 5 sec.",
          "name": "Greater Quintessence of Health Regeneration",
@@ -1399,6 +1511,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5350,
+         "sanitizedDescription": "+0.37 magic resist per level (+6.66 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.3711},
          "description": "+0.37 magic resist per level (+6.66 at champion level 18)",
          "name": "Greater Quintessence of Scaling Magic Resist",
@@ -1423,6 +1537,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5348,
+         "sanitizedDescription": "+0.38 armor per level (+6.84 at champion level 18)",
          "stats": {"rFlatArmorModPerLevel": 0.375},
          "description": "+0.38 armor per level (+6.84 at champion level 18)",
          "name": "Greater Quintessence of Scaling Armor",
@@ -1447,6 +1563,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5349,
+         "sanitizedDescription": "+4 magic resist",
          "stats": {"FlatSpellBlockMod": 4},
          "description": "+4 magic resist",
          "name": "Greater Quintessence of Magic Resist",
@@ -1471,6 +1589,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5346,
+         "sanitizedDescription": "+2.7 health per level (+48.6 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 2.7043},
          "description": "+2.7 health per level (+48.6 at champion level 18)",
          "name": "Greater Quintessence of Scaling Health",
@@ -1495,6 +1615,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5347,
+         "sanitizedDescription": "+4.26 armor",
          "stats": {"FlatArmorMod": 4.2632},
          "description": "+4.26 armor",
          "name": "Greater Quintessence of Armor",
@@ -1519,6 +1641,8 @@
             "flat",
             "mark"
          ],
+         "id": 5249,
+         "sanitizedDescription": "+2.23% critical damage",
          "stats": {"FlatCritDamageMod": 0.022314},
          "description": "+2.23% critical damage",
          "name": "Greater Mark of Critical Damage",
@@ -1543,6 +1667,8 @@
             "percent",
             "mark"
          ],
+         "id": 5247,
+         "sanitizedDescription": "+1.7% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.016981},
          "description": "+1.7% attack speed",
          "name": "Greater Mark of Attack Speed",
@@ -1567,6 +1693,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5240,
+         "sanitizedDescription": "+0.19 mana regen / 5 sec. per level (+3.42 at champion level 18)",
          "stats": {"rFlatMPRegenModPerLevel": 0.03798},
          "description": "+0.19 mana regen / 5 sec. per level (+3.42 at champion level 18)",
          "name": "Quintessence of Scaling Mana Regeneration",
@@ -1591,6 +1719,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5241,
+         "sanitizedDescription": "+1.56 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 1.56},
          "description": "+1.56 magic penetration",
          "name": "Quintessence of Magic Penetration",
@@ -1615,6 +1745,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 5243,
+         "sanitizedDescription": "+1.17% movement speed",
          "stats": {"PercentMovementSpeedMod": 0.011667},
          "description": "+1.17% movement speed",
          "name": "Quintessence of Movement Speed",
@@ -1639,6 +1771,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5246,
+         "sanitizedDescription": "+0.13 attack damage per level (+2.43 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.135},
          "description": "+0.13 attack damage per level (+2.43 at champion level 18)",
          "name": "Greater Mark of Scaling Attack Damage",
@@ -1663,6 +1797,8 @@
             "flat",
             "mark"
          ],
+         "id": 5245,
+         "sanitizedDescription": "+0.95 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.945},
          "description": "+0.95 attack damage",
          "name": "Greater Mark of Attack Damage",
@@ -1687,6 +1823,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5343,
+         "sanitizedDescription": "+2.56 armor penetration",
          "stats": {"rFlatArmorPenetrationMod": 2.56},
          "description": "+2.56 armor penetration",
          "name": "Greater Quintessence of Armor Penetration",
@@ -1711,6 +1849,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5345,
+         "sanitizedDescription": "+26 health",
          "stats": {"FlatHPPoolMod": 26},
          "description": "+26 health",
          "name": "Greater Quintessence of Health",
@@ -1735,6 +1875,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5341,
+         "sanitizedDescription": "+1.86% critical chance",
          "stats": {"FlatCritChanceMod": 0.018557},
          "description": "+1.86% critical chance",
          "name": "Greater Quintessence of Critical Chance",
@@ -1759,6 +1901,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5339,
+         "sanitizedDescription": "+4.46% critical damage",
          "stats": {"FlatCritDamageMod": 0.044628},
          "description": "+4.46% critical damage",
          "name": "Greater Quintessence of Critical Damage",
@@ -1783,6 +1927,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5335,
+         "sanitizedDescription": "+2.25 attack damage",
          "stats": {"FlatPhysicalDamageMod": 2.25},
          "description": "+2.25 attack damage",
          "name": "Greater Quintessence of Attack Damage",
@@ -1807,6 +1953,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5336,
+         "sanitizedDescription": "+0.25 attack damage per level (+4.5 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.25},
          "description": "+0.25 attack damage per level (+4.5 at champion level 18)",
          "name": "Greater Quintessence of Scaling Attack Damage",
@@ -1831,8 +1979,10 @@
             "percent",
             "quintessence"
          ],
-         "stats": {"PercentAttackSpeedMod": 0.033962},
-         "description": "+3.4% attack speed",
+         "id": 5337,
+         "sanitizedDescription": "+4.5% attack speed",
+         "stats": {"PercentAttackSpeedMod": 0.045},
+         "description": "+4.5% attack speed",
          "name": "Greater Quintessence of Attack Speed",
          "image": {
             "w": 48,
@@ -1855,6 +2005,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5236,
+         "sanitizedDescription": "+0.34 ability power per level (+6.12 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.3365},
          "description": "+0.34 ability power per level (+6.12 at champion level 18)",
          "name": "Quintessence of Scaling Ability Power",
@@ -1879,6 +2031,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5237,
+         "sanitizedDescription": "+29.17 mana",
          "stats": {"FlatMPPoolMod": 29.1667},
          "description": "+29.17 mana",
          "name": "Quintessence of Mana",
@@ -1903,6 +2057,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5238,
+         "sanitizedDescription": "+3.24 mana per level (+58.32 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 3.2407},
          "description": "+3.24 mana per level (+58.32 at champion level 18)",
          "name": "Quintessence of Scaling Mana",
@@ -1927,6 +2083,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5239,
+         "sanitizedDescription": "+0.97 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.19444},
          "description": "+0.97 mana regen / 5 sec.",
          "name": "Quintessence of Mana Regeneration",
@@ -1951,6 +2109,8 @@
             "flat",
             "mark"
          ],
+         "id": 5129,
+         "sanitizedDescription": "+0.72% critical chance",
          "stats": {"FlatCritChanceMod": 0.007216},
          "description": "+0.72% critical chance",
          "name": "Mark of Critical Chance",
@@ -1975,6 +2135,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5330,
+         "sanitizedDescription": "+1.17 mana per level (+21.06 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 1.1667},
          "description": "+1.17 mana per level (+21.06 at champion level 18)",
          "name": "Greater Seal of Scaling Mana",
@@ -1999,6 +2161,8 @@
             "flat",
             "mark"
          ],
+         "id": 5127,
+         "sanitizedDescription": "+1.74% critical damage",
          "stats": {"FlatCritDamageMod": 0.017355},
          "description": "+1.74% critical damage",
          "name": "Mark of Critical Damage",
@@ -2023,6 +2187,8 @@
             "flat",
             "seal"
          ],
+         "id": 5331,
+         "sanitizedDescription": "+0.41 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.08126},
          "description": "+0.41 mana regen / 5 sec.",
          "name": "Greater Seal of Mana Regeneration",
@@ -2047,6 +2213,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5332,
+         "sanitizedDescription": "+0.065 mana regen / 5 sec. per level (+1.17 at champion level 18)",
          "stats": {"rFlatMPRegenModPerLevel": 0.013},
          "description": "+0.065 mana regen / 5 sec. per level (+1.17 at champion level 18)",
          "name": "Greater Seal of Scaling Mana Regeneration",
@@ -2072,6 +2240,8 @@
             "magic",
             "mark"
          ],
+         "id": 5400,
+         "sanitizedDescription": "+0.5 Armor Penetration / +0.34 Magic Penetration",
          "stats": {
             "rFlatMagicPenetrationMod": 0.34,
             "rFlatArmorPenetrationMod": 0.5
@@ -2099,6 +2269,8 @@
             "flat",
             "seal"
          ],
+         "id": 5327,
+         "sanitizedDescription": "+0.59 ability power",
          "stats": {"FlatMagicDamageMod": 0.594},
          "description": "+0.59 ability power",
          "name": "Greater Seal of Ability Power",
@@ -2123,6 +2295,8 @@
             "flat",
             "mark"
          ],
+         "id": 5131,
+         "sanitizedDescription": "+1 armor penetration",
          "stats": {"rFlatArmorPenetrationMod": 1},
          "description": "+1 armor penetration",
          "name": "Mark of Armor Penetration",
@@ -2143,6 +2317,8 @@
       },
       "5325": {
          "tags": ["seal"],
+         "id": 5325,
+         "sanitizedDescription": "-0.36% cooldowns",
          "stats": {"rPercentCooldownMod": -0.003556},
          "description": "-0.36% cooldowns",
          "name": "Greater Seal of Cooldown Reduction",
@@ -2167,6 +2343,8 @@
             "flat",
             "mark"
          ],
+         "id": 5135,
+         "sanitizedDescription": "+0.71 armor",
          "stats": {"FlatArmorMod": 0.7112},
          "description": "+0.71 armor",
          "name": "Mark of Armor",
@@ -2191,6 +2369,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5134,
+         "sanitizedDescription": "+0.42 health per level (+7.56 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 0.4207},
          "description": "+0.42 health per level (+7.56 at champion level 18)",
          "name": "Mark of Scaling Health",
@@ -2215,6 +2395,8 @@
             "flat",
             "seal"
          ],
+         "id": 5329,
+         "sanitizedDescription": "+6.89 mana",
          "stats": {"FlatMPPoolMod": 6.8906},
          "description": "+6.89 mana",
          "name": "Greater Seal of Mana",
@@ -2239,6 +2421,8 @@
             "flat",
             "mark"
          ],
+         "id": 5133,
+         "sanitizedDescription": "+2.7 health",
          "stats": {"FlatHPPoolMod": 2.7027},
          "description": "+2.7 health",
          "name": "Mark of Health",
@@ -2263,6 +2447,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5328,
+         "sanitizedDescription": "+0.1 ability power per level (+1.8 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.1038},
          "description": "+0.1 ability power per level (+1.8 at champion level 18)",
          "name": "Greater Seal of Scaling Ability Power",
@@ -2287,6 +2473,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5115,
+         "sanitizedDescription": "+20.83 mana",
          "stats": {"FlatMPPoolMod": 20.8333},
          "description": "+20.83 mana",
          "name": "Lesser Quintessence of Mana",
@@ -2311,6 +2499,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5116,
+         "sanitizedDescription": "+2.31 mana per level (+41.58 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 2.3148},
          "description": "+2.31 mana per level (+41.58 at champion level 18)",
          "name": "Lesser Quintessence of Scaling Mana",
@@ -2335,6 +2525,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5117,
+         "sanitizedDescription": "+0.69 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.13888},
          "description": "+0.69 mana regen / 5 sec.",
          "name": "Lesser Quintessence of Mana Regeneration",
@@ -2359,6 +2551,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5118,
+         "sanitizedDescription": "+0.14 mana regen / 5 sec. per level (+2.52 at champion level 18)",
          "stats": {"rFlatMPRegenModPerLevel": 0.02712},
          "description": "+0.14 mana regen / 5 sec. per level (+2.52 at champion level 18)",
          "name": "Lesser Quintessence of Scaling Mana Regeneration",
@@ -2379,8 +2573,10 @@
       },
       "5410": {
          "tags": ["quintessence"],
-         "stats": {"PercentLifeStealMod": 0.0112},
-         "description": "+1.12% Lifesteal",
+         "id": 5410,
+         "sanitizedDescription": "+0.84% Life Steal",
+         "stats": {"PercentLifeStealMod": 0.0084},
+         "description": "+0.84% Life Steal",
          "name": "Lesser Quintessence of Life Steal",
          "image": {
             "w": 48,
@@ -2403,6 +2599,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5320,
+         "sanitizedDescription": "+0.1 magic resist per level (+1.8 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.0965},
          "description": "+0.1 magic resist per level (+1.8 at champion level 18)",
          "name": "Greater Seal of Scaling Magic Resist",
@@ -2427,6 +2625,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5119,
+         "sanitizedDescription": "+1.11 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 1.11},
          "description": "+1.11 magic penetration",
          "name": "Lesser Quintessence of Magic Penetration",
@@ -2447,8 +2647,10 @@
       },
       "5411": {
          "tags": ["quintessence"],
-         "stats": {"PercentLifeStealMod": 0.0156},
-         "description": "+1.56% Lifesteal",
+         "id": 5411,
+         "sanitizedDescription": "+1.17% Life Steal",
+         "stats": {"PercentLifeStealMod": 0.0117},
+         "description": "+1.17% Life Steal",
          "name": "Quintessence of Life Steal",
          "image": {
             "w": 48,
@@ -2471,8 +2673,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatHPRegenMod": 0.0864},
-         "description": "+0.43 health regen / 5 sec.",
+         "id": 5321,
+         "sanitizedDescription": "+0.56 health regen / 5 sec.",
+         "stats": {"FlatHPRegenMod": 0.1112},
+         "description": "+0.56 health regen / 5 sec.",
          "name": "Greater Seal of Health Regeneration",
          "image": {
             "w": 48,
@@ -2495,6 +2699,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5322,
+         "sanitizedDescription": "+0.11 health regen / 5 sec. per level (+1.98 at champion level 18)",
          "stats": {"rFlatHPRegenModPerLevel": 0.0225},
          "description": "+0.11 health regen / 5 sec. per level (+1.98 at champion level 18)",
          "name": "Greater Seal of Scaling Health Regeneration",
@@ -2515,6 +2721,8 @@
       },
       "5409": {
          "tags": ["quintessence"],
+         "id": 5409,
+         "sanitizedDescription": "+2% Spellvamp.",
          "stats": {"PercentSpellVampMod": 0.02},
          "description": "+2% Spellvamp.",
          "name": "Greater Quintessence of Spell Vamp",
@@ -2539,6 +2747,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 5404,
+         "sanitizedDescription": "+0.84% increased health.",
          "stats": {"PercentHPPoolMod": 0.0084},
          "description": "+0.84% increased health.",
          "name": "Lesser Quintessence of Percent Health",
@@ -2562,6 +2772,8 @@
             "utility",
             "seal"
          ],
+         "id": 5403,
+         "sanitizedDescription": "+0.25 gold / 10 sec.",
          "stats": {"rFlatGoldPer10Mod": 0.25},
          "description": "+0.25 gold / 10 sec.",
          "name": "Greater Seal of Gold",
@@ -2587,6 +2799,8 @@
             "magic",
             "mark"
          ],
+         "id": 5402,
+         "sanitizedDescription": "+0.9 Armor Penetration / +0.62 Magic Penetration",
          "stats": {
             "rFlatMagicPenetrationMod": 0.61,
             "rFlatArmorPenetrationMod": 0.9
@@ -2614,8 +2828,10 @@
             "perLevel",
             "seal"
          ],
-         "stats": {"rFlatHPModPerLevel": 1.0817},
-         "description": "+1.08 health per level (+19.44 at champion level 18)",
+         "id": 5316,
+         "sanitizedDescription": "+1.33 health per level (+24 at champion level 18)",
+         "stats": {"rFlatHPModPerLevel": 1.3334},
+         "description": "+1.33 health per level (+24 at champion level 18)",
          "name": "Greater Seal of Scaling Health",
          "image": {
             "w": 48,
@@ -2638,6 +2854,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 5121,
+         "sanitizedDescription": "+0.83% movement speed",
          "stats": {"PercentMovementSpeedMod": 0.008333},
          "description": "+0.83% movement speed",
          "name": "Lesser Quintessence of Movement Speed",
@@ -2663,6 +2881,8 @@
             "magic",
             "mark"
          ],
+         "id": 5401,
+         "sanitizedDescription": "+0.7 Armor Penetration / +0.48 Magic Penetration",
          "stats": {
             "rFlatMagicPenetrationMod": 0.48,
             "rFlatArmorPenetrationMod": 0.7
@@ -2690,8 +2910,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatHPPoolMod": 5.346},
-         "description": "+5.35 health",
+         "id": 5315,
+         "sanitizedDescription": "+8 health",
+         "stats": {"FlatHPPoolMod": 8},
+         "description": "+8 health",
          "name": "Greater Seal of Health",
          "image": {
             "w": 48,
@@ -2710,6 +2932,8 @@
       },
       "5408": {
          "tags": ["quintessence"],
+         "id": 5408,
+         "sanitizedDescription": "+1.56% Spellvamp.",
          "stats": {"PercentSpellVampMod": 0.0156},
          "description": "+1.56% Spellvamp.",
          "name": "Quintessence of Spell Vamp",
@@ -2734,8 +2958,10 @@
             "perLevel",
             "seal"
          ],
-         "stats": {"rFlatArmorModPerLevel": 0.15},
-         "description": "+0.15 armor per level (+2.7 at champion level 18)",
+         "id": 5318,
+         "sanitizedDescription": "+0.16 armor per level (+3 at champion level 18)",
+         "stats": {"rFlatArmorModPerLevel": 0.16667},
+         "description": "+0.16 armor per level (+3 at champion level 18)",
          "name": "Greater Seal of Scaling Armor",
          "image": {
             "w": 48,
@@ -2758,6 +2984,8 @@
             "flat",
             "mark"
          ],
+         "id": 5123,
+         "sanitizedDescription": "+0.74 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.735},
          "description": "+0.74 attack damage",
          "name": "Mark of Attack Damage",
@@ -2778,6 +3006,8 @@
       },
       "5407": {
          "tags": ["quintessence"],
+         "id": 5407,
+         "sanitizedDescription": "+1.12% Spellvamp.",
          "stats": {"PercentSpellVampMod": 0.0112},
          "description": "+1.12% Spellvamp.",
          "name": "Lesser Quintessence of Spell Vamp",
@@ -2802,8 +3032,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatArmorMod": 1.4068},
-         "description": "+1.41 armor",
+         "id": 5317,
+         "sanitizedDescription": "+1 armor",
+         "stats": {"FlatArmorMod": 1},
+         "description": "+1 armor",
          "name": "Greater Seal of Armor",
          "image": {
             "w": 48,
@@ -2826,6 +3058,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 5406,
+         "sanitizedDescription": "+1.5% increased health.",
          "stats": {"PercentHPPoolMod": 0.015},
          "description": "+1.5% increased health.",
          "name": "Greater Quintessence of Percent Health",
@@ -2850,6 +3084,8 @@
             "percent",
             "mark"
          ],
+         "id": 5125,
+         "sanitizedDescription": "+1.32% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.013208},
          "description": "+1.32% attack speed",
          "name": "Mark of Attack Speed",
@@ -2874,6 +3110,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 5405,
+         "sanitizedDescription": "+1.17% increased health.",
          "stats": {"PercentHPPoolMod": 0.0117},
          "description": "+1.17% increased health.",
          "name": "Quintessence of Percent Health",
@@ -2898,6 +3136,8 @@
             "flat",
             "seal"
          ],
+         "id": 5319,
+         "sanitizedDescription": "+0.74 magic resist",
          "stats": {"FlatSpellBlockMod": 0.7425},
          "description": "+0.74 magic resist",
          "name": "Greater Seal of Magic Resist",
@@ -2922,6 +3162,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5124,
+         "sanitizedDescription": "+0.1 attack damage per level (+1.89 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.105},
          "description": "+0.1 attack damage per level (+1.89 at champion level 18)",
          "name": "Mark of Scaling Attack Damage",
@@ -2946,6 +3188,8 @@
             "flat",
             "seal"
          ],
+         "id": 5311,
+         "sanitizedDescription": "+0.42% critical chance",
          "stats": {"FlatCritChanceMod": 0.004175},
          "description": "+0.42% critical chance",
          "name": "Greater Seal of Critical Chance",
@@ -2970,6 +3214,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5108,
+         "sanitizedDescription": "+0.16 health regen / 5 sec. per level (+2.88 at champion level 18)",
          "stats": {"rFlatHPRegenModPerLevel": 0.03126},
          "description": "+0.16 health regen / 5 sec. per level (+2.88 at champion level 18)",
          "name": "Lesser Quintessence of Scaling Health Regeneration",
@@ -2994,6 +3240,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5106,
+         "sanitizedDescription": "+0.21 magic resist per level (+3.78 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.2062},
          "description": "+0.21 magic resist per level (+3.78 at champion level 18)",
          "name": "Lesser Quintessence of Scaling Magic Resist",
@@ -3018,6 +3266,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5107,
+         "sanitizedDescription": "+1.5 health regen / 5 sec.",
          "stats": {"FlatHPRegenMod": 0.3},
          "description": "+1.5 health regen / 5 sec.",
          "name": "Lesser Quintessence of Health Regeneration",
@@ -3042,6 +3292,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5104,
+         "sanitizedDescription": "+0.21 armor per level (+3.78 at champion level 18)",
          "stats": {"rFlatArmorModPerLevel": 0.2083},
          "description": "+0.21 armor per level (+3.78 at champion level 18)",
          "name": "Lesser Quintessence of Scaling Armor",
@@ -3066,6 +3318,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5105,
+         "sanitizedDescription": "+2.22 magic resist",
          "stats": {"FlatSpellBlockMod": 2.22},
          "description": "+2.22 magic resist",
          "name": "Lesser Quintessence of Magic Resist",
@@ -3090,6 +3344,8 @@
             "flat",
             "mark"
          ],
+         "id": 5007,
+         "sanitizedDescription": "+0.52% critical chance",
          "stats": {"FlatCritChanceMod": 0.005155},
          "description": "+0.52% critical chance",
          "name": "Lesser Mark of Critical Chance",
@@ -3114,6 +3370,8 @@
             "flat",
             "mark"
          ],
+         "id": 5005,
+         "sanitizedDescription": "+1.24% critical damage",
          "stats": {"FlatCritDamageMod": 0.012397},
          "description": "+1.24% critical damage",
          "name": "Lesser Mark of Critical Damage",
@@ -3138,6 +3396,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5213,
+         "sanitizedDescription": "+1.75 attack damage",
          "stats": {"FlatPhysicalDamageMod": 1.75},
          "description": "+1.75 attack damage",
          "name": "Quintessence of Attack Damage",
@@ -3162,6 +3422,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5210,
+         "sanitizedDescription": "+0.05 mana regen / 5 sec. per level (+0.9 at champion level 18)",
          "stats": {"rFlatMPRegenModPerLevel": 0.01},
          "description": "+0.05 mana regen / 5 sec. per level (+0.9 at champion level 18)",
          "name": "Seal of Scaling Mana Regeneration",
@@ -3186,6 +3448,8 @@
             "flat",
             "mark"
          ],
+         "id": 5009,
+         "sanitizedDescription": "+0.72 armor penetration",
          "stats": {"rFlatArmorPenetrationMod": 0.72},
          "description": "+0.72 armor penetration",
          "name": "Lesser Mark of Armor Penetration",
@@ -3210,6 +3474,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5206,
+         "sanitizedDescription": "+0.08 ability power per level (+1.44 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.0808},
          "description": "+0.08 ability power per level (+1.44 at champion level 18)",
          "name": "Seal of Scaling Ability Power",
@@ -3234,6 +3500,8 @@
             "flat",
             "mark"
          ],
+         "id": 5011,
+         "sanitizedDescription": "+1.93 health",
          "stats": {"FlatHPPoolMod": 1.9305},
          "description": "+1.93 health",
          "name": "Lesser Mark of Health",
@@ -3258,6 +3526,8 @@
             "flat",
             "seal"
          ],
+         "id": 5205,
+         "sanitizedDescription": "+0.46 ability power",
          "stats": {"FlatMagicDamageMod": 0.462},
          "description": "+0.46 ability power",
          "name": "Seal of Ability Power",
@@ -3278,6 +3548,8 @@
       },
       "5203": {
          "tags": ["seal"],
+         "id": 5203,
+         "sanitizedDescription": "-0.29% cooldowns",
          "stats": {"rPercentCooldownMod": -0.002889},
          "description": "-0.29% cooldowns",
          "name": "Seal of Cooldown Reduction",
@@ -3302,6 +3574,8 @@
             "flat",
             "mark"
          ],
+         "id": 5015,
+         "sanitizedDescription": "+0.43 magic resist",
          "stats": {"FlatSpellBlockMod": 0.43},
          "description": "+0.43 magic resist",
          "name": "Lesser Mark of Magic Resist",
@@ -3326,6 +3600,8 @@
             "flat",
             "seal"
          ],
+         "id": 5209,
+         "sanitizedDescription": "+0.32 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.0632},
          "description": "+0.32 mana regen / 5 sec.",
          "name": "Seal of Mana Regeneration",
@@ -3350,6 +3626,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5208,
+         "sanitizedDescription": "+0.91 mana per level (+16.38 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 0.9074},
          "description": "+0.91 mana per level (+16.38 at champion level 18)",
          "name": "Seal of Scaling Mana",
@@ -3374,6 +3652,8 @@
             "flat",
             "mark"
          ],
+         "id": 5013,
+         "sanitizedDescription": "+0.51 armor",
          "stats": {"FlatArmorMod": 0.508},
          "description": "+0.51 armor",
          "name": "Lesser Mark of Armor",
@@ -3398,6 +3678,8 @@
             "flat",
             "seal"
          ],
+         "id": 5207,
+         "sanitizedDescription": "+5.36 mana",
          "stats": {"FlatMPPoolMod": 5.3594},
          "description": "+5.36 mana",
          "name": "Seal of Mana",
@@ -3422,6 +3704,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5012,
+         "sanitizedDescription": "+0.3 health per level (+5.4 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 0.3005},
          "description": "+0.3 health per level (+5.4 at champion level 18)",
          "name": "Lesser Mark of Scaling Health",
@@ -3446,6 +3730,8 @@
             "flat",
             "seal"
          ],
+         "id": 5309,
+         "sanitizedDescription": "+0.78% critical damage",
          "stats": {"FlatCritDamageMod": 0.00781},
          "description": "+0.78% critical damage",
          "name": "Greater Seal of Critical Damage",
@@ -3470,6 +3756,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5114,
+         "sanitizedDescription": "+0.24 ability power per level (+4.32 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.2404},
          "description": "+0.24 ability power per level (+4.32 at champion level 18)",
          "name": "Lesser Quintessence of Scaling Ability Power",
@@ -3494,6 +3782,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5113,
+         "sanitizedDescription": "+2.75 ability power",
          "stats": {"FlatMagicDamageMod": 2.75},
          "description": "+2.75 ability power",
          "name": "Lesser Quintessence of Ability Power",
@@ -3518,6 +3808,8 @@
             "percent",
             "seal"
          ],
+         "id": 5307,
+         "sanitizedDescription": "+0.76% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.007642},
          "description": "+0.76% attack speed",
          "name": "Greater Seal of Attack Speed",
@@ -3538,8 +3830,10 @@
       },
       "5112": {
          "tags": ["quintessence"],
-         "stats": {"rPercentCooldownModPerLevel": -8.0E-4},
-         "description": "-0.08% cooldowns per level (-1.44% at champion level 18)",
+         "id": 5112,
+         "sanitizedDescription": "-0.15% cooldowns per level (-2.8% at champion level 18)",
+         "stats": {"rPercentCooldownModPerLevel": -0.0015556},
+         "description": "-0.15% cooldowns per level (-2.8% at champion level 18)",
          "name": "Lesser Quintessence of Scaling Cooldown Reduction",
          "image": {
             "w": 48,
@@ -3562,6 +3856,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5306,
+         "sanitizedDescription": "+0.06 attack damage per level (+1.09 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.0608},
          "description": "+0.06 attack damage per level (+1.09 at champion level 18)",
          "name": "Greater Seal of Scaling Attack Damage",
@@ -3582,8 +3878,10 @@
       },
       "5111": {
          "tags": ["quintessence"],
-         "stats": {"rPercentCooldownMod": -0.0093},
-         "description": "-0.93% cooldowns",
+         "id": 5111,
+         "sanitizedDescription": "-1.4% cooldowns",
+         "stats": {"rPercentCooldownMod": -0.014},
+         "description": "-1.4% cooldowns",
          "name": "Lesser Quintessence of Cooldown Reduction",
          "image": {
             "w": 48,
@@ -3606,6 +3904,8 @@
             "flat",
             "seal"
          ],
+         "id": 5305,
+         "sanitizedDescription": "+0.43 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.4254},
          "description": "+0.43 attack damage",
          "name": "Greater Seal of Attack Damage",
@@ -3630,6 +3930,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5303,
+         "sanitizedDescription": "+0.63 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 0.63},
          "description": "+0.63 magic penetration",
          "name": "Greater Glyph of Magic Penetration",
@@ -3654,8 +3956,10 @@
             "perLevel",
             "glyph"
          ],
-         "stats": {"rFlatMPRegenModPerLevel": 0.011},
-         "description": "+0.055 mana regen / 5 sec. per level (+0.99 at champion level 18)",
+         "id": 5302,
+         "sanitizedDescription": "+0.06 mana regen / 5 sec. per level (+1.2 at champion level 18)",
+         "stats": {"rFlatMPRegenModPerLevel": 0.01334},
+         "description": "+0.06 mana regen / 5 sec. per level (+1.2 at champion level 18)",
          "name": "Greater Glyph of Scaling Mana Regeneration",
          "image": {
             "w": 48,
@@ -3678,6 +3982,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5300,
+         "sanitizedDescription": "+1.42 mana per level (+25.56 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 1.4167},
          "description": "+1.42 mana per level (+25.56 at champion level 18)",
          "name": "Greater Glyph of Scaling Mana",
@@ -3702,8 +4008,10 @@
             "flat",
             "glyph"
          ],
-         "stats": {"FlatMPRegenMod": 0.0625},
-         "description": "+0.31 mana regen / 5 sec.",
+         "id": 5301,
+         "sanitizedDescription": "+0.33 mana regen / 5 sec.",
+         "stats": {"FlatMPRegenMod": 0.066},
+         "description": "+0.33 mana regen / 5 sec.",
          "name": "Greater Glyph of Mana Regeneration",
          "image": {
             "w": 48,
@@ -3726,6 +4034,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5200,
+         "sanitizedDescription": "+0.09 health regen / 5 sec. per level (+1.62 at champion level 18)",
          "stats": {"rFlatHPRegenModPerLevel": 0.0175},
          "description": "+0.09 health regen / 5 sec. per level (+1.62 at champion level 18)",
          "name": "Seal of Scaling Health Regeneration",
@@ -3750,6 +4060,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5002,
+         "sanitizedDescription": "+0.08 attack damage per level (+1.35 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.075},
          "description": "+0.08 attack damage per level (+1.35 at champion level 18)",
          "name": "Lesser Mark of Scaling Attack Damage",
@@ -3774,6 +4086,8 @@
             "flat",
             "mark"
          ],
+         "id": 5001,
+         "sanitizedDescription": "+0.53 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.525},
          "description": "+0.53 attack damage",
          "name": "Lesser Mark of Attack Damage",
@@ -3798,6 +4112,8 @@
             "percent",
             "mark"
          ],
+         "id": 5003,
+         "sanitizedDescription": "+0.94% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.009434},
          "description": "+0.94% attack speed",
          "name": "Lesser Mark of Attack Speed",
@@ -3822,6 +4138,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5101,
+         "sanitizedDescription": "+14.5 health",
          "stats": {"FlatHPPoolMod": 14.5},
          "description": "+14.5 health",
          "name": "Lesser Quintessence of Health",
@@ -3846,6 +4164,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5103,
+         "sanitizedDescription": "+2.37 armor",
          "stats": {"FlatArmorMod": 2.3684},
          "description": "+2.37 armor",
          "name": "Lesser Quintessence of Armor",
@@ -3870,6 +4190,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5102,
+         "sanitizedDescription": "+1.5 health per level (+27 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 1.5024},
          "description": "+1.5 health per level (+27 at champion level 18)",
          "name": "Lesser Quintessence of Scaling Health",
@@ -3894,8 +4216,10 @@
             "perLevel",
             "glyph"
          ],
-         "stats": {"rFlatSpellBlockModPerLevel": 0.1155},
-         "description": "+0.12 magic resist per level (+2.16 at champion level 18)",
+         "id": 5168,
+         "sanitizedDescription": "+0.13 magic resist per level (+2.34 at champion level 18)",
+         "stats": {"rFlatSpellBlockModPerLevel": 0.13},
+         "description": "+0.13 magic resist per level (+2.34 at champion level 18)",
          "name": "Glyph of Scaling Magic Resist",
          "image": {
             "w": 48,
@@ -3918,6 +4242,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5169,
+         "sanitizedDescription": "+0.21 health regen / 5 sec.",
          "stats": {"FlatHPRegenMod": 0.042},
          "description": "+0.21 health regen / 5 sec.",
          "name": "Glyph of Health Regeneration",
@@ -3942,6 +4268,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5167,
+         "sanitizedDescription": "+1.04 magic resist",
          "stats": {"FlatSpellBlockMod": 1.04},
          "description": "+1.04 magic resist",
          "name": "Glyph of Magic Resist",
@@ -3966,6 +4294,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5164,
+         "sanitizedDescription": "+0.42 health per level (+7.56 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 0.4207},
          "description": "+0.42 health per level (+7.56 at champion level 18)",
          "name": "Glyph of Scaling Health",
@@ -3990,6 +4320,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5165,
+         "sanitizedDescription": "+0.55 armor",
          "stats": {"FlatArmorMod": 0.5471},
          "description": "+0.55 armor",
          "name": "Glyph of Armor",
@@ -4014,6 +4346,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5163,
+         "sanitizedDescription": "+2.08 health",
          "stats": {"FlatHPPoolMod": 2.079},
          "description": "+2.08 health",
          "name": "Glyph of Health",
@@ -4034,6 +4368,8 @@
       },
       "5021": {
          "tags": ["mark"],
+         "id": 5021,
+         "sanitizedDescription": "-0.11% cooldowns",
          "stats": {"rPercentCooldownMod": -0.001112},
          "description": "-0.11% cooldowns",
          "name": "Lesser Mark of Cooldown Reduction",
@@ -4058,6 +4394,8 @@
             "flat",
             "mark"
          ],
+         "id": 5025,
+         "sanitizedDescription": "+3.28 mana",
          "stats": {"FlatMPPoolMod": 3.2813},
          "description": "+3.28 mana",
          "name": "Lesser Mark of Mana",
@@ -4082,6 +4420,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5026,
+         "sanitizedDescription": "+0.65 mana per level (+11.7 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 0.6481},
          "description": "+0.65 mana per level (+11.7 at champion level 18)",
          "name": "Lesser Mark of Scaling Mana",
@@ -4106,6 +4446,8 @@
             "flat",
             "mark"
          ],
+         "id": 5023,
+         "sanitizedDescription": "+0.33 ability power",
          "stats": {"FlatMagicDamageMod": 0.33},
          "description": "+0.33 ability power",
          "name": "Lesser Mark of Ability Power",
@@ -4130,6 +4472,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5024,
+         "sanitizedDescription": "+0.06 ability power per level (+1.08 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.0577},
          "description": "+0.06 ability power per level (+1.08 at champion level 18)",
          "name": "Lesser Mark of Scaling Ability Power",
@@ -4154,6 +4498,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5016,
+         "sanitizedDescription": "+0.04 magic resist per level (+0.72 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.0412},
          "description": "+0.04 magic resist per level (+0.72 at champion level 18)",
          "name": "Lesser Mark of Scaling Magic Resist",
@@ -4178,6 +4524,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5159,
+         "sanitizedDescription": "+0.22% critical chance",
          "stats": {"FlatCritChanceMod": 0.002165},
          "description": "+0.22% critical chance",
          "name": "Glyph of Critical Chance",
@@ -4202,6 +4550,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5177,
+         "sanitizedDescription": "+8.75 mana",
          "stats": {"FlatMPPoolMod": 8.75},
          "description": "+8.75 mana",
          "name": "Glyph of Mana",
@@ -4226,6 +4576,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5178,
+         "sanitizedDescription": "+1.1 mana per level (+19.8 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 1.1019},
          "description": "+1.1 mana per level (+19.8 at champion level 18)",
          "name": "Glyph of Scaling Mana",
@@ -4250,8 +4602,10 @@
             "flat",
             "glyph"
          ],
-         "stats": {"FlatMPRegenMod": 0.04862},
-         "description": "+0.24 mana regen / 5 sec.",
+         "id": 5179,
+         "sanitizedDescription": "+0.26 mana regen / 5 sec.",
+         "stats": {"FlatMPRegenMod": 0.052},
+         "description": "+0.26 mana regen / 5 sec.",
          "name": "Glyph of Mana Regeneration",
          "image": {
             "w": 48,
@@ -4270,6 +4624,8 @@
       },
       "5173": {
          "tags": ["glyph"],
+         "id": 5173,
+         "sanitizedDescription": "-0.67% cooldowns",
          "stats": {"rPercentCooldownMod": -0.00667},
          "description": "-0.67% cooldowns",
          "name": "Glyph of Cooldown Reduction",
@@ -4290,8 +4646,10 @@
       },
       "5174": {
          "tags": ["glyph"],
-         "stats": {"rPercentCooldownModPerLevel": -5.0E-4},
-         "description": "-0.05% cooldowns per level (-0.9% at champion level 18)",
+         "id": 5174,
+         "sanitizedDescription": "-0.07% cooldowns per level (-1.3% at champion level 18)",
+         "stats": {"rPercentCooldownModPerLevel": -7.223E-4},
+         "description": "-0.07% cooldowns per level (-1.3% at champion level 18)",
          "name": "Glyph of Scaling Cooldown Reduction",
          "image": {
             "w": 48,
@@ -4314,6 +4672,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5175,
+         "sanitizedDescription": "+0.92 ability power",
          "stats": {"FlatMagicDamageMod": 0.92},
          "description": "+0.92 ability power",
          "name": "Glyph of Ability Power",
@@ -4338,6 +4698,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5176,
+         "sanitizedDescription": "+0.13 ability power per level (+2.34 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.1346},
          "description": "+0.13 ability power per level (+2.34 at champion level 18)",
          "name": "Glyph of Scaling Ability Power",
@@ -4362,6 +4724,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5031,
+         "sanitizedDescription": "+0.16 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.1575},
          "description": "+0.16 attack damage",
          "name": "Lesser Glyph of Attack Damage",
@@ -4386,6 +4750,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5032,
+         "sanitizedDescription": "+0.02 attack damage per level (+0.36 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.0225},
          "description": "+0.02 attack damage per level (+0.36 at champion level 18)",
          "name": "Lesser Glyph of Scaling Attack Damage",
@@ -4410,6 +4776,8 @@
             "percent",
             "glyph"
          ],
+         "id": 5033,
+         "sanitizedDescription": "+0.35% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.003538},
          "description": "+0.35% attack speed",
          "name": "Lesser Glyph of Attack Speed",
@@ -4434,6 +4802,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5035,
+         "sanitizedDescription": "+0.31% critical damage",
          "stats": {"FlatCritDamageMod": 0.003099},
          "description": "+0.31% critical damage",
          "name": "Lesser Glyph of Critical Damage",
@@ -4458,6 +4828,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5037,
+         "sanitizedDescription": "+0.15% critical chance",
          "stats": {"FlatCritChanceMod": 0.001546},
          "description": "+0.15% critical chance",
          "name": "Lesser Glyph of Critical Chance",
@@ -4482,6 +4854,8 @@
             "flat",
             "mark"
          ],
+         "id": 10001,
+         "sanitizedDescription": "+2.23% critical damage",
          "stats": {"FlatCritDamageMod": 0.022314},
          "description": "+2.23% critical damage",
          "name": "Razer Mark of Precision",
@@ -4506,6 +4880,8 @@
             "flat",
             "mark"
          ],
+         "id": 5027,
+         "sanitizedDescription": "+0.15 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.02916},
          "description": "+0.15 mana regen / 5 sec.",
          "name": "Lesser Mark of Mana Regeneration",
@@ -4530,6 +4906,8 @@
             "percent",
             "quintessence"
          ],
+         "id": 10002,
+         "sanitizedDescription": "+1.5% movement speed",
          "stats": {"PercentMovementSpeedMod": 0.015},
          "description": "+1.5% movement speed",
          "name": "Razer Quintessence of Speed",
@@ -4554,6 +4932,8 @@
             "flat",
             "mark"
          ],
+         "id": 5029,
+         "sanitizedDescription": "+0.49 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 0.49},
          "description": "+0.49 magic penetration",
          "name": "Lesser Mark of Magic Penetration",
@@ -4579,6 +4959,8 @@
             "magic",
             "quintessence"
          ],
+         "id": 5418,
+         "sanitizedDescription": "+1.79 Armor Penetration / +1.4 Magic Penetration",
          "stats": {
             "rFlatMagicPenetrationMod": 1.4,
             "rFlatArmorPenetrationMod": 1.79
@@ -4602,6 +4984,8 @@
       },
       "5143": {
          "tags": ["mark"],
+         "id": 5143,
+         "sanitizedDescription": "-0.16% cooldowns",
          "stats": {"rPercentCooldownMod": -0.001556},
          "description": "-0.16% cooldowns",
          "name": "Mark of Cooldown Reduction",
@@ -4627,6 +5011,8 @@
             "magic",
             "quintessence"
          ],
+         "id": 5416,
+         "sanitizedDescription": "+0.99 Armor Penetration / +0.78 Magic Penetration",
          "stats": {
             "rFlatMagicPenetrationMod": 0.78,
             "rFlatArmorPenetrationMod": 0.99
@@ -4655,6 +5041,8 @@
             "magic",
             "quintessence"
          ],
+         "id": 5417,
+         "sanitizedDescription": "+1.39 Armor Penetration / +1.09 Magic Penetration",
          "stats": {
             "rFlatMagicPenetrationMod": 1.09,
             "rFlatArmorPenetrationMod": 1.39
@@ -4682,6 +5070,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5146,
+         "sanitizedDescription": "+0.08 ability power per level (+1.44 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.0808},
          "description": "+0.08 ability power per level (+1.44 at champion level 18)",
          "name": "Mark of Scaling Ability Power",
@@ -4706,6 +5096,8 @@
             "percent",
             "seal"
          ],
+         "id": 5414,
+         "sanitizedDescription": "+0.39% Health.",
          "stats": {"PercentHPPoolMod": 0.0039},
          "description": "+0.39% Health.",
          "name": "Seal of Percent Health",
@@ -4730,6 +5122,8 @@
             "flat",
             "mark"
          ],
+         "id": 5147,
+         "sanitizedDescription": "+4.59 mana",
          "stats": {"FlatMPPoolMod": 4.5938},
          "description": "+4.59 mana",
          "name": "Mark of Mana",
@@ -4754,6 +5148,8 @@
             "percent",
             "seal"
          ],
+         "id": 5415,
+         "sanitizedDescription": "+0.5% Health.",
          "stats": {"PercentHPPoolMod": 0.005},
          "description": "+0.5% Health.",
          "name": "Greater Seal of Percent Health",
@@ -4774,8 +5170,10 @@
       },
       "5412": {
          "tags": ["quintessence"],
-         "stats": {"PercentLifeStealMod": 0.02},
-         "description": "+2% Lifesteal.",
+         "id": 5412,
+         "sanitizedDescription": "+1.5% Life Steal.",
+         "stats": {"PercentLifeStealMod": 0.015},
+         "description": "+1.5% Life Steal.",
          "name": "Greater Quintessence of Life Steal",
          "image": {
             "w": 48,
@@ -4798,6 +5196,8 @@
             "flat",
             "mark"
          ],
+         "id": 5145,
+         "sanitizedDescription": "+0.46 ability power",
          "stats": {"FlatMagicDamageMod": 0.462},
          "description": "+0.46 ability power",
          "name": "Mark of Ability Power",
@@ -4822,6 +5222,8 @@
             "percent",
             "seal"
          ],
+         "id": 5413,
+         "sanitizedDescription": "+0.28% Health.",
          "stats": {"PercentHPPoolMod": 0.0028},
          "description": "+0.28% Health.",
          "name": "Lesser Seal of Percent Health",
@@ -4846,6 +5248,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5047,
+         "sanitizedDescription": "+0.15 health regen / 5 sec.",
          "stats": {"FlatHPRegenMod": 0.03},
          "description": "+0.15 health regen / 5 sec.",
          "name": "Lesser Glyph of Health Regeneration",
@@ -4870,6 +5274,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5045,
+         "sanitizedDescription": "+0.74 magic resist",
          "stats": {"FlatSpellBlockMod": 0.74},
          "description": "+0.74 magic resist",
          "name": "Lesser Glyph of Magic Resist",
@@ -4894,8 +5300,10 @@
             "perLevel",
             "glyph"
          ],
-         "stats": {"rFlatSpellBlockModPerLevel": 0.0825},
-         "description": "+0.08 magic resist per level (+1.44 at champion level 18)",
+         "id": 5046,
+         "sanitizedDescription": "+0.09 magic resist per level (+1.68 at champion level 18)",
+         "stats": {"rFlatSpellBlockModPerLevel": 0.09333},
+         "description": "+0.09 magic resist per level (+1.68 at champion level 18)",
          "name": "Lesser Glyph of Scaling Magic Resist",
          "image": {
             "w": 48,
@@ -4918,6 +5326,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5043,
+         "sanitizedDescription": "+0.39 armor",
          "stats": {"FlatArmorMod": 0.3908},
          "description": "+0.39 armor",
          "name": "Lesser Glyph of Armor",
@@ -4942,6 +5352,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5041,
+         "sanitizedDescription": "+1.49 health",
          "stats": {"FlatHPPoolMod": 1.485},
          "description": "+1.49 health",
          "name": "Lesser Glyph of Health",
@@ -4966,6 +5378,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5042,
+         "sanitizedDescription": "+0.3 health per level (+5.4 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 0.3005},
          "description": "+0.3 health per level (+5.4 at champion level 18)",
          "name": "Lesser Glyph of Scaling Health",
@@ -4990,6 +5404,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5138,
+         "sanitizedDescription": "+0.06 magic resist per level (+1.08 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.0577},
          "description": "+0.06 magic resist per level (+1.08 at champion level 18)",
          "name": "Mark of Scaling Magic Resist",
@@ -5014,6 +5430,8 @@
             "flat",
             "mark"
          ],
+         "id": 5137,
+         "sanitizedDescription": "+0.6 magic resist",
          "stats": {"FlatSpellBlockMod": 0.6},
          "description": "+0.6 magic resist",
          "name": "Mark of Magic Resist",
@@ -5038,6 +5456,8 @@
             "flat",
             "mark"
          ],
+         "id": 5151,
+         "sanitizedDescription": "+0.68 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 0.68},
          "description": "+0.68 magic penetration",
          "name": "Mark of Magic Penetration",
@@ -5062,6 +5482,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5153,
+         "sanitizedDescription": "+0.22 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.2205},
          "description": "+0.22 attack damage",
          "name": "Glyph of Attack Damage",
@@ -5082,6 +5504,8 @@
       },
       "5051": {
          "tags": ["glyph"],
+         "id": 5051,
+         "sanitizedDescription": "-0.47% cooldowns",
          "stats": {"rPercentCooldownMod": -0.0047},
          "description": "-0.47% cooldowns",
          "name": "Lesser Glyph of Cooldown Reduction",
@@ -5106,6 +5530,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5154,
+         "sanitizedDescription": "+0.03 attack damage per level (+0.57 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.0315},
          "description": "+0.03 attack damage per level (+0.57 at champion level 18)",
          "name": "Glyph of Scaling Attack Damage",
@@ -5130,6 +5556,8 @@
             "percent",
             "glyph"
          ],
+         "id": 5155,
+         "sanitizedDescription": "+0.5% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.004953},
          "description": "+0.5% attack speed",
          "name": "Glyph of Attack Speed",
@@ -5154,6 +5582,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5157,
+         "sanitizedDescription": "+0.43% critical damage",
          "stats": {"FlatCritDamageMod": 0.004339},
          "description": "+0.43% critical damage",
          "name": "Glyph of Critical Damage",
@@ -5178,6 +5608,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5056,
+         "sanitizedDescription": "+0.79 mana per level (+14.22 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 0.787},
          "description": "+0.79 mana per level (+14.22 at champion level 18)",
          "name": "Lesser Glyph of Scaling Mana",
@@ -5202,8 +5634,10 @@
             "flat",
             "glyph"
          ],
-         "stats": {"FlatMPRegenMod": 0.03472},
-         "description": "+0.17 mana regen / 5 sec.",
+         "id": 5057,
+         "sanitizedDescription": "+0.19 mana regen / 5 sec.",
+         "stats": {"FlatMPRegenMod": 0.038},
+         "description": "+0.19 mana regen / 5 sec.",
          "name": "Lesser Glyph of Mana Regeneration",
          "image": {
             "w": 48,
@@ -5226,8 +5660,10 @@
             "perLevel",
             "glyph"
          ],
-         "stats": {"rFlatMPRegenModPerLevel": 0.006},
-         "description": "+0.03 mana regen / 5 sec. per level (+0.54 at champion level 18)",
+         "id": 5058,
+         "sanitizedDescription": "+0.04 mana regen / 5 sec. per level (+0.67 at champion level 18)",
+         "stats": {"rFlatMPRegenModPerLevel": 0.007444},
+         "description": "+0.04 mana regen / 5 sec. per level (+0.67 at champion level 18)",
          "name": "Lesser Glyph of Scaling Mana Regeneration",
          "image": {
             "w": 48,
@@ -5250,6 +5686,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5059,
+         "sanitizedDescription": "+0.35 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 0.35},
          "description": "+0.35 magic penetration",
          "name": "Lesser Glyph of Magic Penetration",
@@ -5270,8 +5708,10 @@
       },
       "5052": {
          "tags": ["glyph"],
-         "stats": {"rPercentCooldownModPerLevel": -4.0E-4},
-         "description": "-0.04% cooldowns per level (-0.72% at champion level 18)",
+         "id": 5052,
+         "sanitizedDescription": "-0.05% cooldowns per level (-0.93% at champion level 18)",
+         "stats": {"rPercentCooldownModPerLevel": -5.1667E-4},
+         "description": "-0.05% cooldowns per level (-0.93% at champion level 18)",
          "name": "Lesser Glyph of Scaling Cooldown Reduction",
          "image": {
             "w": 48,
@@ -5294,6 +5734,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5053,
+         "sanitizedDescription": "+0.66 ability power",
          "stats": {"FlatMagicDamageMod": 0.66},
          "description": "+0.66 ability power",
          "name": "Lesser Glyph of Ability Power",
@@ -5318,6 +5760,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5054,
+         "sanitizedDescription": "+0.1 ability power per level (+1.8 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.0962},
          "description": "+0.1 ability power per level (+1.8 at champion level 18)",
          "name": "Lesser Glyph of Scaling Ability Power",
@@ -5342,6 +5786,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5055,
+         "sanitizedDescription": "+6.25 mana",
          "stats": {"FlatMPPoolMod": 6.25},
          "description": "+6.25 mana",
          "name": "Lesser Glyph of Mana",
@@ -5366,6 +5812,8 @@
             "flat",
             "mark"
          ],
+         "id": 5149,
+         "sanitizedDescription": "+0.2 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.04084},
          "description": "+0.2 mana regen / 5 sec.",
          "name": "Mark of Mana Regeneration",
@@ -5390,6 +5838,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5148,
+         "sanitizedDescription": "+0.91 mana per level (+16.38 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 0.9074},
          "description": "+0.91 mana per level (+16.38 at champion level 18)",
          "name": "Mark of Scaling Mana",
@@ -5414,6 +5864,8 @@
             "flat",
             "seal"
          ],
+         "id": 5065,
+         "sanitizedDescription": "+0.43% critical damage",
          "stats": {"FlatCritDamageMod": 0.004339},
          "description": "+0.43% critical damage",
          "name": "Lesser Seal of Critical Damage",
@@ -5438,6 +5890,8 @@
             "flat",
             "mark"
          ],
+         "id": 5259,
+         "sanitizedDescription": "+0.77 magic resist",
          "stats": {"FlatSpellBlockMod": 0.77},
          "description": "+0.77 magic resist",
          "name": "Greater Mark of Magic Resist",
@@ -5462,6 +5916,8 @@
             "percent",
             "seal"
          ],
+         "id": 5063,
+         "sanitizedDescription": "+0.42% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.004245},
          "description": "+0.42% attack speed",
          "name": "Lesser Seal of Attack Speed",
@@ -5486,6 +5942,8 @@
             "flat",
             "seal"
          ],
+         "id": 5067,
+         "sanitizedDescription": "+0.23% critical chance",
          "stats": {"FlatCritChanceMod": 0.00232},
          "description": "+0.23% critical chance",
          "name": "Lesser Seal of Critical Chance",
@@ -5510,6 +5968,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5062,
+         "sanitizedDescription": "+0.03 attack damage per level (+0.61 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.0338},
          "description": "+0.03 attack damage per level (+0.61 at champion level 18)",
          "name": "Lesser Seal of Scaling Attack Damage",
@@ -5534,6 +5994,8 @@
             "flat",
             "seal"
          ],
+         "id": 5061,
+         "sanitizedDescription": "+0.24 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.2364},
          "description": "+0.24 attack damage",
          "name": "Lesser Seal of Attack Damage",
@@ -5558,6 +6020,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5260,
+         "sanitizedDescription": "+0.07 magic resist per level (+1.26 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.0742},
          "description": "+0.07 magic resist per level (+1.26 at champion level 18)",
          "name": "Greater Mark of Scaling Magic Resist",
@@ -5582,6 +6046,8 @@
             "flat",
             "mark"
          ],
+         "id": 5267,
+         "sanitizedDescription": "+0.59 ability power",
          "stats": {"FlatMagicDamageMod": 0.594},
          "description": "+0.59 ability power",
          "name": "Greater Mark of Ability Power",
@@ -5606,6 +6072,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5268,
+         "sanitizedDescription": "+0.1 ability power per level (+1.8 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.1038},
          "description": "+0.1 ability power per level (+1.8 at champion level 18)",
          "name": "Greater Mark of Scaling Ability Power",
@@ -5626,6 +6094,8 @@
       },
       "5265": {
          "tags": ["mark"],
+         "id": 5265,
+         "sanitizedDescription": "-0.2% cooldowns",
          "stats": {"rPercentCooldownMod": -0.002},
          "description": "-0.2% cooldowns",
          "name": "Greater Mark of Cooldown Reduction",
@@ -5650,6 +6120,8 @@
             "flat",
             "seal"
          ],
+         "id": 5075,
+         "sanitizedDescription": "+0.41 magic resist",
          "stats": {"FlatSpellBlockMod": 0.4125},
          "description": "+0.41 magic resist",
          "name": "Lesser Seal of Magic Resist",
@@ -5674,8 +6146,10 @@
             "perLevel",
             "seal"
          ],
-         "stats": {"rFlatArmorModPerLevel": 0.0833},
-         "description": "+0.08 armor per level (+1.44 at champion level 18)",
+         "id": 5074,
+         "sanitizedDescription": "+0.09 armor per level (+1.68 at champion level 18)",
+         "stats": {"rFlatArmorModPerLevel": 0.09333},
+         "description": "+0.09 armor per level (+1.68 at champion level 18)",
          "name": "Lesser Seal of Scaling Armor",
          "image": {
             "w": 48,
@@ -5698,6 +6172,8 @@
             "flat",
             "mark"
          ],
+         "id": 5269,
+         "sanitizedDescription": "+5.91 mana",
          "stats": {"FlatMPPoolMod": 5.9063},
          "description": "+5.91 mana",
          "name": "Greater Mark of Mana",
@@ -5722,8 +6198,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatHPRegenMod": 0.048},
-         "description": "+0.24 health regen / 5 sec.",
+         "id": 5077,
+         "sanitizedDescription": "+0.31 health regen / 5 sec.",
+         "stats": {"FlatHPRegenMod": 0.062},
+         "description": "+0.31 health regen / 5 sec.",
          "name": "Lesser Seal of Health Regeneration",
          "image": {
             "w": 48,
@@ -5746,6 +6224,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5076,
+         "sanitizedDescription": "+0.05 magic resist per level (+0.9 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.0536},
          "description": "+0.05 magic resist per level (+0.9 at champion level 18)",
          "name": "Lesser Seal of Scaling Magic Resist",
@@ -5770,6 +6250,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5078,
+         "sanitizedDescription": "+0.06 health regen / 5 sec. per level (+1.08 at champion level 18)",
          "stats": {"rFlatHPRegenModPerLevel": 0.0125},
          "description": "+0.06 health regen / 5 sec. per level (+1.08 at champion level 18)",
          "name": "Lesser Seal of Scaling Health Regeneration",
@@ -5794,8 +6276,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatHPPoolMod": 2.97},
-         "description": "+2.97 health",
+         "id": 5071,
+         "sanitizedDescription": "+4.48 health",
+         "stats": {"FlatHPPoolMod": 4.48},
+         "description": "+4.48 health",
          "name": "Lesser Seal of Health",
          "image": {
             "w": 48,
@@ -5818,8 +6302,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatArmorMod": 0.7816},
-         "description": "+0.78 armor",
+         "id": 5073,
+         "sanitizedDescription": "+0.56 armor",
+         "stats": {"FlatArmorMod": 0.56},
+         "description": "+0.56 armor",
          "name": "Lesser Seal of Armor",
          "image": {
             "w": 48,
@@ -5842,8 +6328,10 @@
             "perLevel",
             "seal"
          ],
-         "stats": {"rFlatHPModPerLevel": 0.601},
-         "description": "+0.6 health per level (+10.8 at champion level 18)",
+         "id": 5072,
+         "sanitizedDescription": "+0.75 health per level (+13.44 at champion level 18)",
+         "stats": {"rFlatHPModPerLevel": 0.74667},
+         "description": "+0.75 health per level (+13.44 at champion level 18)",
          "name": "Lesser Seal of Scaling Health",
          "image": {
             "w": 48,
@@ -5866,6 +6354,8 @@
             "perLevel",
             "mark"
          ],
+         "id": 5270,
+         "sanitizedDescription": "+1.17 mana per level (+21.06 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 1.1667},
          "description": "+1.17 mana per level (+21.06 at champion level 18)",
          "name": "Greater Mark of Scaling Mana",
@@ -5890,6 +6380,8 @@
             "flat",
             "mark"
          ],
+         "id": 5271,
+         "sanitizedDescription": "+0.26 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.0525},
          "description": "+0.26 mana regen / 5 sec.",
          "name": "Greater Mark of Mana Regeneration",
@@ -5914,6 +6406,8 @@
             "flat",
             "mark"
          ],
+         "id": 5273,
+         "sanitizedDescription": "+0.87 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 0.87},
          "description": "+0.87 magic penetration",
          "name": "Greater Mark of Magic Penetration",
@@ -5938,6 +6432,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5275,
+         "sanitizedDescription": "+0.28 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.2835},
          "description": "+0.28 attack damage",
          "name": "Greater Glyph of Attack Damage",
@@ -5962,6 +6458,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5276,
+         "sanitizedDescription": "+0.04 attack damage per level (+0.73 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.0405},
          "description": "+0.04 attack damage per level (+0.73 at champion level 18)",
          "name": "Greater Glyph of Scaling Attack Damage",
@@ -5986,6 +6484,8 @@
             "percent",
             "glyph"
          ],
+         "id": 5277,
+         "sanitizedDescription": "+0.64% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.006368},
          "description": "+0.64% attack speed",
          "name": "Greater Glyph of Attack Speed",
@@ -6010,6 +6510,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5279,
+         "sanitizedDescription": "+0.56% critical damage",
          "stats": {"FlatCritDamageMod": 0.005579},
          "description": "+0.56% critical damage",
          "name": "Greater Glyph of Critical Damage",
@@ -6034,6 +6536,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5088,
+         "sanitizedDescription": "+0.036 mana regen / 5 sec. per level (+0.65 at champion level 18)",
          "stats": {"rFlatMPRegenModPerLevel": 0.0072},
          "description": "+0.036 mana regen / 5 sec. per level (+0.65 at champion level 18)",
          "name": "Lesser Seal of Scaling Mana Regeneration",
@@ -6058,6 +6562,8 @@
             "flat",
             "seal"
          ],
+         "id": 5183,
+         "sanitizedDescription": "+0.33 attack damage",
          "stats": {"FlatPhysicalDamageMod": 0.3309},
          "description": "+0.33 attack damage",
          "name": "Seal of Attack Damage",
@@ -6082,6 +6588,8 @@
             "flat",
             "seal"
          ],
+         "id": 5087,
+         "sanitizedDescription": "+0.23 mana regen / 5 sec.",
          "stats": {"FlatMPRegenMod": 0.04514},
          "description": "+0.23 mana regen / 5 sec.",
          "name": "Lesser Seal of Mana Regeneration",
@@ -6106,6 +6614,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5086,
+         "sanitizedDescription": "+0.65 mana per level (+11.7 at champion level 18)",
          "stats": {"rFlatMPModPerLevel": 0.6481},
          "description": "+0.65 mana per level (+11.7 at champion level 18)",
          "name": "Lesser Seal of Scaling Mana",
@@ -6130,6 +6640,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5181,
+         "sanitizedDescription": "+0.49 magic penetration",
          "stats": {"rFlatMagicPenetrationMod": 0.49},
          "description": "+0.49 magic penetration",
          "name": "Glyph of Magic Penetration",
@@ -6154,6 +6666,8 @@
             "flat",
             "seal"
          ],
+         "id": 5085,
+         "sanitizedDescription": "+3.83 mana",
          "stats": {"FlatMPPoolMod": 3.8281},
          "description": "+3.83 mana",
          "name": "Lesser Seal of Mana",
@@ -6178,8 +6692,10 @@
             "perLevel",
             "glyph"
          ],
-         "stats": {"rFlatMPRegenModPerLevel": 0.008},
-         "description": "+0.04 mana regen / 5 sec. per level (+0.72 at champion level 18)",
+         "id": 5180,
+         "sanitizedDescription": "+0.05 mana regen / 5 sec. per level (+0.94 at champion level 18)",
+         "stats": {"rFlatMPRegenModPerLevel": 0.01044},
+         "description": "+0.05 mana regen / 5 sec. per level (+0.94 at champion level 18)",
          "name": "Glyph of Scaling Mana Regeneration",
          "image": {
             "w": 48,
@@ -6202,6 +6718,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5084,
+         "sanitizedDescription": "+0.06 ability power per level (+1.08 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.0577},
          "description": "+0.06 ability power per level (+1.08 at champion level 18)",
          "name": "Lesser Seal of Scaling Ability Power",
@@ -6226,6 +6744,8 @@
             "flat",
             "seal"
          ],
+         "id": 5187,
+         "sanitizedDescription": "+0.61% critical damage",
          "stats": {"FlatCritDamageMod": 0.006074},
          "description": "+0.61% critical damage",
          "name": "Seal of Critical Damage",
@@ -6250,6 +6770,8 @@
             "flat",
             "seal"
          ],
+         "id": 5083,
+         "sanitizedDescription": "+0.33 ability power",
          "stats": {"FlatMagicDamageMod": 0.33},
          "description": "+0.33 ability power",
          "name": "Lesser Seal of Ability Power",
@@ -6274,6 +6796,8 @@
             "percent",
             "seal"
          ],
+         "id": 5185,
+         "sanitizedDescription": "+0.59% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.005943},
          "description": "+0.59% attack speed",
          "name": "Seal of Attack Speed",
@@ -6294,6 +6818,8 @@
       },
       "5081": {
          "tags": ["seal"],
+         "id": 5081,
+         "sanitizedDescription": "-0.2% cooldowns",
          "stats": {"rPercentCooldownMod": -0.002},
          "description": "-0.2% cooldowns",
          "name": "Lesser Seal of Cooldown Reduction",
@@ -6318,6 +6844,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5184,
+         "sanitizedDescription": "+0.05 attack damage per level (+0.85 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.0473},
          "description": "+0.05 attack damage per level (+0.85 at champion level 18)",
          "name": "Seal of Scaling Attack Damage",
@@ -6342,6 +6870,8 @@
             "flat",
             "seal"
          ],
+         "id": 5189,
+         "sanitizedDescription": "+0.32% critical chance",
          "stats": {"FlatCritChanceMod": 0.003247},
          "description": "+0.32% critical chance",
          "name": "Seal of Critical Chance",
@@ -6366,6 +6896,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5281,
+         "sanitizedDescription": "+0.28% critical chance",
          "stats": {"FlatCritChanceMod": 0.002784},
          "description": "+0.28% critical chance",
          "name": "Greater Glyph of Critical Chance",
@@ -6390,6 +6922,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5289,
+         "sanitizedDescription": "+1.34 magic resist",
          "stats": {"FlatSpellBlockMod": 1.34},
          "description": "+1.34 magic resist",
          "name": "Greater Glyph of Magic Resist",
@@ -6414,6 +6948,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5287,
+         "sanitizedDescription": "+0.7 armor",
          "stats": {"FlatArmorMod": 0.7034},
          "description": "+0.7 armor",
          "name": "Greater Glyph of Armor",
@@ -6438,6 +6974,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5285,
+         "sanitizedDescription": "+2.67 health",
          "stats": {"FlatHPPoolMod": 2.673},
          "description": "+2.67 health",
          "name": "Greater Glyph of Health",
@@ -6462,6 +7000,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5286,
+         "sanitizedDescription": "+0.54 health per level (+9.72 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 0.5409},
          "description": "+0.54 health per level (+9.72 at champion level 18)",
          "name": "Greater Glyph of Scaling Health",
@@ -6486,6 +7026,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5097,
+         "sanitizedDescription": "+1.03% critical chance",
          "stats": {"FlatCritChanceMod": 0.010309},
          "description": "+1.03% critical chance",
          "name": "Lesser Quintessence of Critical Chance",
@@ -6510,6 +7052,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5099,
+         "sanitizedDescription": "+1.42 armor penetration",
          "stats": {"rFlatArmorPenetrationMod": 1.42},
          "description": "+1.42 armor penetration",
          "name": "Lesser Quintessence of Armor Penetration",
@@ -6534,8 +7078,10 @@
             "perLevel",
             "seal"
          ],
-         "stats": {"rFlatHPModPerLevel": 0.8413},
-         "description": "+0.84 health per level (+15.12 at champion level 18)",
+         "id": 5194,
+         "sanitizedDescription": "+1.04 health per level (+18.72 at champion level 18)",
+         "stats": {"rFlatHPModPerLevel": 1.04},
+         "description": "+1.04 health per level (+18.72 at champion level 18)",
          "name": "Seal of Scaling Health",
          "image": {
             "w": 48,
@@ -6558,8 +7104,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatHPPoolMod": 4.158},
-         "description": "+4.16 health",
+         "id": 5193,
+         "sanitizedDescription": "+6.24 health",
+         "stats": {"FlatHPPoolMod": 6.24},
+         "description": "+6.24 health",
          "name": "Seal of Health",
          "image": {
             "w": 48,
@@ -6582,8 +7130,10 @@
             "percent",
             "quintessence"
          ],
-         "stats": {"PercentAttackSpeedMod": 0.018868},
-         "description": "+1.89% attack speed",
+         "id": 5093,
+         "sanitizedDescription": "+2.52% attack speed",
+         "stats": {"PercentAttackSpeedMod": 0.0252},
+         "description": "+2.52% attack speed",
          "name": "Lesser Quintessence of Attack Speed",
          "image": {
             "w": 48,
@@ -6606,8 +7156,10 @@
             "perLevel",
             "seal"
          ],
-         "stats": {"rFlatArmorModPerLevel": 0.1167},
-         "description": "+0.12 armor per level (+2.16 at champion level 18)",
+         "id": 5196,
+         "sanitizedDescription": "+0.13 armor per level (+2.34 at champion level 18)",
+         "stats": {"rFlatArmorModPerLevel": 0.13},
+         "description": "+0.13 armor per level (+2.34 at champion level 18)",
          "name": "Seal of Scaling Armor",
          "image": {
             "w": 48,
@@ -6630,6 +7182,8 @@
             "perLevel",
             "quintessence"
          ],
+         "id": 5092,
+         "sanitizedDescription": "+0.14 attack damage per level (+2.52 at champion level 18)",
          "stats": {"rFlatPhysicalDamageModPerLevel": 0.1389},
          "description": "+0.14 attack damage per level (+2.52 at champion level 18)",
          "name": "Lesser Quintessence of Scaling Attack Damage",
@@ -6654,8 +7208,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatArmorMod": 1.0942},
-         "description": "+1.09 armor",
+         "id": 5195,
+         "sanitizedDescription": "+0.78 armor",
+         "stats": {"FlatArmorMod": 0.78},
+         "description": "+0.78 armor",
          "name": "Seal of Armor",
          "image": {
             "w": 48,
@@ -6678,6 +7234,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5095,
+         "sanitizedDescription": "+2.48% critical damage",
          "stats": {"FlatCritDamageMod": 0.024793},
          "description": "+2.48% critical damage",
          "name": "Lesser Quintessence of Critical Damage",
@@ -6702,6 +7260,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 5198,
+         "sanitizedDescription": "+0.08 magic resist per level (+1.44 at champion level 18)",
          "stats": {"rFlatSpellBlockModPerLevel": 0.075},
          "description": "+0.08 magic resist per level (+1.44 at champion level 18)",
          "name": "Seal of Scaling Magic Resist",
@@ -6726,6 +7286,8 @@
             "flat",
             "seal"
          ],
+         "id": 5197,
+         "sanitizedDescription": "+0.58 magic resist",
          "stats": {"FlatSpellBlockMod": 0.5775},
          "description": "+0.58 magic resist",
          "name": "Seal of Magic Resist",
@@ -6750,8 +7312,10 @@
             "flat",
             "seal"
          ],
-         "stats": {"FlatHPRegenMod": 0.0672},
-         "description": "+0.34 health regen / 5 sec.",
+         "id": 5199,
+         "sanitizedDescription": "+0.43 health regen / 5 sec.",
+         "stats": {"FlatHPRegenMod": 0.086},
+         "description": "+0.43 health regen / 5 sec.",
          "name": "Seal of Health Regeneration",
          "image": {
             "w": 48,
@@ -6774,6 +7338,8 @@
             "flat",
             "quintessence"
          ],
+         "id": 5091,
+         "sanitizedDescription": "+1.25 attack damage",
          "stats": {"FlatPhysicalDamageMod": 1.25},
          "description": "+1.25 attack damage",
          "name": "Lesser Quintessence of Attack Damage",
@@ -6798,8 +7364,10 @@
             "perLevel",
             "glyph"
          ],
-         "stats": {"rFlatSpellBlockModPerLevel": 0.1484},
-         "description": "+0.15 magic resist per level (+2.7 at champion level 18)",
+         "id": 5290,
+         "sanitizedDescription": "+0.16 magic resist per level (+3 at champion level 18)",
+         "stats": {"rFlatSpellBlockModPerLevel": 0.16667},
+         "description": "+0.16 magic resist per level (+3 at champion level 18)",
          "name": "Greater Glyph of Scaling Magic Resist",
          "image": {
             "w": 48,
@@ -6822,6 +7390,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5291,
+         "sanitizedDescription": "+0.27 health regen / 5 sec.",
          "stats": {"FlatHPRegenMod": 0.054},
          "description": "+0.27 health regen / 5 sec.",
          "name": "Greater Glyph of Health Regeneration",
@@ -6846,6 +7416,8 @@
             "flat",
             "mark"
          ],
+         "id": 8001,
+         "sanitizedDescription": "+2% critical damage",
          "stats": {"FlatCritDamageMod": 0.019835},
          "description": "+2% critical damage",
          "name": "Mark of the Crippling Candy Cane",
@@ -6870,6 +7442,8 @@
             "flat",
             "mark"
          ],
+         "id": 8002,
+         "sanitizedDescription": "+0.62% critical chance",
          "stats": {"FlatCritChanceMod": 0.0061855},
          "description": "+0.62% critical chance",
          "name": "Lesser Mark of the Yuletide Tannenbaum ",
@@ -6890,6 +7464,8 @@
       },
       "8003": {
          "tags": ["glyph"],
+         "id": 8003,
+         "sanitizedDescription": "-0.75% cooldowns",
          "stats": {"rPercentCooldownMod": -0.0075},
          "description": "-0.75% cooldowns",
          "name": "Glyph of the Special Stocking",
@@ -6914,6 +7490,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 8005,
+         "sanitizedDescription": "+0.12 ability power per level (+2.16 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.1154},
          "description": "+0.12 ability power per level (+2.16 at champion level 18)",
          "name": "Lesser Glyph of the Gracious Gift",
@@ -6938,6 +7516,8 @@
             "perLevel",
             "seal"
          ],
+         "id": 8006,
+         "sanitizedDescription": "+0.72 health per level (+12.96 at champion level 18)",
          "stats": {"rFlatHPModPerLevel": 0.72115},
          "description": "+0.72 health per level (+12.96 at champion level 18)",
          "name": "Lesser Seal of the Stout Snowman",
@@ -6962,6 +7542,8 @@
             "percent",
             "mark"
          ],
+         "id": 8007,
+         "sanitizedDescription": "+1.13% attack speed",
          "stats": {"PercentAttackSpeedMod": 0.011321},
          "description": "+1.13% attack speed",
          "name": "Lesser Mark of Alpine Attack Speed",
@@ -6986,6 +7568,8 @@
             "perLevel",
             "glyph"
          ],
+         "id": 5298,
+         "sanitizedDescription": "+0.17 ability power per level (+3.06 at champion level 18)",
          "stats": {"rFlatMagicDamageModPerLevel": 0.1731},
          "description": "+0.17 ability power per level (+3.06 at champion level 18)",
          "name": "Greater Glyph of Scaling Ability Power",
@@ -7010,6 +7594,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5299,
+         "sanitizedDescription": "+11.25 mana",
          "stats": {"FlatMPPoolMod": 11.25},
          "description": "+11.25 mana",
          "name": "Greater Glyph of Mana",
@@ -7030,6 +7616,8 @@
       },
       "5295": {
          "tags": ["glyph"],
+         "id": 5295,
+         "sanitizedDescription": "-0.83% cooldowns",
          "stats": {"rPercentCooldownMod": -0.008334},
          "description": "-0.83% cooldowns",
          "name": "Greater Glyph of Cooldown Reduction",
@@ -7050,8 +7638,10 @@
       },
       "5296": {
          "tags": ["glyph"],
-         "stats": {"rPercentCooldownModPerLevel": -6.173E-4},
-         "description": "-0.06% cooldowns per level (-1.11% at champion level 18)",
+         "id": 5296,
+         "sanitizedDescription": "-0.09% cooldowns per level (-1.67% at champion level 18)",
+         "stats": {"rPercentCooldownModPerLevel": -9.278E-4},
+         "description": "-0.09% cooldowns per level (-1.67% at champion level 18)",
          "name": "Greater Glyph of Scaling Cooldown Reduction",
          "image": {
             "w": 48,
@@ -7074,6 +7664,8 @@
             "flat",
             "glyph"
          ],
+         "id": 5297,
+         "sanitizedDescription": "+1.19 ability power",
          "stats": {"FlatMagicDamageMod": 1.19},
          "description": "+1.19 ability power",
          "name": "Greater Glyph of Ability Power",
@@ -7094,5 +7686,5 @@
       }
    },
    "type": "rune",
-   "version": "4.2.6"
+   "version": "4.5.4"
 }

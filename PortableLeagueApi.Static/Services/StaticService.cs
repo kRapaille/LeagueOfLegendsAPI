@@ -33,7 +33,7 @@ namespace PortableLeagueApi.Static.Services
 
         public StaticService(
             ILeagueApiConfiguration config)
-            : base(config, VersionEnum.V1, "static-data", false)
+            : base(config, VersionEnum.V1Rev2, "static-data", false)
         { 
             ChampionList.CreateMap(AutoMapperService);
             ItemList.CreateMap(AutoMapperService);
@@ -87,7 +87,8 @@ namespace PortableLeagueApi.Static.Services
             RegionEnum? region,
             LanguageEnum? languageCode,
             string dataDragonVersion,
-            int? id = null) where T : struct
+            int? id = null,
+            params KeyValuePair<string, string>[] additionalParameters) where T : struct
         {
             return BuildStaticUri(
                 path,
@@ -96,7 +97,8 @@ namespace PortableLeagueApi.Static.Services
                 region,
                 languageCode,
                 dataDragonVersion,
-                id.HasValue ? id.Value.ToString() : null);
+                id.HasValue ? id.Value.ToString() : null,
+                additionalParameters);
         }
 
         private Uri BuildStaticUri<T>(
@@ -106,7 +108,8 @@ namespace PortableLeagueApi.Static.Services
             RegionEnum? region,
             LanguageEnum? languageCode,
             string dataDragonVersion,
-            string id) where T : struct
+            string id,
+            params KeyValuePair<string, string>[] additionalParameters) where T : struct
         {
             var uri = BuildUri(region, path);
 
@@ -124,10 +127,16 @@ namespace PortableLeagueApi.Static.Services
             if (id != null)
                 uriBuilder.Path += string.Format("/{0}", id);
 
+            foreach (var additionalParameter in additionalParameters)
+            {
+                uriBuilder.AddQueryParameter(string.Format("{0}={1}", additionalParameter.Key, additionalParameter.Value));
+            }
+
             return uriBuilder.Uri;
         }
 
         public async Task<IChampionList> GetChampionsAsync(
+            bool dataById = false,
             ChampDataEnum? champData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
@@ -140,7 +149,9 @@ namespace PortableLeagueApi.Static.Services
                     champData, 
                     region, 
                     languageCode, 
-                    dataDragonVersion));
+                    dataDragonVersion,
+                    (string) null,
+                    new KeyValuePair<string, string>("dataById", dataById.ToString())));
         }
 
         public async Task<IChampion> GetChampionAsync(
@@ -270,6 +281,7 @@ namespace PortableLeagueApi.Static.Services
         }
 
         public async Task<ISummonerSpellList> GetSummonerSpellsAsync(
+            bool dataById = false,
             SpellDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
@@ -282,11 +294,13 @@ namespace PortableLeagueApi.Static.Services
                     itemData,
                     region,
                     languageCode,
-                    dataDragonVersion));
+                    dataDragonVersion,
+                    (string) null,
+                    new KeyValuePair<string, string>( "dataById", dataById.ToString())));
         }
 
         public async Task<ISummonerSpell> GetSummonerSpellsAsync(
-            string spellId,
+            int spellId,
             SpellDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,

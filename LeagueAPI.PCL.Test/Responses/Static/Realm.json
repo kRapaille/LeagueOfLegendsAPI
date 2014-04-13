@@ -1,16 +1,16 @@
 ﻿{
-   "v": "4.4.3",
+   "v": "4.5.4",
    "dd": "4.2.6",
    "cdn": "http://ddragon.leagueoflegends.com/cdn",
    "lg": "0.152.55",
    "n": {
-      "champion": "4.4.3",
-      "profileicon": "4.4.3",
-      "item": "4.4.3",
-      "mastery": "4.4.3",
-      "language": "4.4.3",
-      "summoner": "4.4.3",
-      "rune": "4.2.6"
+      "champion": "4.5.4",
+      "profileicon": "4.5.4",
+      "item": "4.5.4",
+      "mastery": "4.5.4",
+      "language": "4.5.4",
+      "summoner": "4.5.4",
+      "rune": "4.5.4"
    },
    "profileiconmax": 28,
    "l": "en_US",

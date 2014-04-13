@@ -7,7 +7,7 @@ namespace PortableLeagueApi.Static.Models.Mastery
 {
     public class MasteryTreeItem : ApiModel, IMasteryTreeItem
     {
-        public string MasteryId { get; set; }
+        public int MasteryId { get; set; }
         public string Prereq { get; set; }
 
         internal static void CreateMap(AutoMapperService autoMapperService)

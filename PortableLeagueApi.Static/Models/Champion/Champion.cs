@@ -15,7 +15,7 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         public IList<string> Enemytips { get; set; }
 
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public IImage Image { get; set; }
 

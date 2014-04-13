@@ -32,6 +32,9 @@ namespace PortableLeagueApi.Static.Models.DTO
         [JsonProperty("hideFromAll")]
         public bool HideFromAll { get; set; }
 
+        [JsonProperty("id")]
+        public int Id { get; set; }
+        
         [JsonProperty("image")]
         public ImageDto Image { get; set; }
 
@@ -55,6 +58,9 @@ namespace PortableLeagueApi.Static.Models.DTO
 
         [JsonProperty("rune")]
         public ItemRuneDto Rune { get; set; }
+
+        [JsonProperty("sanitizedDescription")]
+        public string SanitizedDescription { get; set; }
 
         [JsonProperty("specialRecipe")]
         public int SpecialRecipe { get; set; }

@@ -4,7 +4,7 @@ namespace PortableLeagueApi.Interfaces.Static.Mastery
 {
     public interface IMasteryTreeItem : IApiModel
     {
-        string MasteryId { get; set; }
+        int MasteryId { get; set; }
         string Prereq { get; set; }
     }
 }

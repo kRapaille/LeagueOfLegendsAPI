@@ -10,6 +10,8 @@ namespace PortableLeagueApi.Static.Models.Champion
     {
         public string Description { get; set; }
 
+        public string SanitizedDescription { get; set; }
+
         public IImage Image { get; set; }
 
         public string Name { get; set; }

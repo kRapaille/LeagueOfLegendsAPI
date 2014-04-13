@@ -364,6 +364,15 @@ namespace PortableLeagueAPI.Test
 
         [Test]
         [Category("Static")]
+        public async void GetStaticChampionsTest2Async()
+        {
+            var result = await _leagueAPI.Static.GetChampionsAsync(true);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
         public async void GetStaticChampionsWithParametersTestAsync()
         {
             var result = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
@@ -447,7 +456,16 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticSummonerSpellsWithParametersTestAsync()
         {
-            var result = await _leagueAPI.Static.GetSummonerSpellsAsync("SummonerTeleport", SpellDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await _leagueAPI.Static.GetSummonerSpellsAsync(12, SpellDataEnum.All, languageCode: LanguageEnum.French);
+
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        [Category("Static")]
+        public async void GetStaticSummonerSpellsWithParametersTest2Async()
+        {
+            var result = await _leagueAPI.Static.GetSummonerSpellsAsync(true, SpellDataEnum.All, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }
