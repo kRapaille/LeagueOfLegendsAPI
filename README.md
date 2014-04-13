@@ -45,6 +45,11 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 ## Last changes
 
+- Static API v1.1
+- Champion API v1.2
+- Stats  API v1.3
+- Summoner  API v1.4
+- Games API updates
 - Static masteries DTOs fix
 - All unit tests are now offline
 - Accept-Encoding now supports gzip and deflate
