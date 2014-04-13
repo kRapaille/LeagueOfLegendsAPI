@@ -2,7 +2,7 @@
 {
     internal class StaticResponses : Responses
     {
-        private const string Version = "v1.1";
+        private const string Version = "v1.2";
 
         private StaticResponses() : base("Static") { }
 

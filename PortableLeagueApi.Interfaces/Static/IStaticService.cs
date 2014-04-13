@@ -11,6 +11,7 @@ namespace PortableLeagueApi.Interfaces.Static
     public interface IStaticService
     {
         Task<IChampionList> GetChampionsAsync(
+            bool dataById = false,
             ChampDataEnum? champData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
@@ -66,13 +67,14 @@ namespace PortableLeagueApi.Interfaces.Static
             string dataDragonVersion = null);
 
         Task<ISummonerSpellList> GetSummonerSpellsAsync(
+            bool dataById = false,
             SpellDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null);
 
         Task<ISummonerSpell> GetSummonerSpellsAsync(
-            string spellId,
+            int spellId,
             SpellDataEnum? itemData = null,
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,

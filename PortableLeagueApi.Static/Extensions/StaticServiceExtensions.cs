@@ -114,6 +114,7 @@ namespace PortableLeagueApi.Static.Extensions
             var staticService = new StaticService(hasSummonerSpells.ApiConfiguration);
 
             var allSummonerSpells = await staticService.GetSummonerSpellsAsync(
+                false,
                 itemData,
                 region,
                 languageCode,
