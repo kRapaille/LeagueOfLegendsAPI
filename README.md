@@ -45,7 +45,7 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 ## Last changes
 
-- Static API v1.1
+- Static API v1.2
 - Champion API v1.2
 - Stats  API v1.3
 - Summoner  API v1.4
