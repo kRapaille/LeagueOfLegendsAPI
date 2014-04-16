@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using NUnit.Framework;
@@ -33,6 +34,23 @@ namespace PortableLeagueAPI.Test
                             new LeagueApiConfiguration(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
 
             _leagueAPI = new LeagueApi(configuration);
+        }
+
+        [Test]
+        [Category("Others")]
+        public async void TestRegions()
+        {
+            if (_leagueAPI.LeagueApiConfiguration.Key != string.Empty)
+            {
+                foreach (var region in Enum.GetValues(typeof(RegionEnum)).Cast<RegionEnum>())
+                {
+                    if (region == RegionEnum.Kr) continue;
+
+                    var freeChampions = await _leagueAPI.Champion.GetChampionsAsync(false, region);
+
+                    Assert.NotNull(freeChampions);
+                }
+            }
         }
 
         [Test]
