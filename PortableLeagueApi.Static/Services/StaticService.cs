@@ -77,7 +77,7 @@ namespace PortableLeagueApi.Static.Services
                    VersionText,
                    relativeUrl);
             
-            return BuildUri(new Uri(relativeUrl, UriKind.Relative));
+            return BuildUri(new Uri(relativeUrl, UriKind.Relative), region);
         }
 
         private Uri BuildStaticUri<T>(
