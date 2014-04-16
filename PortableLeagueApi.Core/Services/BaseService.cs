@@ -15,7 +15,7 @@ namespace PortableLeagueApi.Core.Services
 {
     public abstract class BaseService : IDisposable
     {
-        private static readonly Uri BaseUri = new Uri("http://prod.api.pvp.net/api/lol/");
+        private const string BaseUrl = "http://{0}.api.pvp.net/api/lol/";
 
         private static readonly Dictionary<string, List<DateTime>> LastRequests =
             new Dictionary<string, List<DateTime>>();
@@ -31,7 +31,7 @@ namespace PortableLeagueApi.Core.Services
         protected AutoMapperService AutoMapperService { get; private set; }
 
         protected string Prefix { get; private set; }
-
+        
         protected string VersionText
         {
             get
@@ -72,12 +72,14 @@ namespace PortableLeagueApi.Core.Services
                 Prefix,
                 relativeUrl);
 
-            return BuildUri(new Uri(relativeUrl, UriKind.Relative));
+            return BuildUri(new Uri(relativeUrl, UriKind.Relative), region);
         }
 
-        protected Uri BuildUri(Uri relativeUri)
+        protected Uri BuildUri(Uri relativeUri, RegionEnum? region)
         {
-            var uriBuilder = new UriBuilder(new Uri(BaseUri, relativeUri));
+            var baseUri = new Uri(string.Format(BaseUrl, GetSubDomain(region)));
+
+            var uriBuilder = new UriBuilder(new Uri(baseUri, relativeUri));
 
             var keyParameter = string.Format("api_key={0}", _apiConfiguration.Key);
             uriBuilder.AddQueryParameter(keyParameter);
@@ -219,6 +221,11 @@ namespace PortableLeagueApi.Core.Services
         protected string GetRegionAsString(RegionEnum? region)
         {
             return RegionConsts.Regions[GetRegion(region)];
+        }
+
+        private string GetSubDomain(RegionEnum? region)
+        {
+            return RegionConsts.SubDomains[GetRegion(region)];
         }
 
         public void Dispose()
