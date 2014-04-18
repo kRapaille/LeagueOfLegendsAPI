@@ -5,6 +5,9 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
 {
     internal class SpellDto
     {
+        [JsonProperty("altimages")]
+        public IList<ImageDto> AltImages { get; set; }
+
         [JsonProperty("cooldown")]
         public int[] Cooldown { get; set; }
 

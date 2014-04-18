@@ -16,6 +16,8 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         public string Link { get; set; }
 
+        public string RanksWith { get; set; }
+
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
             autoMapperService.CreateApiModelMapWithInterface<SpellVarsDto, SpellVars, ISpellVars>();

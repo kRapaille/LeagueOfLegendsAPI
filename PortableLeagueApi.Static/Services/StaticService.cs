@@ -316,5 +316,12 @@ namespace PortableLeagueApi.Static.Services
                     dataDragonVersion,
                     spellId));
         }
+
+        public async Task<IEnumerable<string>> GetVersionsAsync(
+            RegionEnum? region = null)
+        {
+            return await GetResponseAsync<IEnumerable<string>>(
+                BuildUri(region, "versions"));
+        }
     }
 }

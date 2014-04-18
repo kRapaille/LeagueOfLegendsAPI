@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using PortableLeagueApi.Interfaces.Enums;
 using PortableLeagueApi.Interfaces.Static.Champion;
 using PortableLeagueApi.Interfaces.Static.Item;
@@ -79,5 +80,11 @@ namespace PortableLeagueApi.Interfaces.Static
             RegionEnum? region = null,
             LanguageEnum? languageCode = null,
             string dataDragonVersion = null);
+
+        /// <summary>
+        /// Retrieve version data.
+        /// </summary>
+        Task<IEnumerable<string>> GetVersionsAsync(
+            RegionEnum? region = null);
     }
 }

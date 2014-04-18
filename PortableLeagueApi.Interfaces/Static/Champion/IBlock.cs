@@ -7,5 +7,6 @@ namespace PortableLeagueApi.Interfaces.Static.Champion
     {
         IList<IBlockItem> Items { get; set; }
         string Type { get; set; }
+        bool RecMath { get; set; }
     }
 }

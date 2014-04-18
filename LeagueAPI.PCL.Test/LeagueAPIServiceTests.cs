@@ -487,6 +487,14 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(result);
         }
+
+        [Test]
+        [Category("Static")]
+        public async void GetVersionsTestAsync()
+        {
+            var versions = await _leagueAPI.Static.GetVersionsAsync();
+            Assert.NotNull(versions);
+        }
         
         [Test]
         [Category("StaticExtensions")]

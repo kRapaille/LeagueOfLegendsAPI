@@ -9,6 +9,8 @@ namespace PortableLeagueApi.Static.Models.Champion
 {
     public class Spell : ApiModel, ISpell
     {
+        public IList<IImage> AltImages { get; set; }
+
         public IList<int> Cooldown { get; set; }
 
         public string CooldownBurn { get; set; }

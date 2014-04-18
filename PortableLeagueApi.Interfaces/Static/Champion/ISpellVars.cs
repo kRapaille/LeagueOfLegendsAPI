@@ -9,5 +9,6 @@ namespace PortableLeagueApi.Interfaces.Static.Champion
         string Dyn { get; set; }
         string Key { get; set; }
         string Link { get; set; }
+        string RanksWith { get; set; }
     }
 }

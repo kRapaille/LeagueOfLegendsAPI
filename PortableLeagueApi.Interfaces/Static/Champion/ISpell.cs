@@ -5,6 +5,7 @@ namespace PortableLeagueApi.Interfaces.Static.Champion
 {
     public interface ISpell : IApiModel
     {
+        IList<IImage> AltImages { get; set; }
         IList<int> Cooldown { get; set; }
         string CooldownBurn { get; set; }
         IList<int> Cost { get; set; }
