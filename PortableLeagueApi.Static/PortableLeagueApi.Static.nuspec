@@ -12,23 +12,15 @@
 
 “This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.”</description>
     <summary>Portable League API Static</summary>
-    <releaseNotes>1.0.2 :
-
-- Converted stats on ItemDto to structured BasicDataStatsDto instead of Map for more clear documentation.
-- Consolidated BasicRuneDataDto, which was empty, with BasicDataDto, which means all the data from BasicDataDto is now available for runes.
-- Rune stats will now include rFlatMagicPenetrationModPerLevel.
-Item stats will now include FlatEnergyRegenMod, FlatEnergyPoolMod, PercentSpellVampMod, PercentLifeStealMod, rFlatEnergyRegenModPerLevel, and rFlatEnergyModPerLevel.
-- RuneDto will now include from, depth, consumeOnFull, maps, specialRecipe, stacks, inStore, consumed, hideFromAll, requiredChampion, gold, group, and into.
-- ItemDto will now include from, depth, consumeOnFull, maps, specialRecipe, stacks, inStore, consumed, hideFromAll, requiredChampion, and rune.
-- SummonerSpellDto now includes leveltip.</releaseNotes>
+    <releaseNotes>https://github.com/XeeX/LeagueOfLegendsAPI/releases</releaseNotes>
     <language>en-US</language>
     <tags>"Portable League API Static"</tags>
     <dependencies>
-      <group targetFramework=".NETPortable0.0-net45+wp8+win8">
-        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.0.8" />
-        <dependency id="Newtonsoft.Json" version="6.0.1" />
-        <dependency id="AutoMapper" version="3.1.1" />
-        <dependency id="Remake.PortableLeagueAPI.Core" version="2.0.8" />
+      <group targetFramework="portable-net45+wp80+win8+wpa81">
+        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.1.2" />
+        <dependency id="Newtonsoft.Json" version="6.0.2" />
+        <dependency id="AutoMapper" version="3.2.0" />
+        <dependency id="Remake.PortableLeagueAPI.Core" version="2.0.10" />
       </group>
     </dependencies>
   </metadata>
