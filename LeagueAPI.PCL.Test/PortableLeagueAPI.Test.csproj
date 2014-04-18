@@ -162,6 +162,9 @@
     <Content Include="Responses\Champion\ChampionById.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Responses\Static\Versions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LeagueAPI.PCL\PortableLeagueAPI.csproj">

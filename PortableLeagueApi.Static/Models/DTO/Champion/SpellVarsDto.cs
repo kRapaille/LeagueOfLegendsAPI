@@ -16,5 +16,8 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
 
         [JsonProperty("link")]
         public string Link { get; set; }
+
+        [JsonProperty("ranksWith")]
+        public string RanksWith { get; set; }
     }
 }

@@ -9,5 +9,8 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
 
         [JsonProperty("type")]
         public string Type { get; set; }
+
+        [JsonProperty("recMath")]
+        public bool RecMath { get; set; }
     }
 }

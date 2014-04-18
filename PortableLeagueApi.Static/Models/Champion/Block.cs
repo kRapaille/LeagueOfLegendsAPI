@@ -12,6 +12,8 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         public string Type { get; set; }
 
+        public bool RecMath { get; set; }
+
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
             BlockItem.CreateMap(autoMapperService);

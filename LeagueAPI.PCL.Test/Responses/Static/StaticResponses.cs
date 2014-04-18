@@ -48,6 +48,9 @@
             else if (pathAndQuery.Contains("/static-data/")
                 && pathAndQuery.Contains(string.Format("/{0}/summoner-spell", Version)))
                 response = "SummonerSpell";
+            else if (pathAndQuery.Contains("/static-data/")
+                && pathAndQuery.Contains(string.Format("/{0}/versions", Version)))
+                response = "Versions";
 
             return response;
         }
