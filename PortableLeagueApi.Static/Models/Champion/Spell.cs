@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Static.Models.Champion
     {
         public IList<IImage> AltImages { get; set; }
 
-        public IList<int> Cooldown { get; set; }
+        public IList<double> Cooldown { get; set; }
 
         public string CooldownBurn { get; set; }
 

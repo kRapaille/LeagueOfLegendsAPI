@@ -5,7 +5,7 @@ namespace PortableLeagueApi.Interfaces.Static.SummonerSpell
 {
     public interface ISummonerSpell : IApiModel
     {
-        IList<int> Cooldown { get; set; }
+        IList<double> Cooldown { get; set; }
         string CooldownBurn { get; set; }
         IList<int> Cost { get; set; }
         string CostBurn { get; set; }

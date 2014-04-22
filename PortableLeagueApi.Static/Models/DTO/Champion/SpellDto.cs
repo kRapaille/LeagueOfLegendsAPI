@@ -9,7 +9,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
         public IList<ImageDto> AltImages { get; set; }
 
         [JsonProperty("cooldown")]
-        public int[] Cooldown { get; set; }
+        public IList<double> Cooldown { get; set; }
 
         [JsonProperty("cooldownBurn")]
         public string CooldownBurn { get; set; }

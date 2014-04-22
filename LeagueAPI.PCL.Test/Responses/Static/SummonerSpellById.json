@@ -15,8 +15,8 @@
       "y": 48,
       "x": 288
    },
-   "cost": [0],
    "cooldown": [300],
+   "cost": [0],
    "summonerLevel": 6,
    "id": 12,
    "vars": [{

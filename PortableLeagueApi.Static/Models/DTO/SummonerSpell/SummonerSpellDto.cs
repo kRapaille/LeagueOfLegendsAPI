@@ -19,7 +19,7 @@ namespace PortableLeagueApi.Static.Models.DTO.SummonerSpell
     internal class SummonerSpellDto
     {
         [JsonProperty("cooldown")]
-        public int[] Cooldown { get; set; }
+        public IList<double> Cooldown { get; set; }
 
         [JsonProperty("cooldownBurn")]
         public string CooldownBurn { get; set; }

@@ -9,7 +9,7 @@ namespace PortableLeagueApi.Static.Models.SummonerSpell
 {
     public class SummonerSpell : ApiModel, ISummonerSpell
     {
-        public IList<int> Cooldown { get; set; }
+        public IList<double> Cooldown { get; set; }
 
         public string CooldownBurn { get; set; }
 
