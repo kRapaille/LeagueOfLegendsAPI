@@ -51,6 +51,7 @@
                "type": "beginner_Starter"
             },
             {
+               "recMath": true,
                "items": [
                   {
                      "id": 1028,
@@ -68,6 +69,7 @@
                "type": "beginner_Advanced"
             },
             {
+               "recMath": true,
                "items": [
                   {
                      "id": 1001,
@@ -81,6 +83,7 @@
                "type": "beginner_MovementSpeed"
             },
             {
+               "recMath": true,
                "items": [
                   {
                      "id": 3010,
@@ -721,19 +724,19 @@
             "y": 144,
             "x": 336
          },
+         "cooldown": [
+            3.5,
+            3.5,
+            3.5,
+            3.5,
+            3.5
+         ],
          "cost": [
             60,
             60,
             60,
             60,
             60
-         ],
-         "cooldown": [
-            3,
-            3,
-            3,
-            3,
-            3
          ],
          "vars": [
             {
@@ -817,19 +820,19 @@
             "y": 144,
             "x": 384
          },
-         "cost": [
-            60,
-            70,
-            80,
-            90,
-            100
-         ],
          "cooldown": [
             0,
             0,
             0,
             0,
             0
+         ],
+         "cost": [
+            60,
+            70,
+            80,
+            90,
+            100
          ],
          "vars": [
             {
@@ -913,19 +916,19 @@
             "y": 144,
             "x": 432
          },
-         "cost": [
-            60,
-            70,
-            80,
-            90,
-            100
-         ],
          "cooldown": [
             14,
             14,
             14,
             14,
             14
+         ],
+         "cost": [
+            60,
+            70,
+            80,
+            90,
+            100
          ],
          "vars": [
             {
@@ -1004,15 +1007,15 @@
             "y": 0,
             "x": 0
          },
-         "cost": [
-            0,
-            0,
-            0
-         ],
          "cooldown": [
             70,
             60,
             50
+         ],
+         "cost": [
+            0,
+            0,
+            0
          ],
          "sanitizedDescription": "Ryze channels immense arcane power, he gains spell vamp and all of his spells deal area of effect damage.",
          "rangeBurn": "self",
@@ -1053,13 +1056,13 @@
       "Ryze can use himself as a conduit for his Spell Flux ability if there are no additional enemies to bounce the spell off of.",
       "Using Ryze's ultimate to farm creeps can lead to a large gold advantage."
    ],
-   "lore": "There are many on Runeterra who are attracted to the study of magic or, in recent times, the emerging field of techmaturgy. For most, pursuit of such knowledge is formalized in a college or university. The halls of traditional study were never for Ryze, however, who felt a more raw and primal connection to the magic of Runeterra than those who tried to teach him. He struck out on his own as a young man to discover what already called to him. Ryze traveled the world, seeking the wisdom of powerful hermits, witches, and shamans - anyone who had something to share beyond what was taught in the city-states of Valoran. When he had learned all he could from these fonts of wisdom, Ryze turned to seek the lost, forgotten, and forbidden knowledge in the world, delving into mystical worlds where others feared to tread.<br><br>Ryze's tireless searching for magical knowledge led him to an ancient form of spellcraft known as thorn magic. This art required Ryze to tattoo spells on his body, permanently infusing his being with vast arcane power and finally fulfilling his need to bond with the mystical energies of Runeterra. His travels also led him to uncover the giant indestructible scroll he now carries on his back - the purpose of the inscribed spell remains a secret only Ryze knows. He claims it is an abomination - something that he must safeguard from the world. This has piqued the curiosity of many, though no one is sure how to separate the scroll from Ryze, or if it is possible to overcome the rogue mage to do so. Since then, Ryze has joined the League of Legends to study the magical creatures and powerful will-workers that fight there, in order to complete his exploration of mystical Runeterra.<br><br>''Ryze is no longer just a mage - he has become a creature of magic itself.''<br>-- High Councilor Heywan Relivash",
    "info": {
       "defense": 2,
       "magic": 10,
       "difficulty": 3,
       "attack": 2
    },
+   "lore": "There are many on Runeterra who are attracted to the study of magic or, in recent times, the emerging field of techmaturgy. For most, pursuit of such knowledge is formalized in a college or university. The halls of traditional study were never for Ryze, however, who felt a more raw and primal connection to the magic of Runeterra than those who tried to teach him. He struck out on his own as a young man to discover what already called to him. Ryze traveled the world, seeking the wisdom of powerful hermits, witches, and shamans - anyone who had something to share beyond what was taught in the city-states of Valoran. When he had learned all he could from these fonts of wisdom, Ryze turned to seek the lost, forgotten, and forbidden knowledge in the world, delving into mystical worlds where others feared to tread.<br><br>Ryze's tireless searching for magical knowledge led him to an ancient form of spellcraft known as thorn magic. This art required Ryze to tattoo spells on his body, permanently infusing his being with vast arcane power and finally fulfilling his need to bond with the mystical energies of Runeterra. His travels also led him to uncover the giant indestructible scroll he now carries on his back - the purpose of the inscribed spell remains a secret only Ryze knows. He claims it is an abomination - something that he must safeguard from the world. This has piqued the curiosity of many, though no one is sure how to separate the scroll from Ryze, or if it is possible to overcome the rogue mage to do so. Since then, Ryze has joined the League of Legends to study the magical creatures and powerful will-workers that fight there, in order to complete his exploration of mystical Runeterra.<br><br>''Ryze is no longer just a mage - he has become a creature of magic itself.''<br>-- High Councilor Heywan Relivash",
    "id": 13,
    "title": "the Rogue Mage",
    "name": "Ryze",
