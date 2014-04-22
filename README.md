@@ -45,6 +45,7 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 ## Last changes
 
+- Windows Phone 8.1 support
 - Static API v1.2
 - Champion API v1.2
 - Stats  API v1.3
