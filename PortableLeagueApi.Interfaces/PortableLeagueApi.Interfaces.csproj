@@ -82,7 +82,7 @@
     <Compile Include="Static\IRealm.cs" />
     <Compile Include="Static\Champion\IBlock.cs" />
     <Compile Include="League\ILeague.cs" />
-    <Compile Include="League\ILeagueItem.cs" />
+    <Compile Include="League\ILeagueEntry.cs" />
     <Compile Include="League\ILeagueService.cs" />
     <Compile Include="League\IMiniSeries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

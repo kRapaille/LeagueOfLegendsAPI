@@ -9,6 +9,7 @@
         V1Rev4,
         V2Rev1,
         V2Rev2,
-        V2Rev3
+        V2Rev3,
+        V2Rev4
     }
 }

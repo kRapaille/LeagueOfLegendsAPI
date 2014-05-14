@@ -12,7 +12,7 @@ namespace PortableLeagueApi.League.Models
 {
     public class League : ApiModel, ILeague
     {
-        public IList<ILeagueItem> LeagueItems { get; set; }
+        public IList<ILeagueEntry> LeagueItems { get; set; }
         public string Name { get; set; }
         public string ParticipantId { get; set; }
         public LeagueTypeEnum LeagueType { get; set; }
@@ -20,7 +20,7 @@ namespace PortableLeagueApi.League.Models
 
         internal static void CreateMap(AutoMapperService autoMapperService)
         {
-            LeagueItem.CreateMap(autoMapperService);
+            LeagueEntry.CreateMap(autoMapperService);
 
             autoMapperService.CreateMap<string, LeagueTypeEnum>()
                 .ConvertUsing(x => LeagueTypeConsts.LeagueTypes.First(z => z.Value == x).Key);

@@ -5,7 +5,7 @@ namespace PortableLeagueApi.League.Models.DTO
     internal class LeagueDto
     {
         [JsonProperty("entries")]
-        public LeagueItemDto[] Entries { get; set; }
+        public LeagueEntryDto[] Entries { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -26,8 +26,11 @@ namespace PortableLeagueApi.League.Models.DTO
         public string Tier { get; set; }
     }
 
-    internal class LeagueItemDto
+    internal class LeagueEntryDto
     {
+        [JsonProperty("division")]
+        public string Division { get; set; }
+
         [JsonProperty("isFreshBlood")]
         public bool IsFreshBlood { get; set; }
 
@@ -40,12 +43,6 @@ namespace PortableLeagueApi.League.Models.DTO
         [JsonProperty("isVeteran")]
         public bool IsVeteran { get; set; }
 
-        [JsonProperty("lastPlayed")]
-        public long LastPlayed { get; set; }
-
-        [JsonProperty("leagueName")]
-        public string LeagueName { get; set; }
-
         [JsonProperty("leaguePoints")]
         public int LeaguePoints { get; set; }
 
@@ -57,15 +54,6 @@ namespace PortableLeagueApi.League.Models.DTO
         
         [JsonProperty("playerOrTeamName")]
         public string PlayerOrTeamName { get; set; }
-
-        [JsonProperty("queueType")]
-        public string QueueType { get; set; }
-
-        [JsonProperty("rank")]
-        public string Rank { get; set; }
-
-        [JsonProperty("tier")]
-        public string Tier { get; set; }
 
         [JsonProperty("wins")]
         public int Wins { get; set; }

@@ -15,7 +15,7 @@ namespace PortableLeagueApi.Core.Services
 {
     public abstract class BaseService : IDisposable
     {
-        private const string BaseUrl = "http://{0}.api.pvp.net/api/lol/";
+        private const string BaseUrl = "https://{0}.api.pvp.net/api/lol/";
 
         private static readonly Dictionary<string, List<DateTime>> LastRequests =
             new Dictionary<string, List<DateTime>>();

@@ -13,6 +13,7 @@ namespace PortableLeagueApi.Core.Constants
         public const string V2Rev1 = "v2.1";
         public const string V2Rev2 = "v2.2";
         public const string V2Rev3 = "v2.3";
+        public const string V2Rev4 = "v2.4";
 
         internal static readonly Dictionary<VersionEnum, string> Versions = new Dictionary<VersionEnum, string>
         {
@@ -23,7 +24,8 @@ namespace PortableLeagueApi.Core.Constants
             { VersionEnum.V1Rev4, V1Rev4 },
             { VersionEnum.V2Rev1, V2Rev1 },
             { VersionEnum.V2Rev2, V2Rev2 },
-            { VersionEnum.V2Rev3, V2Rev3 }
+            { VersionEnum.V2Rev3, V2Rev3 },
+            { VersionEnum.V2Rev4, V2Rev4 }
         };
     }
 }

@@ -13,9 +13,6 @@ namespace PortableLeagueApi.League.Models.DTO
         [JsonProperty("target")]
         public int Target { get; set; }
 
-        [JsonProperty("timeLeftToPlayMillis")]
-        public long TimeLeftToPlayMillis { get; set; }
-
         [JsonProperty("wins")]
         public int Wins { get; set; }
     }
