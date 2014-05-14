@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.Core;
@@ -12,7 +13,7 @@ namespace PortableLeagueApi.Team.Services
     {
         public TeamService(
             ILeagueApiConfiguration config)
-            : base(config, VersionEnum.V2Rev2, "team")
+            : base(config, VersionEnum.V2Rev3, "team")
         {
             Models.Team.CreateMap(AutoMapperService);
 
@@ -28,10 +29,22 @@ namespace PortableLeagueApi.Team.Services
             long summonerId,
             RegionEnum? region = null)
         {
-            var url = string.Format("by-summoner/{0}",
-                summonerId);
+            var result = await GetTeamsBySummonerIdAsync(new[] {summonerId}, region);
 
-            return await GetResponseAsync<IEnumerable<TeamDto>, IEnumerable<ITeam>>(region, url);
+            return result.Values.FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Retrieves teams
+        /// </summary>
+        public async Task<IDictionary<string, IEnumerable<ITeam>>> GetTeamsBySummonerIdAsync(
+            IEnumerable<long> summonerIds,
+            RegionEnum? region = null)
+        {
+            var url = string.Format("by-summoner/{0}",
+                string.Join(",", summonerIds));
+
+            return await GetResponseAsync <IDictionary<string, IEnumerable<TeamDto>>, IDictionary<string, IEnumerable<ITeam>>>(region, url);
         }
 
         /// <summary>

@@ -7,9 +7,6 @@ namespace PortableLeagueApi.Team.Models.DTO
         [JsonProperty("averageGamesPlayed")]
         public int AverageGamesPlayed { get; set; }
 
-        [JsonProperty("fullId")]
-        public string FullId { get; set; }
-
         [JsonProperty("losses")]
         public int Losses { get; set; }
 

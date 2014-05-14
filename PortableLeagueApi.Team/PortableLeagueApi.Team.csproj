@@ -37,19 +37,15 @@
   <ItemGroup>
     <Compile Include="Extensions\TeamsBySummonerIdExtensions.cs" />
     <Compile Include="Models\DTO\MatchHistorySummaryDto.cs" />
-    <Compile Include="Models\MessageOfDay.cs" />
-    <Compile Include="Models\DTO\MessageOfDayDto.cs" />
     <Compile Include="Models\DTO\RosterDto.cs" />
     <Compile Include="Models\DTO\TeamDto.cs" />
     <Compile Include="Models\DTO\TeamMemberInfoDto.cs" />
     <Compile Include="Models\DTO\TeamStatDetailDto.cs" />
-    <Compile Include="Models\DTO\TeamStatSummaryDto.cs" />
     <Compile Include="Models\MatchHistorySummary.cs" />
     <Compile Include="Models\Roster.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\TeamMemberInfo.cs" />
     <Compile Include="Models\TeamStatDetail.cs" />
-    <Compile Include="Models\TeamStatSummary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\TeamService.cs" />
   </ItemGroup>

@@ -12,14 +12,13 @@ namespace PortableLeagueApi.Interfaces.Team
         DateTime LastJoinDate { get; set; }
         DateTime LastJoinedRankedTeamQueueDate { get; set; }
         IList<IMatchHistorySummary> MatchHistory { get; set; }
-        IMessageOfDay MessageOfDay { get; set; }
         DateTime ModifyDate { get; set; }
         string Name { get; set; }
         IRoster Roster { get; set; }
         DateTime SecondLastJoinDate { get; set; }
         string Status { get; set; }
         string Tag { get; set; }
-        ITeamStatSummary TeamStatSummary { get; set; }
+        IList<ITeamStatDetail> TeamStatDetails { get; set; }
         DateTime ThirdLastJoinDate { get; set; }
     }
 }

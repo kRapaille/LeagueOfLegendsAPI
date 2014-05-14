@@ -22,9 +22,6 @@ namespace PortableLeagueApi.Team.Models.DTO
         [JsonProperty("matchHistory")]
         public MatchHistorySummaryDto[] MatchHistory { get; set; }
 
-        [JsonProperty("messageOfDay")]
-        public MessageOfDayDto MessageOfDay { get; set; }
-
         [JsonProperty("modifyDate")]
         public long ModifyDate { get; set; }
 
@@ -43,8 +40,8 @@ namespace PortableLeagueApi.Team.Models.DTO
         [JsonProperty("tag")]
         public string Tag { get; set; }
 
-        [JsonProperty("teamStatSummary")]
-        public TeamStatSummaryDto TeamStatSummary { get; set; }
+        [JsonProperty("teamStatDetails")]
+        public TeamStatDetailDto[] TeamStatDetails { get; set; }
 
         [JsonProperty("thirdLastJoinDate")]
         public long ThirdLastJoinDate { get; set; }

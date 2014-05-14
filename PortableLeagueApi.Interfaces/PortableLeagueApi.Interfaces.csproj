@@ -124,13 +124,11 @@
     <Compile Include="Stats\IRankedStats.cs" />
     <Compile Include="Stats\IStatsService.cs" />
     <Compile Include="Team\IMatchHistorySummary.cs" />
-    <Compile Include="Team\IMessageOfDay.cs" />
     <Compile Include="Team\IRoster.cs" />
     <Compile Include="Team\ITeam.cs" />
     <Compile Include="Team\ITeamMemberInfo.cs" />
     <Compile Include="Team\ITeamService.cs" />
     <Compile Include="Team\ITeamStatDetail.cs" />
-    <Compile Include="Team\ITeamStatSummary.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="_SetFullFrameworkFolderToProfile" AfterTargets="GetReferenceAssemblyPaths">
