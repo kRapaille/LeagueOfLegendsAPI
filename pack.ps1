@@ -1,5 +1,5 @@
 param(
-    [bool]$clean = $true,
+	[bool]$clean = $true,
 	[bool]$unittests = $true
 )
 
@@ -15,22 +15,22 @@ $solutionFolder = Join-Path $rootFolder "PortableLeagueAPI"
 $outputFolder = Join-Path $rootFolder "bin"
 
 $projects = @(
-    "LeagueAPI.PCL.Test\PortableLeagueAPI.Test.csproj",
-    "PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj",
-    "PortableLeagueApi.Core\PortableLeagueApi.Core.csproj",
-    "PortableLeagueAPI.Champion\PortableLeagueApi.Champion.csproj",
-    "PortableLeagueApi.Game\PortableLeagueApi.Game.csproj",
-    "PortableLeagueApi.League\PortableLeagueApi.League.csproj",
-    "PortableLeagueApi.Static\PortableLeagueApi.Static.csproj",
-    "PortableLeagueApi.Stats\PortableLeagueApi.Stats.csproj",
-    "PortableLeagueApi.Summoner\PortableLeagueApi.Summoner.csproj",
-    "PortableLeagueApi.Team\PortableLeagueApi.Team.csproj",
+	"LeagueAPI.PCL.Test\PortableLeagueAPI.Test.csproj",
+	"PortableLeagueApi.Interfaces\PortableLeagueApi.Interfaces.csproj",
+	"PortableLeagueApi.Core\PortableLeagueApi.Core.csproj",
+	"PortableLeagueAPI.Champion\PortableLeagueApi.Champion.csproj",
+	"PortableLeagueApi.Game\PortableLeagueApi.Game.csproj",
+	"PortableLeagueApi.League\PortableLeagueApi.League.csproj",
+	"PortableLeagueApi.Static\PortableLeagueApi.Static.csproj",
+	"PortableLeagueApi.Stats\PortableLeagueApi.Stats.csproj",
+	"PortableLeagueApi.Summoner\PortableLeagueApi.Summoner.csproj",
+	"PortableLeagueApi.Team\PortableLeagueApi.Team.csproj",
 	"LeagueAPI.PCL\PortableLeagueAPI.csproj"
 )
 
 # Do not build a .nupkg for these projects
 $excludeNupkgProjects = @(
-    $projects[0]
+	$projects[0]
 )
 
 # Clean
@@ -41,16 +41,16 @@ $config = "Release"
 
 # Projects to build
 $projects | ForEach-Object {
-    $project = $_
+	$project = $_
 		
-    # Build project
-    Build-Project -rootFolder $rootFolder `
-        -outputFolder $outputFolder `
-        -project $project `
-        -config $config
+	# Build project
+	Build-Project -rootFolder $rootFolder `
+		-outputFolder $outputFolder `
+		-project $project `
+		-config $config
 	
 	# Build .nupkg if project is not excluded and needed
-    if(-not ($excludeNupkgProjects -contains $project)) {
+	if(-not ($excludeNupkgProjects -contains $project)) {
 
 		$projectFolder = Get-Project-Folder -rootFolder $rootFolder `
 			-project $project
@@ -85,7 +85,7 @@ $projects | ForEach-Object {
 				-version $version `
 				-config $config
 		}
-    }
+	}
 	else {
 
 		if($unittests) {
