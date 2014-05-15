@@ -45,19 +45,7 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 ## Last changes
 
-- Windows Phone 8.1 support
-- Static API v1.2
-- Champion API v1.2
-- Stats  API v1.3
-- Summoner  API v1.4
-- Games API updates
-- Static masteries DTOs fix
-- All unit tests are now offline
-- Accept-Encoding now supports gzip and deflate
-- Updated Game Constants to include Team Builder constants.
-- Added endpoints to leagues to get a league and a league entry by team ID.
-- Async naming convention
-- Datetime converter fix
+[Check it here](https://github.com/XeeX/LeagueOfLegendsAPI/releases)
 
 ## Disclaimer
 
