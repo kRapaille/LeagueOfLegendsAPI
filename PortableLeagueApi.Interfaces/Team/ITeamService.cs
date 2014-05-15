@@ -14,6 +14,13 @@ namespace PortableLeagueApi.Interfaces.Team
             RegionEnum? region = null);
 
         /// <summary>
+        /// Retrieves teams
+        /// </summary>
+        Task<IDictionary<string, IEnumerable<ITeam>>> GetTeamsBySummonerIdAsync(
+            IEnumerable<long> summonerIds,
+            RegionEnum? region = null);
+
+        /// <summary>
         /// Get teams mapped by team ID for a given list of team IDs
         /// </summary>
         Task<Dictionary<string, ITeam>> GetTeamsByTeamIdsAsync(

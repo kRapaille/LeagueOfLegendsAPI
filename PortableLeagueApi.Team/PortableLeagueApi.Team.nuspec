@@ -17,10 +17,10 @@
     <tags>"Portable League API Team"</tags>
     <dependencies>
       <group targetFramework="portable-net45+wp80+win8+wpa81">
-        <dependency id="AutoMapper" version="3.2.0" />
-        <dependency id="Newtonsoft.Json" version="6.0.2" />
-        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.1.4" />
-        <dependency id="Remake.PortableLeagueAPI.Core" version="2.1.0" />
+        <dependency id="AutoMapper" version="3.2.1" />
+        <dependency id="Newtonsoft.Json" version="6.0.3" />
+        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.1.5" />
+        <dependency id="Remake.PortableLeagueAPI.Core" version="2.1.1" />
       </group>
     </dependencies>
   </metadata>

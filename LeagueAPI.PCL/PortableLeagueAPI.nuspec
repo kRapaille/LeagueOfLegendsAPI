@@ -22,15 +22,15 @@
     <tags>league of legends API PCL portable Riot Games LeagueOfLegends RiotDeveloperProgram LeagueOfLegendsApi LoL LoLApi LolDeveloper "League Of Legends" Remake</tags>
     <dependencies>
       <group targetFramework="portable-net45+wp80+win8+wpa81">
-        <dependency id="Remake.PortableLeagueAPI.Core" version="2.1.0" />
-        <dependency id="Remake.PortableLeagueAPI.Team" version="2.3.0" />
-        <dependency id="Remake.PortableLeagueAPI.League" version="2.4.0" />
-        <dependency id="Remake.PortableLeagueAPI.Summoner" version="1.4.2" />
-        <dependency id="Remake.PortableLeagueAPI.Game" version="1.3.8" />
-        <dependency id="Remake.PortableLeagueAPI.Champion" version="1.2.2" />
-        <dependency id="Remake.PortableLeagueAPI.Stats" version="1.3.2" />
-        <dependency id="Remake.PortableLeagueAPI.Static" version="1.2.5" />
-        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.1.4" />
+        <dependency id="Remake.PortableLeagueAPI.Core" version="2.1.1" />
+        <dependency id="Remake.PortableLeagueAPI.Team" version="2.3.1" />
+        <dependency id="Remake.PortableLeagueAPI.League" version="2.4.1" />
+        <dependency id="Remake.PortableLeagueAPI.Summoner" version="1.4.3" />
+        <dependency id="Remake.PortableLeagueAPI.Game" version="1.3.9" />
+        <dependency id="Remake.PortableLeagueAPI.Champion" version="1.2.3" />
+        <dependency id="Remake.PortableLeagueAPI.Stats" version="1.3.3" />
+        <dependency id="Remake.PortableLeagueAPI.Static" version="1.2.6" />
+        <dependency id="Remake.PortableLeagueAPI.Interfaces" version="1.1.5" />
       </group>
     </dependencies>
   </metadata>
