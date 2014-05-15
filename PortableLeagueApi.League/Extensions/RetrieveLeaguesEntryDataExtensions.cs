@@ -15,7 +15,7 @@ namespace PortableLeagueApi.League.Extensions
         /// <summary>
         /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
         /// </summary>
-        private static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataAsync(
+        private static async Task<IEnumerable<ILeague>> RetrieveLeaguesEntryDataAsync(
             IApiModel leagueModel,
             long summonerId,
             RegionEnum? region = null)
@@ -29,7 +29,7 @@ namespace PortableLeagueApi.League.Extensions
         /// <summary>
         /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
         /// </summary>
-        public static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataAsync(
+        public static async Task<IEnumerable<ILeague>> RetrieveLeaguesEntryDataAsync(
             this IHasSummonerId summoner,
             RegionEnum? region = null)
         {
@@ -39,7 +39,7 @@ namespace PortableLeagueApi.League.Extensions
         /// <summary>
         /// Retrieves leagues entry data for summoner, including league entries for all of summoner's teams
         /// </summary>
-        public static async Task<IEnumerable<ILeagueItem>> RetrieveLeaguesEntryDataAsync(
+        public static async Task<IEnumerable<ILeague>> RetrieveLeaguesEntryDataAsync(
             this IRoster roster,
             RegionEnum? region = null)
         {

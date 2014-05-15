@@ -6,7 +6,7 @@ namespace PortableLeagueApi.Interfaces.League
 {
     public interface ILeague : IApiModel
     {
-        IList<ILeagueItem> LeagueItems { get; set; }
+        IList<ILeagueEntry> LeagueItems { get; set; }
         string Name { get; set; }
         string ParticipantId { get; set; }
         LeagueTypeEnum LeagueType { get; set; }

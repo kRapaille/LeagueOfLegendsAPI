@@ -1,69 +1,82 @@
-﻿[
+﻿{"19332836": [
    {
-      "isHotStreak": false,
-      "isFreshBlood": false,
-      "leagueName": "Jayce's Crusaders",
-      "miniSeries": {
-         "progress": "WNN",
-         "target": 2,
-         "losses": 0,
-         "timeLeftToPlayMillis": -1,
-         "wins": 1
-      },
-      "isVeteran": true,
-      "tier": "DIAMOND",
-      "lastPlayed": -1,
-      "playerOrTeamId": "19332836",
-      "leaguePoints": 100,
-      "rank": "II",
-      "isInactive": false,
-      "queueType": "RANKED_SOLO_5x5",
-      "playerOrTeamName": "TuC Ølen",
-      "wins": 123
+      "queue": "RANKED_SOLO_5x5",
+      "name": "Jayce's Crusaders",
+      "entries": [{
+         "leaguePoints": 49,
+         "isFreshBlood": false,
+         "isHotStreak": false,
+         "division": "IV",
+         "isInactive": false,
+         "isVeteran": true,
+         "playerOrTeamName": "Pulse Olen",
+         "playerOrTeamId": "19332836",
+         "wins": 168
+      }],
+      "tier": "DIAMOND"
    },
    {
-      "isHotStreak": false,
-      "isFreshBlood": false,
-      "leagueName": "Taric's Avengers",
-      "isVeteran": false,
-      "tier": "DIAMOND",
-      "lastPlayed": -1,
-      "playerOrTeamId": "TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f",
-      "leaguePoints": 27,
-      "rank": "III",
-      "isInactive": false,
-      "queueType": "RANKED_TEAM_5x5",
-      "playerOrTeamName": "holyshiitcarry",
-      "wins": 38
+      "queue": "RANKED_TEAM_5x5",
+      "name": "Taric's Avengers",
+      "entries": [{
+         "leaguePoints": 8,
+         "isFreshBlood": false,
+         "isHotStreak": false,
+         "division": "II",
+         "isInactive": false,
+         "isVeteran": false,
+         "playerOrTeamName": "holyshiitcarry",
+         "playerOrTeamId": "TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f",
+         "wins": 68
+      }],
+      "tier": "DIAMOND"
    },
    {
-      "isHotStreak": false,
-      "isFreshBlood": false,
-      "leagueName": "Fiora's Infiltrators",
-      "isVeteran": false,
-      "tier": "PLATINUM",
-      "lastPlayed": -1,
-      "playerOrTeamId": "TEAM-51da0800-7d3c-11e3-bc48-782bcb4ce61a",
-      "leaguePoints": 5,
-      "rank": "V",
-      "isInactive": true,
-      "queueType": "RANKED_TEAM_5x5",
-      "playerOrTeamName": "Aquilon Frost Gaming",
-      "wins": 9
+      "queue": "RANKED_TEAM_3x3",
+      "name": "Annie's Masterminds",
+      "entries": [{
+         "leaguePoints": 0,
+         "isFreshBlood": false,
+         "isHotStreak": true,
+         "division": "V",
+         "isInactive": false,
+         "isVeteran": false,
+         "playerOrTeamName": "iNPhase",
+         "playerOrTeamId": "TEAM-ed71fea0-9329-11e3-a5ae-782bcb497d6f",
+         "wins": 23
+      }],
+      "tier": "DIAMOND"
    },
    {
-      "isHotStreak": false,
-      "isFreshBlood": false,
-      "leagueName": "Rengar's Swashbucklers",
-      "isVeteran": false,
-      "tier": "PLATINUM",
-      "lastPlayed": -1,
-      "playerOrTeamId": "TEAM-a1b0e620-90cc-11e3-9ae1-782bcb4ce61a",
-      "leaguePoints": 40,
-      "rank": "V",
-      "isInactive": true,
-      "queueType": "RANKED_TEAM_5x5",
-      "playerOrTeamName": "Bourkh",
-      "wins": 4
+      "queue": "RANKED_TEAM_5x5",
+      "name": "Mordekaiser's Sorcerers",
+      "entries": [{
+         "leaguePoints": 5,
+         "isFreshBlood": false,
+         "isHotStreak": false,
+         "division": "I",
+         "isInactive": true,
+         "isVeteran": false,
+         "playerOrTeamName": "iNPhase",
+         "playerOrTeamId": "TEAM-ed71fea0-9329-11e3-a5ae-782bcb497d6f",
+         "wins": 11
+      }],
+      "tier": "SILVER"
+   },
+   {
+      "queue": "RANKED_TEAM_5x5",
+      "name": "Sivir's Gladiators",
+      "entries": [{
+         "leaguePoints": 0,
+         "isFreshBlood": true,
+         "isHotStreak": false,
+         "division": "V",
+         "isInactive": false,
+         "isVeteran": false,
+         "playerOrTeamName": "ScudTeam",
+         "playerOrTeamId": "TEAM-c5239850-d2fd-11e3-a4dd-782bcb4ce61a",
+         "wins": 3
+      }],
+      "tier": "GOLD"
    }
-]
+]}

@@ -11,7 +11,7 @@ namespace PortableLeagueApi.Team.Models.DTO
         public long JoinDate { get; set; }
 
         [JsonProperty("playerId")]
-        public long SummonerId { get; set; }
+        public long PlayerId { get; set; }
         
         [JsonProperty("status")]
         public string Status { get; set; }

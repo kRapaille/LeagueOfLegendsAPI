@@ -9,8 +9,6 @@ namespace PortableLeagueApi.Team.Models
     {
         public int AverageGamesPlayed { get; set; }
 
-        public string FullId { get; set; }
-
         public int Losses { get; set; }
 
         public string TeamStatType { get; set; }

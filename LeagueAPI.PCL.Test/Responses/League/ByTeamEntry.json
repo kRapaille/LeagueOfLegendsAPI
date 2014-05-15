@@ -1,15 +1,16 @@
-﻿[{
-   "isHotStreak": false,
-   "isFreshBlood": false,
-   "leagueName": "Fiora's Infiltrators",
-   "isVeteran": false,
-   "tier": "PLATINUM",
-   "lastPlayed": -1,
-   "playerOrTeamId": "TEAM-51da0800-7d3c-11e3-bc48-782bcb4ce61a",
-   "leaguePoints": 5,
-   "rank": "V",
-   "isInactive": true,
-   "queueType": "RANKED_TEAM_5x5",
-   "playerOrTeamName": "Aquilon Frost Gaming",
-   "wins": 9
-}]
+﻿{"TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f": [{
+   "queue": "RANKED_TEAM_5x5",
+   "name": "Taric's Avengers",
+   "entries": [{
+      "leaguePoints": 8,
+      "isFreshBlood": false,
+      "isHotStreak": false,
+      "division": "II",
+      "isInactive": false,
+      "isVeteran": false,
+      "playerOrTeamName": "holyshiitcarry",
+      "playerOrTeamId": "TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f",
+      "wins": 68
+   }],
+   "tier": "DIAMOND"
+}]}

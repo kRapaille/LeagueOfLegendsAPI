@@ -128,7 +128,7 @@ namespace PortableLeagueAPI.Test
         [Category("League")]
         public async void RetrievesLeaguesEntryDataForSummonerTestAsync()
         {
-            List<ILeagueItem> result = null;
+            List<ILeague> result = null;
 
             try
             {
@@ -172,7 +172,7 @@ namespace PortableLeagueAPI.Test
         [Category("League")]
         public async void RetrievesLeaguesEntryDataForTeamTestAsync()
         {
-            List<ILeagueItem> result = null;
+            List<ILeague> result = null;
 
             try
             {
