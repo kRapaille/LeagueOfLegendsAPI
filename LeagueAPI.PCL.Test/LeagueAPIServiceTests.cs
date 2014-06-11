@@ -44,8 +44,6 @@ namespace PortableLeagueAPI.Test
             {
                 foreach (var region in Enum.GetValues(typeof(RegionEnum)).Cast<RegionEnum>())
                 {
-                    if (region == RegionEnum.Kr) continue;
-
                     var freeChampions = await _leagueAPI.Champion.GetChampionsAsync(false, region);
 
                     Assert.NotNull(freeChampions);
@@ -393,7 +391,7 @@ namespace PortableLeagueAPI.Test
         [Category("Static")]
         public async void GetStaticChampionsWithParametersTestAsync()
         {
-            var result = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.All, languageCode: LanguageEnum.French);
+            var result = await _leagueAPI.Static.GetChampionAsync(13, ChampDataEnum.Info | ChampDataEnum.Image, languageCode: LanguageEnum.French);
 
             Assert.NotNull(result);
         }

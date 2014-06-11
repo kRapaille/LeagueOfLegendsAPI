@@ -122,7 +122,7 @@ namespace PortableLeagueApi.Static.Services
                 uriBuilder.AddQueryParameter(string.Format("version={0}", dataDragonVersion));
 
             if (data.HasValue)
-                uriBuilder.AddQueryParameter(string.Format("{0}={1}", dataParameterName, data.Value.ToString().ToLower()));
+                uriBuilder.AddQueryParameter(string.Format("{0}={1}", dataParameterName, data.Value.ToString().ToLower().Replace(" ", string.Empty)));
 
             if (id != null)
                 uriBuilder.Path += string.Format("/{0}", id);
