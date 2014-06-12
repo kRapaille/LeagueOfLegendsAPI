@@ -29,23 +29,5 @@ namespace PortableLeagueApi.Core.Constants
             { RegionEnum.Ru, Ru },
             { RegionEnum.Tr, Tr }
         };
-
-        public const string SubDomainProd = "prod";
-        public const string SubDomainEu = "eu";
-        public const string SubDomainKr = "kr";
-
-        internal static readonly Dictionary<RegionEnum, string> SubDomains = new Dictionary<RegionEnum, string>
-        {
-            { RegionEnum.Br, SubDomainProd },
-            { RegionEnum.Eune, SubDomainProd },
-            { RegionEnum.Euw, SubDomainProd },
-            { RegionEnum.Kr, SubDomainKr },
-            { RegionEnum.Lan, SubDomainProd },
-            { RegionEnum.Las, SubDomainProd },
-            { RegionEnum.Na, SubDomainProd },
-            { RegionEnum.Oce, SubDomainProd },
-            { RegionEnum.Ru, SubDomainEu },
-            { RegionEnum.Tr, SubDomainEu }
-        };
     }
 }

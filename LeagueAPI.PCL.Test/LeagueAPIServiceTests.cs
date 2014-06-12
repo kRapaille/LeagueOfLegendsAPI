@@ -24,6 +24,9 @@ namespace PortableLeagueAPI.Test
         private const string SummonerName = "TuC Ølen";
         private const string TeamId = "TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f";
 
+        private static readonly string ApiKey = string.Empty;
+        private static readonly IHttpRequestService HttpRequestService = new FakeHttpRequestService();
+
         public LeagueAPIServiceTests() : this(null)
         {
         }
@@ -31,7 +34,7 @@ namespace PortableLeagueAPI.Test
         public LeagueAPIServiceTests(ILeagueApiConfiguration configuration)
         {
             configuration = configuration ??
-                            new LeagueApiConfiguration(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
+                            new LeagueApiConfiguration(ApiKey, RegionEnum.Euw, true, HttpRequestService);
 
             _leagueAPI = new LeagueApi(configuration);
         }
