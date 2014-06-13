@@ -7,8 +7,10 @@ using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Game.Extensions;
 using PortableLeagueApi.Interfaces.Core;
 using PortableLeagueApi.Interfaces.Enums;
+using PortableLeagueApi.Interfaces.Game;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.Interfaces.Stats;
+using PortableLeagueApi.Interfaces.Summoner;
 using PortableLeagueApi.League.Extensions;
 using PortableLeagueApi.Static.Extensions;
 using PortableLeagueApi.Team.Extensions;
@@ -21,8 +23,11 @@ namespace PortableLeagueAPI.Test
         private readonly LeagueApi _leagueAPI;
 
         private const long SummonerId = 19332836;
-        private const string SummonerName = "TuC Ølen";
+        private const string SummonerName = "Pulse Olen";
         private const string TeamId = "TEAM-4b3c8100-91a3-11e3-be7d-782bcb497d6f";
+
+        private const string ApiKey = "";
+        private static readonly IHttpRequestService HttpRequestService = new FakeHttpRequestService();
 
         public LeagueAPIServiceTests() : this(null)
         {
@@ -31,7 +36,7 @@ namespace PortableLeagueAPI.Test
         public LeagueAPIServiceTests(ILeagueApiConfiguration configuration)
         {
             configuration = configuration ??
-                            new LeagueApiConfiguration(string.Empty, RegionEnum.Euw, true, new FakeHttpRequestService());
+                            new LeagueApiConfiguration(ApiKey, RegionEnum.Euw, true, HttpRequestService);
 
             _leagueAPI = new LeagueApi(configuration);
         }
@@ -46,7 +51,7 @@ namespace PortableLeagueAPI.Test
                 {
                     var freeChampions = await _leagueAPI.Champion.GetChampionsAsync(false, region);
 
-                    Assert.NotNull(freeChampions);
+                    Assert.NotNull(freeChampions.ToList());
                 }
             }
         }
@@ -85,7 +90,7 @@ namespace PortableLeagueAPI.Test
         {
             var freeChampions = await _leagueAPI.Champion.GetChampionsAsync(false);
 
-            Assert.NotNull(freeChampions);
+            Assert.NotNull(freeChampions.ToList());
         }
 
         [Test]
@@ -110,7 +115,7 @@ namespace PortableLeagueAPI.Test
 
             var result = await summoner.GetRecentGamesAsync();
 
-            Assert.NotNull(result);
+            Assert.NotNull(result.ToList());
         }
 
         [Test]
@@ -220,7 +225,7 @@ namespace PortableLeagueAPI.Test
 
             var result = await summoner.RetrieveLeaguesEntryDataAsync();
 
-            Assert.NotNull(result);
+            Assert.NotNull(result.ToList());
         }
 
         [Test]
@@ -229,7 +234,7 @@ namespace PortableLeagueAPI.Test
         {
             var result = await _leagueAPI.Stats.GetPlayerStatsSummariesBySummonerIdAsync(SummonerId);
 
-            Assert.NotNull(result);
+            Assert.NotNull(result.ToList());
         }
 
         [Test]
@@ -259,7 +264,7 @@ namespace PortableLeagueAPI.Test
         {
             var result = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(SummonerId);
 
-            Assert.NotNull(result);
+            Assert.NotNull(result.ToList());
         }
 
         //[Test]
@@ -277,7 +282,7 @@ namespace PortableLeagueAPI.Test
         {
             var result = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(SummonerId);
 
-            Assert.NotNull(result);
+            Assert.NotNull(result.ToList());
         }
 
         //[Test]
@@ -313,7 +318,7 @@ namespace PortableLeagueAPI.Test
         {
             var result = await _leagueAPI.Summoner.GetSummonerByIdAsync(new List<long> { SummonerId, 19231045 });
 
-            Assert.NotNull(result);
+            Assert.NotNull(result.ToList());
         }
 
         [Test]
@@ -340,7 +345,7 @@ namespace PortableLeagueAPI.Test
         {
             var result = await _leagueAPI.Team.GetTeamsBySummonerIdAsync(SummonerId);
 
-            Assert.NotNull(result);
+            Assert.NotNull(result.ToList());
         }
 
         [Test]
@@ -351,9 +356,9 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(summoner);
 
-            var teams = summoner.GetTeamsBySummonerIdAsync();
+            var teams = await summoner.GetTeamsBySummonerIdAsync();
 
-            Assert.NotNull(teams);
+            Assert.NotNull(teams.ToList());
         }
 
         [Test]
@@ -491,7 +496,7 @@ namespace PortableLeagueAPI.Test
         public async void GetVersionsTestAsync()
         {
             var versions = await _leagueAPI.Static.GetVersionsAsync();
-            Assert.NotNull(versions);
+            Assert.NotNull(versions.ToList());
         }
         
         [Test]
@@ -613,9 +618,11 @@ namespace PortableLeagueAPI.Test
         public async void MasteryExtensionsTestAsync()
         {
             var masteriesPage = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(SummonerId);
-            Assert.NotNull(masteriesPage);
 
-            var result = await masteriesPage.First().Masteries.First().GetMasteryStaticInfosAsync();
+            var masteryPages = masteriesPage as IMasteryPage[] ?? masteriesPage.ToArray();
+            Assert.NotNull(masteryPages);
+
+            var result = await masteryPages.First().Masteries.First().GetMasteryStaticInfosAsync();
 
             Assert.NotNull(result);
         }
@@ -625,9 +632,11 @@ namespace PortableLeagueAPI.Test
         public async void RuneExtensionsTestAsync()
         {
             var runesPages = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(SummonerId);
-            Assert.NotNull(runesPages);
 
-            var result = await runesPages.First().Slots.First().GetRuneStaticInfosAsync();
+            var runePages = runesPages as IRunePage[] ?? runesPages.ToArray();
+            Assert.NotNull(runePages);
+
+            var result = await runePages.First().Slots.First().GetRuneStaticInfosAsync();
 
             Assert.NotNull(result);
         }
@@ -637,9 +646,11 @@ namespace PortableLeagueAPI.Test
         public async void ItemsExtensionsTestAsync()
         {
             var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(SummonerId);
-            Assert.NotNull(recentGames);
 
-            var result = await recentGames.First().Stats.GetItemsStaticInfosAsync();
+            var enumerable = recentGames as IGame[] ?? recentGames.ToArray();
+            Assert.NotNull(enumerable);
+
+            var result = await enumerable.First().Stats.GetItemsStaticInfosAsync();
 
             Assert.NotNull(result);
         }
@@ -649,9 +660,11 @@ namespace PortableLeagueAPI.Test
         public async void ItemsImageExtensionsTestAsync()
         {
             var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(SummonerId);
-            Assert.NotNull(recentGames);
 
-            var urls = await recentGames.First().Stats.GetItemsImageUrlsAsync();
+            var enumerable = recentGames as IGame[] ?? recentGames.ToArray();
+            Assert.NotNull(enumerable);
+
+            var urls = await enumerable.First().Stats.GetItemsImageUrlsAsync();
             Assert.NotNull(urls);
 
             using (var httpClient = new HttpClient())
@@ -672,9 +685,11 @@ namespace PortableLeagueAPI.Test
         public async void SummonerSpellExtensionsTestAsync()
         {
             var recentGames = await _leagueAPI.Game.GetRecentGamesBySummonerIdAsync(SummonerId);
-            Assert.NotNull(recentGames);
 
-            var result = await recentGames.First().GetSummonerSpellsStaticInfosAsync();
+            var enumerable = recentGames as IGame[] ?? recentGames.ToArray();
+            Assert.NotNull(enumerable);
+
+            var result = await enumerable.First().GetSummonerSpellsStaticInfosAsync();
 
             Assert.NotNull(result);
         }

@@ -11,6 +11,8 @@
         RankedSolo5X5,
         RankedTeam3X3,
         RankedTeam5X5,
+        RankedPremade3X3,
+        RankedPremade5X5,
         OneForAll5X5,
         FirstBlood1X1,
         FirstBlood2X2,

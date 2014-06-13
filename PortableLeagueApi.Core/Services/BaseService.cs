@@ -75,9 +75,9 @@ namespace PortableLeagueApi.Core.Services
             return BuildUri(new Uri(relativeUrl, UriKind.Relative), region);
         }
 
-        protected Uri BuildUri(Uri relativeUri, RegionEnum? region)
+        protected Uri BuildUri(Uri relativeUri, RegionEnum? region, string endpoint = null)
         {
-            var baseUri = new Uri(string.Format(BaseUrl, GetSubDomain(region)));
+            var baseUri = new Uri(string.Format(BaseUrl, endpoint ?? GetRegionAsString(region)));
 
             var uriBuilder = new UriBuilder(new Uri(baseUri, relativeUri));
 
@@ -221,11 +221,6 @@ namespace PortableLeagueApi.Core.Services
         protected string GetRegionAsString(RegionEnum? region)
         {
             return RegionConsts.Regions[GetRegion(region)];
-        }
-
-        private string GetSubDomain(RegionEnum? region)
-        {
-            return RegionConsts.SubDomains[GetRegion(region)];
         }
 
         public void Dispose()
