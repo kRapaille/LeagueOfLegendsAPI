@@ -114,7 +114,7 @@
          "wins": 1689
       },
       {
-         "playerStatSummaryType": "Unranked3x3",
+         "playerStatSummaryType": "URFBots",
          "aggregatedStats": {
             "totalNeutralMinionsKilled": 263,
             "totalMinionKills": 1702,
