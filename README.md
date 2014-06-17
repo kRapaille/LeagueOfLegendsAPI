@@ -27,7 +27,7 @@ var imageUrl = await item.Image.GetUrlAsync();
 
 ```
 
-**Note** : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, set the third paramater in the LeagueAPI constructor to true.
+**Note** : By default the library doesn't check for the rate limit. But if you want to wait when you reach it, set the third parameter in the LeagueAPI constructor to true.
 
 ## Notes
 
