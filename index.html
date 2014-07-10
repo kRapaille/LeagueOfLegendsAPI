@@ -48,10 +48,10 @@
 <div class="highlight highlight-c#"><pre>
 <span class="kt">var</span> <span class="n">leagueAPI</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LeagueApi</span><span class="p">(</span><span class="s">"YOUR API KEY HERE"</span><span class="p">,</span> <span class="n">RegionEnum</span><span class="p">.</span><span class="n">Euw</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
 
-<span class="kt">var</span> <span class="n">summoner</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_leagueAPI</span><span class="p">.</span><span class="n">Summoner</span><span class="p">.</span><span class="n">GetSummonerByNameAsync</span><span class="p">(</span><span class="s">"TuC Ølen"</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">summoner</span> <span class="p">=</span> <span class="k">await</span> <span class="n">leagueAPI</span><span class="p">.</span><span class="n">Summoner</span><span class="p">.</span><span class="n">GetSummonerByNameAsync</span><span class="p">(</span><span class="s">"TuC Ølen"</span><span class="p">);</span>
 <span class="kt">var</span> <span class="n">recentGames</span> <span class="p">=</span> <span class="k">await</span> <span class="n">summoner</span><span class="p">.</span><span class="n">GetRecentGamesAsync</span><span class="p">();</span>
 
-<span class="kt">var</span> <span class="n">item</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_leagueAPI</span><span class="p">.</span><span class="n">Static</span><span class="p">.</span><span class="n">GetItemsAsync</span><span class="p">(</span>
+<span class="kt">var</span> <span class="n">item</span> <span class="p">=</span> <span class="k">await</span> <span class="n">leagueAPI</span><span class="p">.</span><span class="n">Static</span><span class="p">.</span><span class="n">GetItemsAsync</span><span class="p">(</span>
   <span class="m">1001</span><span class="p">,</span> 
   <span class="n">ItemDataEnum</span><span class="p">.</span><span class="n">All</span><span class="p">,</span> 
   <span class="n">languageCode</span><span class="p">:</span> <span class="n">LanguageEnum</span><span class="p">.</span><span class="n">French</span><span class="p">);</span>
