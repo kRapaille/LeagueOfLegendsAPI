@@ -12,7 +12,7 @@ namespace PortableLeagueApi.Interfaces.Static.Champion
         string CostBurn { get; set; }
         string CostType { get; set; }
         string Description { get; set; }
-        IList<IList<int>> Effect { get; set; }
+        IList<IList<double>> Effect { get; set; }
         IList<string> EffectBurn { get; set; }
         string Key { get; set; }
         IImage Image { get; set; }

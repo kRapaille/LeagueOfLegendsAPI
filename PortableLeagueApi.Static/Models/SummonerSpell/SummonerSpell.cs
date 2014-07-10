@@ -15,13 +15,13 @@ namespace PortableLeagueApi.Static.Models.SummonerSpell
 
         public IList<int> Cost { get; set; }
 
-        public string CostBurn { get; set; }
+        public string CostBurn { get; set; } 
 
         public string CostType { get; set; }
 
         public string Description { get; set; }
 
-        public IList<IList<float>> Effect { get; set; }
+        public IList<IList<double>> Effect { get; set; }
 
         public IList<string> EffectBurn { get; set; }
 
