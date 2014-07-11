@@ -23,7 +23,7 @@ namespace PortableLeagueApi.Static.Models.Champion
 
         public string Description { get; set; }
 
-        public IList<IList<int>> Effect { get; set; }
+        public IList<IList<double>> Effect { get; set; }
 
         public IList<string> EffectBurn { get; set; }
 

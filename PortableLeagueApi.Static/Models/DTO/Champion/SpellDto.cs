@@ -27,7 +27,7 @@ namespace PortableLeagueApi.Static.Models.DTO.Champion
         public string Description { get; set; }
 
         [JsonProperty("effect")]
-        public IList<IList<int>> Effect { get; set; }
+        public IList<IList<double>> Effect { get; set; }
 
         [JsonProperty("effectBurn")]
         public string[] EffectBurn { get; set; }
