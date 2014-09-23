@@ -11,6 +11,7 @@ namespace PortableLeagueApi.Core.Constants
         public const string Tutorial = "TUTORIAL";
         public const string OneForAll = "ONEFORALL";
         public const string FirstBlood = "FIRSTBLOOD";
+        public const string Ascension = "ASCENSION"; 
 
         public static readonly Dictionary<GameModeEnum, string> GameModes = new Dictionary<GameModeEnum, string>
         {
@@ -20,6 +21,7 @@ namespace PortableLeagueApi.Core.Constants
             { GameModeEnum.Tutorial, Tutorial },
             { GameModeEnum.OneForAll, OneForAll },
             { GameModeEnum.FirstBlood, FirstBlood },
+            { GameModeEnum.Ascension, Ascension },
         };
     }
 }

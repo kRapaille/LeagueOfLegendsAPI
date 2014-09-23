@@ -14,7 +14,7 @@ namespace PortableLeagueApi.League.Services
     {
         public LeagueService(
             ILeagueApiConfiguration config)
-            : base(config, VersionEnum.V2Rev4, "league")
+            : base(config, VersionEnum.V2Rev5, "league")
         {
             Models.League.CreateMap(AutoMapperService);
 

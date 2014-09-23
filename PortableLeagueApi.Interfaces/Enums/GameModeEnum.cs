@@ -7,6 +7,7 @@
         Aram, 
         Tutorial, 
         OneForAll, 
-        FirstBlood
+        FirstBlood,
+        Ascension
     }
 }

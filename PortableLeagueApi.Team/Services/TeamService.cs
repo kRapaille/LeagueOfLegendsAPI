@@ -13,7 +13,7 @@ namespace PortableLeagueApi.Team.Services
     {
         public TeamService(
             ILeagueApiConfiguration config)
-            : base(config, VersionEnum.V2Rev3, "team")
+            : base(config, VersionEnum.V2Rev4, "team")
         {
             Models.Team.CreateMap(AutoMapperService);
 
