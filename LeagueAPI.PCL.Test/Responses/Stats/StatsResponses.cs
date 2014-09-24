@@ -2,7 +2,10 @@
 {
     internal class StatsResponses : Responses
     {
-        private StatsResponses() :base("Stats") { }
+        private StatsResponses()
+            : base("Stats")
+        {
+        }
 
         public static IResponses Instance
         {

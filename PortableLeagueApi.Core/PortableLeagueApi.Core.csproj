@@ -44,7 +44,6 @@
     <Compile Include="Constants\GameTypeConsts.cs" />
     <Compile Include="Constants\RegionConsts.cs" />
     <Compile Include="Constants\VersionConsts.cs" />
-    <Compile Include="Enums\QueueEnum.cs" />
     <Compile Include="Helpers\CoeffArrayJsonConverter.cs" />
     <Compile Include="Helpers\RangeJsonConverter.cs" />
     <Compile Include="Interfaces\IResolver.cs" />

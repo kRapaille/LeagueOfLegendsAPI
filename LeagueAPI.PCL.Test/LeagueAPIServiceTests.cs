@@ -267,15 +267,6 @@ namespace PortableLeagueAPI.Test
             Assert.NotNull(result.ToList());
         }
 
-        //[Test]
-        //[Category("Summoner")]
-        //public async void GetMasteryPagesBySummonerIdsTest()
-        //{
-        //    var result = await _leagueAPI.Summoner.GetMasteryPagesBySummonerIdAsync(new List<long> { 19231046, 19231045 });
-
-        //    Assert.NotNull(result);
-        //}
-
         [Test]
         [Category("Summoner")]
         public async void GetRunePagesBySummonerIdTestAsync()
@@ -284,16 +275,7 @@ namespace PortableLeagueAPI.Test
 
             Assert.NotNull(result.ToList());
         }
-
-        //[Test]
-        //[Category("Summoner")]
-        //public async void GetRunePagesBySummonerIdsTest()
-        //{
-        //    var result = await _leagueAPI.Summoner.GetRunePagesBySummonerIdAsync(new List<long> { 19231046, 19231045 });
-
-        //    Assert.NotNull(result);
-        //}
-
+        
         [Test]
         [Category("Summoner")]
         public async void GetSummonerByNameTestAsync()
@@ -365,10 +347,12 @@ namespace PortableLeagueAPI.Test
         [Category("Team")]
         public async void GetTeamsByTeamIdsTestAsync()
         {
-            var result = await _leagueAPI.Team.GetTeamsByTeamIdsAsync(new []
-            {
-                "TEAM-1dc55d56-c3d7-471c-8b28-3f21b5d99582",
-                "TEAM-d9ecabd1-7315-11e2-b227-782bcb497d6f"
+            var result =
+                await _leagueAPI.Team.GetTeamsByTeamIdsAsync(
+                    new[]
+                        {
+                            "TEAM-1dc55d56-c3d7-471c-8b28-3f21b5d99582",
+                            "TEAM-d9ecabd1-7315-11e2-b227-782bcb497d6f"
             });
 
             Assert.NotNull(result);
