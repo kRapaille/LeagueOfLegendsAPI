@@ -1,5 +1,4 @@
-﻿using System;
-using PortableLeagueApi.Core.Models;
+﻿using PortableLeagueApi.Core.Models;
 using PortableLeagueApi.Core.Services;
 using PortableLeagueApi.Interfaces.League;
 using PortableLeagueApi.League.Models.DTO;

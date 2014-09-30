@@ -2,7 +2,10 @@
 {
     internal class ChampionResponses : Responses
     {
-        private ChampionResponses() : base("Champion") {}
+        private ChampionResponses()
+            : base("Champion")
+        {
+        }
 
         public static IResponses Instance
         {

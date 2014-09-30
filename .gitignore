@@ -213,3 +213,9 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.dll
+*.ps1
+*._
+*.xml
+*.nupkg
+*.StyleCop

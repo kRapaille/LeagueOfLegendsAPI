@@ -34,7 +34,10 @@ namespace PortableLeagueAPI
 
         public LeagueApi(ILeagueApiConfiguration leagueApiConfiguration)
         {
-            if (leagueApiConfiguration == null) throw new ArgumentNullException("leagueApiConfiguration");
+            if (leagueApiConfiguration == null)
+            {
+                throw new ArgumentNullException("leagueApiConfiguration");
+            }
 
             LeagueApiConfiguration = leagueApiConfiguration;
 
@@ -47,7 +50,10 @@ namespace PortableLeagueAPI
             bool waitToAvoidRateLimit = false,
             IHttpRequestService httpRequestService = null)
         {
-            if(apiKey == null) throw new ArgumentNullException("apiKey");
+            if (apiKey == null)
+            {
+                throw new ArgumentNullException("apiKey");
+            }
 
             httpRequestService = httpRequestService ?? new HttpRequestService();
 

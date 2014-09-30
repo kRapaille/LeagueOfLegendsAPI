@@ -19,6 +19,7 @@
         SummonersRift6X6,
         CAP5X5,
         Urf,
-        UrfBot
+        UrfBot,
+        Ascension
     }
 }

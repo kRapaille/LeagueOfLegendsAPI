@@ -43,6 +43,7 @@
     <Compile Include="Champion\IChampionService.cs" />
     <Compile Include="Core\ILeagueApiConfiguration.cs" />
     <Compile Include="Enums\ChampDataEnum.cs" />
+    <Compile Include="Enums\QueueTypeEnum.cs" />
     <Compile Include="Enums\ItemDataEnum.cs" />
     <Compile Include="Enums\MasteryDataEnum.cs" />
     <Compile Include="Enums\RuneDataEnum.cs" />
