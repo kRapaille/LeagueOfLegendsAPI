@@ -25,6 +25,7 @@ namespace PortableLeagueApi.Core.Constants
         public const string UrfBot = "URFBots";
         public const string Ascension = "Ascension";
         public const string Hexakill = "Hexakill";
+        public const string NightmareBot = "NightmareBot";
 
         public static readonly Dictionary<PlayerStatSummaryTypeEnum, string> PlayerStatsSummaryTypes = new Dictionary<PlayerStatSummaryTypeEnum, string>
         {
@@ -47,7 +48,8 @@ namespace PortableLeagueApi.Core.Constants
             { PlayerStatSummaryTypeEnum.Urf, Urf },
             { PlayerStatSummaryTypeEnum.UrfBot, UrfBot },
             { PlayerStatSummaryTypeEnum.Ascension, Ascension },
-            { PlayerStatSummaryTypeEnum.Hexakill, Hexakill }
+            { PlayerStatSummaryTypeEnum.Hexakill, Hexakill },
+            { PlayerStatSummaryTypeEnum.NightmareBot, NightmareBot }
         };
     }
 }

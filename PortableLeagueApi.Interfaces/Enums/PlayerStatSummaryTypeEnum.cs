@@ -21,6 +21,7 @@
         Urf,
         UrfBot,
         Ascension,
-        Hexakill
+        Hexakill,
+        NightmareBot
     }
 }
