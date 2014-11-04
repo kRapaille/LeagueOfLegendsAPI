@@ -20,6 +20,7 @@
         CAP5X5,
         Urf,
         UrfBot,
-        Ascension
+        Ascension,
+        Hexakill
     }
 }
