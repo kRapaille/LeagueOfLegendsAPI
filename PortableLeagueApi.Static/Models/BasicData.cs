@@ -18,8 +18,6 @@ namespace PortableLeagueApi.Static.Models
 
         public string Description { get; set; }
 
-        public Dictionary<string, string> Effect { get; set; }
-
         public IList<string> From { get; set; }
 
         public IGold Gold { get; set; }
