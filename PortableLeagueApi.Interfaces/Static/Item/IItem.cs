@@ -10,6 +10,7 @@ namespace PortableLeagueApi.Interfaces.Static.Item
         bool Consumed { get; set; }
         int Depth { get; set; }
         string Description { get; set; }
+        Dictionary<string, string> Effect { get; set; }
         IList<string> From { get; set; }
         IGold Gold { get; set; }
         string Group { get; set; }
