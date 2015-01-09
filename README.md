@@ -1,3 +1,7 @@
+# I'm not maintining this project anymore. Feel free to fork it or use [RiotSharp](https://github.com/BenFradet/RiotSharp).
+
+
+
 Portable C# Library for [League of Legends API](https://developer.riotgames.com)
 
 ## Install
