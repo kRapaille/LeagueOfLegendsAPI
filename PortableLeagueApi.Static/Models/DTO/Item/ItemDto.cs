@@ -41,6 +41,9 @@ namespace PortableLeagueApi.Static.Models.DTO.Item
         [JsonProperty("description")]
         public string Description { get; set; }
 
+        [JsonProperty("effect")]
+        public Dictionary<string, string> Effect { get; set; }
+
         [JsonProperty("from")]
         public IList<string> From { get; set; }
 
